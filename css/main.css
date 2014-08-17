@@ -66,3 +66,23 @@ color: blue;
 .content{
 margin-left: 10px;
 }
+
+#sites{
+
+}
+
+#sites a{
+color: white;
+background: blue;
+margin-left: 10px;
+margin-right: 10px;
+padding: 10px;
+}
+
+#sites a:hover{
+color: black;
+background: #EEEEEE;
+margin-left: 10px;
+margin-right: 10px;
+padding: 10px;
+}
