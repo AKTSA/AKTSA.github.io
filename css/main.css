@@ -1,0 +1,60 @@
+body{
+background: #EEEEEE;
+margin: 0;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+font-size:30px;
+font-weight: 100;
+}
+
+#container{
+margin: auto;
+width: 1000px;
+}
+
+#title{
+color: #B20000;
+font-family: 'Titillium Web', sans-serif;
+font-size: 40px;
+font-weight: 600;
+margin: auto;
+width:1000px;
+//background: red;
+padding-top: 20px;
+padding-bottom: 20px;
+border-bottom: solid 1px gray;
+}
+
+#title b{
+color: #7A52CC;
+}
+
+.post{
+width: 960px;
+margin-left: 40px;
+}
+
+.post h1{
+font-weight: 300;
+font-size: 36px;
+margin-bottom: 10px;
+color: #7A52CC;
+}
+
+.post div{
+text-align:center;
+margin-top: 20px;
+}
+
+.post a{
+text-decoration: none;
+color: black;
+}
+
+.post a:hover{
+text-decoration: none;
+color: blue;
+}
+
+.content{
+margin-left: 10px;
+}
