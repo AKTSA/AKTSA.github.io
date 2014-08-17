@@ -1,9 +1,18 @@
 body{
-background: #EEEEEE;
+background: white;
 margin: 0;
 font-family: 'Yanone Kaffeesatz', sans-serif;
 font-size:30px;
 font-weight: 100;
+}
+
+#background{
+background: #EEEEEE;
+width: 4000px;
+position: fixed;
+top: 0;
+height: 100px;
+z-index: -1;
 }
 
 #container{
@@ -21,7 +30,6 @@ width:1000px;
 //background: red;
 padding-top: 20px;
 padding-bottom: 20px;
-border-bottom: solid 1px gray;
 }
 
 #title b{
