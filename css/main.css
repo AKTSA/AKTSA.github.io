@@ -7,7 +7,7 @@ font-weight: 100;
 }
 
 #background{
-background: #EEEEEE;
+background: #F4F4F4;;
 width: 100%;
 min-width: 1000px;
 position: absolute;
@@ -67,6 +67,19 @@ opacity: 1.0;
 
 #title div{
 display: inline;
+}
+
+#nav a{
+text-decoration: none; 
+font-size: 22px; 
+color: #7A52CC;
+margin-left: 660px; 
+position: absolute; 
+top: 34px;
+}
+
+#nav a:hover{
+color: white;
 }
 
 .post{
