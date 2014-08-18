@@ -44,6 +44,11 @@ opacity: 0.6;
     -o-transition: opacity 0.2s ease-out;
     -ms-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out;
+	height: 50px; 
+	position: absolute; 
+	top: 26px; 
+	margin-left: 160px; 
+	border: none;
 }
 
 #title img:hover{
@@ -53,6 +58,11 @@ opacity: 1.0;
     -o-transition: opacity 0.2s ease-out;
     -ms-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out;
+	height: 50px; 
+	position: absolute; 
+	top: 26px; 
+	margin-left: 160px;
+	border: none;
 }
 
 .post{
