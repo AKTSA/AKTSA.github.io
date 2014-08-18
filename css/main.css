@@ -65,6 +65,10 @@ opacity: 1.0;
 	border: none;
 }
 
+#title div{
+display: inline;
+}
+
 .post{
 width: 960px;
 margin-left: 40px;
