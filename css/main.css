@@ -37,6 +37,24 @@ padding-bottom: 20px;
 color: #7A52CC;
 }
 
+#title img{
+opacity: 0.6;
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    -ms-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+
+#title img:hover{
+opacity: 1.0;
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    -ms-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+
 .post{
 width: 960px;
 margin-left: 40px;
