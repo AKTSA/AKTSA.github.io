@@ -74,11 +74,9 @@ display: inline;
 }
 
 #nav{
-margin-right: 200px;
-top: 15px;
 width: 270px;
-position: absolute;
-margin-left: 540px;
+float: right;
+margin-top: -6px;
 }
 
 #nav a{
