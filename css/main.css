@@ -55,9 +55,6 @@ opacity: 0.6;
     -ms-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out;
 	height: 50px; 
-	position: absolute; 
-	top: 26px; 
-	margin-left: 780px; 
 	border: none;
 }
 
@@ -69,9 +66,6 @@ opacity: 1.0;
     -ms-transition: opacity 0.2s ease-out;
     transition: opacity 0.2s ease-out;
 	height: 50px; 
-	position: absolute; 
-	top: 26px; 
-	margin-left: 780px; 
 	border: none;
 }
 
@@ -80,10 +74,11 @@ display: inline;
 }
 
 #nav{
-margin-left: 500px; 
-position: absolute; 
+margin-right: 200px;
 top: 15px;
 width: 270px;
+position: absolute;
+margin-left: 540px;
 }
 
 #nav a{
