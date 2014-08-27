@@ -17,6 +17,18 @@ body{
 	z-index: -1;
 }
 
+#message{
+	background-color: blue;
+	color: white;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	position: absolute;
+	min-width: 1000px;
+	margin-top: 100px;
+	text-align: center;
+	width: 100%;
+}
+
 #container{
 	margin: auto;
 	width: 1000px;
