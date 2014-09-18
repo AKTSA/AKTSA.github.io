@@ -30,8 +30,9 @@ body{
 }
 
 #container{
-	margin: auto;
 	width: 1000px;
+	margin: auto;
+	
 }
 
 #headersection{
@@ -50,7 +51,6 @@ body{
 	height: 40px; 
 	opacity: 1.0;
 	opacity: 0.6;
-	
     -webkit-transition: opacity 0.2s ease-out;
     -moz-transition: opacity 0.2s ease-out;
     -o-transition: opacity 0.2s ease-out;
