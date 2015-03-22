@@ -207,12 +207,12 @@ footer{
 }
 
 footer p{
-	padding-top: 34px;
+	/*padding-top: 34px;TODO: Marked for deletion (the comment)*/
 }
 
 #footerbackground{
 	background: #F4F4F4;
-	height: 100px;
+	/*height: 100px; TODO: Marked for deletion (the comment)*/
 	margin-top: -100px;
 	min-width: 1000px;
 	position: absolute;
