@@ -204,10 +204,12 @@ footer{
 	height: 100px;
 	text-align:center;
 	width: 1000px;
+    background: #F4F4F4;
 }
 
 footer p{
 	/*padding-top: 34px;TODO: Marked for deletion (the comment)*/
+    
 }
 
 #footerbackground{
