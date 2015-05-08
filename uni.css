@@ -1,7 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu|Nunito:700|Open+Sans);
 
+body{
+	text-align:center;
+}
+
 .AKTSA{
 	font-family:"Audiowide";
+	font-size:500%;
 }
 
 .ScrollDown{
