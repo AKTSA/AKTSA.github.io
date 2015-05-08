@@ -20,11 +20,11 @@ h2{
 }
 
 .ThreeCards{
-	margin-top:50px;
+	margin-top:10px;
 }
 .ThreeCards div{
 	width:30vw;
-	height:60vh;
+	height:75vh;
 	margin-left:1vw;
 	margin-right:1vw;
 	display:inline-block;
