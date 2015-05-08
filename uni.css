@@ -28,15 +28,16 @@ h2{
 	margin-left:1vw;
 	margin-right:1vw;
 	display:inline-block;
+	box-shadow: 2px 2px 4px 1px #000;
 }
 .ThreeCards div:nth-child(1){
-	background:blue;
+	
 }
 .ThreeCards div:nth-child(2){
-	background:red;
+	
 }
 .ThreeCards div:nth-child(3){
-	background:green;
+	
 }
 
 
