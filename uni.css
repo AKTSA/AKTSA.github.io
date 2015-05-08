@@ -19,6 +19,23 @@ h2{
 	margin:0;
 }
 
+.ThreeCards{
+	
+}
+.ThreeCards div{
+	width:100px;
+	height:100px;
+	display:inline-block;
+}
+.ThreeCards div:nth-child(1){
+	background:blue;
+}
+.ThreeCards div:nth-child(2){
+	background:red;
+}
+.ThreeCards div:nth-child(3){
+	background:green;
+}
 
 
 
