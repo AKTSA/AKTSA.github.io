@@ -26,7 +26,6 @@ h2{
 }
 
 header{
-    background-color: #F4F4F4;
     padding-bottom: 40px;
 }
 
@@ -57,11 +56,11 @@ header{
 }
 
 section:nth-child(1){
-	
+	background-color: #F4F4F4;
 }
 section:nth-child(2){
 	/*background:linear-gradient(white, #A6C7FF);*/
-	background:purple;
+	background-color: white;
 }
 /*A6C7FF*/
 
