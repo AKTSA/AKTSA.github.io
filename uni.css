@@ -39,7 +39,7 @@ header{
 	margin-left:1vw;
 	margin-right:1vw;
 	display:inline-block;
-	box-shadow: 8px 8px 20px 1px #999;
+	/*box-shadow: 8px 8px 20px 1px #999;*/
 	background:white;
 	text-align:center;
 }
@@ -60,7 +60,8 @@ section:nth-child(1){
 	
 }
 section:nth-child(2){
-	background:linear-gradient(white, #A6C7FF);
+	/*background:linear-gradient(white, #A6C7FF);*/
+	background:purple;
 }
 /*A6C7FF*/
 
