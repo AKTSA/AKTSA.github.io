@@ -30,6 +30,7 @@ h2{
 	display:inline-block;
 	box-shadow: 8px 8px 20px 1px #999;
 	background:white;
+	text-align:center;
 }
 .ThreeCards div:nth-child(1){
 	
@@ -39,6 +40,9 @@ h2{
 }
 .ThreeCards div:nth-child(3){
 	
+}
+.ThreeCards img{
+	max-width:29vw;
 }
 
 section:nth-child(1){
