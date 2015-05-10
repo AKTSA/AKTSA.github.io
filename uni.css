@@ -51,6 +51,7 @@ header{
 	/*box-shadow: 8px 8px 20px 1px #999;*/
 	text-align:center;
     border: none;
+    background-color: #F4F4F4;
 }
 .ThreeCards div:nth-child(1){
 	
