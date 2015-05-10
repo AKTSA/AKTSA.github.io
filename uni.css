@@ -66,15 +66,13 @@ header{
 }
 
 section:nth-child(1){
-	background-color: #F4F4F4;
 }
 section:nth-child(2){
 	/*background:linear-gradient(white, #A6C7FF);*/
-	background-color: white;
+	background-color: #F4F4F4;;
 }
 
 section:nth-child(3){
-	background-color: #F4F4F4;
 }
 /*A6C7FF*/
 
