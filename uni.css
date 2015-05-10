@@ -25,22 +25,32 @@ h2{
 	margin:0;
 }
 
+h3{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;   
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+        font-size: 120%;
+}
+
 header{
     padding-bottom: 40px;
 }
 
 .ThreeCards{
-	margin-top:10px;
+	margin-top:30px;
 }
 .ThreeCards div{
 	width:30vw;
-	height:75vh;
+	height:54vh;
 	margin-left:1vw;
 	margin-right:1vw;
 	display:inline-block;
 	/*box-shadow: 8px 8px 20px 1px #999;*/
-	background:white;
 	text-align:center;
+    border: none;
 }
 .ThreeCards div:nth-child(1){
 	
@@ -61,6 +71,10 @@ section:nth-child(1){
 section:nth-child(2){
 	/*background:linear-gradient(white, #A6C7FF);*/
 	background-color: white;
+}
+
+section:nth-child(3){
+	background-color: #F4F4F4;
 }
 /*A6C7FF*/
 
