@@ -1,22 +1,33 @@
 @import url(http://fonts.googleapis.com/css?family=Audiowide);
 @import url(http://fonts.googleapis.com/css?family=Ubuntu|Nunito:700|Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Raleway:300);
 
 body{
 	text-align:center;
 	font-family: 'Open Sans', sans-serif;
+    padding:  0;
+    margin: 0;
 }
 
 h2, h3, h4, h5, h6{
 	font-family: 'Ubuntu', sans-serif;
 }
 h1{
-	font-family:"Audiowide";
+	font-family:"Audiowide", sans-serif;
 	font-size:1000%;
 	margin:0;
 }
+/* OMG YOU NUBS... IS THIS REALLY HOW YOU CODE? */ 
 h2{
-	font-size:400%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+	font-size:200%;
 	margin:0;
+}
+
+header{
+    background-color: #F4F4F4;
+    padding-bottom: 40px;
 }
 
 .ThreeCards{
