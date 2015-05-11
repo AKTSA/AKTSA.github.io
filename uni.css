@@ -52,6 +52,7 @@ header{
 	text-align:center;
     border: none;
     background-color: white;
+    padding: 4px;
 }
 .ThreeCards div:nth-child(1){
 	
