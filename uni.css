@@ -39,6 +39,13 @@ header{
     padding-bottom: 40px;
 }
 
+.dawg{
+    background-color: #F4F4F4;
+    width: 350px;
+    margin: 20px;
+    text-align: center;
+}
+
 .ThreeCards{
 	margin-top:30px;
 }
@@ -89,5 +96,5 @@ section:nth-child(4){
 	//left:25vw;
 	width:50vw;
     margin: auto;
-    margin-top: 10vw;
+    margin-top: 10%;
 }
