@@ -48,6 +48,7 @@ header{
     height: 400px;
     padding: 10px;
     text-align: center;
+    vertical-align: top;
     -webkit-transition: background-color  0.4s ease-out;
 	-moz-transition: background-color  0.4s ease-out;
 	-o-transition: background-color  0.4s ease-out;
