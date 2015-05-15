@@ -42,9 +42,11 @@ header{
 .dawg{
     background-color: #F4F4F4;
     color: black;
+    display: inline-block;
     width: 350px;
     margin: 20px;
     height: 400px;
+    padding: 10px;
     text-align: center;
     -webkit-transition: background-color  0.4s ease-out;
 	-moz-transition: background-color  0.4s ease-out;
@@ -63,6 +65,33 @@ header{
 	transition: background-color  0.4s ease-out;
 }
 
+.dawg h3{
+ margin-top: 0;   
+}
+
+.scroll{
+    width: 80px;
+    padding: 20px;
+    margin: 0;
+    text-align: center;
+    //height: 26px;
+    background-color: #F4F4F4;
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.holder{   
+    max-width: 1200px;
+    margin: auto;
+    overflow-x: auto;
+}
+
+.cardCon{
+    min-width: 1200px;
+    height: 450px;
+}
+
 .ThreeCards{
 	margin-top:30px;
 }
@@ -71,7 +100,7 @@ header{
 	height:54vh;
 	margin-left:1vw;
 	margin-right:1vw;
-	display:inline-block;
+	display:inline;
 	/*box-shadow: 8px 8px 20px 1px #999;*/
 	text-align:center;
     border: none;
