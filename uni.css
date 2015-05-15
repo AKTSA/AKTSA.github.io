@@ -93,6 +93,29 @@ header{
     height: 450px;
 }
 
+/* Responsive Stuff */ 
+
+@media  all and (min-width: 0px) {
+    .holder{ 
+        width: 410px;
+        //background: blue;
+    }
+}
+
+@media  all and (min-width: 1000px){
+    .holder{ 
+        width: 800px;
+        //background: red;
+    }
+}
+
+@media  all and (min-width: 1200px){
+    .holder{ 
+        width: 1200px;
+        //background: red;
+    }
+}
+
 .ThreeCards{
 	margin-top:30px;
 }
