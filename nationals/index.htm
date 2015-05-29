@@ -1,0 +1,86 @@
+<link href='http://fonts.googleapis.com/css?family=Rajdhani:300,400|Lato:300|Quicksand:300|Source+Code+Pro:300,400|Jura:300' rel='stylesheet' type='text/css'>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+<style>
+.Holder{
+display: inline-table;
+}
+
+.subt{
+font-size: 20px;
+text-align: right;
+}
+</style>
+
+<script>
+var end = new Date('06/28/2015 07:1 PM');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+		
+		if(days < 10)
+		{
+			days = "0" + days;
+		}
+		
+		if(hours < 10)
+		{
+			hours = "0" + hours;
+		}
+		
+		if(minutes < 10)
+		{
+			minutes = "0" + minutes;
+		}
+		
+		if(seconds < 10)
+		{
+			seconds = "0" + seconds;
+		}
+
+        document.getElementById('Days').innerHTML = days;
+        document.getElementById('Hours').innerHTML = hours;
+        document.getElementById('Minutes').innerHTML = minutes;
+        document.getElementById('Seconds').innerHTML = seconds;
+    }
+
+    timer = setInterval(showRemaining, 1000);
+</script>
+
+<center> <div id="countdown" style="font-family: 'Lato', sans-serif; font-weight: 300; font-size: 100px;">
+<h1 style="margin-top: 20%;"><b style="color:red; font-weight: 300;"> TSA </b> Nationals Countdown </h1>
+<div class="Holder"> <div id="Days"></div> <div class="subt"> Days </div> </div>
+<div class="Holder"> : </div>
+<div class="Holder"> <div id="Hours"></div> <div class="subt"> Hours </div> </div>
+<div class="Holder"> : </div>
+<div class="Holder"> <div id="Minutes"></div> <div class="subt"> Minutes </div> </div>
+<div class="Holder"> : </div>
+<div class="Holder"> <div id="Seconds"></div> <div class="subt"> Seconds </div> </div>
+<h1 style="margin-top: 10%;"> #ThisIsTSA </h1>
+</div> </center>
