@@ -144,17 +144,10 @@ header{
 	max-width:29vw;
 }
 
-section:nth-child(1){
+section:nth-child(odd){
+	background:white;
 }
-section:nth-child(2){
-    background-color: #F4F4F4;
-}
-section:nth-child(3){
-	/*background:linear-gradient(white, #A6C7FF);*/
-	background-color: white;
-}
-
-section:nth-child(4){
+section:nth-child(even){
     background-color: #F4F4F4;
 }
 /*A6C7FF*/
