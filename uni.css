@@ -66,6 +66,14 @@ header{
 	transition: background-color  0.4s ease-out;
 }
 
+.cheapcardfix .dawg{
+	background:white;
+}
+.cheapcardfix .dawg:hover{
+	
+    background-color: #8e44ad;
+}
+
 .dawg h3{
  margin-top: 0;   
 }
