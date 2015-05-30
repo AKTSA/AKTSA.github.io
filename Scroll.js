@@ -3,11 +3,11 @@
 
         $('.left-button').click(function () {
            var leftPos = outer.scrollLeft();
-           outer.animate({ scrollLeft: leftPos - 400 }, 800);
+           outer.animate({ scrollLeft: leftPos - 400 }, 1000);
         });
 
         $('.right-button').click(function () {
            var leftPos = outer.scrollLeft();
-           outer.animate({ scrollLeft: leftPos + 400 }, 800);
+           outer.animate({ scrollLeft: leftPos + 400 }, 1000);
         });
      });
