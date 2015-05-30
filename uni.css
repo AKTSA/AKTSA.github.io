@@ -85,7 +85,7 @@ header{
 .holder{   
     max-width: 1200px;
     margin: auto;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .cardCon{
@@ -107,12 +107,18 @@ header{
         width: 800px;
         //background: red;
     }
+    .bu{
+        display: normal;
+    }
 }
 
 @media  all and (min-width: 1200px){
     .holder{ 
         width: 1200px;
         //background: red;
+    }
+    .bu{
+        display: none;
     }
 }
 
@@ -160,4 +166,14 @@ section:nth-child(even){
 	width:50vw;
     margin: auto;
     margin-top: 10%;
+}
+
+.ScrollButton{
+    background: #2980b9;
+    color: white;
+    position: absolute;
+    padding: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
 }
