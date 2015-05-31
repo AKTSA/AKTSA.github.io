@@ -1,12 +1,12 @@
      $(function () {
-        var outer = $('.holder1');
+        var outer = $('.holder2');
 
-        $('.left-button1').click(function () {
+        $('.left-button2').click(function () {
            var leftPos = outer.scrollLeft();
            outer.animate({ scrollLeft: leftPos - 400 }, 1000);
         });
 
-        $('.right-button1').click(function () {
+        $('.right-button2').click(function () {
            var leftPos = outer.scrollLeft();
            outer.animate({ scrollLeft: leftPos + 400 }, 1000);
         });
