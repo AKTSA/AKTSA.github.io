@@ -35,9 +35,6 @@ p{
         font-size: 120%;
 }
 
-header{
-    padding-bottom: 40px;
-}
 
 .dawg{
     background-color: #F4F4F4;
@@ -180,12 +177,9 @@ section:nth-child(even){
 
 .ScrollDown{
 	font-style:italic;
-	//position:absolute;
-	//bottom:40px;
-	//left:25vw;
-	width:50vw;
-    margin: auto;
-    margin-top: 10%;
+	position:absolute;
+	bottom:25px;
+	left:25vw;
 }
 
 .ScrollButton{
