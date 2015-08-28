@@ -122,7 +122,12 @@
 			</section>-->
 
 
-			<script>$(document).ready(function() {$('#fullpage').fullpage();});</script>
+			<script>$(document).ready(function() {$('#fullpage').fullpage({
+				navigation: true,
+				navigationPosition: 'right',
+				navigationTooltips: ['Home', 'Countdown', 'About', 'Community Service', 'Projects', 'Personnel'],
+				showActiveTooltip: false
+			});});</script>
 	        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 		</div>
 	</body>
