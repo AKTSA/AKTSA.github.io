@@ -74,6 +74,14 @@ header{
     background-color: #8e44ad;
 }
 
+.holder2 .cheapcardfix{
+	
+    background-color: #8e44ad !important;
+}
+.holder2 .cheapcardfix:hover{
+	background:white !important;
+}
+
 .dawg h3{
  margin-top: 0;   
 }
