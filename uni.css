@@ -220,7 +220,7 @@ section:nth-child(even){
 	padding:10px;
 	transition:all 0.4s ease;
 }
-..BigButton:hover{
+.BigButton:hover{
 	background:white;
 	color:black;
 }
