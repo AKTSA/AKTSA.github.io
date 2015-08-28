@@ -199,3 +199,8 @@ section:nth-child(even){
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
 }
+
+.fp-tooltip{
+	color:black;
+	text-shadow:0px 0px 10px #fff;
+}
