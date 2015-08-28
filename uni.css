@@ -17,7 +17,7 @@ h1{
 	font-size:1000%;
 	margin:0;
 }
-/* OMG YOU NUBS... IS THIS REALLY HOW YOU CODE? */ 
+
 h2{
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
@@ -73,6 +73,21 @@ header{
 	
     background-color: #8e44ad;
 }
+
+
+
+
+
+.holder2 .cheapcardfix .dawg{
+	background:#F4F4F4 !important;
+}
+.holder2 .cheapcardfix .dawg:hover{
+	
+    background-color: white !important;
+}
+
+
+
 
 .dawg h3{
  margin-top: 0;   
