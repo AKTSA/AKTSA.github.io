@@ -201,6 +201,6 @@ section:nth-child(even){
 }
 
 .fp-tooltip{
-	color:black;
+	color:black !important;
 	text-shadow:0px 0px 10px #fff;
 }
