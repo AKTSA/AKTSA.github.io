@@ -9,6 +9,8 @@ body{
     margin: 0;
 }
 
+
+
 h2, h3, h4, h5, h6{
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -17,14 +19,12 @@ h1{
 	font-size:1000%;
 	margin:0;
 }
-
 h2{
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
 	font-size:200%;
 	margin:0;
 }
-
 h3{
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;   
@@ -35,6 +35,23 @@ p{
         font-size: 120%;
 }
 
+
+
+section:nth-child(odd){
+	background:white;
+}
+section:nth-child(even){
+    background-color: #F4F4F4;
+}
+
+
+
+
+/*
+ *  Cards
+ */
+
+/*Code was written by Dmitry and is incredibly messy, broken, and hack-y. Recommend caution if making changes.*/
 
 .dawg{
     background-color: #F4F4F4;
@@ -67,34 +84,15 @@ p{
 	background:white;
 }
 .cheapcardfix .dawg:hover{
-	
     background-color: #8e44ad !important;
+    /*Overrides holder 2 cheapcardfix background value*/
 }
-
-
-
-
-
 .holder2 .cheapcardfix .dawg{
 	background:#F4F4F4;
 }
 
-
-
 .dawg h3{
  margin-top: 0;   
-}
-
-.scroll{
-    width: 80px;
-    padding: 20px;
-    margin: 0;
-    text-align: center;
-    //height: 26px;
-    background-color: #F4F4F4;
-    font-family: 'Raleway', sans-serif;
-    font-size: 30px;
-    font-weight: 300;
 }
 
 .holder{   
@@ -108,7 +106,31 @@ p{
     height: 450px;
 }
 
-/* Responsive Stuff */ 
+/*Additional Cards Code, slightly less messy*/
+.ThreeCards{
+	margin-top:30px;
+}
+.ThreeCards div{
+	width:30vw;
+	height:54vh;
+	margin-left:1vw;
+	margin-right:1vw;
+	display:inline;
+	text-align:center;
+    border: none;
+    background-color: #F4F4F4;
+    padding: 4px;
+}
+.ThreeCards img{
+	max-width:29vw;
+}
+
+
+
+
+/*
+    Responsive Stuff 
+*/ 
 
 @media  all and (min-width: 0px) {
     .holder{ 
@@ -139,41 +161,14 @@ p{
     }
 }
 
-.ThreeCards{
-	margin-top:30px;
-}
-.ThreeCards div{
-	width:30vw;
-	height:54vh;
-	margin-left:1vw;
-	margin-right:1vw;
-	display:inline;
-	/*box-shadow: 8px 8px 20px 1px #999;*/
-	text-align:center;
-    border: none;
-    background-color: #F4F4F4;
-    padding: 4px;
-}
-.ThreeCards div:nth-child(1){
-	
-}
-.ThreeCards div:nth-child(2){
-	
-}
-.ThreeCards div:nth-child(3){
-	
-}
-.ThreeCards img{
-	max-width:29vw;
-}
 
-section:nth-child(odd){
-	background:white;
-}
-section:nth-child(even){
-    background-color: #F4F4F4;
-}
-/*A6C7FF*/
+
+
+
+/*
+ * Additional Small Things
+ */
+
 
 .ScrollDown{
 	font-style:italic;
@@ -184,7 +179,6 @@ section:nth-child(even){
 }
 
 .ScrollButton{
-    //background: #2980b9;
     color: gray;
     cursor: pointer;
     opacity: 0.6;
@@ -205,12 +199,6 @@ section:nth-child(even){
 	text-shadow:0px 0px 10px #fff;
 }
 
-
-/*
- * ===========================
- * END OF DMITRY'S MESSY STUFF
- * ===========================
- */
 
 
 .BigButton{

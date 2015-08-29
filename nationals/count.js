@@ -1,5 +1,4 @@
 var end = new Date('09/04/2015 2:15 PM');
-//var end = new Date('05/29/2015 12:05 PM');
     var _second = 1000;
     var _minute = _second * 60;
     var _hour = _minute * 60;
@@ -14,7 +13,7 @@ var end = new Date('09/04/2015 2:15 PM');
         if (distance < 0) {
 
             clearInterval(timer);
-            document.getElementById('countdown').innerHTML = 'Nationals Happening!';
+            document.getElementById('countdown').innerHTML = 'First Meeting Happening!';
 
             return;
         }
