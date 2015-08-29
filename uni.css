@@ -213,3 +213,26 @@ section:nth-child(even){
 	color:black;
 	text-decoration:none !important;
 }
+
+.BotLeftBox{
+    position:absolute;
+    background:rgba(44, 62, 80,0.8);
+    color:white;
+    bottom:2vh;
+    left:-100%;
+    transition:all 1s ease-out;
+    padding:30px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    font-size:200%;
+    display:block;
+}
+.BotLeftBox img{
+    max-width:10vw;
+}
+.BotLeftBox:hover{
+    left: -0.5% !important;
+    transition: 0.2s ease;
+    color:white;
+    text-decoration:none;
+}
