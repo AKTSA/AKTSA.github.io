@@ -170,13 +170,13 @@ section:nth-child(even){
  */
 
 
-.ScrollDown{
+/*.ScrollDown{
 	font-style:italic;
 	position:absolute;
 	bottom:25px;
 	left:25vw;
 	width:50vw;
-}
+}*/
 
 .ScrollButton{
     color: gray;

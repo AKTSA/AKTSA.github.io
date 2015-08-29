@@ -276,7 +276,7 @@
         /**
         * Moves the page up one section.
         */
-        FP.moveSectionUp = function(){
+        FP.moveSectionUp = function(){                    return;        //THESE TWO FUNCTIONS WERE RETURNED BY ME BECAUSE THEY WERE BREAKING THE SITE AND WERE NOT PART OF THE ORIGINAL CODE -Xing
             var prev = $(SECTION_ACTIVE_SEL).prev(SECTION_SEL);
 
             //looping to the bottom if there's no more sections above
@@ -292,7 +292,7 @@
         /**
         * Moves the page down one section.
         */
-        FP.moveSectionDown = function (){
+        FP.moveSectionDown = function (){   return;                     //THESE TWO FUNCTIONS WERE RETURNED BY ME BECAUSE THEY WERE BREAKING THE SITE AND WERE NOT PART OF THE ORIGINAL CODE -Xing
             var next = $(SECTION_ACTIVE_SEL).next(SECTION_SEL);
 
             //looping to the top if there's no more sections below
