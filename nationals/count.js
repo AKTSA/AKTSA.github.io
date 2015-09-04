@@ -21,7 +21,7 @@ var end = new Date(args.substring(0, 19));
         if (distance < 0) {
 
             clearInterval(timer);
-            document.getElementById('countdown').innerHTML = 'Meeting Happening Right Now';
+            document.getElementById('countdown').innerHTML = "Let's Roll";
 
             return;
         }
