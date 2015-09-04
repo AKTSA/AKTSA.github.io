@@ -1,4 +1,4 @@
-var end = new Date('09/04/2015 2:30 PM');
+var end = new Date('09/16/2015 2:30 PM');
     var _second = 1000;
     var _minute = _second * 60;
     var _hour = _minute * 60;
@@ -13,7 +13,7 @@ var end = new Date('09/04/2015 2:30 PM');
         if (distance < 0) {
 
             clearInterval(timer);
-            document.getElementById('countdown').innerHTML = 'Welcome to TSA!';
+            document.getElementById('countdown').innerHTML = 'Meeting Happening Right Now';
 
             return;
         }
