@@ -207,6 +207,7 @@ section:nth-child(even){
 	color:white;
 	padding:10px;
 	transition:all 0.4s ease;
+    margin-bottom:10px;
 }
 .BigButton:hover{
 	background:#F4F4F4;
