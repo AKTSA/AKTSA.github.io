@@ -1,4 +1,12 @@
-var end = new Date('09/16/2015 2:30 PM');
+var args = location.search.substring(1).replace(/%20/g, " ");
+args = args.replace(/%3C/g, "<");
+args = args.replace(/%3E/g, ">");
+
+
+//"09/16/2015 02:30 PM"
+//alert(args.substring(19));
+document.getElementById("Description").innerHTML = args.substring(19);
+var end = new Date(args.substring(0, 19));
     var _second = 1000;
     var _minute = _second * 60;
     var _hour = _minute * 60;
