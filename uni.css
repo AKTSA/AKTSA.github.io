@@ -283,16 +283,15 @@ section:nth-child(even){
 	-webkit-transition: all 0.5s ease;
 	        transition: all 0.5s ease;
 
-	-webkit-transform:scale(1.5);
+
+	
+	top:0;
+}
+.HoverZoom .Grid6 td .BImg:hover{
+		-webkit-transform:scale(1.5);
 	-ms-transform:scale(1.5);
 	    transform:scale(1.5);
 	top:-12.5%;
-}
-.HoverZoom .Grid6 td .BImg:hover{
-    	top:0;
-    -webkit-transform:scale(1);
-	-ms-transform:scale(1);
-	    transform:scale(1);
 }
 .HoverZoom .Grid6 td .BImg img{
 	max-height:50vh;
@@ -306,25 +305,25 @@ section:nth-child(even){
 	background:rgba(0, 0, 0, 0.4);
 	pointer-events: none;
 	top: 50%;
-	/*-webkit-transform: translateY(-50%)scale(1.5);
+	-webkit-transform: translateY(-50%)scale(1.5);
 	-ms-transform: translateY(-50%)scale(1.5);
 	    transform: translateY(-50%)scale(1.5);
-	opacity:0;*/
+	opacity:0;
 	-webkit-transition: all 0.7s ease;
 	        transition: all 0.7s ease;
     
-	opacity:1;
-	-webkit-transform:translateY(-50%)scale(1);
-	-ms-transform:translateY(-50%)scale(1);
-	    transform:translateY(-50%)scale(1);    
-}
-.HoverZoom .Grid6 td:hover .BText{
 	/*opacity:1;
 	-webkit-transform:translateY(-50%)scale(1);
 	-ms-transform:translateY(-50%)scale(1);
-	    transform:translateY(-50%)scale(1);*/
-    -webkit-transform: translateY(-50%)scale(1.5);
+	    transform:translateY(-50%)scale(1);*/    
+}
+.HoverZoom .Grid6 td:hover .BText{
+	opacity:1;
+	-webkit-transform:translateY(-50%)scale(1);
+	-ms-transform:translateY(-50%)scale(1);
+	    transform:translateY(-50%)scale(1);
+    /*-webkit-transform: translateY(-50%)scale(1.5);
 	-ms-transform: translateY(-50%)scale(1.5);
 	    transform: translateY(-50%)scale(1.5);
-    opacity:0;
+    opacity:0;*/
 }
