@@ -104,47 +104,51 @@
 			
 			<!--Projects-->
 			<section class="section HoverZoom">
-					<table class="Grid6">
-						<tr style="height:10vh;">
-							<td colspan="3" style=""><h2 style="padding:0;margin:0;">Student Projects</h2></td>
-						</tr>
-						<tr>
-							<td>
-								<div class="BText"><h3>Fashion Design</h3><p>The Technology Student Association at Ardrey Kell creates and designs new trends in fashion..</p></div>
-								<div class="BImg" style="background-image:url('/images/fdesign1.jpg');"></div>
-							</td>
-							<td>
-								<div class="BText"><h3>VEX Robotics</h3><p>The Technology Student Association at Ardrey Kell builds robots to perform specific tasks.</p></div>
-								<div class="BImg" style="background-image:url('/images/IMG_20150322_160628.jpg');"></div>
-							</td>
-							<td>
-								<div class="BText"><h3>Campus Cleanup</h3><p>The Technology Student Association at Ardrey Kell is always helping the school out. One of the many ways we do this is with a Campus Clean up.</p></div>
-								<div class="BImg" style="background-image:url('/images/cs2.jpg');"></div>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<div class="BText"><h3>Animatronics</h3><p>The Technology Student Association at Ardrey Kell makes robot bunnies that help teach kids how to brush their teeth in a child friendy way.</p></div>
-								<div class="BImg" style="background-image:url('/images/cs3.jpg');"></div>
-							</td>
-							<td>
-								<div class="BText"><h3>2<sup>nd</sup> Harvest Food Bank</h3><p>The Technology Student Association at Ardrey Kell participates in helping the Second Harvest Food Bank collect money.</p></div>
-								<div class="BImg" style="background-image:url('/images/cs1.jpg');"></div>
-							</td>
-							<td>
-								<div class="BText"><h3>Webmasters</h3><p>Students from AK TSA create a website promoting awareness of eco-friendly recycling of electronic products. Click to check it out.</p></div>
-								<a href="http://cleantech4us.github.io/"><div class="BImg" style="background-image:url('/images/Clean.png');"></div></a>
-							</td>
-						</tr>
-					</table>
+                
+                <div id="BigPicDisp" onclick="this.style.left='-100vw';this.style.opacity='0';this.style.transform='rotateY(-90deg)';">
+                </div>
+                
+				<table class="Grid6">
+					<tr style="height:10vh;">
+						<td colspan="3" style=""><h2 style="padding:0;margin:0;">Student Projects</h2></td>
+					</tr>
+					<tr>
+						<td onclick="SetBigPic(1);">
+							<div class="BText"><h3>Fashion Design</h3><p>The Technology Student Association at Ardrey Kell creates and designs new trends in fashion..</p></div>
+							<div class="BImg" style="background-image:url('/images/fdesign1.jpg');"></div>
+						</td>
+						<td onclick="SetBigPic(2);">
+							<div class="BText"><h3>VEX Robotics</h3><p>The Technology Student Association at Ardrey Kell builds robots to perform specific tasks.</p></div>
+							<div class="BImg" style="background-image:url('/images/IMG_20150322_160628.jpg');"></div>
+						</td>
+						<td onclick="SetBigPic(3);">
+							<div class="BText"><h3>Campus Cleanup</h3><p>The Technology Student Association at Ardrey Kell is always helping the school out. One of the many ways we do this is with a Campus Clean up.</p></div>
+							<div class="BImg" style="background-image:url('/images/cs2.jpg');"></div>
+						</td>
+					</tr>
+					<tr>
+						<td onclick="SetBigPic(4);">
+							<div class="BText"><h3>Animatronics</h3><p>The Technology Student Association at Ardrey Kell makes robot bunnies that help teach kids how to brush their teeth in a child friendy way.</p></div>
+							<div class="BImg" style="background-image:url('/images/cs3.jpg');"></div>
+						</td>
+						<td onclick="SetBigPic(5);">
+							<div class="BText"><h3>2<sup>nd</sup> Harvest Food Bank</h3><p>The Technology Student Association at Ardrey Kell participates in helping the Second Harvest Food Bank collect money.</p></div>
+							<div class="BImg" style="background-image:url('/images/cs1.jpg');"></div>
+						</td>
+						<td>
+							<div class="BText"><h3>Webmasters</h3><p>Students from AK TSA create a website promoting awareness of eco-friendly recycling of electronic products. Click to check it out.</p></div>
+							<a href="http://cleantech4us.github.io/"><div class="BImg" style="background-image:url('/images/Clean.png');"></div></a>
+						</td>
+					</tr>
+				</table>
 				
 			</section>
 			
-            <section class="section">
+            <section class="section" style="overflow-x:hidden;">
 				<h2>
 					Meeting Dates
 				</h2>
-				<p>
+				<!--<p>
 					Mandatory TSA meetings will take place on the following dates.<br /> Note that we reserve the right to add additional emergency meetings as needed.
 				</p>
 				<div style="display:inline-block;">
@@ -159,7 +163,29 @@
 						<li>April 6, 2016</li>
 						<li>May 4, 2016</li>
                     </ul>
-                </div>
+                </div>-->
+                <table id="UpcomingMeetings">
+                    <tr id="NextMeeting">
+                        <th>Next Meeting</th>
+                        <td>September 16, 2015</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th rowspan="8">Upcoming Meetings</th>
+                        <td>October 14, 2015</td>
+                        <td rowspan="8"></td>
+                    </tr>
+					<tr><td>November 4, 2015</td></tr>
+					<tr><td>December 2, 2015</td></tr>
+					<tr><td>January 6, 2016</td></tr>
+					<tr><td>February 3, 2016</td></tr>
+					<tr><td>March 2, 2016</td></tr>
+					<tr><td>April 6, 2016</td></tr>
+					<tr><td>May 4, 2016</td></tr>
+                    
+                </table>
+                
+                <p>Note that additional emergency meetings may be called at any time.</p>
 			</section>
 			
 			<section class="section">
@@ -171,8 +197,8 @@
 				<h3>NC TSA State Conference</h3>
 				<p>April 14 - 16, 2016 in Greensboro</p>
                 
-				<h3>TSA National Conference</h3>
-				<p>June 28 - July 2, 2016 in Nashville; #Thisis<strong style="color:#c0392b;">TSA</strong></p>
+				<h3><img src="http://mhstech.org/images/TSA%20LOGO2.png" style="max-height:55px;position:relative;top:-2px;" alt="TSA" /> National Conference</h3>
+				<p style="position:relative;top:-10px;">June 28 - July 2, 2016 in Nashville; #Thisis<strong style="color:#c0392b;">TSA</strong></p>
 			</section>
             
 	        <section class="section">
@@ -211,6 +237,28 @@
                 setTimeout(function(){ 
                     document.getElementsByClassName("BotLeftBox")[0].style.left = "0";
                 }, 100);
+                
+                function SetBigPic(arg){
+                    switch (arg){
+                        case 1:
+                            document.getElementById("BigPicDisp").style.backgroundImage = 'url("/images/fdesign1.jpg")';
+                            break;
+                        case 2:
+                            document.getElementById("BigPicDisp").style.backgroundImage = 'url("/images/IMG_20150322_160628.jpg")';
+                            break;
+                        case 3:
+                            document.getElementById("BigPicDisp").style.backgroundImage = 'url("/images/cs2.jpg")';
+                            break;
+                        case 4:
+                            document.getElementById("BigPicDisp").style.backgroundImage = 'url("/images/cs3.jpg")';
+                            break;
+                        case 5:
+                            document.getElementById("BigPicDisp").style.backgroundImage = 'url("/images/cs1.jpg")';
+                    }
+                    document.getElementById("BigPicDisp").style.left="0";
+                    document.getElementById("BigPicDisp").style.opacity="1";
+                    document.getElementById("BigPicDisp").style.transform="rotateY(0deg)";
+                }
                 
             </script>
 	        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>

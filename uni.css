@@ -247,12 +247,12 @@ section:nth-child(even){
 	height:80vh;
 	position:relative;
 	top:8vh;
+    
 }
 .Grid6 td{
 	overflow:hidden;
 	border-style:solid;
 	border-color:black;
-	background:white;
 	padding:0;
 	position:relative;
     width:33vw;
@@ -277,13 +277,13 @@ section:nth-child(even){
 
 	margin:0 auto;
 	width:100%;
-	cursor:auto;
+	cursor:pointer;
 	height:100%;
 	background-size:cover;
 	background-repeat:no-repeat;
 	-webkit-transition: all 0.5s ease;
 	        transition: all 0.5s ease;
-
+    background-position:50% 50%;
 
 	
 	top:0;
@@ -327,4 +327,63 @@ section:nth-child(even){
 	-ms-transform: translateY(-50%)scale(1.5);
 	    transform: translateY(-50%)scale(1.5);
     opacity:0;*/
+}
+
+
+code{
+    background:#90C695;
+}
+
+
+
+#UpcomingMeetings{
+    display:inline-block;
+    margin-top:25px;
+    margin-bottom:5px;
+    padding-bottom:10px;
+    background:#95a5a6;
+}
+#UpcomingMeetings th{
+    font-size:150%;
+    text-align:right;
+    padding-right:40px;
+}
+#UpcomingMeetings td, th{
+    padding:10px;
+    min-width:34vw;
+    text-align:center;
+}
+#UpcomingMeetings #NextMeeting{
+    background:#2c3e50;
+    color:white;
+}
+#UpcomingMeetings #NextMeeting td{
+    padding:50px;
+}
+#UpcomingMeetings tr:nth-child(odd){
+    background:#2c3e50;
+    color:white;
+}
+#UpcomingMeetings tr:nth-child(even){
+    background:#95a5a6
+}
+
+
+
+#BigPicDisp{
+    position:absolute;
+    width:98vw;
+    height:100vh;
+    z-index:6;
+    left:-100vw;
+    transition: left 1s ease, opacity 1s ease, transform 1s ease;
+    background-image: url("/images/fdesign1.jpg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: 50% 50%;
+    padding:0;
+    margin:0;
+    cursor:pointer;
+    opacity:0;
+    transform: rotateY(-90deg);
 }
