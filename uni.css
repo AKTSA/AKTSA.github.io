@@ -342,6 +342,8 @@ code{
     margin-bottom:5px;
     padding-bottom:10px;
     background:#95a5a6;
+    max-width:100%;
+    overflow-x:hidden !important;
 }
 #UpcomingMeetings th{
     font-size:150%;
