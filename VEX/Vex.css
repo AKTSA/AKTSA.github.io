@@ -43,7 +43,7 @@ section{
 	text-align:center;
 }
 section:nth-child(1){
-	/*background:#7A52CC;*/
+	background-color:black;
     background-image:url("/images/VEXbg.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -111,5 +111,5 @@ header{
 }
 #TitleBG2{   
     pointer-events:none;
-    background:radial-gradient(black, rgba(0,0,0,0), rgba(0,0,0,0));
+    background:radial-gradient(black, rgba(0, 0, 0, 0.7), rgba(0,0,0,0), rgba(0,0,0,0));
 }
