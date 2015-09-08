@@ -30,7 +30,8 @@ h1{
     font-family: 'Lato', sans-serif; 
     font-size: 100px; 
     font-weight: 300; 
-    max-width: 792px; 
+/*    max-width: 792px; */
+    max-width:850px;
     padding-bottom: 20px;
         position: absolute;
         top: 50%;
@@ -83,7 +84,7 @@ h1{
     }
 }
 
-@media  all and (max-width: 800px){
+@media  all and (max-width: 850px){
     .lose1{
         display: none;
     }
