@@ -44,6 +44,7 @@ section:nth-child(even){
     background-color: #F4F4F4;
 }
 section:nth-child(1){
+	background-color:black;
     background-image:url("/images/nats.jpg");
     background-size:cover;
     background-position:50% 50%;
