@@ -114,7 +114,9 @@ header{
     background:radial-gradient(black, rgba(0, 0, 0, 0.7), rgba(0,0,0,0), rgba(0,0,0,0));
 }
 
-
+#AttendRank{
+	display:inline-block;
+}
 #AttendRank li{
 	padding:10px;
 	text-align:center;
