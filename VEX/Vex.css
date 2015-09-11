@@ -113,3 +113,17 @@ header{
     pointer-events:none;
     background:radial-gradient(black, rgba(0, 0, 0, 0.7), rgba(0,0,0,0), rgba(0,0,0,0));
 }
+
+
+#AttendRank li{
+	padding:10px;
+	text-align:center;
+}
+#AttendRank li:nth-child(odd){
+	background:#34495e;
+	color:white;
+}
+#AttendRank li:nth-child(even){
+	background:#bdc3c7;
+	color:black;
+}
