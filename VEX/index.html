@@ -9,8 +9,20 @@
         <script type="text/javascript" src="/JSDep/jquery.fullPage.js"></script>
 		<script>
 			var Rankings = [
-				[Adithya Singh, Aviral Agarwal, Charles Yang, Chris Peterson, Eli Hubble, Joseph Yuen, Leon Bauer, Michael Xing, Mitchell Fine, Nick Umling, Omar Salem, Sam Unferth, Sarosh Santosh, Sujan Guditi],
-				[1,2,2,1,2,2,2,2,1,2,2,1,2,1]
+				[Adithya Singh,1],
+				[Aviral Agarwal,2],
+				[Charles Yang,2],
+				[Chris Peterson,1],
+				[Eli Hubble,2],
+				[Joseph Yuen,2],
+				[Leon Bauer,2],
+				[Michael Xing,2],
+				[Mitchell Fine,1],
+				[Nick Umling,2],
+				[Omar Salem,2],
+				[Sam Unferth,1],
+				[Sarosh Santosh,2],
+				[Sujan Guditi,1]
 			];
 		</script>
     </head>
@@ -45,11 +57,7 @@
 			<section class="section">
 				<h2>Attendance Rankings</h2>
 				<ol id="AttendRank">
-					<li>This section is</li>
-					<li>Temporarily empty</li>
-					<li>And will be populated</li>
-					<li>Soon.</li>
-					<li>Stay tuned.</li>
+					
 				</ol>
 			</section>
 			
@@ -111,6 +119,23 @@
 			    }
 			}
 			
+			
+			Rankings.sort(sortFunction);
+
+			function sortFunction(a, b) {
+			    if (a[0] === b[0]) {
+			        return 0;
+			    }
+			    else {
+			        return (a[0] < b[0]) ? -1 : 1;
+			    }
+			}
+			
+			for(i = 0; i < Rankings.length; i++){
+				var NewListItem = document.createElement("LI");
+				NewListItem.textContent = Rankings[i][0];
+				document.getElementById("AttendRank").appendChild(NewListItem);
+			}
 			
 			
         </script>
