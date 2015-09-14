@@ -7,24 +7,6 @@
 		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script type="text/javascript" src="/JSDep/jquery.fullPage.js"></script>
-		<script>
-			var Rankings = [
-				[Adithya Singh,1],
-				[Aviral Agarwal,2],
-				[Charles Yang,2],
-				[Chris Peterson,1],
-				[Eli Hubble,2],
-				[Joseph Yuen,2],
-				[Leon Bauer,2],
-				[Michael Xing,2],
-				[Mitchell Fine,1],
-				[Nick Umling,2],
-				[Omar Salem,2],
-				[Sam Unferth,1],
-				[Sarosh Santosh,2],
-				[Sujan Guditi,1]
-			];
-		</script>
     </head>
     <body>
         <div id="fullpage">
@@ -86,7 +68,7 @@
             $(document).ready(function() {$('#fullpage').fullpage({
 				navigation: true,
 				navigationPosition: 'right',
-				navigationTooltips: ['Home', 'Competition', 'Meetings', 'Countdown', 'Information'],
+				navigationTooltips: ['Home', 'Competition', 'Meetings', 'Attendance', 'Countdown', 'Information'],
 				showActiveTooltip: false,
 				autoScrolling: false,
 				fitToSection: false
@@ -120,20 +102,39 @@
 			}
 			
 			
-			Rankings.sort(sortFunction);
+			
+			var attendRankings = [
+				["Adithya Singh",1],
+				["Aviral Agarwal",2],
+				["Charles Yang",2],
+				["Chris Peterson",1],
+				["Eli Hubble",2],
+				["Joseph Yuen",2],
+				["Leon Bauer",2],
+				["Michael Xing",2],
+				["Mitchell Fine",1],
+				["Nick Umling",2],
+				["Omar Salem",2],
+				["Sam Unferth",1],
+				["Sarosh Santosh",2],
+				["Sujan Guditi",1]
+			];
+			
+			
+			attendRankings.sort(sortFunction);
 
 			function sortFunction(a, b) {
-			    if (a[0] === b[0]) {
+			    if (a[1] === b[1]) {
 			        return 0;
 			    }
 			    else {
-			        return (a[0] < b[0]) ? -1 : 1;
+			        return (a[1] > b[1]) ? -1 : 1;
 			    }
 			}
 			
-			for(i = 0; i < Rankings.length; i++){
+			for(i = 0; i < attendRankings.length; i++){
 				var NewListItem = document.createElement("LI");
-				NewListItem.textContent = Rankings[i][0];
+				NewListItem.textContent = attendRankings[i][0] + " (" + attendRankings[i][1] + ")";
 				document.getElementById("AttendRank").appendChild(NewListItem);
 			}
 			

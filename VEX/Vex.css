@@ -116,6 +116,9 @@ header{
 
 #AttendRank{
 	display:inline-block;
+	list-style-type: none;
+	padding:0;
+	margin:0;
 }
 #AttendRank li{
 	padding:10px;
