@@ -2,6 +2,10 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu|Nunito:700|Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
 
+body{
+	margin:0;
+}
+
 
 h1, h2, h3, h4, h5, h6{
 	font-family: 'Ubuntu', sans-serif;
@@ -19,15 +23,16 @@ header h2{
 }
 
 .Panel{
-	width:10vw;
+	width:10%;
 	transition:all 1s ease;
 	height:100vh;
 	display:inline-block;
 	margin:0;
 	border:0;
+	overflow:hidden;
 }
 .Panel:hover{
-	width:70vw;
+	width:70%;
 }
 
 .Panel:nth-child(even){
