@@ -338,17 +338,12 @@ section:nth-child(1){
 }
 
 
-code{
-    background:#90C695;
-}
-
-
 
 #UpcomingMeetings{
     display:inline-block;
     margin-top:25px;
     margin-bottom:5px;
-    padding-bottom:10px;
+    /*padding-bottom:10px;			/*THIS PADDING GETS REVERSED WITH EVERY PASSING MEETING*/
     background:#bdc3c7;
     max-width:100%;
     overflow-x:hidden !important;
