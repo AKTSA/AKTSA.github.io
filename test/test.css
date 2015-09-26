@@ -94,13 +94,18 @@ Colors and/or backgrounds
     z-index:0;
     width:100%;
     height:100%;
-    background:radial-gradient(rgba(0,0,0,0.4), black);
+    background:radial-gradient(black, rgba(0,0,0,0));
     left:0;
     top:0;
   -webkit-transform-origin: 100% 0;
   -ms-transform-origin: 100% 0;
   transform-origin: 100% 0;
   transform: skew(-3deg);
+    opacity:0;
+    transition: all 0.5s ease;
+}
+.Panel:hover .TitleBG{
+    opacity:1;
 }
 header{
 	position:relative;
