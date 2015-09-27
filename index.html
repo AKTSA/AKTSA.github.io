@@ -8,14 +8,41 @@
 		<link rel="icon" href="favicon.ico" type="image/x-icon" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script type="text/javascript" src="/JSDep/jquery.fullPage.js"></script>
-		<script> window.location.replace("http://aktsa.org"); </script>
+		<!--<script> window.location.replace("http://aktsa.org"); </script>-->
         <script type="text/javascript" src="Scroll.js"></script>
 	</head>
 	<body>
+        <div id="CheckPage">
+            <div class="CentVert"> <!--Padding for the flexbox-->
+                <p>
+                    You are on<br />
+                    <span class="WebsiteTitle"><span class="MainTitle"><span class="FirstLetters">AK</span> TSA</span> .com</span>,
+                    <br />
+                    the former webmaster competition entry site.
+                </p>
+                <p>
+                    Did you mean to go to <br />
+                    <span class="WebsiteTitle"><span class="MainTitle"><span class="FirstLetters">AK</span> TSA</span> .org</span>,
+                    <br />
+                    the official website of AKTSA?
+                </p>
+                <p>
+                    <button style="padding-left:10vw;padding-right:10vw;" onclick="AcceptNag(true);">Yes</button> <button onclick="AcceptNag(false);">No</button>
+                </p>
+                <p>
+                    <label for="NoShowAgain">Don't ask again</label> <input id="NoShowAgain" type="checkbox" checked>
+                </p>
+            </div>
+        </div>
+        
+        
+        
+        
+        
 		<div id="fullpage">
 			<section class="section">
 	            <header>
-				    <h1><span style="color:#7A52CC;">AK</span> <span style="color:#FF0000">TSA</span></h1>
+				    <h1 class="MainTitle"><span class="FirstLetters">AK</span> TSA</h1>
 				    <h2>Innovate Today. Change Tomorrow.</h2>
 	            </header>
                 
@@ -152,22 +179,7 @@
 				<h2>
 					Meeting Dates
 				</h2>
-				<!--<p>
-					Mandatory TSA meetings will take place on the following dates.<br /> Note that we reserve the right to add additional emergency meetings as needed.
-				</p>
-				<div style="display:inline-block;">
-                    <ul style="list-style-type:none;padding:0;">
-                        <li>September 16, 2015</li>
-						<li>October 14, 2015</li>
-						<li>November 4, 2015</li>
-						<li>December 2, 2015</li>
-						<li>January 6, 2016</li>
-						<li>February 3, 2016</li>
-						<li>March 2, 2016</li>
-						<li>April 6, 2016</li>
-						<li>May 4, 2016</li>
-                    </ul>
-                </div>-->
+				
                 <table id="UpcomingMeetings">
                     <tr id="NextMeeting">
                         <th>Next Meeting</th>
@@ -262,6 +274,60 @@
                     document.getElementById("BigPicDisp").style.left="0";
                     document.getElementById("BigPicDisp").style.opacity="1";
                     document.getElementById("BigPicDisp").style.transform="rotateY(0deg)";
+                }
+                
+                
+                
+                //NAG SHEET STUFF
+                
+                
+                var CookieValue = readCookie("ShowNag");
+                if(CookieValue == null){
+                    document.getElementById("CheckPage").style.top = "5vh";
+                } else if(CookieValue == 1){
+                    window.location.replace("http://aktsa.org");
+                } else{
+                    document.getElementById("CheckPage").style.display = "none";
+                }
+                
+                
+                function AcceptNag(redir){
+                    if(redir){
+                        if(document.getElementById("NoShowAgain").checked){
+                            createCookie("ShowNag", 1, 30);
+                        }
+                        window.location.replace("http://aktsa.org");
+                    } else{
+                        if(document.getElementById("NoShowAgain").checked){
+                            createCookie("ShowNag", 0, 30);
+                        }
+                        document.getElementById("CheckPage").style.top = "-100vh";
+                    }
+                }
+                
+                
+                //Cookie Setting Cr@p - Thanks to http://www.quirksmode.org/js/cookies.html
+                function createCookie(name,value,days) {
+                    if (days) {
+                        var date = new Date();
+                        date.setTime(date.getTime()+(days*24*60*60*1000));
+                        var expires = "; expires="+date.toGMTString();
+                    }
+                    else var expires = "";
+                    document.cookie = name+"="+value+expires+"; path=/";
+                }
+                function readCookie(name) {
+                    var nameEQ = name + "=";
+                    var ca = document.cookie.split(';');
+                    for(var i=0;i < ca.length;i++) {
+                        var c = ca[i];
+                        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+                    }
+                    return null;
+                }
+                function eraseCookie(name) {
+                    createCookie(name,"",-1);
                 }
                 
             </script>
