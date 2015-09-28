@@ -73,7 +73,7 @@ Colors and/or backgrounds
     z-index:4;
 }
 
-#BigPanelWrapper:hover .Panel:nth-child(3){
+#BigPanelWrapper:hover .Panel{
     width:10%;
 }
 
