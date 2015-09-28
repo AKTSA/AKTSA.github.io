@@ -24,7 +24,7 @@ header h2{
 }
 
 .Panel{
-	width:12%;
+	width:11%;
 	transition:all 1s ease;
 	height:100vh;
 	display:inline-block;
@@ -64,7 +64,7 @@ Colors and/or backgrounds
 }
 .Panel:nth-child(3){
     z-index:2;
-    width:52%;
+    width:56%;
 }
 .Panel:nth-child(4){
     z-index:3;
