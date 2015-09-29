@@ -54,6 +54,30 @@ Colors and/or backgrounds
 
 
 
+.Panel:nth-child(1) .PanelBeforeChild{
+	background-image:url("/images/VEXbg.png");
+    background-size:cover;
+    background-position:50% 50%;
+}
+.Panel:nth-child(2) .PanelBeforeChild{
+	background-image:url("/images/fdesign1.jpg");
+    background-size:cover;
+    background-position:50% 50%;
+}
+.Panel:nth-child(3) .PanelBeforeChild{
+	background-image:url("/images/nats.jpg");
+    background-size:cover;
+    background-position:50% 50%;
+}
+.Panel:nth-child(4) .PanelBeforeChild{
+	background-image:url('http://cleantech4us.github.io/AKCTE/Projects/Proj3.jpg');
+    background-size:cover;
+    background-position:50% 50%;
+}
+.Panel:nth-child(5) .PanelBeforeChild{
+	background:#3498db;
+}
+
 
 
 
@@ -79,35 +103,6 @@ Colors and/or backgrounds
     width:10%;
 }
 
-
-.Panel:nth-child(1) .PanelBeforeChild{
-	background-image:url("/images/VEXbg.png");
-    background-size:cover;
-    background-position:50% 50%;
-}
-.Panel:nth-child(2) .PanelBeforeChild{
-	background-image:url("/images/fdesign1.jpg");
-    background-size:cover;
-    background-position:50% 50%;
-}
-.Panel:nth-child(3) .PanelBeforeChild{
-	background-image:url("/images/nats.jpg");
-    background-size:cover;
-    background-position:50% 50%;
-}
-.Panel:nth-child(4) .PanelBeforeChild{
-	background-image:url('http://cleantech4us.github.io/AKCTE/Projects/Proj3.jpg');
-    background-size:cover;
-    background-position:50% 50%;
-}
-/*.Panel:nth-child(5) .PanelBeforeChild{
-	background-image:url('/images/Clean.png');
-    background-size:cover;
-    background-position:50% 50%;
-}*/
-.Panel:nth-child(5) .PanelBeforeChild{
-	background:#3498db;
-}
 
 
 
