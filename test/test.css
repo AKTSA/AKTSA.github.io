@@ -46,7 +46,7 @@ header h2{
 /*
 Colors and/or backgrounds
 */
-
+/*
 .Panel:nth-child(1) .PanelBeforeChild:before{
     content:'';
     width:150%;
@@ -57,8 +57,9 @@ Colors and/or backgrounds
     transform:skew(3deg);
     background-size:cover;
     background-position:50% 50%;
-}
-.Panel:nth-child(2) .PanelBeforeChild:before{
+}*/
+.Panel .PanelBeforeChild:before{
+	opacity:0;
     content:'';
     width:150%;
     height:100%;
@@ -66,23 +67,44 @@ Colors and/or backgrounds
     left:-25%;
     position:absolute;
     transform:skew(3deg);
-	background-image:url("/images/VEXbg.png");/*
-	background-image:url("/images/fdesign1.jpg");*/
     background-size:cover;
     background-position:50% 50%;
+	transition: all 0.5s cubic-bezier(0.000, 1.040, 0.120, 1.005);
 }
-.Panel:nth-child(3) .PanelBeforeChild:before{
+.Panel:hover .PanelBeforeChild:before{
+	transition:all 0.3s ease-in;
+	transition-delay:0.8s;
+	opacity:1;
+}
+
+.Panel:nth-child(1) .PanelBeforeChild:before{
+	background-image:url("/images/VEXbg.png");
+}
+.Panel:nth-child(1) .PanelBeforeChild{
+	background:#c0392b;
+}
+.Panel:nth-child(2) .PanelBeforeChild{
+	background:#1F3A93;
+}
+.Panel:nth-child(3) .PanelBeforeChild{/*
     content:'';
     width:150%;
     height:100%;
     top:0;
     left:-25%;
     position:absolute;
-    transform:skew(3deg);
+    transform:skew(3deg);*/
 	background-image:url("/images/nats.jpg");
     background-size:cover;
     background-position:50% 50%;
 }
+.Panel:nth-child(4) .PanelBeforeChild{
+	background:#8e44ad;
+}
+.Panel:nth-child(5) .PanelBeforeChild{
+	background:#1E824C;
+}
+/*
 .Panel:nth-child(4) .PanelBeforeChild:before{
     content:'';
     width:150%;
@@ -180,7 +202,7 @@ header{
     margin:0;
     border:0;
     padding:0;
-    background:#3498db;
+    background:#1E824C;
 }
 
 .Panel:nth-child(3) .NonDisp{
@@ -198,6 +220,10 @@ header{
 	transition: all 0.5s ease;
 	position:relative;
 	left:50%;
+	top:0;
+}
+.Panel h2.NonDisp{
+	width:100vh;
 }
 .Panel:hover .NonDisp{
 	transform:rotate(0deg) !important;
@@ -205,6 +231,9 @@ header{
 }
 .Panel:hover h2.NonDisp{
 	left:0 !important;
+	top:50%;
+	transform:translateY(-50%) !important;
+	width:inherit;
 }
 
 .Panel .SecDisp{
