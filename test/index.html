@@ -5,14 +5,25 @@
 		<link rel="stylesheet" type="text/css" href="test.css" />
 		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 		
-		<!--
-			Yes, I'm going with Skrollr again. Deal with it.
-			https://github.com/Prinzhorn/skrollr/blob/master/LICENSE.txt
-		-->
-		<script src="http://cleantech4us.github.io/JSDep/skrollr.min.js"></script>
-		<script src="home.js"></script>
+        <!--
+            Waypoints.js
+            http://imakewebthings.com/waypoints/
+        -->
+        <script src="/JSDep/noframework.waypoints.min.js"></script>
+		
 	</head>
 	<body><!--
+        
+        --><nav>
+            <ul>
+                <li>VEX</li><!--
+                --><li>Members</li><!--
+                --><li><span style="color:#7A52CC;">AK</span> TSA</li><!--
+                --><li>AK CTE</li><!--
+                --><li>Design Brief</li>
+            </ul>
+        </nav><!--
+
 		--><div id="BigPanelWrapper"><!--
 		
 			--><a href="/" class="Panel">
@@ -35,21 +46,22 @@
 				</div>
 			</a><!--
 
-		  --><section class="Panel">
+            --><section class="Panel">
                 <div class="PanelBeforeParent">
                     <div class="PanelBeforeChild"></div>
-		  	<header>
-		  		<h1 class="NonDisp"><span style="color:#7A52CC;">AK</span> <span style="color:#FF0000">TSA</span></h1>
-		  		<h2 class="SecDisp">Innovate Today. Change Tomorrow.</h2>
-		  		<p class="SecDisp">
-		  			&#8964; Scroll Down to Learn More &#8964;
-		  		</p>
-		  	</header>
-		  	<div class="TitleBG" id="TitleBG"></div>
-		  	<div class="SecDisp">
-		  		
-		  	</div></div>
-		  </section><!--
+		  	           <header>
+		  	           	<h1 class="NonDisp"><span style="color:#7A52CC;">AK</span> <span style="color:#FF0000">TSA</span></h1>
+		  	           	<h2 class="SecDisp">Innovate Today. Change Tomorrow.</h2>
+		  	           	<p class="SecDisp">
+		  	           		&#8964; Scroll Down to Learn More &#8964;
+		  	           	</p>
+		  	           </header>
+		  	           <div class="TitleBG" id="TitleBG"></div>
+		  	           <div class="SecDisp">
+		  	           	
+		  	       </div>
+                </div>
+		      </section><!--
     
 		  --><a href="/" class="Panel">
                 <div class="PanelBeforeParent">
@@ -82,5 +94,20 @@
             <h1>Projects</h1>
         </div>
         
+        <script>
+            var waypoint = new Waypoint({
+                element: document.getElementById('HeroFrame'),
+                handler: function(direction) {
+                    //alert('Basic waypoint triggered')
+                    //alert(direction);
+                    if(direction == "down"){
+                        document.getElementsByTagName("NAV")[0].style.opacity = "1";
+                    } else{
+                        document.getElementsByTagName("NAV")[0].style.opacity = "0";                        
+                    }
+                },
+                offset: 100
+            })
+        </script>
 	</body>
 </html>
