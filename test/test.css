@@ -7,6 +7,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
     color:white;
     background:#354b60;
+    text-align:center;
 }
 
 
@@ -106,36 +107,6 @@ Colors and/or backgrounds
 .Panel:nth-child(5) .PanelBeforeChild{
 	background:#1E824C;
 }
-/*
-.Panel:nth-child(4) .PanelBeforeChild:before{
-    content:'';
-    width:150%;
-    height:100%;
-    top:0;
-    left:-25%;
-    position:absolute;
-    transform:skew(3deg);
-	background-image:url('/images/Clean.png');
-    background-size:cover;
-    background-position:50% 50%;
-}
-/*
-.Panel:nth-child(5) .PanelBeforeParent::before{
-    content:'';
-    width:150%;
-    height:100%;
-    top:0;
-    left:-25%;
-    position:absolute;
-	background-image:url('/images/Clean.png');
-    background-size:cover;
-    background-position:50% 50%;
-}/*
-.Panel:nth-child(5) .PanelBeforeParent{
-	background-image:url('/images/Clean.png');
-    background-size:cover;
-    background-position:50% 50%;
-}*/
 
 
 
@@ -265,4 +236,33 @@ header{
   transform-origin: 100% 0;
   transform: skew(-3deg);
     overflow:hidden;
+}
+
+
+
+/*
+    Main Divs
+*/
+#HeroFrame{
+    padding:10vh;
+}
+#AboutFrame{
+    padding:30vh;
+    background-image:url(/images/fdesign1.jpg);
+    background-position:center;
+    background-size:cover;
+    background-attachment:fixed;
+}
+#ProjectsFrame{
+    background:#8e44ad;
+    padding:10vh;
+}
+#ProjectsFrame h1{
+    margin:0;
+}
+
+
+
+.TSA{
+    color:#c0392b;
 }
