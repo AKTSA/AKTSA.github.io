@@ -37,6 +37,7 @@ header h2{
     text-decoration:none;
     text-align:center;
     color:white;
+    font-size:initial;
 }
 .Panel:hover{
 	width:60% !important;
@@ -77,10 +78,10 @@ Colors and/or backgrounds
 }
 .Panel:nth-child(3) .PanelBeforeChild:before{
     content:'';
-    width:120%;
-    height:120%;
-    top:-10%;
-    left:-10%;
+    width:200%;
+    height:100%;
+    top:0;
+    left:-50%;
     position:absolute;
     transform:skew(3deg);
 	background-image:url("/images/nats.jpg");
@@ -158,6 +159,9 @@ header{
 
 
 #BigPanelWrapper {
+    display:inline;
+}
+#BigPanelWrapperParent{
     width:100%;
     height:100vh;
     margin:0;
@@ -165,6 +169,8 @@ header{
     padding:0;
     background:#1E824C;
     text-align: left;
+    overflow:hidden;
+    transition: all 0.5s ease;
 }
 
 .Panel:nth-child(3) .NonDisp{
@@ -184,18 +190,23 @@ header{
 	left:50%;
 	top:0;
 }
+#BigPanelWrapper:hover .Panel h1.NonDisp{
+    opacity:0;
+}
 .Panel h2.NonDisp{
 	width:100vh;
 }
 .Panel:hover .NonDisp{
 	transform:rotate(0deg) !important;
 	left:0 !important;
+    opacity:1 !important;
 }
 .Panel:hover h2.NonDisp{
 	left:0 !important;
 	top:50%;
 	transform:translateY(-50%) !important;
 	width:inherit;
+    transition: all 0.5s ease-in-out;
 }
 
 .Panel .SecDisp{
@@ -229,7 +240,7 @@ header{
 
 
 nav{
-    background:black;
+    background:#1E824C;
     width:100%;
     position:fixed;
     height:100px;
@@ -256,28 +267,64 @@ nav li{
     line-height:100px;
     height:100%;
     transition: all 0.5s ease;
+    overflow:hidden;
 }
-nav li:hover{
-    background:#ecf0f1 !important;
+nav li:hover a{
     color:black;
 }
+nav li::before{
+    transform:skewX(-3deg);
+    content:"";
+    position:absolute;
+    top:0;
+    width:20%;
+    height:100%;
+    z-index:0;
+    transition: all 0.5s ease;
+    -webkit-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+nav li:hover::before{   
+    background:#ecf0f1 !important;
+}
+nav li a{
+    position:relative;
+    z-index:10;
+    width:100%;
+    height:100%;
+    text-decoration:none;
+    color:white;
+    display:inline-block;
+}
 
-nav li:nth-child(1){
+nav li:nth-child(1)::before{
+    left:0;
     background:#c0392b;
 }
-nav li:nth-child(2){
+nav li:nth-child(2)::before{
+    left:20%;
     background:#1F3A93;
 }
-nav li:nth-child(3){
-    color:#FF0000;
-	font-family:"Audiowide", sans-serif;
+nav li:nth-child(3)::before{
+    left:40%;
     background:#22313F;
 }
-nav li:nth-child(4){
+nav li:nth-child(4)::before{
+    left:60%;
     background:#8e44ad;
 }
-nav li:nth-child(5){
+nav li:nth-child(5)::before{
     background:#1E824C;
+    left:80%;
+}
+nav li:nth-child(5):hover{
+    background:#ecf0f1;
+}
+
+nav li:nth-child(3) a{  
+	font-family:"Audiowide", sans-serif; 
+    color:#FF0000;
 }
 
 /*
@@ -286,13 +333,53 @@ nav li:nth-child(5){
 #HeroFrame{
     padding:10vh;
 }
+
 #AboutFrame{
-    padding:20vh;
+    padding:30vh 20vh;
     background-image:url(/images/fdesign1.jpg);
     background-position:center;
     background-size:cover;
     background-attachment:fixed;
 }
+#AboutFrame div{
+    font-size: 22px;
+    max-width:800px;
+    position:relative;   
+    left:-100vw;
+    transition: all 0.5s cubic-bezier(0.000, 0.645, 0.525, 1.075); /* custom */
+    text-align:left;
+}
+#AboutFrame div p{
+    position:relative;
+    z-index:5;
+}
+#AboutFrame div::before{
+    background:#354b60;
+    z-index:0;
+    transform:skewX(-3deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:150%;
+    left:-10%;
+    top:-25%;
+    z-index:0;
+    display:block;
+}
+#AboutFrame div::after{
+    background:#354b60;
+    z-index:0;
+    transform:skewX(-3deg);
+    content:"";
+    position:absolute;
+    width:100vw;
+    height:150%;
+    left:-100vw;
+    top:-25%;
+    z-index:0;
+    display:block;
+}
+
 #ProjectsFrame{
     background:#8e44ad;
     padding:10vh;
