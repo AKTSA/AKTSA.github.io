@@ -5,119 +5,106 @@
 		<link rel="stylesheet" type="text/css" href="test.css" />
 		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 		
-        <!--
-            Waypoints.js
-            http://imakewebthings.com/waypoints/
-        -->
-        <script src="/JSDep/noframework.waypoints.min.js"></script>
+		<!--
+			Waypoints.js
+			http://imakewebthings.com/waypoints/
+		-->
+		<script src="/JSDep/noframework.waypoints.min.js"></script>
 		
 	</head>
     <body><!--
-        
-        --><nav>
-            <ul>
-                <li><a href="/VEX">VEX</a></li><!--
-                --><li><a>Members</a></li><!--
-                --><li><a><span style="color:#7A52CC;">AK</span> TSA</a></li><!--
-                --><li><a href="http://cleantech4us.github.io/AKCTE">AK CTE</a></li><!--
-                --><li><a>Design Brief</a></li>
-            </ul>
-        </nav>
-        <div id="BigPanelWrapperParent">
-            <span id="BigPanelWrapper"><!--
-            
-                --><a href="/VEX" class="Panel">
-                    <div class="PanelBeforeParent">
-                        <div class="PanelBeforeChild"></div>
-                        <h2 class="NonDisp">VEX Robotics</h2>
-                        <div class="SecDisp">
-                            
-                        </div>
-                    </div>
-                    </a><!--
-            
-            --><a href="/" class="Panel">
-                    <div class="PanelBeforeParent">
-                        <div class="PanelBeforeChild"></div>
-                        <h2 class="NonDisp">Member Information</h2>
-                        <div class="SecDisp">
-                            
-                        </div>
-                    </div>
-                    </a><!--
-    
-            --><section class="Panel">
-                    <div class="PanelBeforeParent">
-                        <div class="PanelBeforeChild"></div>
-                        <header>
-                            <h1 class="NonDisp"><span style="color:#7A52CC;">AK</span> <span style="color:#FF0000">TSA</span></h1>
-                            <h2 class="SecDisp">Innovate Today. Change Tomorrow.</h2>
-                            <p class="SecDisp">
-                                &#8964; Scroll Down to Learn More &#8964;
-                            </p>
-                        </header>
-                        <div class="TitleBG" id="TitleBG"></div>
-                        <div class="SecDisp">
-                            
-                        </div>
-                    </div>
-                    </section><!--
-            
-		    --><a href="http://cleantech4us.github.io/AKCTE" class="Panel">
-                    <div class="PanelBeforeParent">
-                        <div class="PanelBeforeChild"></div>
-		    	<h2 class="NonDisp">AK CTE</h2>
-		    	<div class="SecDisp">
-		    		
-		    	</div></div>
-		    </a><!--
-        
-		    --><a href="/" class="Panel">
-                    <div class="PanelBeforeParent">
-                        <div class="PanelBeforeChild"></div>
-		    	<h2 class="NonDisp">Design Brief</h2>
-		    	<div class="SecDisp">
-		    		
-		    	</div></div>
-		    </a>
-            </span>
-        </div>
-        
-        <div id="HeroFrame">
-            <h2>#ThisIs<span class="TSA">TSA</span></h2>
-        </div>
-        
-        <section id="AboutFrame">
-            <div>
-                <p>We are the <span style="color:#7A52CC;">Ardery Kell High School</span> <span style="color:#FF0000">Technology Student Association</span>, a school supported club that participates in several technology-based events and projects. AK TSA also competes against other school's TSA clubs at the Regional, State, and National level!</p>
-            </div>
-        </section>
-        
-        <div id="ProjectsFrame">
-            <h1>Projects</h1>
-        </div>
-        
-        <script>
-            var waypoint = new Waypoint({
-                element: document.getElementById('HeroFrame'),
-                handler: function(direction) {
-                    //alert('Basic waypoint triggered')
-                    //alert(direction);
-                    if(direction == "down"){
-                        document.getElementsByTagName("NAV")[0].style.opacity = "1";
-                    } else{
-                        document.getElementsByTagName("NAV")[0].style.opacity = "0";                        
-                    }
-                },
-                offset: 100
-            })
-            var waypoint2 = new Waypoint({
-                element: document.getElementById('HeroFrame'),
-                handler: function(direction) {
-                    document.getElementById("AboutFrame").getElementsByTagName("DIV")[0].style.left = "0";
-                },
-                offset:50
-            })
-        </script>
+		
+		--><nav>
+			<ul>
+				<li><a href="/VEX">VEX</a></li><!--
+				--><li><a>Members</a></li><!--
+				--><li><a><span style="color:#7A52CC;">AK</span> TSA</a></li><!--
+				--><li><a href="http://cleantech4us.github.io/AKCTE">AK CTE</a></li><!--
+				--><li><a>Design Brief</a></li>
+			</ul>
+		</nav>
+		<div id="BigPanelWrapperParent"><span id="BigPanelWrapper"><!--
+			
+			--><a href="/VEX" class="Panel">
+				<div class="PanelBeforeParent">
+					<div class="PanelBeforeChild"></div>
+					<h2 class="NonDisp">VEX Robotics</h2>
+				</div>
+			</a><!--
+			
+			--><a href="/" class="Panel">
+				<div class="PanelBeforeParent">
+					<div class="PanelBeforeChild"></div>
+					<h2 class="NonDisp">Member Information</h2>
+				</div>
+			</a><!--
+			
+			--><section class="Panel">
+				<div class="PanelBeforeParent">
+					<div class="PanelBeforeChild"></div>
+					<header>
+						<h1 class="NonDisp">
+							<span style="color:#7A52CC;">AK</span> <span style="color:#FF0000">TSA</span>
+						</h1>
+						<h2 class="SecDisp">Innovate Today. Change Tomorrow.</h2>
+						<p class="SecDisp">
+							&#8964; Scroll Down to Learn More &#8964;
+						</p>
+					</header>
+					<div class="TitleBG" id="TitleBG"></div>
+				</div>
+			</section><!--
+			
+			--><a href="http://cleantech4us.github.io/AKCTE" class="Panel">
+				<div class="PanelBeforeParent">
+					<div class="PanelBeforeChild"></div>
+					<h2 class="NonDisp">AK CTE</h2>
+				</div>
+			</a><!--
+			
+			--><a href="/" class="Panel">
+				<div class="PanelBeforeParent">
+					<div class="PanelBeforeChild"></div>
+					<h2 class="NonDisp">Design Brief</h2>
+				</div>
+			</a>
+		</span></div>
+
+		<div id="HeroFrame">
+			<h2>#ThisIs<span class="TSA">TSA</span></h2>
+		</div>
+
+		<section id="AboutFrame">
+			<div>
+				<p>We are the <span style="color:#7A52CC;">Ardery Kell High School</span> <span style="color:#FF0000">Technology Student Association</span>, a school supported club that participates in several technology-based events and projects. AK TSA also competes against other school's TSA clubs at the Regional, State, and National level!</p>
+			</div>
+		</section>
+
+		<div id="ProjectsFrame">
+			<h1>Projects</h1>
+		</div>
+
+		<script>
+			var waypoint = new Waypoint({
+				element: document.getElementById('HeroFrame'),
+				handler: function(direction) {
+					//alert('Basic waypoint triggered')
+					//alert(direction);
+					if(direction == "down"){
+						document.getElementsByTagName("NAV")[0].style.opacity = "1";
+					} else{
+						document.getElementsByTagName("NAV")[0].style.opacity = "0";                        
+					}
+				},
+				offset: 100
+			})
+			var waypoint2 = new Waypoint({
+				element: document.getElementById('HeroFrame'),
+				handler: function(direction) {
+					document.getElementById("AboutFrame").getElementsByTagName("DIV")[0].style.left = "0";
+				},
+				offset:50
+			})
+		</script>
 	</body>
 </html>
