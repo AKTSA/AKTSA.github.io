@@ -91,7 +91,14 @@
 		</div>
 		
 		<section id="ProjectsFrame">
-			
+			<img id="Project1b" src="/images/fdesign1.jpg" alt="Fashion Design" />
+			<img id="Project1ba" class="HoverOp" src="/images/fdesign1.jpg" alt="Fashion Design" />
+            <div id="Project1a">
+                <div>
+                    <h2>Fashion Design</h2>
+                    <p>The Technology Student Association at Ardrey Kell creates and designs new trends in fashion.</p>
+                </div>
+            </div>
 		</section>
 
 		<script>
@@ -114,6 +121,13 @@
 					document.getElementById("AboutFrame").getElementsByTagName("DIV")[0].style.left = "0";
 				},
 				offset:'30%'
+			});
+			var waypoint2 = new Waypoint({
+				element: document.getElementById('Project1a'),
+				handler: function(direction) {
+					document.getElementById("Project1a").style.left = "10vw";
+				},
+				offset:'60%'
 			});
 		</script>
 	</body>

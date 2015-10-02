@@ -6,7 +6,7 @@ body{
 	margin:0;
 	font-family: 'Open Sans', sans-serif;
     color:white;
-    background:#354b60;
+    background:#2c3e50;
     text-align:center;
 }
 
@@ -335,8 +335,8 @@ nav li:nth-child(3) a{
 }
 
 #AboutFrame{
-    padding:30vh 20vh;
-    background-image:url(/images/fdesign1.jpg);
+    padding:25vh 10vh;
+    background-image:url('http://aktsa.org/img/fdesign2.jpg');
     background-position:center;
     background-size:cover;
     background-attachment:fixed;
@@ -354,34 +354,34 @@ nav li:nth-child(3) a{
     z-index:5;
 }
 #AboutFrame div::before{
-    background:#354b60;
+    background:#34495e;
     z-index:0;
-    transform:skewX(-3deg);
+    transform:skewX(-10deg);
     content:"";
     position:absolute;
     width:120%;
-    height:150%;
+    height:200%;
     left:-10%;
-    top:-25%;
+    top:-50%;
     z-index:0;
     display:block;
 }
 #AboutFrame div::after{
-    background:#354b60;
+    background:#34495e;
     z-index:0;
     transform:skewX(-3deg);
     content:"";
     position:absolute;
     width:100vw;
-    height:150%;
+    height:200%;
     left:-100vw;
-    top:-25%;
+    top:-50%;
     z-index:0;
     display:block;
 }
 
 #ProjectsHeroFrame{
-    background:#8e44ad;
+    background:#9b59b6;
     padding:10vh;
 }
 #ProjectsHeroFrame h1{
@@ -390,6 +390,70 @@ nav li:nth-child(3) a{
 
 #ProjectsFrame{
 	height:100vh;
+    text-align:right;
+}
+
+#Project1a{
+    position:relative;
+    left:-100vw;
+    height:40vh;
+    top:20vh;
+    width:40vw;
+    transform-style:preserve-3d;
+    transition: all 0.5s ease;
+}
+#Project1a div{
+    position:relative;
+    z-index:1;
+    top:50%;
+    transform:translateY(-50%);
+}
+#Project1a::before{
+    background:#d35400;
+    z-index:0;
+    transform:skewX(-10deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    left:-10%;
+    top:0;
+    z-index:0;
+    display:block;
+}
+#Project1a::after{
+    background:#d35400;
+    z-index:0;
+    transform:skewX(-3deg);
+    content:"";
+    position:absolute;
+    width:100vw;
+    height:100%;
+    left:-90vw;
+    top:0;
+    z-index:0;
+    display:block;
+}
+#Project1b{
+    position:absolute;
+    right:0;
+    height:80vh;
+}
+#Project1ba{
+    position:absolute;
+    height:80vh;
+    top:calc(inherit - 80vh);
+    right:0;
+    z-index:100;
+    transition: all 0.5s ease;
+}
+
+.HoverOp{
+    opacity:0;
+    overflow:hidden;
+}
+.HoverOp:hover{
+    opacity:1;
 }
 
 
