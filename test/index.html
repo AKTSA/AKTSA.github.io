@@ -70,23 +70,33 @@
 			</a>
 		</span></div>
 
-		<div id="HeroFrame">
+		<div id="AboutHeroFrame">
 			<h2>#ThisIs<span class="TSA">TSA</span></h2>
 		</div>
 
 		<section id="AboutFrame">
 			<div>
-				<p>We are the <span style="color:#7A52CC;">Ardery Kell High School</span> <span style="color:#FF0000">Technology Student Association</span>, a school supported club that participates in several technology-based events and projects. AK TSA also competes against other school's TSA clubs at the Regional, State, and National level!</p>
+				<p>
+					We are the
+					<span style="color:#7A52CC;">Ardery Kell High School</span>
+					<span style="color:#FF0000">Technology Student Association</span>,
+					a school supported club that participates in several technology-based events and projects.
+					AK TSA also competes against other school's TSA clubs at the Regional, State, and National level!
+				</p>
 			</div>
 		</section>
 
-		<div id="ProjectsFrame">
-			<h1>Projects</h1>
+		<div id="ProjectsHeroFrame">
+			<h1>Student Projects</h1>
 		</div>
+		
+		<section id="ProjectsFrame">
+			
+		</section>
 
 		<script>
 			var waypoint = new Waypoint({
-				element: document.getElementById('HeroFrame'),
+				element: document.getElementById('AboutHeroFrame'),
 				handler: function(direction) {
 					//alert('Basic waypoint triggered')
 					//alert(direction);
@@ -97,14 +107,14 @@
 					}
 				},
 				offset: 100
-			})
+			});
 			var waypoint2 = new Waypoint({
-				element: document.getElementById('HeroFrame'),
+				element: document.getElementById('AboutFrame'),
 				handler: function(direction) {
 					document.getElementById("AboutFrame").getElementsByTagName("DIV")[0].style.left = "0";
 				},
-				offset:50
-			})
+				offset:'30%'
+			});
 		</script>
 	</body>
 </html>
