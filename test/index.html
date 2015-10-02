@@ -4,17 +4,13 @@
 		<title>AK TSA</title>
 		<link rel="stylesheet" type="text/css" href="test.css" />
 		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-		
-		<!--
-			Waypoints.js
-			http://imakewebthings.com/waypoints/
-		-->
 		<script src="/JSDep/noframework.waypoints.min.js"></script>
+		<script src="/JSDep/smooth-scroll.js"></script>
 		
 	</head>
     <body><!--
 		
-		--><nav>
+		--><nav id="GlobalNav">
 			<ul>
 				<li><a href="/VEX">VEX</a></li><!--
 				--><li><a>Members</a></li><!--
@@ -23,6 +19,37 @@
 				--><li><a>Design Brief</a></li>
 			</ul>
 		</nav>
+        <nav id="LocalNav">
+            <ul>
+                <li>
+                    <input id="SB1" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#BigPanelWrapperParent', {speed: 1000, easing: 'easeInOutCubic', updateURL: false});" />
+                    <label for="SB1"></label>
+                    <div>Home</div>
+                </li>
+                <li>
+                    <input id="SB2" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#AboutHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+                    <label for="SB2"></label>
+                    <div>About</div>
+                </li>
+                <li>
+                    <input id="SB3" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#ProjectsHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+                    <label for="SB3"></label>
+                    <div>Projects</div>
+                </li>
+                <li>
+                    <input id="SB4" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#CommHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+                    <label for="SB4"></label>
+                    <div>Community</div>
+                </li>
+                <li>
+                    <input id="SB5" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#OffHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+                    <label for="SB5"></label>
+                    <div>Officers</div>
+                </li>
+            </ul>
+        </nav>
+        
+        
 		<div id="BigPanelWrapperParent"><span id="BigPanelWrapper"><!--
 			
 			--><a href="/VEX" class="Panel">
@@ -71,7 +98,7 @@
 		</span></div>
 
 		<div id="AboutHeroFrame">
-			<h2>#ThisIs<span class="TSA">TSA</span></h2>
+			<h2>#ThisIs<span style="color:#c0392b;">TSA</span></h2>
 		</div>
 
 		<section id="AboutFrame">
@@ -89,19 +116,64 @@
 		<div id="ProjectsHeroFrame">
 			<h1>Student Projects</h1>
 		</div>
-		
-		<section id="ProjectsFrame">
-			<img id="Project1b" src="/images/fdesign1.jpg" alt="Fashion Design" />
-			<img id="Project1ba" class="HoverOp" src="/images/fdesign1.jpg" alt="Fashion Design" />
-            <div id="Project1a">
+        
+        <section id="ProjectsFrame">
+			<img class="Projectb ProjLimg" src="/images/IMG_20150322_160628.jpg" alt="VEX Robotics" />
+			<!--<img class="Projectba HoverOp ProjLimg" src="/images/IMG_20150322_160628.jpg" alt="" />-->
+            <div class="Projecta ProjL" id="Project1a">
+                <div>
+                    <h2>VEX Robotics</h2>
+                    <p>The Technology Student Association at Ardrey Kell builds robots to perform specific tasks both under drive control and autonomously for competition.</p>
+                </div>
+            </div>
+            
+			<img class="Projectb ProjRimg" src="/images/fdesign1.jpg" alt="Fashion Design" />
+			<!--<img class="Projectba HoverOp ProjRimg" src="/images/fdesign1.jpg" alt="" />-->
+            <div id="Project2a" class="Projecta ProjR">
                 <div>
                     <h2>Fashion Design</h2>
                     <p>The Technology Student Association at Ardrey Kell creates and designs new trends in fashion.</p>
                 </div>
             </div>
+            
+			<img class="Projectb ProjLimg" src="/images/Clean.png" alt="Webmasters" />
+			<!--<img class="Projectba HoverOp ProjLimg" src="/images/Clean.png" alt="" />-->
+            <div class="Projecta ProjL" id="Project3a">
+                <div>
+                    <h2>Webmasters</h2>
+                    <p>Students from AK TSA create a website promoting awareness of eco-friendly recycling of electronic products.</p>
+                </div>
+            </div>
 		</section>
+        
+        <div id="CommHeroFrame">
+            <h1>Community Service</h1>
+        </div>
+        <section id="CommFrame">
+            
+        </section>
 
+        <div id="OffHeroFrame">
+            <h1>Officer Team</h1>
+        </div>
+        <section id="OffFrame">
+        </section>
+        
+        
+        
+        <section id="EndFrame">
+            <p>An <span style="color:red;font-family:'Audiowide', sans-serif;"><span style="color:#7A52CC;">AK</span> TSA</span> Creation</p>
+            <p>Site Design By Michael Xing</p>
+            <p><a href="http://imakewebthings.com/waypoints/">Waypoints.js</a> and <a href="https://github.com/cferdinandi/smooth-scroll">SmoothScroll</a> used under the MIT license.</p>
+        </section>
+        
+        
+        
+        
+        
 		<script>
+            smoothScroll.init(); 
+            
 			var waypoint = new Waypoint({
 				element: document.getElementById('AboutHeroFrame'),
 				handler: function(direction) {
@@ -109,8 +181,10 @@
 					//alert(direction);
 					if(direction == "down"){
 						document.getElementsByTagName("NAV")[0].style.opacity = "1";
+						document.getElementsByTagName("NAV")[1].style.right = "0";
 					} else{
-						document.getElementsByTagName("NAV")[0].style.opacity = "0";                        
+						document.getElementsByTagName("NAV")[0].style.opacity = "0"; 
+						document.getElementsByTagName("NAV")[1].style.right = "-50px";                          
 					}
 				},
 				offset: 100
@@ -122,12 +196,61 @@
 				},
 				offset:'30%'
 			});
-			var waypoint2 = new Waypoint({
+			var waypoint3 = new Waypoint({
 				element: document.getElementById('Project1a'),
 				handler: function(direction) {
-					document.getElementById("Project1a").style.left = "10vw";
+					document.getElementById("Project1a").style.left = "50vw";
 				},
 				offset:'60%'
+			});
+			var waypoint4 = new Waypoint({
+				element: document.getElementById('Project2a'),
+				handler: function(direction) {
+					document.getElementById("Project2a").style.left = "10vw";
+				},
+				offset:'60%'
+			});
+			var waypoint5 = new Waypoint({
+				element: document.getElementById('Project3a'),
+				handler: function(direction) {
+					document.getElementById("Project3a").style.left = "50vw";
+				},
+				offset:'60%'
+			});
+            
+            var waypointnav1 = new Waypoint({
+				element: document.getElementById('BigPanelWrapperParent'),
+				handler: function(direction) {
+                    document.getElementById("SB1").checked = true;
+				}
+			});
+            var waypointnav2 = new Waypoint({
+				element: document.getElementById('AboutHeroFrame'),
+				handler: function(direction) {
+                    document.getElementById("SB2").checked = true;
+				},
+				offset:'30%'
+			});
+            var waypointnav3 = new Waypoint({
+				element: document.getElementById('ProjectsHeroFrame'),
+				handler: function(direction) {
+                    document.getElementById("SB3").checked = true;
+				},
+				offset:'30%'
+			});
+            var waypointnav4 = new Waypoint({
+				element: document.getElementById('CommHeroFrame'),
+				handler: function(direction) {
+                    document.getElementById("SB4").checked = true;
+				},
+				offset:'30%'
+			});
+            var waypointnav5 = new Waypoint({
+				element: document.getElementById('OffHeroFrame'),
+				handler: function(direction) {
+                    document.getElementById("SB5").checked = true;
+				},
+				offset:'30%'
 			});
 		</script>
 	</body>

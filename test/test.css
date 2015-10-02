@@ -2,6 +2,11 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu|Nunito:700|Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
 
+html, body{
+    max-width:100%;
+    overflow-x:hidden;
+}
+
 body{
 	margin:0;
 	font-family: 'Open Sans', sans-serif;
@@ -239,7 +244,7 @@ header{
 }
 
 
-nav{
+#GlobalNav{
     background:#1E824C;
     width:100%;
     position:fixed;
@@ -251,7 +256,7 @@ nav{
     transform-style: preserve-3d;
     transition: all 0.15s linear;
 }
-nav ul{
+#GlobalNav ul{
     list-style:none;
     margin:0;
     padding:0;
@@ -260,7 +265,7 @@ nav ul{
     position:relative;
     height:100%;
 }
-nav li{
+#GlobalNav li{
     display:inline-block;
     width:20%;
     font-size:20px;
@@ -269,10 +274,10 @@ nav li{
     transition: all 0.5s ease;
     overflow:hidden;
 }
-nav li:hover a{
+#GlobalNav li:hover a{
     color:black;
 }
-nav li::before{
+#GlobalNav li::before{
     transform:skewX(-3deg);
     content:"";
     position:absolute;
@@ -285,10 +290,10 @@ nav li::before{
     -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
 }
-nav li:hover::before{   
+#GlobalNav li:hover::before{   
     background:#ecf0f1 !important;
 }
-nav li a{
+#GlobalNav li a{
     position:relative;
     z-index:10;
     width:100%;
@@ -298,34 +303,107 @@ nav li a{
     display:inline-block;
 }
 
-nav li:nth-child(1)::before{
+#GlobalNav li:nth-child(1)::before{
     left:0;
     background:#c0392b;
 }
-nav li:nth-child(2)::before{
+#GlobalNav li:nth-child(2)::before{
     left:20%;
     background:#1F3A93;
 }
-nav li:nth-child(3)::before{
+#GlobalNav li:nth-child(3)::before{
     left:40%;
     background:#22313F;
 }
-nav li:nth-child(4)::before{
+#GlobalNav li:nth-child(4)::before{
     left:60%;
     background:#8e44ad;
 }
-nav li:nth-child(5)::before{
+#GlobalNav li:nth-child(5)::before{
     background:#1E824C;
     left:80%;
 }
-nav li:nth-child(5):hover{
+#GlobalNav li:nth-child(5):hover{
     background:#ecf0f1;
 }
 
-nav li:nth-child(3) a{  
+#GlobalNav li:nth-child(3) a{  
 	font-family:"Audiowide", sans-serif; 
     color:#FF0000;
 }
+
+
+
+
+#LocalNav{
+    width:30px;
+    height:150px;
+    position:fixed;
+    top:calc(50vh + 25px);
+    right:-100%;
+    z-index:100;
+    transition: all 0.5s ease;
+}
+#LocalNav ul{
+    margin:0;
+    padding:0;
+}
+#LocalNav li{
+    list-style:none;
+    margin:0;
+    padding:0;
+    width:30px;
+    height:30px;
+}
+#LocalNav input[type=radio]{
+    display:none;
+}
+#LocalNav label{
+    width:100%;
+    height:100%;
+    display:inline-block;
+    cursor:pointer;
+    opacity:0.75;
+}
+#LocalNav div{
+    position:absolute;
+    width:100px;
+    right:-100px;
+    height:30px;
+    line-height:30px;
+    display:inline-block;
+    background:#34495e;
+    opacity:0.75;
+    transition: all 0.5s ease;
+    pointer-events:none;
+}
+#LocalNav li:hover div{
+    right:30px;
+}
+
+#LocalNav li:nth-child(1) label{
+    background:#c0392b;
+}
+#LocalNav li:nth-child(2) label{
+    background:#F9690E;
+}
+#LocalNav li:nth-child(3) label{
+    background:#1E824C;
+}
+#LocalNav li:nth-child(4) label{
+    background:#1F3A93;
+}
+#LocalNav li:nth-child(5) label{
+    background:#8e44ad;
+}
+#LocalNav li:hover label{
+    background:white;
+}
+#LocalNav li input[type=radio]:checked+label{
+    background:black;
+}
+
+
 
 /*
     Main Divs
@@ -383,32 +461,36 @@ nav li:nth-child(3) a{
 #ProjectsHeroFrame{
     background:#9b59b6;
     padding:10vh;
+    margin:0;
 }
 #ProjectsHeroFrame h1{
     margin:0;
 }
 
 #ProjectsFrame{
-	height:100vh;
     text-align:right;
+    margin:0;
+}
+#ProjectsFrame h2{
+    margin:0;
 }
 
-#Project1a{
+.Projecta{
     position:relative;
-    left:-100vw;
     height:40vh;
     top:20vh;
     width:40vw;
     transform-style:preserve-3d;
     transition: all 0.5s ease;
+    margin-bottom:40vh;
 }
-#Project1a div{
+.Projecta div{
     position:relative;
     z-index:1;
     top:50%;
     transform:translateY(-50%);
 }
-#Project1a::before{
+.Projecta::before{
     background:#d35400;
     z-index:0;
     transform:skewX(-10deg);
@@ -416,12 +498,12 @@ nav li:nth-child(3) a{
     position:absolute;
     width:120%;
     height:100%;
-    left:-10%;
     top:0;
     z-index:0;
     display:block;
+    left:-10%;
 }
-#Project1a::after{
+.Projecta::after{
     background:#d35400;
     z-index:0;
     transform:skewX(-3deg);
@@ -429,34 +511,101 @@ nav li:nth-child(3) a{
     position:absolute;
     width:100vw;
     height:100%;
-    left:-90vw;
     top:0;
     z-index:0;
     display:block;
 }
-#Project1b{
-    position:absolute;
+.ProjR{
+    left:-100vw;
+}
+.ProjL{
+    left:130vw;
+    text-align:left;
+}
+.ProjR::after{
+    left:-90vw;
+}
+.ProjL::after{
+    right:-90vw;
+}
+.ProjLimg{
+    left:0;
+}
+.ProjRimg{
     right:0;
+}
+.Projectb{
+    position:absolute;
     height:80vh;
 }
-#Project1ba{
+/*.Projectba{
     position:absolute;
     height:80vh;
     top:calc(inherit - 80vh);
-    right:0;
     z-index:100;
     transition: all 0.5s ease;
 }
 
 .HoverOp{
     opacity:0;
-    overflow:hidden;
+    transition: all 1s ease;
 }
-.HoverOp:hover{
-    opacity:1;
+.HoverOpA{
+    transition: all 1s ease;
+    width:80%;
+    height:80%;
+    position:fixed;
+    top:10%;
+    left:10%;
+}
+*/
+
+
+#CommHeroFrame{
+    background:#27ae60;
+    padding:10vh;
+    margin:0;
+    margin:0;
+}
+#CommHeroFrame h1{
+    margin:0;
+}
+
+#CommFrame{
+	height:100vh;
+    text-align:right;
+    margin:0;
 }
 
 
-.TSA{
-    color:#c0392b;
+#OffHeroFrame{
+    background:#2980b9;
+    padding:10vh;
+    margin:0;
+    margin:0;
+}
+#OffHeroFrame h1{
+    margin:0;
+}
+
+#OffFrame{
+	height:100vh;
+    text-align:right;
+    margin:0;
+}
+
+#EndFrame{
+    background:#bdc3c7;
+    color:black;
+    padding:2vw;
+}
+#EndFrame p{
+    margin:0;
+}
+#EndFrame a{
+    text-decoration:underline;
+    color:black !important;
+}
+#EndFrame a:hover{
+    text-decoration:none;
 }
