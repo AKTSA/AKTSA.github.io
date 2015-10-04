@@ -469,3 +469,22 @@ label{
     max-height:100%;
     width:100%;
 }
+
+
+#CommServReq{
+    display:inline-block;
+}
+#CommServReq ul{
+    list-style:none;
+    padding:0;
+}
+#CommServReq li{
+    padding:10px 20vw;
+}
+#CommServReq li:nth-child(odd){
+    background:#ecf0f1;
+}
+#CommServReq li:nth-child(even){
+    background:#2c3e50;
+    color:white;
+}
