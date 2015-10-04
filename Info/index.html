@@ -21,6 +21,7 @@
         
         <header id="HeroFrame">
             <h1>Member Information</h1>
+            <div class="TitleBG"></div>
         </header>
         
         <section id="MeetingsFrame">
@@ -28,24 +29,25 @@
             <p>Note that additional emergency meetings may be called at any time.</p>
             <table id="UpcomingMeetings">
                 <tr id="OldMeeting">
-                    <th rowspan="1">Past Meetings</th>
-                    <td>September 16, 2015</td>
-                    <td rowspan="1"></td>
+                    <th rowspan="2">Past Meetings</th>
+                    <td class="OldNorm">September 16, 2015</td>
+                    <td rowspan="2"></td>
                 </tr>
+                <tr><td>October 14, 2015</td></tr>
                 
                 <tr id="NextMeeting">
                     <th>Next Meeting</th>
-                    <td>October 14, 2015</td>
+                    <td>November 4, 2015</td>
                     <td></td>
                 </tr>
                 
                 <tr>
                     <th rowspan="8">Upcoming Meetings</th>
-                    <td>November 4, 2015</td>
+                    <td>December 2, 2015</td>
                     <td rowspan="8"></td>
                 </tr>
-				<!--<tr><td>November 4, 2015</td></tr>-->
-				<tr><td>December 2, 2015</td>  </tr>
+				<!--<tr><td>November 4, 2015</td></tr>
+				<tr><td>December 2, 2015</td>  </tr>-->
 				<tr><td>January 6, 2016</td>   </tr>
 				<tr><td>February 3, 2016</td>  </tr>
 				<tr><td>March 2, 2016</td>     </tr>
@@ -57,16 +59,16 @@
         <section id="CommFrame">
             <div>
                 <h1>Community Service</h1>
-                <p>Please note that, per new ICC regulations implemented this year, all TSA members are required to perform a minimum of three hours of community service through TSA. The available community service dates are listed below. Be sure to sign up for your preferred time <a href="https://docs.google.com/forms/d/1sXkh2HFXB4Pti6H8xtW6R9VD4u6Xm3qMGUlcMQv776M/viewform?c=0&w=1">here</a>. Note that this is a binding agreement and you will be expected to show up on the day you select.</p>
+                <p>Please remember that, per new ICC regulations implemented this year, all TSA members are required to perform a minimum of three hours of community service through TSA. The available community service dates are listed below. Be sure to sign up for your preferred time <a href="https://docs.google.com/forms/d/1sXkh2HFXB4Pti6H8xtW6R9VD4u6Xm3qMGUlcMQv776M/viewform?c=0&w=1">here</a>. Note that this is a binding agreement and you will be expected to show up on the day you select.</p>
             </div>
             
             <div id="CommServReq">
                 <ul>
-                    <li>October 10, 2015<br />2PM to 4PM at Spratt St.</li>
-                    <li>October 17, 2015<br />2PM to 4PM at Spratt St.</li>
-                    <li>October 24, 2015<br />2PM to 4PM at Spratt St.</li>
-                    <li>November 14, 2015<br />9AM to 12PM at Stonecrest</li>
-                    <li>November 21, 2015<br />9AM to 12PM at Stonecrest</li>
+                    <li><span>October 10, 2015<br />2PM to 4PM at Spratt St.</span></li>
+                    <li><span>October 17, 2015<br />2PM to 4PM at Spratt St.</span></li>
+                    <li><span>October 24, 2015<br />2PM to 4PM at Spratt St.</span></li>
+                    <li><span>November 14, 2015<br />9AM to 12PM at Stonecrest</span></li>
+                    <li><span>November 21, 2015<br />9AM to 12PM at Stonecrest</span></li>
                 </ul>
             </div>
         </section>
@@ -77,6 +79,9 @@
 				element: document.getElementById('CommFrame'),
 				handler: function(direction) {
 					document.getElementById("CommFrame").getElementsByTagName("DIV")[0].style.left = "0";
+                    for(i = 0; i < 5; i++){
+                        document.getElementById("CommServReq").getElementsByTagName("UL")[0].getElementsByTagName("LI")[i].style.left = 0;
+                    }
 				},
 				offset:'60%'
 			});

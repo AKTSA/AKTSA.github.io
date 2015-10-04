@@ -139,7 +139,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #MeetingsFrame{
-    padding:10vh 0 0 0;
+    padding:5vh 0 0 0;
 }
 #MeetingsFrame h1{
     margin:0;
@@ -174,6 +174,19 @@ h1, h2, h3, h4, h5, h6{
     display:block;
     left:-10%;
 }
+#CommFrame div:nth-child(1)::after{
+    background:#1F4788;
+    z-index:0;
+    transform:skewX(-10deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:-90%;
+}
 #CommFrame div:nth-child(1) p, h1{
     position:relative;
     z-index:1;
@@ -204,19 +217,32 @@ h1, h2, h3, h4, h5, h6{
 
 
 /*
+    Title BG
+*/
+.TitleBG{
+    position:absolute;
+    z-index:0;
+    width:100%;
+    height:100%;
+    background:radial-gradient(black, rgba(0,0,0,0));
+    left:0;
+    top:0;
+}
+
+/*
     Meeting Table
 */
 
 #UpcomingMeetings{
-    display:inline-block;
     margin-top:6vh;
     margin-bottom:0;
-    /*padding-bottom:10px;			/*THIS PADDING GETS REVERSED WITH EVERY PASSING MEETING*/
+    padding-bottom:10px;    /*THIS PADDING GETS REVERSED WITH EVERY PASSING MEETING*/
     background:#bdc3c7;
     max-width:100%;
     overflow-x:hidden !important;
     border-style:none;
     border-collapse:collapse;
+    display:block;
 }
 #UpcomingMeetings th{
     font-size:150%;
@@ -243,14 +269,18 @@ h1, h2, h3, h4, h5, h6{
 #UpcomingMeetings #NextMeeting td{
     padding:50px;
 }
-#UpcomingMeetings tr:nth-child(odd){
+#UpcomingMeetings tr:nth-child(even){
     background:#bdc3c7;
     color:black;
 }
-#UpcomingMeetings tr:nth-child(even){
+#UpcomingMeetings tr:nth-child(odd){
     background:#2c3e50;
     color:white;
-}
+}/*
+.OldNorm{
+    background:#2c3e50;
+    color:white; 
+}*/
 
 /*
     Community Service Table
@@ -267,12 +297,84 @@ h1, h2, h3, h4, h5, h6{
 }
 #CommServReq li{
     padding:2vh 20vw;
+    position:relative;
+    left:120%;
+    transition: all 0.5s ease-out;
 }
 #CommServReq li:nth-child(odd){
-    background:#ecf0f1;
     color:black;
 }
 #CommServReq li:nth-child(even){
-    background:#2c3e50;
     color:white;
+}
+#CommServReq li span{
+    position:relative;
+    z-index:1;
+}
+#CommServReq li:nth-child(odd)::before{
+    background:#bdc3c7;
+    z-index:0;
+    transform:skewX(-30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:0;
+}
+#CommServReq li:nth-child(odd)::after{
+    background:#bdc3c7;
+    z-index:0;
+    transform:skewX(-30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:90%;
+}
+#CommServReq li:nth-child(even)::before{
+    background:#2c3e50;
+    z-index:0;
+    transform:skewX(30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:0;
+}
+#CommServReq li:nth-child(even)::after{
+    background:#2c3e50;
+    z-index:0;
+    transform:skewX(30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:90%;
+}
+#CommServReq li:nth-child(1){
+    transition-delay:0.2s;
+}
+#CommServReq li:nth-child(2){
+    transition-delay:0.4s;
+}
+#CommServReq li:nth-child(3){
+    transition-delay:0.6s;
+}
+#CommServReq li:nth-child(4){
+    transition-delay:0.8s;
+}
+#CommServReq li:nth-child(5){
+    transition-delay:1s;
 }

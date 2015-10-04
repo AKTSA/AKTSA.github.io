@@ -75,6 +75,10 @@ Colors and/or backgrounds
 .Panel:nth-child(1) .PanelBeforeChild:before{
 	background-image:url("/images/VEXbg.png");
 }
+.Panel:nth-child(2) .PanelBeforeChild:before{
+    background-image:url("/images/IMG_0437.JPG");
+}
+
 .Panel:nth-child(1) .PanelBeforeChild{
 	background:#c0392b;
 }
