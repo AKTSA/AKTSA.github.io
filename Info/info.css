@@ -200,7 +200,39 @@ h1, h2, h3, h4, h5, h6{
     text-decoration: none;
 }
 
-
+#CompFrame{
+	padding: 5vh 0;
+}
+#CompFrame div{
+	display:table;
+	width:100%;
+	margin-top:5vh;
+}
+#CompFrame div div{
+	display:table-row;
+}
+#CompFrame div div div{
+	display:table-cell;
+	width:33%;
+	transition:all 1s ease;
+	opacity:0;
+}
+#CompFrame div div div:nth-child(2){
+	transition-delay:0.15s;
+}
+#CompFrame div div div:nth-child(3){
+	transition-delay:0.3s;
+}
+#CompFrame #NCTSA{
+	max-height:20px;
+	position:relative;
+	top:1px;
+}
+#CompFrame #Nats{
+	max-height:50px;
+	position:relative;
+	top:15px;
+}
 
 
 
@@ -329,6 +361,8 @@ h1, h2, h3, h4, h5, h6{
     left:5vw;
     top:50%;
     transform:translateY(-50%);
+	text-align:left;
+	max-width:55%;
 }
 #Meet{
     display:inline-block;
@@ -339,19 +373,19 @@ h1, h2, h3, h4, h5, h6{
 #Meet ul{
     list-style:none;
     padding:0;
+	margin:0;
 }
 #Meet li{
     padding:2vh 0;
     position:relative;
-    transition: all 0.5s ease-out;
+    transition: all 0.3s ease-out;
+	right:-150%;
 }
 #Meet li:nth-child(odd){
     color:black;
-    background:#bdc3c7;
 }
 #Meet li:nth-child(even){
     color:white;
-    background:#2c3e50;
 }
 #Meet li span{
     position:relative;
@@ -359,28 +393,8 @@ h1, h2, h3, h4, h5, h6{
 }
 #Meet .NextMeet{
     padding:4vh 0;
-}
-#Meet .NextMeet::before{
-    content:"Next Meeting ►";
-    position:absolute;
-    width:300px;
-    height:100%;
-    right:100%;
-    top:25%;
-    line-height:50px;
-    z-index:1;
-    font-weight:bold;
-}
-#Meet .NextMeet::after{
-    transform:skewX(30deg);
-    content:"";
-    position:absolute;
-    width:600px;
-    height:100%;
-    top:0;
-    right:calc(100% - 300px);
-    display:block;
-    z-index:-1;
+	right:-200%;
+	transition: all 0.7s ease-out;
 }
 #Meet .NextMeet span{
     z-index:10;
@@ -397,7 +411,7 @@ h1, h2, h3, h4, h5, h6{
 #Meet li:nth-child(even).NextMeet::after{
     background:#2c3e50;
 }
-/*#Meet li:nth-child(odd)::before{
+#Meet li:nth-child(odd)::before{
     background:#bdc3c7;
     z-index:0;
     transform:skewX(-30deg);
@@ -448,7 +462,64 @@ h1, h2, h3, h4, h5, h6{
     z-index:0;
     display:block;
     left:90%;
-}*/
+}
+#Meet li.NextMeet::before{
+    content:"Next Meeting";
+    position:absolute;
+    width:300px;
+    height:inherit !important;
+    right:100%;
+    top:50% !important;
+    z-index:1;
+    font-weight:bold;
+	left:initial !important;
+	background:none;
+	transform:translateY(-50%) !important;
+}
+#Meet li.NextMeet::after{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:100%;
+    top:0;
+    right:calc(100% - 300px);
+    display:block;
+    z-index:-1;
+	left:initial !important;
+}
+#Meet li:nth-child(odd).NextMeet{
+	background:#bdc3c7;
+}
+#Meet li:nth-child(even).NextMeet{
+	background:#2c3e50;
+}
+#Meet li:nth-child(1){
+	transition-delay:0.1s;
+}
+#Meet li:nth-child(2){
+	transition-delay:0.2s;
+}
+#Meet li:nth-child(3){
+	transition-delay:0.3s;
+}
+#Meet li:nth-child(4){
+	transition-delay:0.4s;
+}
+#Meet li:nth-child(5){
+	transition-delay:0.5s;
+}
+#Meet li:nth-child(6){
+	transition-delay:0.6s;
+}
+#Meet li:nth-child(7){
+	transition-delay:0.7s;
+}
+#Meet li:nth-child(8){
+	transition-delay:0.8s;
+}
+#Meet li:nth-child(9){
+	transition-delay:0.9s;
+}
 
 
 /*
@@ -546,4 +617,18 @@ h1, h2, h3, h4, h5, h6{
 }
 #CommServReq li:nth-child(5){
     transition-delay:1s;
+}
+
+
+
+
+/*
+	Misc. Small Things
+*/
+.TSA{
+	font-family:"Audiowide", sans-serif; 
+    color:#FF0000;
+}
+.TSA .AK{
+	color:#7A52CC;
 }

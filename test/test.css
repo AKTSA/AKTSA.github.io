@@ -358,6 +358,7 @@ header{
     padding:0;
     width:30px;
     height:30px;
+	position:relative;
 }
 #LocalNav input[type=radio]{
     display:none;
@@ -380,6 +381,7 @@ header{
     opacity:0.75;
     transition: all 0.5s ease;
     pointer-events:none;
+	top:0;
 }
 #LocalNav li:hover div{
     right:30px;

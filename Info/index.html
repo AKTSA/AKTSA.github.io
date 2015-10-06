@@ -1,35 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-		<title>Member Information - AK TSA</title>
-		<link rel="stylesheet" type="text/css" href="info.css" />
-		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-		<script src="/JSDep/noframework.waypoints.min.js"></script>
-		<script src="/JSDep/smooth-scroll.js"></script>
-    </head>
-    <body><!--
+
+<head>
+	<title>Member Information - AK TSA</title>
+	<link rel="stylesheet" type="text/css" href="info.css" />
+	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+	<script src="/JSDep/noframework.waypoints.min.js"></script>
+	<script src="/JSDep/smooth-scroll.js"></script>
+</head>
+
+<body>
+	<!--
 		
-		--><nav id="GlobalNav">
-			<ul>
-				<li><a href="/VEX">VEX</a></li><!--
-				--><li><a>Members</a></li><!--
-				--><li><a href="/test"><span style="color:#7A52CC;">AK</span> TSA</a></li><!--
-				--><li><a href="http://cleantech4us.github.io/AKCTE">AK CTE</a></li><!--
-				--><li><a>Design Brief</a></li>
-			</ul>
-		</nav>
-        
-        <header id="HeroFrame">
-            <h1>Member Information</h1>
-            <div class="TitleBG"></div>
-        </header>
-        
-        <section id="MeetingsFrame">
-            <div id="MeetHero">
-                <h1>Meetings</h1>
-                <p>Note that additional emergency meetings may be called at any time.</p>
-            </div>
-            <!--<table id="UpcomingMeetings">
+		-->
+	<nav id="GlobalNav">
+		<ul>
+			<li><a href="/VEX">VEX</a></li><!--
+			--><li><a>Members</a></li><!--
+			--><li><a href="/test"><span style="color:#7A52CC;">AK</span> TSA</a></li><!--
+			--><li><a href="http://cleantech4us.github.io/AKCTE">AK CTE</a></li><!--
+			--><li><a>Design Brief</a></li>
+		</ul>
+	</nav>
+
+	<header id="HeroFrame">
+		<h1>Member Information</h1>
+		<div class="TitleBG"></div>
+	</header>
+
+	<section id="MeetingsFrame">
+		<div id="MeetHero">
+			<h1>Meetings</h1>
+			<p>All TSA meetings are required and all TSA members are expected to be at all meetings. Attendance will be taken at various points throughout the meeting and any member whose attendance drops below 80% will <strong>not</strong> be eligible to compete at competitions.</p>
+			<p>These are the meetings that are currently planned. Note that additional emergency meetings may be called at any time.</p>
+		</div>
+		<!--<table id="UpcomingMeetings">
                 <tr id="OldMeeting">
                     <th rowspan="2">Past Meetings</th>
                     <td class="OldNorm">September 16, 2015</td>
@@ -56,7 +61,7 @@
 				<tr><td>April 6, 2016</td>     </tr>
 				<tr><td>May 4, 2016</td>       </tr>
             </table>-->
-            <!--<table class="Meet">
+		<!--<table class="Meet">
                 <tr>
                     <th>Past Meetings</th>
                     <th>Next Meeting</th>
@@ -84,50 +89,112 @@
                     </td>
                 </tr>
             </table>-->
-            <div id="Meet">
-                <ul>
-                    <li><span>September 16, 2015</span></li>
-                    <li class="NextMedet"><span>October 14, 2015  </span></li>
-                    <li class="NextMeet"><span>November 4, 2015  </span></li>
-                    <li><span>December 2, 2015  </span></li>
-                    <li><span>January 6, 2016   </span></li> 
-                    <li><span>February 3, 2016  </span></li>
-                    <li><span>March 2, 2016     </span></li>   
-                    <li><span>April 6, 2016     </span></li>   
-                    <li><span>May 4, 2016       </span></li>     
-                </ul>
-            </div>
-        </section>
-        
-        <section id="CommFrame">
-            <div>
-                <h1>Community Service</h1>
-                <p>Please remember that, per new ICC regulations implemented this year, all TSA members are required to perform a minimum of three hours of community service through TSA. The available community service dates are listed below. Be sure to sign up for your preferred time <a href="https://docs.google.com/forms/d/1sXkh2HFXB4Pti6H8xtW6R9VD4u6Xm3qMGUlcMQv776M/viewform?c=0&w=1">here</a>. Note that this is a binding agreement and you will be expected to show up on the day you select.</p>
-            </div>
-            
-            <div id="CommServReq">
-                <ul>
-                    <li><span>October 10, 2015<br />2PM to 4PM at Spratt St.</span></li>
-                    <li><span>October 17, 2015<br />2PM to 4PM at Spratt St.</span></li>
-                    <li><span>October 24, 2015<br />2PM to 4PM at Spratt St.</span></li>
-                    <li><span>November 14, 2015<br />9AM to 12PM at Stonecrest</span></li>
-                    <li><span>November 21, 2015<br />9AM to 12PM at Stonecrest</span></li>
-                </ul>
-            </div>
-        </section>
-        
-        
-        <script>
-			var waypoint1 = new Waypoint({
-				element: document.getElementById('CommFrame'),
-				handler: function(direction) {
-					document.getElementById("CommFrame").getElementsByTagName("DIV")[0].style.left = "0";
-                    for(i = 0; i < 5; i++){
-                        document.getElementById("CommServReq").getElementsByTagName("UL")[0].getElementsByTagName("LI")[i].style.left = 0;
-                    }
-				},
-				offset:'60%'
-			});
-        </script>
-    </body>
+		<div id="Meet">
+			<ul>
+				<li><span>September 16, 2015</span>
+				</li>
+				<li class="NextMeet"><span>October 14, 2015  </span>
+				</li>
+				<li><span>November 4, 2015  </span>
+				</li>
+				<li><span>December 2, 2015  </span>
+				</li>
+				<li><span>January 6, 2016   </span>
+				</li>
+				<li><span>February 3, 2016  </span>
+				</li>
+				<li><span>March 2, 2016     </span>
+				</li>
+				<li><span>April 6, 2016     </span>
+				</li>
+				<li><span>May 4, 2016       </span>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<section id="CommFrame">
+		<div>
+			<h1>Community Service</h1>
+			<p>Per new ICC regulations implemented this year, all TSA members are required to perform a minimum of three hours of community service through TSA. The available community service dates are listed below. Be sure to sign up for your preferred time <a href="https://docs.google.com/forms/d/1sXkh2HFXB4Pti6H8xtW6R9VD4u6Xm3qMGUlcMQv776M/viewform?c=0&w=1">here</a>.
+				Note that this is a binding agreement and you will be expected to show up on the day you select.</p>
+		</div>
+
+		<div id="CommServReq">
+			<ul>
+				<li><span>October 10, 2015<br />2PM to 4PM at Spratt St.</span>
+				</li>
+				<li><span>October 17, 2015<br />2PM to 4PM at Spratt St.</span>
+				</li>
+				<li><span>October 24, 2015<br />2PM to 4PM at Spratt St.</span>
+				</li>
+				<li><span>November 14, 2015<br />9AM to 12PM at Stonecrest</span>
+				</li>
+				<li><span>November 21, 2015<br />9AM to 12PM at Stonecrest</span>
+				</li>
+			</ul>
+		</div>
+	</section>
+	
+	<section id="CompFrame">
+		<h1>Upcoming Competitions</h1>
+		<div><div>
+			<div>
+				<h2>Western Regionals</h2>
+				<p>February 26, 2016<br />Appalachian State</p>
+			</div>
+			<div>
+				<h2>
+					<img id="NCTSA" src="http://nctsa.org/wp-content/themes/NCTSA/img/logo.png" alt="NC TSA"/> 
+					State Conference
+				</h2>
+				<p>April 14 - 16, 2016<br />Greensboro</p>
+			</div>
+			<div>
+				<h2>
+					<img id="Nats" src="http://mhstech.org/images/TSA%20LOGO2.png" alt="TSA" /> 
+					National Conference
+				</h2>
+				<p>June 28 - July 2, 2016<br />Nashville - #Thisis<strong style="color:#c0392b;">TSA</strong></p>
+			</div>
+		</div></div>
+	</section>
+	
+	<section id="UpFrame">
+		<h1>Updates</h1>
+		<p>Be sure to follow <span class="TSA"><span class="AK">AK</span> TSA</span> for all the latest updates</p>
+	</section>
+
+	<script>
+		var waypoint1 = new Waypoint({
+			element: document.getElementById('CommFrame'),
+			handler: function() {
+				document.getElementById("CommFrame").getElementsByTagName("DIV")[0].style.left = "0";
+				for (i = 0; i < 5; i++) {
+					document.getElementById("CommServReq").getElementsByTagName("UL")[0].getElementsByTagName("LI")[i].style.left = 0;
+				}
+			},
+			offset: '60%'
+		});
+		var waypoint2 = new Waypoint({
+			element: document.getElementById('Meet'),
+			handler: function() {
+				for (i = 0; i < 9; i++) {
+					document.getElementById("Meet").getElementsByTagName("UL")[0].getElementsByTagName("LI")[i].style.right = 0;
+				}
+			},
+			offset: '60%'
+		});
+		var waypoint3 = new Waypoint({
+			element: document.getElementById('CompFrame'),
+			handler: function() {
+				for (i = 0; i < 3; i++) {
+					document.getElementById("CompFrame").getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[i].style.opacity = 1;
+				}
+			},
+			offset: '60%'
+		});
+	</script>
+</body>
+
 </html>
