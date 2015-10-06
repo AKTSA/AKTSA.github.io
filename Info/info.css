@@ -139,7 +139,9 @@ h1, h2, h3, h4, h5, h6{
 }
 
 #MeetingsFrame{
-    padding:5vh 0 0 0;
+    padding:0;
+    position:relative;
+    transform-style:preserve-3d;
 }
 #MeetingsFrame h1{
     margin:0;
@@ -233,10 +235,10 @@ h1, h2, h3, h4, h5, h6{
     Meeting Table
 */
 
-#UpcomingMeetings{
+/*#UpcomingMeetings{
     margin-top:6vh;
     margin-bottom:0;
-    padding-bottom:10px;    /*THIS PADDING GETS REVERSED WITH EVERY PASSING MEETING*/
+    padding-bottom:10px;    /*THIS PADDING GETS REVERSED WITH EVERY PASSING MEETING*
     background:#bdc3c7;
     max-width:100%;
     overflow-x:hidden !important;
@@ -276,11 +278,178 @@ h1, h2, h3, h4, h5, h6{
 #UpcomingMeetings tr:nth-child(odd){
     background:#2c3e50;
     color:white;
-}/*
-.OldNorm{
+}
+
+.Meet{
+    width:70vw;
+    height:280px;
+    border-collapse: collapse;
+}
+.Meet th,td,tr{
+    padding:0;
+}
+.Meet th{
+    font-size:150%;
+}
+.Meet th:nth-child(2),td:nth-child(2){
+    width:30vw;
     background:#2c3e50;
-    color:white; 
+}
+.Meet th:nth-child(odd),td:nth-child(odd){
+    background:#bdc3c7;
+    color:black;
+}
+.Meet tr:nth-child(2) td:nth-child(3) li:nth-child(odd){
+    background:#2c3e50;
+    color:white;
+}
+.Meet tr:nth-child(1){
+    height:80px;
+}
+.Meet ul{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin:0;
+    padding:0;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height:200px;
+}
+.Meet li{
+    text-align: center;
+    display: table-row;
+}
+.Meet span{
+    display: table-cell;
+    vertical-align: middle;
 }*/
+#MeetHero{
+    position:absolute;
+    left:5vw;
+    top:50%;
+    transform:translateY(-50%);
+}
+#Meet{
+    display:inline-block;
+    width:30%;
+    position:relative;
+    right:-35vw;
+}
+#Meet ul{
+    list-style:none;
+    padding:0;
+}
+#Meet li{
+    padding:2vh 0;
+    position:relative;
+    transition: all 0.5s ease-out;
+}
+#Meet li:nth-child(odd){
+    color:black;
+    background:#bdc3c7;
+}
+#Meet li:nth-child(even){
+    color:white;
+    background:#2c3e50;
+}
+#Meet li span{
+    position:relative;
+    z-index:1;
+}
+#Meet .NextMeet{
+    padding:4vh 0;
+}
+#Meet .NextMeet::before{
+    content:"Next Meeting ►";
+    position:absolute;
+    width:300px;
+    height:100%;
+    right:100%;
+    top:25%;
+    line-height:50px;
+    z-index:1;
+    font-weight:bold;
+}
+#Meet .NextMeet::after{
+    transform:skewX(30deg);
+    content:"";
+    position:absolute;
+    width:600px;
+    height:100%;
+    top:0;
+    right:calc(100% - 300px);
+    display:block;
+    z-index:-1;
+}
+#Meet .NextMeet span{
+    z-index:10;
+}
+#Meet li:nth-child(odd).NextMeet::before{
+    color:black;
+}
+#Meet li:nth-child(odd).NextMeet::after{
+    background:#bdc3c7;
+}
+#Meet li:nth-child(even).NextMeet::before{
+    color:white;
+}
+#Meet li:nth-child(even).NextMeet::after{
+    background:#2c3e50;
+}
+/*#Meet li:nth-child(odd)::before{
+    background:#bdc3c7;
+    z-index:0;
+    transform:skewX(-30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:0;
+}
+#Meet li:nth-child(odd)::after{
+    background:#bdc3c7;
+    z-index:0;
+    transform:skewX(-30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:90%;
+}
+#Meet li:nth-child(even)::before{
+    background:#2c3e50;
+    z-index:0;
+    transform:skewX(30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:0;
+}
+#Meet li:nth-child(even)::after{
+    background:#2c3e50;
+    z-index:0;
+    transform:skewX(30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:90%;
+}*/
+
 
 /*
     Community Service Table
