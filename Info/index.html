@@ -149,10 +149,17 @@
 			<div><a href="https://twitter.com/AKHSTSA"><div>
 				<p>Follow <code>@AKHSTSA</code> to have reminders and announcements tweeted.</p>
 			</div></a></div>
-			<div><div>
+			<div><a><div>
 				<p>Receive important updates via Remind by texting <code>@akt</code> to <code>81010</code>.</p>
-			</div></div>
-		</div></div>
+			</div></a></div>
+		</div></div><!--(25% 0%, 100% 0%, 75% 100%, 0% 100%)->
+        
+        <svg width="0" height="0">
+            <clipPath id="clipPolygon">
+                <polygon points="25 0,100 0,75 100,0 100">
+                </polygon>
+            </clipPath>
+        </svg>-->
 	</section>
     
     
@@ -205,15 +212,20 @@
 			element: document.getElementById('UpFrameHero'),
 			handler: function() {
 				document.getElementById("UpFrameHero").style.left = 0;
-				for (i = 0; i < 3; i++) {
-					document.getElementById("UpFrame").getElementsByTagName("DIV")[1].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[2*i].getElementsByTagName("DIV")[0].style.opacity = 1;
-					document.getElementById("UpFrame").getElementsByTagName("DIV")[1].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[2*i].getElementsByTagName("DIV")[0].style.top = 0;
-					document.getElementById("UpFrame").getElementsByTagName("DIV")[1].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[2*i].getElementsByTagName("DIV")[0].style.transform = "inherit";
-				}
 			},
 			offset: '60%'
 		});
 		var waypoint5 = new Waypoint({
+			element: document.getElementById('UpFrameHero'),
+			handler: function() {
+				for (i = 0; i < 3; i++) {
+					document.getElementById("UpFrame").getElementsByTagName("DIV")[1].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[2*i].getElementsByTagName("DIV")[0].style.opacity = 1;
+					document.getElementById("UpFrame").getElementsByTagName("DIV")[1].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[2*i].getElementsByTagName("DIV")[0].style.left = 0;
+				}
+			},
+			offset: '30%'
+		});
+		var waypoint6 = new Waypoint({
 			element: document.getElementById('RefFrame'),
 			handler: function() {
 				for (i = 0; i < document.getElementsByClassName("BigButton").length; i++) {
@@ -230,44 +242,44 @@
         
         
         
-            var waypointnav1 = new Waypoint({
-				element: document.getElementById('MeetingsFrame'),
-				handler: function(direction) {
-                    document.getElementById("SB1").checked = true;
-                    if(direction == 'up'){
-                        document.getElementById("SB1").checked = false;
-                    }
-				},
-                offset:'30%'
-			});
-            var waypointnav2 = new Waypoint({
-				element: document.getElementById('CommFrame'),
-				handler: function(direction) {
-                    document.getElementById("SB2").checked = true;
-				},
-				offset:'30%'
-			});
-            var waypointnav3 = new Waypoint({
-				element: document.getElementById('CompFrame'),
-				handler: function(direction) {
-                    document.getElementById("SB3").checked = true;
-				},
-				offset:'30%'
-			});
-            var waypointnav4 = new Waypoint({
-				element: document.getElementById('UpFrame'),
-				handler: function(direction) {
-                    document.getElementById("SB4").checked = true;
-				},
-				offset:'30%'
-			});
-            var waypointnav5 = new Waypoint({
-				element: document.getElementById('RefFrame'),
-				handler: function(direction) {
-                    document.getElementById("SB5").checked = true;
-				},
-				offset:'30%'
-			});
+        var waypointnav1 = new Waypoint({
+			element: document.getElementById('MeetingsFrame'),
+			handler: function(direction) {
+                document.getElementById("SB1").checked = true;
+                if(direction == 'up'){
+                    document.getElementById("SB1").checked = false;
+                }
+			},
+            offset:'30%'
+		});
+        var waypointnav2 = new Waypoint({
+			element: document.getElementById('CommFrame'),
+			handler: function(direction) {
+                document.getElementById("SB2").checked = true;
+			},
+			offset:'30%'
+		});
+        var waypointnav3 = new Waypoint({
+			element: document.getElementById('CompFrame'),
+			handler: function(direction) {
+                document.getElementById("SB3").checked = true;
+			},
+			offset:'30%'
+		});
+        var waypointnav4 = new Waypoint({
+			element: document.getElementById('UpFrame'),
+			handler: function(direction) {
+                document.getElementById("SB4").checked = true;
+			},
+			offset:'30%'
+		});
+        var waypointnav5 = new Waypoint({
+			element: document.getElementById('RefFrame'),
+			handler: function(direction) {
+                document.getElementById("SB5").checked = true;
+			},
+			offset:'30%'
+		});
 	</script>
 </body>
 

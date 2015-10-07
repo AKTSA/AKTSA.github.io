@@ -311,7 +311,7 @@ h1, h2, h3, h4, h5, h6{
     background-size: cover;
     background-position: 50% 50%;
 	padding: 5vh 0;
-    overflow-y:hidden;
+    overflow-x:hidden;
 } /*DIV CEPTION!!*/
 #UpFrame div{
 	display:table;
@@ -328,31 +328,28 @@ h1, h2, h3, h4, h5, h6{
 	text-align:center;
 }
 #UpFrame div div div div{
-	width:20vw;
+	width:30vw;
 	margin-left:auto;
 	margin-right:auto;
 	height:20vw;
-	border-radius:10vw;
+	/*border-radius:10vw;*/
 	display:block;
 	background-position: 50% 50%;
 	background-size:cover;
 	position:relative;
     overflow-x:hidden;
-    top:30vh;
-    transform:rotate(-45deg);
+    left:30vh;
     opacity:0;
     transition: all 0.5s ease-out;
+    z-index:1;
 }
 #UpFrame div div div:nth-child(1) div{
-	background-image:url("http://core0.staticworld.net/images/article/2013/04/facebook_home_logo_580-100034106-large.jpg");
     transition-delay:0.35s;
 }
 #UpFrame div div div:nth-child(2) div{
-	background-image:url("http://www.melissadecapua.com/uploads/1/1/7/5/11753250/8031721_orig.jpg");
     transition-delay:0.5s;
 }
 #UpFrame div div div:nth-child(3) div{
-	background-image:url("https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/08_comment-512.png");
     transition-delay:0.65s;
 }
 #UpFrame div div div div::before{
@@ -367,24 +364,54 @@ h1, h2, h3, h4, h5, h6{
 	z-index:0;
 	opacity:0;
 	transition: all 0.5s ease;
-	border-radius:10vw;
+    clip-path: url("#clipPolygon");
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 #UpFrame div div div div:hover::before{
 	opacity:1;
+}
+#UpFrame div div div div::after{
+    position:absolute;
+    display:block;
+    content:'';
+    width:100%;
+	height:100%;
+    background-size:cover;
+    background-position: 50% 50%;
+    top:0;
+    left:0;
+    z-index:-1;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+#UpFrame div div div:nth-child(1) div::after{
+	/*background-image:url("http://core0.staticworld.net/images/article/2013/04/facebook_home_logo_580-100034106-large.jpg");*/
+    background-image:url("http://joemiller.us/wp-content/uploads/official-facebook-logo-slide.jpg");
+}
+#UpFrame div div div:nth-child(2) div::after{
+	/*background-image:url("http://www.melissadecapua.com/uploads/1/1/7/5/11753250/8031721_orig.jpg");*/
+    background-image:url("http://www.newportgwentdragons.com//content/images/stock-twitter-logo-1200x675.jpg");
+}
+#UpFrame div div div:nth-child(3) div::after{
+	/*background-image:url("https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/08_comment-512.png");*/
+    background-image:url("/images/SMS.png");
 }
 #UpFrame div div div div p{
 	opacity:0;
 	transition: all 0.5s ease;
 	position:relative;
 	z-index:1;
-	top:50%;
-	left:-100%;
+	top:-50%;
+    left:20%;
 	transform:translateY(-50%);
     padding:5px;
+    max-width:60%;
+    margin:0;
 }
 #UpFrame div div div div:hover p{
 	opacity:1;
-	left:0;
+    top:50%;
 }
 #UpFrame #UpFrameHero{
 	display:block;
