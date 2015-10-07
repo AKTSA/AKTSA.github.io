@@ -266,6 +266,7 @@ h1, h2, h3, h4, h5, h6{
 	display:block;
 	background-position: 50% 50%;
 	background-size:cover;
+	position:relative;
 }
 #UpFrame div div div:nth-child(1) div{
 	background-image:url("http://core0.staticworld.net/images/article/2013/04/facebook_home_logo_580-100034106-large.jpg");
@@ -275,6 +276,73 @@ h1, h2, h3, h4, h5, h6{
 }
 #UpFrame div div div:nth-child(3) div{
 	background-image:url("https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/08_comment-512.png");
+}
+#UpFrame div div div div::before{
+	content:'';
+	width:100%;
+	height:100%;
+	display:block;
+	position:absolute;
+	top:0;
+	left:0;
+	background:radial-gradient(black, rgba(0,0,0,0));
+	z-index:0;
+	opacity:0;
+	transition: all 0.5s ease;
+	border-radius:10vw;
+}
+#UpFrame div div div div:hover::before{
+	opacity:1;
+}
+#UpFrame div div div div p{
+	opacity:0;
+	transition: all 0.5s ease;
+	position:relative;
+	z-index:1;
+	top:50%;
+	left:-100%;
+	transform:translateY(-50%);
+}
+#UpFrame div div div div:hover p{
+	opacity:1;
+	left:0;
+}
+#UpFrame #UpFrameHero{
+	display:block;
+	width:60vw;
+	text-align:right;
+	position:relative;
+	padding: 5vh 1vw;
+}
+#UpFrame #UpFrameHero p{
+	position:relative;
+	z-index:1;
+}
+#UpFrame #UpFrameHero::before{
+    background:#1F4788;
+    z-index:0;
+    transform:skewX(-10deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:-10%;
+}
+#UpFrame #UpFrameHero::after{
+    background:#1F4788;
+    z-index:0;
+    transform:skewX(-10deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:-90%;
 }
 
 
@@ -531,9 +599,11 @@ h1, h2, h3, h4, h5, h6{
 }
 #Meet li:nth-child(odd).NextMeet{
 	background:#bdc3c7;
+	transition-delay:0;
 }
 #Meet li:nth-child(even).NextMeet{
 	background:#2c3e50;
+	transition-delay:0;
 }
 #Meet li:nth-child(1){
 	transition-delay:0.1s;
@@ -681,5 +751,4 @@ code{
 	font-family: 'Lucida Console', monospace;
 	padding: 5px;
 	border-radius:5px;
-}
 }
