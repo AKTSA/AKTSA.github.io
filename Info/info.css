@@ -113,6 +113,75 @@ h1, h2, h3, h4, h5, h6{
 
 
 
+#LocalNav{
+    width:30px;
+    height:150px;
+    position:fixed;
+    top:calc(50vh + 25px);
+    z-index:100;
+    transition: all 0.5s ease;
+    right:0;
+}
+#LocalNav ul{
+    margin:0;
+    padding:0;
+}
+#LocalNav li{
+    list-style:none;
+    margin:0;
+    padding:0;
+    width:30px;
+    height:30px;
+	position:relative;
+}
+#LocalNav input[type=radio]{
+    display:none;
+}
+#LocalNav label{
+    width:100%;
+    height:100%;
+    display:inline-block;
+    cursor:pointer;
+    opacity:0.75;
+}
+#LocalNav div{
+    position:absolute;
+    width:100px;
+    right:-100px;
+    height:30px;
+    line-height:30px;
+    display:inline-block;
+    background:#34495e;
+    opacity:0.75;
+    transition: all 0.5s ease;
+    pointer-events:none;
+	top:0;
+}
+#LocalNav li:hover div{
+    right:30px;
+}
+
+#LocalNav li:nth-child(1) label{
+    background:#c0392b;
+}
+#LocalNav li:nth-child(2) label{
+    background:#F9690E;
+}
+#LocalNav li:nth-child(3) label{
+    background:#1E824C;
+}
+#LocalNav li:nth-child(4) label{
+    background:#1F3A93;
+}
+#LocalNav li:nth-child(5) label{
+    background:#8e44ad;
+}
+#LocalNav li:hover label{
+    background:white;
+}
+#LocalNav li input[type=radio]:checked+label{
+    background:black;
+}
 
 
 
@@ -242,6 +311,7 @@ h1, h2, h3, h4, h5, h6{
     background-size: cover;
     background-position: 50% 50%;
 	padding: 5vh 0;
+    overflow-y:hidden;
 } /*DIV CEPTION!!*/
 #UpFrame div{
 	display:table;
@@ -267,15 +337,23 @@ h1, h2, h3, h4, h5, h6{
 	background-position: 50% 50%;
 	background-size:cover;
 	position:relative;
+    overflow-x:hidden;
+    top:30vh;
+    transform:rotate(-45deg);
+    opacity:0;
+    transition: all 0.5s ease-out;
 }
 #UpFrame div div div:nth-child(1) div{
 	background-image:url("http://core0.staticworld.net/images/article/2013/04/facebook_home_logo_580-100034106-large.jpg");
+    transition-delay:0.35s;
 }
 #UpFrame div div div:nth-child(2) div{
 	background-image:url("http://www.melissadecapua.com/uploads/1/1/7/5/11753250/8031721_orig.jpg");
+    transition-delay:0.5s;
 }
 #UpFrame div div div:nth-child(3) div{
 	background-image:url("https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/08_comment-512.png");
+    transition-delay:0.65s;
 }
 #UpFrame div div div div::before{
 	content:'';
@@ -302,6 +380,7 @@ h1, h2, h3, h4, h5, h6{
 	top:50%;
 	left:-100%;
 	transform:translateY(-50%);
+    padding:5px;
 }
 #UpFrame div div div div:hover p{
 	opacity:1;
@@ -312,7 +391,9 @@ h1, h2, h3, h4, h5, h6{
 	width:60vw;
 	text-align:right;
 	position:relative;
-	padding: 5vh 1vw;
+	padding: 5vh 0 5vh 5vw;
+    left:-100%;
+    transition: all 0.5s ease-out;
 }
 #UpFrame #UpFrameHero p{
 	position:relative;
@@ -343,6 +424,14 @@ h1, h2, h3, h4, h5, h6{
     z-index:0;
     display:block;
     left:-90%;
+}
+#UpFrame a{
+    color:white !important;
+    text-decoration: none;
+}
+
+#RefFrame{
+    padding: 5vh 0;
 }
 
 
@@ -377,95 +466,6 @@ h1, h2, h3, h4, h5, h6{
     Meeting Table
 */
 
-/*#UpcomingMeetings{
-    margin-top:6vh;
-    margin-bottom:0;
-    padding-bottom:10px;    /*THIS PADDING GETS REVERSED WITH EVERY PASSING MEETING*
-    background:#bdc3c7;
-    max-width:100%;
-    overflow-x:hidden !important;
-    border-style:none;
-    border-collapse:collapse;
-    display:block;
-}
-#UpcomingMeetings th{
-    font-size:150%;
-    text-align:right;
-    padding-right:40px;
-}
-#UpcomingMeetings td, th{
-    padding:10px;
-    width:calc(34vw - 20px);
-    text-align:center;
-}
-#UpcomingMeetings #OldMeeting{
-    background:#bdc3c7;
-    color:black;
-}
-#UpcomingMeetings #OldMeeting th, td{
-    padding-top:15px;
-    padding-bottom:15px;
-}
-#UpcomingMeetings #NextMeeting{
-    background:#2c3e50;
-    color:white;
-}
-#UpcomingMeetings #NextMeeting td{
-    padding:50px;
-}
-#UpcomingMeetings tr:nth-child(even){
-    background:#bdc3c7;
-    color:black;
-}
-#UpcomingMeetings tr:nth-child(odd){
-    background:#2c3e50;
-    color:white;
-}
-
-.Meet{
-    width:70vw;
-    height:280px;
-    border-collapse: collapse;
-}
-.Meet th,td,tr{
-    padding:0;
-}
-.Meet th{
-    font-size:150%;
-}
-.Meet th:nth-child(2),td:nth-child(2){
-    width:30vw;
-    background:#2c3e50;
-}
-.Meet th:nth-child(odd),td:nth-child(odd){
-    background:#bdc3c7;
-    color:black;
-}
-.Meet tr:nth-child(2) td:nth-child(3) li:nth-child(odd){
-    background:#2c3e50;
-    color:white;
-}
-.Meet tr:nth-child(1){
-    height:80px;
-}
-.Meet ul{
-    display: table;
-    table-layout: fixed;
-    width: 100%;
-    margin:0;
-    padding:0;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    height:200px;
-}
-.Meet li{
-    text-align: center;
-    display: table-row;
-}
-.Meet span{
-    display: table-cell;
-    vertical-align: middle;
-}*/
 #MeetHero{
     position:absolute;
     left:5vw;
@@ -504,7 +504,7 @@ h1, h2, h3, h4, h5, h6{
 #Meet .NextMeet{
     padding:4vh 0;
 	right:-400%;
-	transition: all 0.7s ease-out;
+	transition: all 0.9s ease-out;
 }
 #Meet .NextMeet span{
     z-index:10;
@@ -599,11 +599,11 @@ h1, h2, h3, h4, h5, h6{
 }
 #Meet li:nth-child(odd).NextMeet{
 	background:#bdc3c7;
-	transition-delay:0;
+	transition-delay:0s;
 }
 #Meet li:nth-child(even).NextMeet{
 	background:#2c3e50;
-	transition-delay:0;
+	transition-delay:0s;
 }
 #Meet li:nth-child(1){
 	transition-delay:0.1s;
@@ -751,4 +751,49 @@ code{
 	font-family: 'Lucida Console', monospace;
 	padding: 5px;
 	border-radius:5px;
+}
+
+.BigButton{
+	display:inline-block;
+	color:white;
+	padding:10px;
+	transition:all 0.5s ease;
+    margin-bottom:10px;
+    text-decoration:none;
+    position:relative;
+    right:100vw;
+}
+.BigButton:hover{
+	color:black;
+	text-decoration:none !important;
+    transition-delay:0s !important;
+}
+.BigButton::before{
+    content:'';
+    display:block;
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    top:0;
+    left:0;
+    transform:skewx(-10deg);
+    transition: all 0.5s ease;
+    
+	background:#7A52CC;
+}
+.BigButton:hover::before{   
+	background:#F4F4F4;
+}
+.BigButton:nth-child(4){
+    transition-delay:0.15s;
+}
+.BigButton:nth-child(3){
+    transition-delay:0.3s;
+}
+.BigButton:nth-child(2){
+    transition-delay:0.45s;
+}
+.BigButton:nth-child(1){
+    transition-delay:0.6s;
 }
