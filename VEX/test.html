@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>VEX Robotics - AK TSA</title>
+		<link rel="stylesheet" type="text/css" href="test.css" />
+		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
+		<script src="/JSDep/noframework.waypoints.min.js"></script>
+		<script src="/JSDep/smooth-scroll.js"></script>
+	</head>
+    <body><!--
+		
+		--><nav id="GlobalNav">
+			<ul>
+				<li><a>VEX</a></li><!--
+				--><li><a href="/Info/">Members</a></li><!--
+				--><li><a href=""><span style="color:#7A52CC;">AK</span> TSA</a></li><!--
+				--><li><a href="http://cleantech4us.github.io/AKCTE">AK CTE</a></li><!--
+				--><li><a>Design Brief</a></li>
+			</ul>
+		</nav>
+        <nav id="LocalNav">
+            <ul>
+                <li>
+                    <input id="SB1" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#BigPanelWrapperParent', {speed: 1000, easing: 'easeInOutCubic', updateURL: false});" />
+                    <label for="SB1"></label>
+                    <div>Home</div>
+                </li>
+                <li>
+                    <input id="SB2" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#AboutHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+                    <label for="SB2"></label>
+                    <div>About</div>
+                </li>
+                <li>
+                    <input id="SB3" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#ProjectsHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+                    <label for="SB3"></label>
+                    <div>Projects</div>
+                </li>
+                <li>
+                    <input id="SB4" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#CommHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+                    <label for="SB4"></label>
+                    <div>Community</div>
+                </li>
+                <li>
+                    <input id="SB5" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#OffHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+                    <label for="SB5"></label>
+                    <div>Officers</div>
+                </li>
+            </ul>
+        </nav>
+        
+        
+        
+        
+        <section id="Hero">
+            <header>
+                <h1 style="color:#7A52CC;">
+                    AK <img src="/images/VEX-Robotics.png" style="max-height:200px;position:relative;bottom:-20px;" alt="VEX"/>
+                </h1>
+                <h2>
+                    A Division of 
+                    <a href="/" style="font-family:'Audiowide', sans-serif;">
+                        <span style="color:#7A52CC;">AK </span><span style="color:#FF0000">TSA</span>
+                    </a>
+                </h2>
+            </header>
+            <div></div>
+        </section>
+        
+        <section id="VidFrame">
+                <h2 id="YTDisappear">2015-2016 VEX Competition<br />Nothing But Net<br /><span style="font-size:50%;">Click to Play Video</span></h2>
+                <div id="YTPlayer"></div>
+                <div class="TitleBG" id="TitleBG2"></div>
+        </section>
+        
+        
+        <script>
+        
+			var tag = document.createElement('script');
+			
+			tag.src = "https://www.youtube.com/iframe_api";
+			var firstScriptTag = document.getElementsByTagName('script')[0];
+			firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+			
+			
+			var player;
+			function onYouTubeIframeAPIReady() {
+			    player = new YT.Player('YTPlayer', {
+			        height: '100%',
+			        width: '100%',
+			        videoId: 'A8daR6qBw3M',
+			        events: {
+			            'onStateChange': onPlayerStateChange
+			        }
+			    });
+			}
+			function onPlayerStateChange(event) {
+			    if (event.data == YT.PlayerState.PLAYING) {
+			        document.getElementById("YTDisappear").style.display = "none";
+			        document.getElementById("TitleBG2").style.display = "none";
+			    }
+			}
+        
+        </script>
+        
+    </body>
+</html>
