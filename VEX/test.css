@@ -19,6 +19,22 @@ h1, h2, h3, h4, h5, h6{
     margin:0;
 }
 
+a{
+	color:white !important;
+	text-decoration:underline;
+}
+a:hover{
+	text-decoration:none;
+}
+
+code{
+	background:#2c3e50;
+	color:white;
+	font-family: 'Lucida Console', monospace;
+	padding: 5px;
+	border-radius:5px;
+}
+
 
 
 /*
@@ -225,6 +241,7 @@ h1, h2, h3, h4, h5, h6{
     width:100%;
     height:calc(100vh - 100px);
     position:relative;
+	overflow-y:hidden;
 }
 #YTDisappear{
     position:absolute;
@@ -234,4 +251,196 @@ h1, h2, h3, h4, h5, h6{
     transform:translateY(-50%);
     pointer-events:none;
     z-index:1;
+}
+#VidFrame div{
+    position:absolute;
+    z-index:0;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    pointer-events:none;
+    background:radial-gradient(black, rgba(0, 0, 0, 0.7), rgba(0,0,0,0), rgba(0,0,0,0));
+}
+
+#ContFrame{
+	padding: 5vh 0;
+}
+#ContFrame div{
+	display:table;
+	width:100%;
+	margin-top:5vh;
+}
+#ContFrame div div{
+	display:table-row;
+}
+#ContFrame div div div{
+	display: table-cell;
+	width:50%;
+	padding: 2vh 3vw 0 3vw;
+}
+
+#MeetFrame{
+	padding: 15vh 0;
+	background-position:50% 50%;
+	background-attachment:fixed;
+	background-size:cover;
+	background-image:url("/images/IMG_20150322_160628.jpg");
+}
+#MeetFrame div{
+	padding: 5vh 3vw;
+	position:relative;
+	width:60vw;
+	z-index:1;
+}
+#MeetFrame div:before{
+	content:'';
+	position:absolute;
+	top:0; right:0;
+	width:200%; height:100%;
+	transform:skewX(-10deg);
+	background:#96281B;
+	z-index:-1;
+}
+
+#AttendFrame{
+	padding: 0;
+	position:relative;
+}
+#AttendFrame h1{
+    position:absolute;
+    left:5vw;
+    top:50%;
+    transform:translateY(-50%);
+	text-align:left;
+	max-width:55%;
+}
+#AttendFrame  ol{
+    list-style:none;
+    padding:0;
+	margin:0;
+    display:inline-block;
+    width:30%;
+    position:relative;
+    right:-35vw;
+}
+#AttendFrame  li{
+    padding:2vh 0;
+    position:relative;
+    transition: all 0.3s ease-out;
+	/*right:-200%;*/right:0;
+}
+#AttendFrame  li:nth-child(odd){
+    color:black;
+}
+#AttendFrame  li:nth-child(even){
+    color:white;
+}
+#AttendFrame  li span{
+    position:relative;
+    z-index:1;
+}
+#AttendFrame  .NextMeet{
+    padding:4vh 0;
+	right:-400%;
+	transition: all 0.9s ease-out;
+}
+#AttendFrame  .NextMeet span{
+    z-index:10;
+}
+#AttendFrame  li:nth-child(odd).NextMeet::before{
+    color:black;
+}
+#AttendFrame  li:nth-child(odd).NextMeet::after{
+    background:#bdc3c7;
+}
+#AttendFrame  li:nth-child(even).NextMeet::before{
+    color:white;
+}
+#AttendFrame  li:nth-child(even).NextMeet::after{
+    background:#2c3e50;
+}
+#AttendFrame  li:nth-child(odd)::before{
+    background:#bdc3c7;
+    z-index:0;
+    transform:skewX(-30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:0;
+}
+#AttendFrame  li:nth-child(odd)::after{
+    background:#bdc3c7;
+    z-index:0;
+    transform:skewX(-30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:90%;
+}
+#AttendFrame  li:nth-child(even)::before{
+    background:#2c3e50;
+    z-index:0;
+    transform:skewX(30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:0;
+}
+#AttendFrame  li:nth-child(even)::after{
+    background:#2c3e50;
+    z-index:0;
+    transform:skewX(30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:90%;
+}
+#AttendFrame  li.NextMeet::before{
+    content:"Next Meeting";
+    position:absolute;
+    width:300px;
+    height:inherit !important;
+    right:100%;
+    top:50% !important;
+    z-index:1;
+    font-weight:bold;
+	left:initial !important;
+	background:none;
+	transform:translateY(-50%) !important;
+}
+#AttendFrame  li.NextMeet::after{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:100%;
+    top:0;
+    right:calc(100% - 300px);
+    display:block;
+    z-index:-1;
+	left:initial !important;
+}
+#AttendFrame  li:nth-child(odd).NextMeet{
+	background:#bdc3c7;
+	transition-delay:0s;
+}
+#AttendFrame  li:nth-child(even).NextMeet{
+	background:#2c3e50;
+	transition-delay:0s;
 }
