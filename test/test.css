@@ -600,6 +600,18 @@ header{
     margin:0;
 }
 
+#AwardHeroFrame{
+    background:#663399;
+    padding:10vh;
+    margin:0;
+    margin:0;
+}
+#AwardFrame{
+	height:100vh;
+	margin:0;
+}
+
+
 #EndFrame{
     background:#bdc3c7;
     color:black;

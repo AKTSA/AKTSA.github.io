@@ -21,11 +21,6 @@
         <nav id="LocalNav">
             <ul>
                 <li>
-                    <input id="SB1" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#BigPanelWrapperParent', {speed: 1000, easing: 'easeInOutCubic', updateURL: false});" />
-                    <label for="SB1"></label>
-                    <div>Home</div>
-                </li>
-                <li>
                     <input id="SB2" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#AboutHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
                     <label for="SB2"></label>
                     <div>About</div>
@@ -44,6 +39,11 @@
                     <input id="SB5" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#OffHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
                     <label for="SB5"></label>
                     <div>Officers</div>
+                </li>
+                <li>
+                    <input id="SB1" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#AwardHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false});" />
+                    <label for="SB1"></label>
+                    <div>Awards</div>
                 </li>
             </ul>
         </nav>
@@ -157,6 +157,12 @@
         </div>
         <section id="OffFrame">
         </section>
+		
+		<div id="AwardHeroFrame">
+			<h1>Awards</h1>
+		</div>
+		<section id="AwardFrame">
+		</section>
         
         
         
@@ -218,15 +224,20 @@
 			});
             
             var waypointnav1 = new Waypoint({
-				element: document.getElementById('BigPanelWrapperParent'),
+				element: document.getElementById('AwardHeroFrame'),
 				handler: function(direction) {
                     document.getElementById("SB1").checked = true;
-				}
+				},
+				offset:'30%'
 			});
             var waypointnav2 = new Waypoint({
 				element: document.getElementById('AboutHeroFrame'),
 				handler: function(direction) {
-                    document.getElementById("SB2").checked = true;
+					if(direction == "down"){
+	                    document.getElementById("SB2").checked = true;
+					} else{
+						document.getElementById("SB2").checked = false;
+					}
 				},
 				offset:'30%'
 			});

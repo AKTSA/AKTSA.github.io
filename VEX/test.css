@@ -124,7 +124,7 @@ code{
 
 #GlobalNav li:nth-child(3) a{  
 	font-family:"Audiowide", sans-serif; 
-    color:#FF0000;
+    color:#FF0000 !important;
 }
 
 
@@ -307,7 +307,7 @@ code{
 	padding: 0;
 	position:relative;
 }
-#AttendFrame h1{
+#AttendFrame div{
     position:absolute;
     left:5vw;
     top:50%;
@@ -327,120 +327,66 @@ code{
 #AttendFrame  li{
     padding:2vh 0;
     position:relative;
-    transition: all 0.3s ease-out;
-	/*right:-200%;*/right:0;
+    transition: all 1.1s ease-out;
+	right:-200%;
 }
 #AttendFrame  li:nth-child(odd){
     color:black;
+	transition: all 1.3s ease-in;
 }
 #AttendFrame  li:nth-child(even){
     color:white;
+	transition-delay:0.2s;
 }
 #AttendFrame  li span{
     position:relative;
     z-index:1;
 }
-#AttendFrame  .NextMeet{
-    padding:4vh 0;
-	right:-400%;
-	transition: all 0.9s ease-out;
-}
-#AttendFrame  .NextMeet span{
-    z-index:10;
-}
-#AttendFrame  li:nth-child(odd).NextMeet::before{
-    color:black;
-}
-#AttendFrame  li:nth-child(odd).NextMeet::after{
-    background:#bdc3c7;
-}
-#AttendFrame  li:nth-child(even).NextMeet::before{
-    color:white;
-}
-#AttendFrame  li:nth-child(even).NextMeet::after{
-    background:#2c3e50;
-}
 #AttendFrame  li:nth-child(odd)::before{
     background:#bdc3c7;
-    z-index:0;
+    z-index:-1;
     transform:skewX(-30deg);
     content:"";
     position:absolute;
     width:120%;
     height:100%;
     top:0;
-    z-index:0;
     display:block;
     left:0;
 }
 #AttendFrame  li:nth-child(odd)::after{
     background:#bdc3c7;
-    z-index:0;
+    z-index:-1;
     transform:skewX(-30deg);
     content:"";
     position:absolute;
     width:120%;
     height:100%;
     top:0;
-    z-index:0;
     display:block;
     left:90%;
 }
 #AttendFrame  li:nth-child(even)::before{
     background:#2c3e50;
-    z-index:0;
+    z-index:-1;
     transform:skewX(30deg);
     content:"";
     position:absolute;
     width:120%;
     height:100%;
     top:0;
-    z-index:0;
     display:block;
     left:0;
 }
 #AttendFrame  li:nth-child(even)::after{
     background:#2c3e50;
-    z-index:0;
+    z-index:-1;
     transform:skewX(30deg);
     content:"";
     position:absolute;
     width:120%;
     height:100%;
     top:0;
-    z-index:0;
     display:block;
     left:90%;
-}
-#AttendFrame  li.NextMeet::before{
-    content:"Next Meeting";
-    position:absolute;
-    width:300px;
-    height:inherit !important;
-    right:100%;
-    top:50% !important;
-    z-index:1;
-    font-weight:bold;
-	left:initial !important;
-	background:none;
-	transform:translateY(-50%) !important;
-}
-#AttendFrame  li.NextMeet::after{
-    content:"";
-    position:absolute;
-    width:600px;
-    height:100%;
-    top:0;
-    right:calc(100% - 300px);
-    display:block;
-    z-index:-1;
-	left:initial !important;
-}
-#AttendFrame  li:nth-child(odd).NextMeet{
-	background:#bdc3c7;
-	transition-delay:0s;
-}
-#AttendFrame  li:nth-child(even).NextMeet{
-	background:#2c3e50;
-	transition-delay:0s;
 }
