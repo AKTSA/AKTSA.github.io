@@ -262,7 +262,7 @@ header{
     z-index:100;
     transform-style: preserve-3d;
     transition: all 0.15s linear;
-	display:none;
+	pointer-events:none;
 }
 #GlobalNav ul{
     list-style:none;
