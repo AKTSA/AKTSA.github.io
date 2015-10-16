@@ -369,7 +369,7 @@ h1{
 	transition: all 0.5s ease;
     -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-    clip-path: url("/Info/index.html#clipPolygon");
+    clip-path: url("/Info/#clipPolygon");
 }
 #UpFrame div div div div:hover::before{
 	opacity:1;
@@ -387,7 +387,7 @@ h1{
     z-index:-1;
     -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-	clip-path:url("/Info/index.html#clipPolygon");
+	clip-path:url("/Info/#clipPolygon");
 }
 #UpFrame div div div:nth-child(1) div::after{
 	/*background-image:url("http://core0.staticworld.net/images/article/2013/04/facebook_home_logo_580-100034106-large.jpg");*/
@@ -488,7 +488,7 @@ h1{
     z-index:0;
     width:100%;
     height:100%;
-    background:radial-gradient(black, rgba(0,0,0,0));
+    background:radial-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0));
     left:0;
     top:0;
 }
