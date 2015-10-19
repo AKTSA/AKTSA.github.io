@@ -663,6 +663,9 @@ h1{
 #Meet li:nth-child(9){
 	transition-delay:0.9s;
 }
+#Meet li:nth-child(10){
+	transition-delay:1s;
+}
 
 
 /*
