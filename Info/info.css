@@ -831,3 +831,59 @@ code{
 .BigButton:nth-child(1){
     transition-delay:0.6s;
 }
+
+
+/*
+ * Mobile Stuff! Woot! Finally!
+ * ============================
+ */
+@media (min-width : 320px) and (max-width : 1024px) {
+	body, html{
+		width:100vw;
+		overflow-x:none;
+	}
+	
+	#LocalNav{
+		opacity:0;
+	}
+	
+	#MeetHero{
+		position:static;
+		top:inherit;
+		transform:inherit;
+		width:100%;
+		max-width:100%;
+		padding-top: 5vh;
+		padding-right: 3vw;
+		padding-left:1vw;
+	}
+	#Meet{
+		display:block;
+		width:100%;
+		left:0;
+	}
+	#Meet li{
+		right:0;
+	}
+	#Meet li:nth-child(odd){
+		background:#bdc3c7;
+	}
+	#Meet li:nth-child(even){
+		background:#2c3e50;
+	}
+	#Meet li::before{
+		display:none !important;
+	}
+	#Meet li::after{
+		display:none !important;
+	}
+	#Meet .NextMeet{
+		padding-top:7vh;
+		padding-bottom: 7vh;
+	}
+	#Meet .NextMeet::before{
+		display:block !important;
+		right:10px !important;
+		width:inherit !important;
+	}
+}
