@@ -391,11 +391,11 @@ h1{
 }
 #UpFrame div div div:nth-child(1) div::after{
 	/*background-image:url("http://core0.staticworld.net/images/article/2013/04/facebook_home_logo_580-100034106-large.jpg");*/
-    background-image:url("http://joemiller.us/wp-content/uploads/official-facebook-logo-slide.jpg");
+    background-image:url("/images/Facebook.jpg");
 }
 #UpFrame div div div:nth-child(2) div::after{
 	/*background-image:url("http://www.melissadecapua.com/uploads/1/1/7/5/11753250/8031721_orig.jpg");*/
-    background-image:url("http://www.newportgwentdragons.com//content/images/stock-twitter-logo-1200x675.jpg");
+    background-image:url("/images/Twitter.jpg");
 }
 #UpFrame div div div:nth-child(3) div::after{
 	/*background-image:url("https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/08_comment-512.png");*/
