@@ -623,7 +623,7 @@ header{
  * Mobile Stuff! Woot! Finally!
  * ============================
  */
-@media (min-width : 320px) and (max-width : 1024px) {
+@media (max-width : 1024px) {
 	body, html{
 		width:100vw;
 		overflow-x:none;
@@ -658,6 +658,7 @@ header{
 	
 	#GlobalNav{
 		opacity:1 !important;
+        pointer-events: all !important;
 	}
 	#LocalNav{
 		opacity:0;

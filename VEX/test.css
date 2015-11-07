@@ -355,8 +355,13 @@ code {
 	text-align: left;
 	max-width: 55%;
 }
-
-#AttendFrame  ol {
+#AttendFrame h2{
+    width:99%;
+    text-align:right;
+    position:relative;
+    margin:15px 0;
+}
+#AttendFrame  ul {
 	list-style: none;
 	padding: 0;
 	margin: 0;
@@ -365,22 +370,19 @@ code {
 	position: relative;
 	right: -35vw;
 }
-
 #AttendFrame  li {
 	padding: 2vh 0;
 	position: relative;
-	transition: all 1.1s ease-out;
+	transition: all 1s ease;
 	right: -200%;
 }
 
 #AttendFrame  li:nth-child(odd) {
 	color: black;
-	transition: all 1.3s ease-in;
 }
 
 #AttendFrame  li:nth-child(even) {
 	color: white;
-	transition-delay: 0.2s;
 }
 
 #AttendFrame  li span {
@@ -440,6 +442,23 @@ code {
 	left: 90%;
 }
 
+#AttendFrame li:nth-child(2){
+    transition-delay:0.1s;
+}
+#AttendFrame li:nth-child(3){
+    transition-delay:0.2s;
+}
+#AttendFrame li:nth-child(4){
+    transition-delay:0.3s;
+}
+#AttendFrame li:nth-child(5){
+    transition-delay:0.4s;
+}
+#AttendFrame li:nth-child(6){
+    transition-delay:0.5s;
+}
+
+
 #InfoFrame {
 	background: url('http://images2.alphacoders.com/447/447885.jpg');
 	background-size: cover;
@@ -477,4 +496,88 @@ code {
 	transform:skewX(10deg);
 	background:#96281B;
 	z-index:-1;
+}
+
+
+
+
+
+
+/*
+ * Mobile Stuff! Woot! Finally!
+ * ============================
+ */
+@media (max-width : 1024px) {
+    #LocalNav{
+        display:none;
+    }
+    
+    #ContFrame div{
+        display:block !important;
+        width:100% !important;
+        margin:0;
+    }
+    #ContFrame div div div{
+        width:90% !important;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    
+    #MeetFrame div{
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    #MeetFrame div::before{
+        transform:none;
+        opacity: 0.9;
+        width:100%;
+    }
+    
+    #AttendFrame{
+        padding: 5vh 0 0 0;
+    }
+    #AttendFrame div{
+        position:static;
+        width:90%;
+        max-width: none;
+        margin-left:auto;
+        margin-right:auto;
+        left:0; top:0;
+        transform:none;
+    }
+    #AttendFrame h2{
+        width:100%;
+        text-align:center;
+    }
+    #AttendFrame ul{
+        width:100%;
+        right:0;
+    }
+    #AttendFrame li{
+        width:100%;
+        right:0;
+    }
+    #AttendFrame li::before{
+        transform:none !important;
+        width:100% !important;
+    }
+    #AttendFrame li::after{
+        display:none !important;
+    }
+    
+    #InfoFrame div{
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+    }
+    #InfoFrame div::before{
+        transform:none;
+        opacity: 0.9;
+        width:100%;
+    }
+    #InfoFrame div::after{
+        display:none;
+    }
 }

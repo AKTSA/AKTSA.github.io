@@ -837,7 +837,7 @@ code{
  * Mobile Stuff! Woot! Finally!
  * ============================
  */
-@media (min-width : 320px) and (max-width : 1024px) {
+@media (max-width : 1024px) {
 	body, html{
 		width:100vw;
 		overflow-x:none;
@@ -864,6 +864,7 @@ code{
 	}
 	#Meet li{
 		right:0;
+        padding: 5px 0;
 	}
 	#Meet li:nth-child(odd){
 		background:#bdc3c7;
@@ -878,12 +879,129 @@ code{
 		display:none !important;
 	}
 	#Meet .NextMeet{
-		padding-top:7vh;
-		padding-bottom: 7vh;
+		padding-top:4vh;
+		padding-bottom: 4vh;
+        right:0 !important;
 	}
 	#Meet .NextMeet::before{
-		display:block !important;
-		right:10px !important;
-		width:inherit !important;
+		display:inline !important;
+        position:static !important;
+        content:'Next Meeting: ' !important;
+        padding-right:25px;
 	}
+    
+    #CommFrame div:nth-child(1){
+        text-align:center;
+        width:80vw !important;
+        margin: 0 auto;
+        background: rgba(31, 71, 136, 0.9);
+        left:0;
+    }
+    #CommFrame div::before{
+        display:none !important;
+    }
+    #CommFrame div::after{
+        display:none !important;
+    }
+    #CommFrame div:nth-child(2){
+        width:90vw !important;
+        margin: 0 auto;
+        display:block;
+    }
+    #CommFrame li{
+        left:0 !important;
+    }
+    #CommFrame li::before{
+        display:none !important;
+    }
+    #CommFrame li::after{
+        display:none !important;
+    }
+    #CommFrame li:nth-child(odd){/*2c3e50;bdc3c7*/
+        background:rgba(189,195,199,0.9);
+    }
+    #CommFrame li:nth-child(even){
+        background:rgba(44,62,80,0.9);
+    }
+    
+    #CompFrame div{
+        display:block !important;
+    }
+    #CompFrame div div{
+        margin:0;
+    }
+    #CompFrame div div div{
+        width:100vw;
+        margin:0;
+        top:0;
+        opacity: 1;
+    }
+    
+    #UpFrameHero{
+        text-align:center !important;
+        width:80vw !important;
+        margin-left:auto;
+        margin-right:auto;
+        left:0 !important;
+        background:rgba(31, 71, 136, 0.9);
+    }
+    #UpFrameHero::before{
+        display:none !important;
+    }
+    #UpFrameHero::after{
+        display:none !important;
+    }
+    #UpFrame div{
+        display:block !important;
+    }
+    #UpFrame div:nth-child(2){
+        width:100%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    #UpFrame div div div{
+        margin:0;
+        width:100%;
+        left:0 !important;
+        opacity:1 !important;
+    }
+    #UpFrame div div div div{
+        width:100% !important;
+        height: auto;
+    }
+    #UpFrame div div div div::before{
+        display:none !important;
+    }
+    #UpFrame div div div div::after{
+        display:block;
+        -webkit-clip-path:inherit !important;
+        clip-path:inherit !important;
+        width:20%;
+    }
+    #UpFrame div div div div p{
+        top:0; right:0;
+        max-width:none;
+        width:80%;
+        padding: 10px 0;
+        opacity:1;
+        transform:inherit;
+        text-align:right;
+    }
+    #UpFrame div div div:nth-child(1) div p{
+        background:rgb(58,88,158);
+    }
+    #UpFrame div div div:nth-child(2) div p{
+        background:rgb(97, 170, 223);
+    }
+    #UpFrame div div div:nth-child(3) div p{
+        background:rgb(51,51,51);
+    }
+    
+    #RefFrame a{
+        display:block;
+        left:0 !important;
+    }
+    #RefFrame a::before{
+        transform:inherit;
+    }
 }

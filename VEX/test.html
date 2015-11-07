@@ -98,17 +98,39 @@
         
 		<section id="AttendFrame">
 			<div>
-				<h1>Member Attendance</h1>
-				<p>Please remember that all members of VEX have an obligation to be present in as many meetings as possible. We will determine teams and, in the event there is not enough available slots, determine who stays and who leaves via our attendance records. In the interest of transparency, they are reproduced here.</p>
-				<small>If you wish your name removed from this list, please contact us.</small>
+				<h1>Team Rosters</h1>
+                <p>Finalized VEX team rosters have been determined for the 2015 - 2016 school year. Due to large numbers of prospective members and very limited spots and funding, many students unfortunately did not make the cut. Membership was determined by seniority, work contribution, overall attitude, and meeting attendance.</p>
+                <p>This year, our members are distributed across two teams, <em>Work Zero</em> and <em>Efficiency Zero</em>, aptly named for our reputation as highly efficient, productive collaborations. <small>/s</small> Each team will be meeting separately to build their respective robots. Please consult with your team leader (first name listed) for meeting schedules and plans.</p>
+                <p>Good luck to everyone!</p>
+                <!--
+				<p>Please remember that all members of VEX have an obligation to be present in as many meetings as possible. We will determine teams and, in the event there is not enough available slots, determine who stays and who leaves via our attendance records. In the interest of transparency, they are reproduced here.</p>-->
 			</div>
-			<ol id="AttendRank"><!--
+			<!--<ol id="AttendRank"><!--
 				<li>Test</li>
 				<li>More Test</li>
 				<li>I love testing</li>
 				<li>No I don't</li>
-				<li>This is stupid</li>-->
-			</ol>
+				<li>This is stupid</li>->
+			</ol>-->
+            <h2>Team Work Zero (10220 A)</h2>
+            <ul>
+                <li>Nick Umling</li>
+                <li>Omar Salem</li>
+                <li>Eli Hubble</li>
+                <li>Asher Zhang</li>
+                <li>Joseph Yuen</li>
+                <li>Karan Malhotra</li>
+            </ul>
+            
+            <h2>Team Efficiency Zero (10220 B)</h2>
+            <ul>
+                <li>Aviral Agarwal</li>
+                <li>Sarosh Santosh</li>
+                <li>Michael Xing</li>
+                <li>Young-Woo Lee</li>
+                <li>Charles Yang</li>
+                <li>Leon Bauer</li>
+            </ul>
 		</section>
 		
 		<section id="InfoFrame">
@@ -155,7 +177,7 @@
 			
 			
 			
-			
+			/*
 			var attendRankings = [
 				["Adithya Singh",	2],
 				["Aviral Agarwal",	11],
@@ -188,13 +210,14 @@
 			}
         
 			
-			
+			*/
 			
 			var waypoint1 = new Waypoint({
-				element: document.getElementById('AttendRank'),
+				element: document.getElementById('AttendFrame'),
 				handler: function() {
-					for (i = 0; i < attendRankings.length; i++) {
-        	            document.getElementById("AttendRank").getElementsByTagName("LI")[i].style.right = 0;
+					for (i = 0; i < 6; i++) {
+                        document.getElementById("AttendFrame").getElementsByTagName("UL")[0].getElementsByTagName("LI")[i].style.right = 0;
+                        document.getElementById("AttendFrame").getElementsByTagName("UL")[1].getElementsByTagName("LI")[i].style.right = 0;
 					}
 				},
 				offset: '50%'
