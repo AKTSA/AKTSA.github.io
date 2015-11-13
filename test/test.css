@@ -623,7 +623,7 @@ header{
  * Mobile Stuff! Woot! Finally!
  * ============================
  */
-@media (max-width : 1024px) {
+@media (max-width : 768px) {
 	body, html{
 		width:100vw;
 		overflow-x:none;

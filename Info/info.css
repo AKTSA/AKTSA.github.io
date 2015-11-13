@@ -503,7 +503,7 @@ h1{
     top:50%;
     transform:translateY(-50%);
 	text-align:left;
-	max-width:55%;
+	max-width:calc(55% - 250px);
 }
 #Meet{
     display:inline-block;
@@ -837,7 +837,7 @@ code{
  * Mobile Stuff! Woot! Finally!
  * ============================
  */
-@media (max-width : 1024px) {
+@media (max-width : 768px) {
 	body, html{
 		width:100vw;
 		overflow-x:none;

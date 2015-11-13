@@ -222,6 +222,30 @@
 				},
 				offset: '50%'
 			});
+			var waypoint2 = new Waypoint({
+				element: document.getElementById('ContFrame'),
+				handler: function() {
+					document.getElementById("ContFrame").getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].style.opacity = 1;
+					document.getElementById("ContFrame").getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].style.top = 0;
+					document.getElementById("ContFrame").getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[1].style.opacity = 1;
+					document.getElementById("ContFrame").getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[1].style.top = 0;
+				},
+				offset: '50%'
+			});
+			var waypoint3 = new Waypoint({
+				element: document.getElementById('MeetFrame'),
+				handler: function() {
+					document.getElementById("MeetFrame").getElementsByTagName("DIV")[0].style.left = 0;
+				},
+				offset: '50%'
+			});
+			var waypoint4 = new Waypoint({
+				element: document.getElementById('InfoFrame'),
+				handler: function() {
+					document.getElementById("InfoFrame").getElementsByTagName("DIV")[0].style.right = "-25vw";
+				},
+				offset: '50%'
+			});
         </script>
         
     </body>
