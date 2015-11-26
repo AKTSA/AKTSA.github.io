@@ -372,6 +372,8 @@ code {
     text-align:right;
     position:relative;
     margin:15px 0;
+    right:-100%;
+    transition: all 0.5s ease-out;
 }
 #AttendFrame  ul {
 	list-style: none;
@@ -569,6 +571,7 @@ code {
     #AttendFrame h2{
         width:100%;
         text-align:center;
+        right:0;
     }
     #AttendFrame ul{
         width:100%;
