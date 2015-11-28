@@ -3,7 +3,7 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
 
 html, body{
-    max-width:100%;
+    width:100%;
     overflow-x:hidden;
 }
 
@@ -391,10 +391,10 @@ header{
     background:#8e44ad;
 }
 #LocalNav li:hover label{
-    background:white;
+    background:black;
 }
 #LocalNav li input[type=radio]:checked+label{
-    background:black;
+    background:white;
 }
 
 
@@ -566,9 +566,30 @@ header{
 }
 
 #CommFrame{
-	height:100vh;
-    text-align:right;
+	/*height:100vh;*/
+    text-align:center;
     margin:0;
+    padding:5vh;
+    position:relative;
+    transform-style:preserve-3d;
+    min-height:80vh;
+}
+#CommFrame img{
+    max-height:75vh;
+    max-width:90vw;
+}
+#CommFrame div{
+    position:absolute;
+    top:75vh;
+    left:50%;
+    transform:translateX(-50%);
+    background:rgba(39,174,96,0.85);
+    width:100vw;
+    padding:3vh;
+    
+    transition: all 0.5s ease;
+    top:80vh;
+    opacity:0;
 }
 
 
@@ -583,9 +604,27 @@ header{
 }
 
 #OffFrame{
-	height:100vh;
-    text-align:right;
+    text-align:center;
     margin:0;
+}
+#OffFrame table{
+    width:95%;
+    margin: 5vh auto;
+    border-collapse:collapse;
+    
+    transition: all 0.5s ease;
+    position:relative;
+    left:-5vh;
+    opacity:0;
+}
+#OffFrame td{
+    width:33%;
+    padding: 5vw;
+    font-size:115%;
+}
+#OffFrame tr:nth-child(odd){
+    background:#bdc3c7;
+    color:black;
 }
 
 #AwardHeroFrame{
@@ -595,8 +634,11 @@ header{
     margin:0;
 }
 #AwardFrame{
-	height:100vh;
 	margin:0;
+}
+#AwardFrame p{
+    margin: 20vh 10vw;
+    font-size:125%;
 }
 
 
@@ -629,7 +671,7 @@ header{
 		overflow-x:none;
 	}
 	
-	#BigPanelWrapper{
+	#BigPanelWrapperParent{
 		width:100%;
 		height:calc(100vh - 100px);
 		margin-top:100px;
@@ -644,6 +686,7 @@ header{
 		background-size:cover;
 		background-position:50% 50%;
 		background-attachment:fixed;
+        height:100%;
 	}
 	.Panel:nth-child(3) .PanelBeforeChild{
 		transform:inherit;
@@ -711,4 +754,30 @@ header{
 	#ProjectsFrame div:after{
 		display:none;
 	}
+    
+    #CommFrame div{
+        opacity:1;
+        top:75vh;
+    }
+    
+    #OffFrame table{
+        width:100%;
+        margin:0;
+        padding:0;
+        opacity: 1;
+        left:0;
+    }
+    #OffFrame td{
+        display:block;
+        width:100%;
+        padding:3vh 0;
+        color:white;
+    }
+    #OffFrame tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even){
+        background:#bdc3c7;
+        color:black !important;
+    }
+    #OffFrame tr{
+        background:inherit !important;
+    }
 }

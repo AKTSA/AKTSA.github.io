@@ -16,11 +16,11 @@
 		-->
 	<nav id="GlobalNav">
 		<ul>
-			<li><a href="/VEX/test.html">VEX</a></li><!--
+			<li><a href="/VEX/">VEX</a></li><!--
 			--><li><a>Members</a></li><!--
-			--><li><a href="/test"><span style="color:#7A52CC;">AK</span> TSA</a></li><!--
-			--><li><a href="http://cleantech4us.github.io/AKCTE">AK CTE</a></li><!--
-			--><li><a>Design Brief</a></li>
+			--><li><a href="/"><span style="color:#7A52CC;">AK</span> TSA</a></li><!--
+			--><li><a><del>AK CTE</del></a></li><!--
+            --><li><a><del>Design Brief</del></a></li>
 		</ul>
 	</nav>
     <nav id="LocalNav">
@@ -259,30 +259,46 @@
         var waypointnav2 = new Waypoint({
 			element: document.getElementById('CommFrame'),
 			handler: function(direction) {
-                document.getElementById("SB2").checked = true;
+                if(direction == "down"){
+                    document.getElementById("SB2").checked = true;
+                } else{
+                    document.getElementById("SB1").checked = true;
+                }
 			},
-			offset:'30%'
+			offset:'50%'
 		});
         var waypointnav3 = new Waypoint({
 			element: document.getElementById('CompFrame'),
 			handler: function(direction) {
-                document.getElementById("SB3").checked = true;
+                if(direction == "down"){
+                    document.getElementById("SB3").checked = true;
+                } else{
+                    document.getElementById("SB2").checked = true;
+                }
 			},
-			offset:'30%'
+			offset:'50%'
 		});
         var waypointnav4 = new Waypoint({
 			element: document.getElementById('UpFrame'),
 			handler: function(direction) {
-                document.getElementById("SB4").checked = true;
+                if(direction == "down"){
+                    document.getElementById("SB4").checked = true;
+                } else{
+                    document.getElementById("SB3").checked = true;
+                }
 			},
-			offset:'30%'
+			offset:'50%'
 		});
         var waypointnav5 = new Waypoint({
 			element: document.getElementById('RefFrame'),
 			handler: function(direction) {
-                document.getElementById("SB5").checked = true;
+                if(direction == "down"){
+                    document.getElementById("SB5").checked = true;
+                } else{
+                    document.getElementById("SB4").checked = true;
+                }
 			},
-			offset:'30%'
+			offset:'80%'
 		});
 	</script>
 </body>

@@ -1,76 +1,156 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>AK VEX</title>
-        <link rel="stylesheet" type="text/css" href="/JSDep/jquery.fullPage.css" />
-        <link rel="stylesheet" type="text/css" href="Vex.css" />
+	<head>
+		<title>VEX Robotics - AK TSA</title>
+		<link rel="stylesheet" type="text/css" href="VEX.css" />
 		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script type="text/javascript" src="/JSDep/jquery.fullPage.js"></script>
-    </head>
-    <body>
-        <div id="fullpage">
-            
-            <section class="section">
-                <header>
-                    <h1 style="color:#7A52CC;">AK <img src="/images/VEX-Robotics.png" style="max-height:200px;position:relative;bottom:-20px;" alt="VEX"/></h1>
-                    <h2>A Division of <a href="/" style="font-family:'Audiowide', sans-serif;"><span style="color:#7A52CC;">AK </span><span style="color:#FF0000">TSA</span></a></h2>
-                </header>
-                <div class="TitleBG" id="TitleBG"></div>
-            </section>
-            
-            <section class="section">
-                <h2 id="YTDisappear">2015-2016 VEX Competition<br />Nothing But Net<br /><span style="font-size:50%;">Click to Play Video</span></h2>
-                <div id="YTPlayer"></div>
-                <div class="TitleBG" id="TitleBG2"></div>
-            </section>
-            
-            
-            <section class="section">
-			  <h2><!--Next Meeting: Thursday, September 24<sup>th</sup>, 2015-->Meeting Schedule</h2>
-				<p>Please note that from now on, regular meetings will be scheduled on <strong>Wednesday, Thursday, and Friday</strong> afternoons immediately after school, including after all TSA meetings, in Mr. Sheffield's room (A304). This is a change from our original Wednesday meeting schedule. Attendance will be taken at all meetings, which you are expected to attend, with or without reminder.</p>
-            </section>
-			
-			<section class="section">
-				<h2>Attendance Rankings</h2><br />
-				<ol id="AttendRank">
-					
-				</ol>
-			</section>
-			
-            <section class="section">
-	            <iframe src="/nationals/index.htm?01/09/2016 07:30 AMWestern VRC Qualifier<br /> Saturday, January 9<sup>th</sup>, 2016" style="width:100%;height:100%;margin:0;padding:0;border:0;pointer-events: none; "></iframe>
-	        </section>
-            
-            <section class="section">
-                <h2>Important Information</h2>
-				<h3>Rules</h3>
-				<p>Please familiarize yourself with the rules and competitions. Detailed rules are available <a href="http://content.vexrobotics.com/docs/vrc-nothing-but-net/VRC-Nothing-But-Net-Game-Manual-20150612.pdf">here</a> and the informational video is available at the top of this page.</p>
-                <h3>Funding</h3>
-                <p>We're broke. If we remain broke, no one will be in VEX because there will be no VEX, and that would be bad. If someone is capable of acquiring grant money, through their parents' companies or other sources, we would be very grateful.</p>
-                <h3>Remind101</h3>
-                <p>Sign up for the VEX Remind101 by texting <code>@b4c213d5</code> to <code>81010</code>. Also sign up for the TSA Remind101 on the <a href="/">main page</a>.</p>
-            </section>
-            
-            <!--<section class="section">
-                <p>Aviral claims he'll write the rest of this up soon.</p>
-            </section>-->
-            
-        </div>
+		<script src="/JSDep/noframework.waypoints.min.js"></script>
+		<script src="/JSDep/smooth-scroll.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+    <body><!--
+		
+		--><nav id="GlobalNav">
+			<ul>
+				<li><a>VEX</a></li><!--
+				--><li><a href="/Info/">Members</a></li><!--
+				--><li><a href="/"><span style="color:#7A52CC;">AK</span> TSA</a></li><!--
+				--><li><a><del>AK CTE</del></a></li><!--
+				--><li><a><del>Design Brief</del></a></li>
+			</ul>
+		</nav>
+        <nav id="LocalNav">
+            <ul>
+                <li>
+                    <input id="SB1" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#VidFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false});" />
+                    <label for="SB1"></label>
+                    <div>Game</div>
+                </li>
+                <li>
+                    <input id="SB2" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#ContFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+                    <label for="SB2"></label>
+                    <div>Contact</div>
+                </li>
+                <li>
+                    <input id="SB3" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#MeetFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+                    <label for="SB3"></label>
+                    <div>Meetings</div>
+                </li>
+                <li>
+                    <input id="SB4" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#AttendFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+                    <label for="SB4"></label>
+                    <div>Teams</div>
+                </li>
+                <li>
+                    <input id="SB5" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#InfoFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+                    <label for="SB5"></label>
+                    <div>Information</div>
+                </li>
+            </ul>
+        </nav>
         
         
+        
+        
+        <section id="Hero">
+            <header>
+                <h1 style="color:#7A52CC;">
+                    AK <img src="/images/VEX-Robotics.png" style="max-height:200px;position:relative;bottom:-20px;" alt="VEX"/>
+                </h1>
+                <!--<h2>
+                    A Division of 
+                    <a href="/" style="font-family:'Audiowide', sans-serif;">
+                        <span style="color:#7A52CC;">AK </span><span style="color:#FF0000">TSA</span>
+                    </a>
+                </h2>-->
+            </header>
+            <div></div>
+        </section>
+        
+        <section id="VidFrame">
+            <h1 id="YTDisappear">2015-2016 VEX Competition<br />Nothing But Net<br /><span style="font-size:50%;">Click to Play Video</span></h1>
+            <div id="YTPlayer"></div>
+            <div class="TitleBG" id="TitleBG2"></div>
+            <div id="TitleBG2"></div>
+        </section>
+		
+		
+		<section id="ContFrame">
+			<h1>Contact Information</h1>
+			<div><div>
+				<div>
+					<h2>Email</h2>
+					<p>We send and receive all important emails through the official team email address, <a href="mailto:akhsvrc@gmail.com">akhsvrc@gmail.com</a>. Make sure you're getting our emails, as most important announcements are announced via email first.</p>
+				</div>
+				<div>
+					<h2>Remind</h2>
+					<p>Urgent messages from Mr. Sheffield are sent out directly via Remind. To ensure you receive these messages, be sure to text <code>@b4c213d5</code> to <code>81010</code>. Also be sure to sign up for the main TSA Remind on the <a href="/Info/index.html">Member Information</a> page.</p>
+				</div>
+			</div></div>
+		</section>
+        
+		<section id="MeetFrame">
+			<div>
+				<h1>Meeting Schedule</h1>
+				<p>Regular meetings are scheduled on Wednesday, Thursday, and Friday afternoons immediately after school, including after all TSA meetings, in Mr. Sheffield's room (A304). This is a change from our original Wednesday meeting schedule. Attendance will be taken at all meetings, which you are expected to attend, with or without reminder.</p>
+			</div>
+			
+		</section>
+        
+		<section id="AttendFrame">
+			<div>
+				<h1>Team Rosters</h1>
+                <p>Finalized VEX team rosters have been determined for the 2015 - 2016 school year. Due to large numbers of prospective members and very limited spots and funding, many students unfortunately did not make the cut. Membership was determined by seniority, work contribution, overall attitude, and meeting attendance.</p>
+                <p>This year, our members are distributed across two teams, <em>Work Zero</em> and <em>Efficiency Zero</em>, aptly named for our reputation as highly efficient, productive collaborations. <small>/s</small> Each team will be meeting separately to build their respective robots. Please consult with your team leader (first name listed) for meeting schedules and plans.</p>
+                <p>Good luck to everyone!</p>
+                <!--
+				<p>Please remember that all members of VEX have an obligation to be present in as many meetings as possible. We will determine teams and, in the event there is not enough available slots, determine who stays and who leaves via our attendance records. In the interest of transparency, they are reproduced here.</p>-->
+			</div>
+			<!--<ol id="AttendRank"><!--
+				<li>Test</li>
+				<li>More Test</li>
+				<li>I love testing</li>
+				<li>No I don't</li>
+				<li>This is stupid</li>->
+			</ol>-->
+            <h2>Team Work Zero (10220 A)</h2>
+            <ul>
+                <li>Nick Umling</li>
+                <li>Omar Salem</li>
+                <li>Eli Hubble</li>
+                <li>Asher Zhang</li>
+                <li>Joseph Yuen</li>
+                <li>Karan Malhotra</li>
+            </ul>
+            
+            <h2>Team Efficiency Zero (10220 B)</h2>
+            <ul>
+                <li>Aviral Agarwal</li>
+                <li>Sarosh Santosh</li>
+                <li>Michael Xing</li>
+                <li>Young-Woo Lee</li>
+                <li>Charles Yang</li>
+                <li>Leon Bauer</li>
+            </ul>
+		</section>
+		
+		<section id="InfoFrame">
+			<div>
+				<h1>Information</h1>
+				<h2>Rules</h2>
+				<p>
+					Please familiarize yourself with the rules and competitions. Detailed rules are available <a href="http://content.vexrobotics.com/docs/vrc-nothing-but-net/VRC-Nothing-But-Net-Game-Manual-20150612.pdf">here</a> and the informational video is available at the top of this page.
+				</p>
+				<h2>Funding</h2>
+				<p>
+					We're broke. If we remain broke, no one will be in VEX because there will be no VEX, and that would be bad. If someone is capable of acquiring grant money, through their parents' companies or other sources, we would be very grateful.
+				</p>
+			</div>
+		</section>
+		
+		
         <script>
-            $(document).ready(function() {$('#fullpage').fullpage({
-				navigation: true,
-				navigationPosition: 'right',
-				navigationTooltips: ['Home', 'Competition', 'Meetings', 'Attendance', 'Countdown', 'Information'],
-				showActiveTooltip: false,
-				autoScrolling: false,
-				fitToSection: false
-			});});
-			
-			
-			
+        
 			var tag = document.createElement('script');
 			
 			tag.src = "https://www.youtube.com/iframe_api";
@@ -98,6 +178,7 @@
 			
 			
 			
+			/*
 			var attendRankings = [
 				["Adithya Singh",	2],
 				["Aviral Agarwal",	11],
@@ -128,6 +209,106 @@
 				NewListItem.textContent = attendRankings[i][0] + " (" + attendRankings[i][1] + ")";
 				document.getElementById("AttendRank").appendChild(NewListItem);
 			}
+        
+			
+			*/
+			
+			var waypoint1 = new Waypoint({
+				element: document.getElementById('AttendFrame'),
+				handler: function() {
+					for (i = 0; i < 6; i++) {
+                        document.getElementById("AttendFrame").getElementsByTagName("UL")[0].getElementsByTagName("LI")[i].style.right = 0;
+                        document.getElementById("AttendFrame").getElementsByTagName("UL")[1].getElementsByTagName("LI")[i].style.right = 0;
+					}
+                    document.getElementById("AttendFrame").getElementsByTagName("H2")[0].style.right = 0;
+                    document.getElementById("AttendFrame").getElementsByTagName("H2")[1].style.right = 0;
+				},
+				offset: '50%'
+			});
+			var waypoint2 = new Waypoint({
+				element: document.getElementById('ContFrame'),
+				handler: function() {
+					document.getElementById("ContFrame").getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].style.opacity = 1;
+					document.getElementById("ContFrame").getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].style.top = 0;
+					document.getElementById("ContFrame").getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[1].style.opacity = 1;
+					document.getElementById("ContFrame").getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[1].style.top = 0;
+				},
+				offset: '50%'
+			});
+			var waypoint3 = new Waypoint({
+				element: document.getElementById('MeetFrame'),
+				handler: function() {
+					document.getElementById("MeetFrame").getElementsByTagName("DIV")[0].style.left = 0;
+				},
+				offset: '50%'
+			});
+			var waypoint4 = new Waypoint({
+				element: document.getElementById('InfoFrame'),
+				handler: function() {
+					document.getElementById("InfoFrame").getElementsByTagName("DIV")[0].style.right = "-25vw";
+				},
+				offset: '50%'
+			});
+            
+            //--------------------
+            //NAVIGATION WAYPOINTS
+            //--------------------
+            var waypointnav1 = new Waypoint({
+				element: document.getElementById('VidFrame'),
+				handler: function(direction) {
+					if(direction == "down"){
+	                    document.getElementById("SB1").checked = true;
+					} else{
+						document.getElementById("SB1").checked = false;
+					}
+				},
+				offset:'50%'
+			});
+            var waypointnav2 = new Waypoint({
+				element: document.getElementById('ContFrame'),
+				handler: function(direction) {
+                    if(direction == "down"){
+                        document.getElementById("SB2").checked = true;
+                    } else{
+                        document.getElementById("SB1").checked = true;
+                    }
+				},
+				offset:'50%'
+			});
+            var waypointnav3 = new Waypoint({
+				element: document.getElementById('MeetFrame'),
+				handler: function(direction) {
+                    if(direction == "down"){
+                        document.getElementById("SB3").checked = true;
+                    } else{
+                        document.getElementById("SB2").checked = true;
+                    }
+				},
+				offset:'50%'
+			});
+            var waypointnav4 = new Waypoint({
+				element: document.getElementById('AttendFrame'),
+				handler: function(direction) {
+                    if(direction == "down"){
+                        document.getElementById("SB4").checked = true;
+                    } else{
+                        document.getElementById("SB3").checked = true;
+                    }
+				},
+				offset:'50%'
+			});
+            var waypointnav5 = new Waypoint({
+				element: document.getElementById('InfoFrame'),
+				handler: function(direction) {
+                    if(direction == "down"){
+                        document.getElementById("SB5").checked = true;
+                    } else{
+                        document.getElementById("SB4").checked = true;
+                    }
+				},
+				offset:'50%'
+			});
         </script>
+        
     </body>
 </html>

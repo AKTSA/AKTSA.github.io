@@ -180,10 +180,10 @@ h1{
     background:#8e44ad;
 }
 #LocalNav li:hover label{
-    background:white;
+    background:black;
 }
 #LocalNav li input[type=radio]:checked+label{
-    background:black;
+    background:white;
 }
 
 
