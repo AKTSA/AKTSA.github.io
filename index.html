@@ -196,127 +196,136 @@
         
         
 		<script>
-            smoothScroll.init(); 
-            
-			var waypoint = new Waypoint({
-				element: document.getElementById('AboutHeroFrame'),
-				handler: function(direction) {
-					//alert('Basic waypoint triggered')
-					//alert(direction);
-					if(direction == "down"){
-						document.getElementsByTagName("NAV")[0].style.pointerEvents = "all";
-						document.getElementsByTagName("NAV")[0].style.opacity = "1";
-						document.getElementsByTagName("NAV")[1].style.right = "0";
-					} else{
-						document.getElementsByTagName("NAV")[0].style.pointerEvents = "none";
-						document.getElementsByTagName("NAV")[0].style.opacity = "0"; 
-						document.getElementsByTagName("NAV")[1].style.right = "-50px";                          
+			if(location.search == "?home"){
+				//alert("HI");
+				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
+			} else{
+				
+			
+				
+            	smoothScroll.init(); 
+            	
+				var waypoint = new Waypoint({
+					element: document.getElementById('AboutHeroFrame'),
+					handler: function(direction) {
+						//alert('Basic waypoint triggered')
+						//alert(direction);
+						if(direction == "down"){
+							document.getElementsByTagName("NAV")[0].style.pointerEvents = "all";
+							document.getElementsByTagName("NAV")[0].style.opacity = "1";
+							document.getElementsByTagName("NAV")[1].style.right = "0";
+						} else{
+							document.getElementsByTagName("NAV")[0].style.pointerEvents = "none";
+							document.getElementsByTagName("NAV")[0].style.opacity = "0"; 
+							document.getElementsByTagName("NAV")[1].style.right = "-50px";                          
+						}
+					},
+					offset: 100
+				});
+				var waypoint2 = new Waypoint({
+					element: document.getElementById('AboutFrame'),
+					handler: function(direction) {
+						document.getElementById("AboutFrame").getElementsByTagName("DIV")[0].style.left = "0";
+					},
+					offset:'30%'
+				});
+				var waypoint3 = new Waypoint({
+					element: document.getElementById('Project1a'),
+					handler: function(direction) {
+						document.getElementById("Project1a").style.left = "50vw";
+					},
+					offset:'60%'
+				});
+				var waypoint4 = new Waypoint({
+					element: document.getElementById('Project2a'),
+					handler: function(direction) {
+						document.getElementById("Project2a").style.left = "10vw";
+					},
+					offset:'60%'
+				});
+				var waypoint5 = new Waypoint({
+					element: document.getElementById('Project3a'),
+					handler: function(direction) {
+						document.getElementById("Project3a").style.left = "50vw";
+					},
+					offset:'60%'
+				});
+				var waypoint6 = new Waypoint({
+					element: document.getElementById('CommFrame'),
+					handler: function(direction) {
+						document.getElementById("CommFrame").getElementsByTagName("DIV")[0].style.opacity = 1;
+						document.getElementById("CommFrame").getElementsByTagName("DIV")[0].style.top = "75vh";
 					}
-				},
-				offset: 100
-			});
-			var waypoint2 = new Waypoint({
-				element: document.getElementById('AboutFrame'),
-				handler: function(direction) {
-					document.getElementById("AboutFrame").getElementsByTagName("DIV")[0].style.left = "0";
-				},
-				offset:'30%'
-			});
-			var waypoint3 = new Waypoint({
-				element: document.getElementById('Project1a'),
-				handler: function(direction) {
-					document.getElementById("Project1a").style.left = "50vw";
-				},
-				offset:'60%'
-			});
-			var waypoint4 = new Waypoint({
-				element: document.getElementById('Project2a'),
-				handler: function(direction) {
-					document.getElementById("Project2a").style.left = "10vw";
-				},
-				offset:'60%'
-			});
-			var waypoint5 = new Waypoint({
-				element: document.getElementById('Project3a'),
-				handler: function(direction) {
-					document.getElementById("Project3a").style.left = "50vw";
-				},
-				offset:'60%'
-			});
-			var waypoint6 = new Waypoint({
-				element: document.getElementById('CommFrame'),
-				handler: function(direction) {
-					document.getElementById("CommFrame").getElementsByTagName("DIV")[0].style.opacity = 1;
-					document.getElementById("CommFrame").getElementsByTagName("DIV")[0].style.top = "75vh";
-				}
-			});
-			var waypoint7 = new Waypoint({
-				element: document.getElementById('OffFrame'),
-				handler: function(direction) {
-					document.getElementById("OffFrame").getElementsByTagName("TABLE")[0].style.opacity = 1;
-					document.getElementById("OffFrame").getElementsByTagName("TABLE")[0].style.left = 0;
-				},
-                offset:'60%'
-			});
-            
-            //--------------------
-            //NAVIGATION WAYPOINTS
-            //--------------------
-            var waypointnav1 = new Waypoint({
-				element: document.getElementById('AboutHeroFrame'),
-				handler: function(direction) {
-					if(direction == "down"){
-	                    document.getElementById("SB1").checked = true;
-					} else{
-						document.getElementById("SB1").checked = false;
-					}
-				},
-				offset:'30%'
-			});
-            var waypointnav2 = new Waypoint({
-				element: document.getElementById('ProjectsHeroFrame'),
-				handler: function(direction) {
-                    if(direction == "down"){
-                        document.getElementById("SB2").checked = true;
-                    } else{
-                        document.getElementById("SB1").checked = true;
-                    }
-				},
-				offset:'50%'
-			});
-            var waypointnav3 = new Waypoint({
-				element: document.getElementById('CommHeroFrame'),
-				handler: function(direction) {
-                    if(direction == "down"){
-                        document.getElementById("SB3").checked = true;
-                    } else{
-                        document.getElementById("SB2").checked = true;
-                    }
-				},
-				offset:'50%'
-			});
-            var waypointnav4 = new Waypoint({
-				element: document.getElementById('OffHeroFrame'),
-				handler: function(direction) {
-                    if(direction == "down"){
-                        document.getElementById("SB4").checked = true;
-                    } else{
-                        document.getElementById("SB3").checked = true;
-                    }
-				},
-				offset:'50%'
-			});
-            var waypointnav5 = new Waypoint({
-				element: document.getElementById('AwardHeroFrame'),
-				handler: function(direction) {
-                    if(direction == "down"){
-                        document.getElementById("SB5").checked = true;
-                    } else{
-                        document.getElementById("SB4").checked = true;
-                    }
-				},
-				offset:'50%'
-			});
+				});
+				var waypoint7 = new Waypoint({
+					element: document.getElementById('OffFrame'),
+					handler: function(direction) {
+						document.getElementById("OffFrame").getElementsByTagName("TABLE")[0].style.opacity = 1;
+						document.getElementById("OffFrame").getElementsByTagName("TABLE")[0].style.left = 0;
+					},
+            	    offset:'60%'
+				});
+            	
+            	//--------------------
+            	//NAVIGATION WAYPOINTS
+            	//--------------------
+            	var waypointnav1 = new Waypoint({
+					element: document.getElementById('AboutHeroFrame'),
+					handler: function(direction) {
+						if(direction == "down"){
+	        	            document.getElementById("SB1").checked = true;
+						} else{
+							document.getElementById("SB1").checked = false;
+						}
+					},
+					offset:'30%'
+				});
+            	var waypointnav2 = new Waypoint({
+					element: document.getElementById('ProjectsHeroFrame'),
+					handler: function(direction) {
+            	        if(direction == "down"){
+            	            document.getElementById("SB2").checked = true;
+            	        } else{
+            	            document.getElementById("SB1").checked = true;
+            	        }
+					},
+					offset:'50%'
+				});
+            	var waypointnav3 = new Waypoint({
+					element: document.getElementById('CommHeroFrame'),
+					handler: function(direction) {
+            	        if(direction == "down"){
+            	            document.getElementById("SB3").checked = true;
+            	        } else{
+            	            document.getElementById("SB2").checked = true;
+            	        }
+					},
+					offset:'50%'
+				});
+            	var waypointnav4 = new Waypoint({
+					element: document.getElementById('OffHeroFrame'),
+					handler: function(direction) {
+            	        if(direction == "down"){
+            	            document.getElementById("SB4").checked = true;
+            	        } else{
+            	            document.getElementById("SB3").checked = true;
+            	        }
+					},
+					offset:'50%'
+				});
+            	var waypointnav5 = new Waypoint({
+					element: document.getElementById('AwardHeroFrame'),
+					handler: function(direction) {
+            	        if(direction == "down"){
+            	            document.getElementById("SB5").checked = true;
+            	        } else{
+            	            document.getElementById("SB4").checked = true;
+            	        }
+					},
+					offset:'50%'
+				});
+			}
+			
 		</script>
 	</body>
 </html>
