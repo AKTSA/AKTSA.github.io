@@ -658,7 +658,9 @@ header{
     text-decoration:none;
 }
 
-
+.DenseOnly{
+	display:none;
+}
 
 
 /*

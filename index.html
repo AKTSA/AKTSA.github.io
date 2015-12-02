@@ -48,7 +48,44 @@
                 </li>
             </ul>
         </nav>
-        
+        <div class="DenseOnly" id="EmptySpacer"></div>
+		<nav class="DenseOnly" id="MainNav">
+			<ul>
+				<li><a href="?home"><span>Home</span></a></li>
+				<li>
+					<span>About</span>
+					<ul>
+						<li><a href="?Proj">Projects</a></li>
+						<li><a href="?Comm">Community Service</a></li>
+						<li><a href="?Off">Officers</a></li>
+						<li><a href="?Award">Awards</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>Member Information</span>
+					<ul>
+						<li><a>Meeting Schedule</a></li>
+						<li><a>Community Service</a></li>
+						<li><a>Competitions</a></li>
+						<li><a>Communication</a></li>
+						<li><a>Helpful Links</a></li>
+					</ul>
+				</li>
+				<li>
+					<span>Officer Pages</span>
+					<ul>
+						<li><a>President</a></li>
+						<li><a>Vice President</a></li>
+						<li><a>Secretary</a></li>
+						<li><a>Treasurer</a></li>
+						<li><a>Reporter</a></li>
+						<li><a>Sergeant at Arms</a></li>
+						<li><a>Webmaster</a></li>
+					</ul>
+				</li>
+				<li><span><a>VEX Robotics</a></span></li>
+			</ul>
+		</nav>
         
 		<div id="BigPanelWrapperParent"><span id="BigPanelWrapper"><!--
 			
@@ -97,7 +134,7 @@
 				</div>
 			</a>
 		</span></div>
-
+		
 		<div id="AboutHeroFrame">
 			<h2>#ThisIs<span style="color:#c0392b;">TSA</span></h2>
 		</div>
@@ -199,6 +236,24 @@
 			if(location.search == "?home"){
 				//alert("HI");
 				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
+				document.getElementById("AboutHeroFrame").style.display = "block";
+				document.getElementById("AboutFrame").style.display = "block";
+			} else if(location.search == "?Proj"){
+				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
+				document.getElementById("ProjectsHeroFrame").style.display = "block";
+				document.getElementById("ProjectsFrame").style.display = "block";
+			} else if(location.search == "?Comm"){
+				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
+				document.getElementById("CommHeroFrame").style.display = "block";
+				document.getElementById("CommFrame").style.display = "block";
+			} else if(location.search == "?Off"){
+				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
+				document.getElementById("OffHeroFrame").style.display = "block";
+				document.getElementById("OffFrame").style.display = "block";
+			} else if(location.search == "?Award"){
+				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
+				document.getElementById("AwardHeroFrame").style.display = "block";
+				document.getElementById("AwardFrame").style.display = "block";
 			} else{
 				
 			
