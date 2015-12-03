@@ -100,13 +100,40 @@ div div{
 #MainNav li:nth-child(7){
 	background:#d35400;
 }*/
+#MainNav li::after{
+    content:'';
+    opacity:0;
+    transition: opacity 0.5s ease;
+}
 #MainNav li:hover::after{
-	content:'';
 	position:absolute;
-	background:black;
+    opacity:1;
+	/*background:black;
 	width:0.5vw;
-	height:calc((100vh - 143px - 4vw) / 5);
+	height:calc((100vh - 143px - 4vw) / 5);*/
+    
 	left:4.5vw;
+    top:calc((100vh - 143px - 4vw) / 20);
+    
+    width: 0; 
+	height: 0; 
+	border-top: calc((100vh - 143px - 4vw) / 20) solid transparent;
+	border-bottom: calc((100vh - 143px - 4vw) / 20) solid transparent;
+	
+	border-left: calc((100vh - 143px - 4vw) / 20) solid black;
+    
+}
+#MainNav li:nth-child(2)::after{
+    top:calc((100vh - 143px - 4vw) / 20 * 5);
+}
+#MainNav li:nth-child(3)::after{
+    top:calc((100vh - 143px - 4vw) / 20 * 9);
+}
+#MainNav li:nth-child(4)::after{
+    top:calc((100vh - 143px - 4vw) / 20 * 13);
+}
+#MainNav li:nth-child(5)::after{
+    top:calc((100vh - 143px - 4vw) / 20 * 17);
 }
 #MainNav li li::after{
 	display:none;
