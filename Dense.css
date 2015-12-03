@@ -44,6 +44,7 @@ div div{
 	border-color:black;
 	background:#ECF0F1;
 	color:black;
+	cursor:pointer;
 	transition: all 0.5s ease;
 }
 #MainNav ul li:hover{
@@ -51,10 +52,15 @@ div div{
 	color:white;
 }
 #MainNav ul ul{
-	display:none;
 	position:absolute;
-	top:0;
+	top:100vw;
+	transition: all 0.5s ease-in;
 	left:5vw;
+	z-index:-1;
+}
+#MainNav li:hover ul{
+	top:0;
+	transition: all 0.5s ease-out;
 }
 #MainNav li span{
 	transform:rotate(-90deg);
@@ -63,20 +69,36 @@ div div{
 	width:13vw;
 	border-left-style:solid;
 }
+#MainNav li:nth-child(1) li{
+	height:calc(100vh - 143px - 4vw);
+}
 #MainNav li:nth-child(2) li{
 	height:calc((100vh - 143px - 4vw) / 4);
 }
 #MainNav li:nth-child(4) li{
 	height:calc((100vh - 143px - 4vw) / 7);
 }
-#MainNav li:hover ul{
-	display:block;
-}
 #MainNav a{
 	width:100%;
 	height:100%;
 	display:inline-block;
 	display:flex;justify-content:center;align-items:center;
+	color:inherit;
+	text-decoration:none;
+}
+
+#NavBG{
+	position:absolute;
+	left:0;
+	margin:0;
+	top:0;
+	height:100vh;
+	width:calc(18vw + 1px) ;
+	background:#ECF0F1;
+	border-right-style:solid;
+	border-right-color:black;
+	border-width:1px;
+	z-index:-2;
 }
 /*
 #MainNav li:nth-child(1){
@@ -164,6 +186,7 @@ div div{
 }
 #GlobalNav li:nth-child(3){
 	display:block;
+	z-index:1;
 	background:#22313F;
 	width:100%;
 	margin:0;
@@ -176,6 +199,17 @@ div div{
 	overflow:hidden;
 	position:fixed;
 	top:0;
+}
+#MainNav .MainTitle{
+	transform:rotate(0deg);
+}
+
+.MainTitle{
+	font-family:"Audiowide", sans-serif; 
+    color:#FF0000;
+}
+.TSA{
+	color:#7A52CC;
 }
 
 #AboutFrame, #AboutHeroFrame{
