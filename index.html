@@ -53,9 +53,10 @@
 		<nav class="DenseOnly" id="MainNav">
 			<ul>
 				<li><a href="?home"><span>Home</span></a>
-					<ul>
-						<li><a href="?home"><span class="MainTitle">AK <span class="TSA">TSA</span></a></li>
-					</ul></li>
+					<ul><li>
+						<a href="?home"><span class="MainTitle">AK <span class="TSA">TSA</span></a>
+					</li></ul>
+				</li>
 				<li>
 					<span>About</span>
 					<ul>
@@ -87,7 +88,12 @@
 						<li><a>Webmaster</a></li>
 					</ul>
 				</li>
-				<li><span><a>VEX Robotics</a></span></li>
+				<li><a><span>VEX Robotics</span></a>
+					<ul><li>
+						<a><img src="images/VEX-Robotics.png" alt="VEX Robotics" /></a>
+					</li></ul>
+				</li>
+				<li>
 			</ul>
 		</nav>
         
@@ -242,6 +248,7 @@
 				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
 				document.getElementById("AboutHeroFrame").style.display = "block";
 				document.getElementById("AboutFrame").style.display = "block";
+				document.getElementsBy
 			} else if(location.search == "?Proj"){
 				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
 				document.getElementById("ProjectsHeroFrame").style.display = "block";

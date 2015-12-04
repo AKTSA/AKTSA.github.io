@@ -25,7 +25,7 @@ div div{
 	height: calc(100vh - 143px - 4vw);
 	left:0;
 	top:calc(143px + 4vw);
-	width:10vw;
+	width:5vw;
 	text-align:center;
 }
 #MainNav ul{
@@ -53,15 +53,34 @@ div div{
 }
 #MainNav ul ul{
 	position:absolute;
-	top:100vw;
-	transition: all 0.5s ease-in;
-	left:5vw;
+	top:0;
+	transition: all 0.5s ease;
+	left:-10vw;
 	z-index:-1;
 }
 #MainNav li:hover ul{
-	top:0;
-	transition: all 0.5s ease-out;
+	left:5vw;
 }
+	/*
+	-webkit-animation-name: jumpList;
+    -webkit-animation-duration: 0.5s;
+    animation-name: jumpList;
+    animation-duration: 0.5s;
+	-webkit-animation-timing-function: ease;
+    animation-timing-function: ease;*
+
+}
+
+@-webkit-keyframes jumpList {
+    from {top:100vw;}
+    to {top:0;}
+}
+
+@keyframes jumpList {
+    from {top:100vw;}
+    to {top:0;}
+}*/
+
 #MainNav li span{
 	transform:rotate(-90deg);
 }
@@ -71,12 +90,19 @@ div div{
 }
 #MainNav li:nth-child(1) li{
 	height:calc(100vh - 143px - 4vw);
+	font-size:2vw;
+}
+#MainNav li:nth-child(5) li{
+	height:calc(100vh - 143px - 4vw);
 }
 #MainNav li:nth-child(2) li{
 	height:calc((100vh - 143px - 4vw) / 4);
 }
 #MainNav li:nth-child(4) li{
 	height:calc((100vh - 143px - 4vw) / 7);
+}
+#MainNav img{
+	width:13vw;
 }
 #MainNav a{
 	width:100%;
@@ -94,7 +120,7 @@ div div{
 	top:0;
 	height:100vh;
 	width:calc(18vw + 1px) ;
-	background:#ECF0F1;
+	background:#2c3e50;
 	border-right-style:solid;
 	border-right-color:black;
 	border-width:1px;
