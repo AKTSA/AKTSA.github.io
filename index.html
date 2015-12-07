@@ -49,7 +49,6 @@
             </ul>
         </nav>
         <div class="DenseOnly" id="EmptySpacer"></div>
-		<div class="DenseOnly" id="NavBG"></div>
 		<nav class="DenseOnly" id="MainNav">
 			<ul>
 				<li><a href="?home"><span>Home</span></a>
@@ -58,7 +57,7 @@
 					</li></ul>
 				</li>
 				<li>
-					<span>About</span>
+					<a><span>About</span></a>
 					<ul>
 						<li><a href="?Proj">Projects</a></li>
 						<li><a href="?Comm">Community Service</a></li>
@@ -67,7 +66,7 @@
 					</ul>
 				</li>
 				<li>
-					<span>Member Information</span>
+					<a><span>Member Information</span></a>
 					<ul>
 						<li><a>Meeting Schedule</a></li>
 						<li><a>Community Service</a></li>
@@ -77,7 +76,7 @@
 					</ul>
 				</li>
 				<li>
-					<span>Officer Pages</span>
+					<a><span>Officer Pages</span></a>
 					<ul>
 						<li><a>President</a></li>
 						<li><a>Vice President</a></li>
@@ -235,7 +234,7 @@
         <!--<section id="EndFrame">
             <p>An <span style="color:red;font-family:'Audiowide', sans-serif;"><span style="color:#7A52CC;">AK</span> TSA</span> Creation</p>
             <p>Site Design By Michael Xing</p>
-            <p><a href="http://imakewebthings.com/waypoints/">Waypoints.js</a> and <a href="https://github.com/cferdinandi/smooth-scroll">SmoothScroll</a> used under the MIT license.</p>
+            <p><a href="http://imakewebthings.com/waypoints/">Waypoints.js</a> and <a href="https://github.com/cferdinandi/smooth-scroll">SmoothScroll</a> used under the MIT lictense.</p>
         </section>
         -->
         
@@ -248,23 +247,32 @@
 				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
 				document.getElementById("AboutHeroFrame").style.display = "block";
 				document.getElementById("AboutFrame").style.display = "block";
-				document.getElementsBy
+				document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].id = "CurrPage";
+                document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].id = "CurrPage2";
 			} else if(location.search == "?Proj"){
 				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
 				document.getElementById("ProjectsHeroFrame").style.display = "block";
-				document.getElementById("ProjectsFrame").style.display = "block";
+				document.getElementById("ProjectsFrame").style.display = "block";;
+				document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].id = "CurrPage";
+                document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].id = "CurrPage2";
 			} else if(location.search == "?Comm"){
 				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
 				document.getElementById("CommHeroFrame").style.display = "block";
 				document.getElementById("CommFrame").style.display = "block";
+				document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].id = "CurrPage";
+                document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].getElementsByTagName("UL")[0].getElementsByTagName("LI")[1].id = "CurrPage2";
 			} else if(location.search == "?Off"){
 				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
 				document.getElementById("OffHeroFrame").style.display = "block";
 				document.getElementById("OffFrame").style.display = "block";
+				document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].id = "CurrPage";
+                document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].id = "CurrPage2";
 			} else if(location.search == "?Award"){
 				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
 				document.getElementById("AwardHeroFrame").style.display = "block";
 				document.getElementById("AwardFrame").style.display = "block";
+				document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].id = "CurrPage";
+                document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].getElementsByTagName("UL")[0].getElementsByTagName("LI")[3].id = "CurrPage2";
 			} else{
 				
 			
