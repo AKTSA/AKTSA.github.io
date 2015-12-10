@@ -68,12 +68,12 @@ div div{
 }
 #MainNav #CurrPage > a{
 	color:white;
-    background:#444291;
+    background:#6C7A89;
     transition: all 0.5s ease;
 }
 #MainNav #CurrPage2 a{
 	color:white;
-    background:#444291;
+    background:#6C7A89;
     transition: all 0.5s ease;
 }
 #MainNav #CurrPage::after{

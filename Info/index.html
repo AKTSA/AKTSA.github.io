@@ -180,8 +180,30 @@
     
 
 	<script>
-        
-        smoothScroll.init(); 
+        if(location.search == "?Meet"){
+			var request = new XMLHttpRequest();
+			request.addEventListener("load", function(evt){
+			    console.log(evt);
+			}, false);
+			request.open('GET', '/index.html', true),
+			request.send();
+			console.log(request.responseText);
+			
+			
+			/*document.getElementsByTagName("LINK")[0].href = "/Dense.css";
+			document.getElementById("MeetingsFrame").style.display = "block";;
+			document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[7].id = "CurrPage";
+            document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[7].getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].id = "CurrPage2";*/
+		} else{
+			
+			
+			
+			
+			
+			
+			
+			
+			smoothScroll.init(); 
         
 		var waypoint1 = new Waypoint({
 			element: document.getElementById('CommFrame'),
@@ -300,6 +322,8 @@
 			},
 			offset:'80%'
 		});
+		}
+        
 	</script>
 </body>
 

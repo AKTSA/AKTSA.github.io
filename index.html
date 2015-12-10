@@ -68,11 +68,11 @@
 				<li>
 					<a><span>Member Information</span></a>
 					<ul>
-						<li><a>Meeting Schedule</a></li>
-						<li><a>Community Service</a></li>
-						<li><a>Competitions</a></li>
-						<li><a>Communication</a></li>
-						<li><a>Helpful Links</a></li>
+						<li><a href="/Info?Meet">Meeting Schedule</a></li>
+						<li><a href="/Info?Comm">Community Service</a></li>
+						<li><a href="/Info?Comp">Competitions</a></li>
+						<li><a href="/Info?Up">Communication</a></li>
+						<li><a href="/Info?Link">Helpful Links</a></li>
 					</ul>
 				</li>
 				<li>
@@ -87,9 +87,9 @@
 						<li><a>Webmaster</a></li>
 					</ul>
 				</li>
-				<li><a><span>VEX Robotics</span></a>
+				<li><a href="/VEX?home"><span>VEX Robotics</span></a>
 					<ul><li>
-						<a><img src="images/VEX-Robotics.png" alt="VEX Robotics" /></a>
+						<a href="/VEX?home"><img src="images/VEX-Robotics.png" alt="VEX Robotics" /></a>
 					</li></ul>
 				</li>
 				<li>
@@ -243,7 +243,6 @@
         
 		<script>
 			if(location.search == "?home"){
-				//alert("HI");
 				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
 				document.getElementById("AboutHeroFrame").style.display = "block";
 				document.getElementById("AboutFrame").style.display = "block";
