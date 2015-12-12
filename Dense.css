@@ -42,14 +42,16 @@ div div{
 	border-right-style:solid;
 	border-width:1px;
 	border-color:black;
-	background:#ECF0F1;
-	color:black;
+	/*background:#ECF0F1;*/
+    background:#674172;
+	color:white;
 	cursor:pointer;
 	transition: all 0.5s ease;
 }
 #MainNav ul li:hover{
-	background:#34495e;
-	color:white;
+	/*background:#34495e;*/
+	background:#DCC6E0;
+    color:black;
 }
 #MainNav ul ul{
 	position:absolute;
@@ -68,12 +70,12 @@ div div{
 }
 #MainNav #CurrPage > a{
 	color:white;
-    background:#6C7A89;
+    background:#34495e;
     transition: all 0.5s ease;
 }
 #MainNav #CurrPage2 a{
 	color:white;
-    background:#6C7A89;
+    background:#34495e;
     transition: all 0.5s ease;
 }
 #MainNav #CurrPage::after{
@@ -116,6 +118,7 @@ div div{
 #MainNav li li{
 	width:13vw;
 	border-left-style:solid;
+    background:#9B59B6;
 }
 #MainNav li:nth-child(1) li{
 	height:calc(100vh - 143px - 4vw);
@@ -229,6 +232,11 @@ div div{
 	overflow:hidden;
 	position:fixed;
 	top:0;
+}
+#GlobalNav li:nth-child(3) a{
+	color:#F00;
+	text-decoration: none;
+	pointer-events: none;
 }
 #MainNav .MainTitle{
 	transform:rotate(0deg);
