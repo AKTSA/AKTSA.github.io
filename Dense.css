@@ -14,9 +14,13 @@ div{
 div div{
 	margin-left:0;
 }
-#EmptySpacer{
-	margin-top:calc(10px + 143px + 4vw);
-	height:0;
+#GlobalNav::before{
+	height:calc(10px + 143px + 4vw);
+	width:100vw;
+	display:block;
+	top:0;
+	left:0;
+	content:'';
 }
 
 #MainNav{
@@ -92,25 +96,6 @@ div div{
 	border-left: calc((100vh - 143px - 4vw) / 20) solid black;
     
 }
-	/*
-	-webkit-animation-name: jumpList;
-    -webkit-animation-duration: 0.5s;
-    animation-name: jumpList;
-    animation-duration: 0.5s;
-	-webkit-animation-timing-function: ease;
-    animation-timing-function: ease;*
-
-}
-
-@-webkit-keyframes jumpList {
-    from {top:100vw;}
-    to {top:0;}
-}
-
-@keyframes jumpList {
-    from {top:100vw;}
-    to {top:0;}
-}*/
 
 #MainNav li span{
 	transform:rotate(-90deg);

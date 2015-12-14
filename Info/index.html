@@ -197,8 +197,8 @@
 			xmlhttp.onreadystatechange = function() {
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 					var navHolder = xmlhttp.responseText;
-					var navInject = String(navHolder.split('<div class="DenseOnly" id="EmptySpacer"></div>')[1].split('<div id="BigPanelWrapperParent">')[0].trim());
-					//alert(navInject);
+					var navInject = String(navHolder).split('<div class="DenseOnly" id="EmptySpacer"></div>')[1].split('<div id="BigPanelWrapperParent">')[0].trim();
+					//TODO: Figure out why this is returning navHolder not found
 					//NO IDEA WHY ANY OF THIS WORKS BUT IT DOES
 					document.getElementById("GlobalNav").parentNode.insertBefore(parseStringEl(navInject), document.getElementById("GlobalNav").nextSibling);
 					
