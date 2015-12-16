@@ -183,15 +183,7 @@
 	
 
 	<script>
-		if(location.search == "?Meet"){
-			/*var request = new XMLHttpRequest();
-			request.addEventListener("load", function(evt){
-			console.log(evt);
-			}, false);
-			request.open('GET', '/index.html', true),
-			request.send();
-			console.log(JSON.parse(request.responseText));
-			*/
+		function DensePrep(i){
 			var xmlhttp;
 			xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() {
@@ -202,17 +194,35 @@
 					document.getElementById("GlobalNav").parentNode.insertBefore(parseStringEl(navInject), document.getElementById("GlobalNav").nextSibling);
 					
 					document.getElementsByTagName("LINK")[0].href = "/Dense.css";
-					document.getElementById("MeetingsFrame").style.display = "block";;
 					document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[7].id = "CurrPage";
-					document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[7].getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].id = "CurrPage2";
+					document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[7].getElementsByTagName("UL")[0].getElementsByTagName("LI")[i].id = "CurrPage2";
 					
+					if(i == 0){
+						document.getElementById("MeetingsFrame").style.display = "block";
+					} else if(i == 1){
+						document.getElementById("CommFrame").style.display = "block";
+					} else if(i == 2){
+						document.getElementById("CompFrame").style.display = "block";
+					} else if(i == 3){
+						document.getElementById("UpFrame").style.display = "block";
+					} else if(i == 4){
+						document.getElementById("RefFrame").style.display = "block";
+					}
 				}
 			}
 			xmlhttp.open("GET", "/index.html", true);
 			xmlhttp.send();
-			
-			
-			
+		}
+		if(location.search == "?Meet"){
+			DensePrep(0);
+		} else if(location.search == "?Comm"){
+			DensePrep(1);
+		} else if(location.search == "?Comp"){
+			DensePrep(2);
+		} else if(location.search == "?Up"){
+			DensePrep(3);
+		} else if(location.search == "?Link"){
+			DensePrep(4);
 		} else{
 			
 			

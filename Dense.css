@@ -2,6 +2,10 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu|Nunito:700|Open+Sans);
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
 
+html{
+	margin:0;
+	padding:0;
+}
 body{
 	padding:0;
 	margin:0;
@@ -251,6 +255,10 @@ div div{
 	display:none;
 }
 
+#HeroFrame, #MeetingsFrame, #CommFrame, #CompFrame, #UpFrame, #RefFrame{
+	display:none;
+}
+
 
 
 /*
@@ -309,4 +317,36 @@ BEGIN INDIVIDUAL FRAMES
 
 #AwardFrame{
 	margin-left:20vw;
+}
+
+
+
+#Meet li.NextMeet::after{
+	content:'- NEXT MEETING';
+	font-weight:bold;
+}
+
+#CommFrame li{
+	margin-bottom:15px;
+}
+
+#CompFrame h1{
+	margin-left:20vw;
+}
+#CompFrame{
+	padding-right:0;
+}
+#NCTSA{
+	-webkit-filter:brightness(0);
+	filter:brightness(0);
+	max-height:20px;
+}
+#Nats{
+	max-height:30px;
+	position:relative;
+	top:6px;
+}
+
+#RefFrame{
+	padding-left:20vw;
 }
