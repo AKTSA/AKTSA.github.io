@@ -7,8 +7,8 @@ html{
 	padding:0;
 }
 body{
-	padding:0;
 	margin:0;
+	padding: 0;
 	font-family: 'Open Sans', sans-serif;
 }
 
@@ -20,7 +20,7 @@ div div{
 }
 #GlobalNav::before{
 	height:calc(10px + 143px + 4vw);
-	width:100vw;
+	width:100%;
 	display:block;
 	top:0;
 	left:0;
@@ -349,4 +349,68 @@ BEGIN INDIVIDUAL FRAMES
 
 #RefFrame{
 	padding-left:20vw;
+}
+
+#Hero h1 img{
+	display:none;
+}
+#VidFrame{
+	margin-left:20vw;
+}
+#YTDisappear span{
+	display:none;
+}
+#TitleBG2{
+	display:none;
+}
+#YTPlayer{
+	width:70vw;
+	height:39.375vw;
+}
+#ContFrame h1{
+	margin-left:20vw;
+}
+h1{
+	font-size:175%;
+}
+h2{
+	font-size:125%;
+}
+#AttendFrame{
+	margin-left:20vw;
+}
+#AttendFrame div{
+	margin:0;
+}
+
+
+
+
+
+
+
+
+
+
+/*
+
+BACKGROUDS
+
+*/
+#AboutHeroFrame::before{
+	content:'';
+	z-index:-5;
+	position:absolute;
+	display:block;
+	top:0;
+	left:15vw;
+	width:85%;
+	height:100vh;
+	
+	background-image:url("http://aktsa.org/img/fdesign2.jpg");
+	background-size:cover;
+}
+#AboutHeroFrame, #AboutFrame{
+	
+	background:rgba(189, 195, 199, 0.8);
 }
