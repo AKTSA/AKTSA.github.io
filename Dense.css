@@ -410,7 +410,43 @@ BACKGROUDS
 	background-image:url("http://aktsa.org/img/fdesign2.jpg");
 	background-size:cover;
 }
-#AboutHeroFrame, #AboutFrame{
+#AboutHeroFrame::after{
+	content:'';
+	z-index:-4;
+	position:absolute;
+	display:block;
+	top:0;
+	left:15vw;
+	width:85%;
+	height:100vh;
+	background:rgba(189, 195, 199, 0.8);
+}
+
+#CommFrame::before{
+	content:'';
+	z-index:-5;
+	position:absolute;
+	display:block;
+	top:0;
+	left:15vw;
+	width:85%;
+	height:100vh;
 	
+	background-image:url("/images/new/FoodBank.JPG");
+	background-size:cover;
+}
+#CommFrame::after{
+	content:'';
+	z-index:-4;
+	position:absolute;
+	display:block;
+	top:0;
+	left:15vw;
+	width:85%;
+	height:100vh;
+	background:rgba(189, 195, 199, 0.8);
+}
+/*
+#AboutHeroFrame, #AboutFrame{
 	background:rgba(189, 195, 199, 0.8);
 }
