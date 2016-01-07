@@ -307,6 +307,27 @@ h1{
 	position:relative;
 	top:15px;
 }
+#CompFrame #TempCompInfo{
+	border-top-style:solid;
+	border-top-color:white;
+	padding-top:5vh;
+	width:80%;
+	margin-left:10%;
+	margin-top:5vh;
+}
+#CompFrame div:nth-child(3) div div{
+	top:0;
+}
+#CompFrame a:visited{
+	color:white;
+}
+#CompFrame a:hover{
+	text-decoration:none;
+}
+#CompFrame ul{
+	text-align:left;
+	list-style-image: url('http://i.imgur.com/j8J3lUe.png'); 
+}
 
 #UpFrame{
     background-attachment: fixed;
