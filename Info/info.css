@@ -321,6 +321,9 @@ h1{
 #CompFrame a:visited{
 	color:white;
 }
+#CompFrame a{
+	color:white;
+}
 #CompFrame a:hover{
 	text-decoration:none;
 }
