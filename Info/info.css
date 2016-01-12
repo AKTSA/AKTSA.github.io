@@ -329,7 +329,7 @@ h1{
 }
 #CompFrame ul{
 	text-align:left;
-	list-style-image: url('http://i.imgur.com/j8J3lUe.png'); 
+	list-style-image: url('http://evernote.com/media/img/getting_started/skitch/windows8/win8-checkmark_icon.png'); 
 }
 
 #UpFrame{
@@ -1031,4 +1031,8 @@ code{
     #RefFrame a::before{
         transform:inherit;
     }
+	
+	#TempCompInfo div div{
+		max-width:100%;
+	}
 }
