@@ -194,6 +194,9 @@ h1{
 #HeroFrame{
 	height:calc(100vh - 100px);
 	margin-top:100px;
+	background:url('http://cleantech4us.github.io/AKCTE/Projects/Proj3.jpg');
+	background-size:cover;
+	background-position: center center;
 }
 
 
@@ -214,11 +217,30 @@ Hero Frame
 	top:50%;
 	transform:translateY(-50%);
 	margin:0;
+	z-index:1;
 }
 #HeroFrame img{
 	vertical-align:middle;
 	height:50%;
 }
-#HeroFrame h1 span span{
+#HeroFrame h1 div{
+	display:inline-block;
+	vertical-align:middle;
+	position:relative;
+	top:50px;
+	text-align:left;
+}
+#HeroFrame h1 span{
 	font-size:20%;
+	position:relative;
+	top:-80px;
+}
+.TitleBG{
+    position:absolute;
+    z-index:0;
+    width:100%;
+    height:100%;
+    background:radial-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0));
+    left:0;
+    top:0;
 }
