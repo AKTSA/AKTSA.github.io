@@ -1,6 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Audiowide);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu|Nunito:700|Open+Sans);
-@import url(http://fonts.googleapis.com/css?family=Raleway:300);
+@import url(http://fonts.googleapis.com/css?family=Audiowide|Ubuntu|Nunito:700|Open+Sans|Raleway:300|Handlee);
 
 html, body{
     max-width:100%;
@@ -194,9 +192,21 @@ h1{
 #HeroFrame{
 	height:calc(100vh - 100px);
 	margin-top:100px;
-	background:url('http://cleantech4us.github.io/AKCTE/Projects/Proj3.jpg');
+	background-image:url('http://cleantech4us.github.io/AKCTE/Projects/Proj3.jpg');
 	background-size:cover;
 	background-position: center center;
+	background-attachment:fixed;
+}
+#MotFrame{
+	width:100%;
+}
+#AKFrame{
+	width:100%;
+	background-image:url('http://cleantech4us.github.io/AKCTE/Projects/Proj4.jpg');
+	background-size:cover;
+	background-position: 50% 0;
+	background-attachment:fixed;
+	padding: 15vh 0;
 }
 
 
@@ -243,4 +253,123 @@ Hero Frame
     background:radial-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0));
     left:0;
     top:0;
+}
+
+/*
+	About Frame
+*/
+#MotFrame p{
+	display:block;
+	width:70vw;
+	text-align:center;
+    transition: all 0.5s ease-out;
+	margin: 7vh auto;
+	font-style:italic;
+	font-family: 'Handlee', cursive;
+	font-size:125%;
+}
+
+#AKFrame div{
+	margin: 0 0;
+	display:block;
+	width:60vw;
+	text-align:right;
+	position:relative;
+	padding: 5vh 0 5vh 5vw;
+    transition: all 0.5s ease-out;
+}
+#AKFrame p{
+	position:relative;
+	z-index:1;
+	padding-left:5vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+========================
+	REUSEABLE STUFF
+========================
+*/
+
+
+.SlantL::before{
+    background:#674172;
+    z-index:0;
+    transform:skewX(-10deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:-10%;
+}
+.SlantL::after{
+    background:#674172;
+    z-index:0;
+    transform:skewX(-10deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    display:block;
+    left:-90%;
+}
+
+.SlantR::before{
+    background:#674172;
+    z-index:0;
+    transform:skewX(10deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    right:-10%;
+}
+.SlantR::after{
+    background:#674172;
+    z-index:0;
+    transform:skewX(10deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    display:block;
+    right:-90%;
+}
+
+
+
+
+.Grid9{
+	width:90vw;
+	margin: 0 auto;
+	display:table;
+}
+.Grid9 div{
+	display:table-row;
+}
+.Grid9 div div{
+	display:table-cell;
+	width:33%;
 }
