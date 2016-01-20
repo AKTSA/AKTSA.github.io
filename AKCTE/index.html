@@ -70,36 +70,58 @@
 	
 	
 	<section id="ClassFrame">
-		<h1>Classes Offered</h1>
+		<h1>Course Offerings</h1>
 		
 		<div class="Grid9">
 			<div>
-				<div onclick="document.getElementsByClassName('PopBox')[0].className = 'PopBox PopBoxA';">
+				<div onclick="ClassPopBox(0);">
 					AP Computer Science
 				</div>
-				<div onclick="document.getElementsByClassName('PopBox')[1].className = 'PopBox PopBoxA';">
+				<div onclick="ClassPopBox(1);">
 					Scientific Visualization
 				</div>
-				<div onclick="document.getElementsByClassName('PopBox')[2].className = 'PopBox PopBoxA';">
+				<div onclick="ClassPopBox(2);">
 					Drafting
 				</div>
 			</div>
 			<div>
-				<div>Game Art Design</div>
-				<div>PLTW Engineering</div>
-				<div>PLTW Biomedical Sciences</div>
+				<div onclick="ClassPopBox(3);">
+					Game Art Design
+				</div>
+				<div onclick="ClassPopBox(4);">
+					PLTW Engineering
+				</div>
+				<div onclick="ClassPopBox(5);">
+					PLTW Biomedical Sciences
+				</div>
 			</div>
 		</div>
 		<!--Pop Boxes-->
 		<div class="PopBox">
-			This is a college-level introductory course in computer science. Because the design and implementation of computer programs to solve problems involve skills that are fundamental to the study of computer science, a large part of the course is built around the development of computer programs that correctly solve a given problem. At the same time, the design and implementation of computer programs is used as a context for introducing other important aspects of computer science, including the development and analysis of algorithms, the development and use of fundamental data structures, the study of standard algorithms and typical applications, and the use of logic and formal methods. In addition, the responsible use of these systems is an integral part of the course.
+			<h2>AP Computer Science</h2>
+			<p>This is a college-level introductory course in computer science. Because the design and implementation of computer programs to solve problems involve skills that are fundamental to the study of computer science, a large part of the course is built around the development of computer programs that correctly solve a given problem. At the same time, the design and implementation of computer programs is used as a context for introducing other important aspects of computer science, including the development and analysis of algorithms, the development and use of fundamental data structures, the study of standard algorithms and typical applications, and the use of logic and formal methods. In addition, the responsible use of these systems is an integral part of the course.</p>
 		</div>
 		<div class="PopBox">
-			This course introduces students to the use of complex graphic tools. Emphasis is placed on the principles, concepts, and use of complex graphic and visualization tools as applied to the study of science and technology. Students use complex 2D graphics, animation, editing, and image analysis tools to better understand, illustrate, explain, and present technical, mathematical, and/or scientific concepts and principles. Emphasis is placed on the use of computer-enhanced images to generate both conceptual and data-driven models, data-driven charts and animations. Science, math, and visual design concepts are reinforced throughout the course. Activities are structured to integrate physical and social sciences, mathematics, English language arts, and art.
+			<h2>Scientific Visualization</h2>
+			<p>This course introduces students to the use of complex graphic tools. Emphasis is placed on the principles, concepts, and use of complex graphic and visualization tools as applied to the study of science and technology. Students use complex 2D graphics, animation, editing, and image analysis tools to better understand, illustrate, explain, and present technical, mathematical, and/or scientific concepts and principles. Emphasis is placed on the use of computer-enhanced images to generate both conceptual and data-driven models, data-driven charts and animations. Science, math, and visual design concepts are reinforced throughout the course. Activities are structured to integrate physical and social sciences, mathematics, English language arts, and art.</p>
 		</div>
 		<div class="PopBox">
-			This course introduces students to the use of simple and complex graphic tools used to communicate and understand ideas and concepts found in the areas of architecture, manufacturing, engineering, science, and mathematics. Topics include problem-solving strategies, classical representation methods such as sketching, geometric construction techniques, as well as computer assisted design (CAD), orthographic projection, and 3-D modeling.
+			<h2>Drafting</h2>
+			<p>This course introduces students to the use of simple and complex graphic tools used to communicate and understand ideas and concepts found in the areas of architecture, manufacturing, engineering, science, and mathematics. Topics include problem-solving strategies, classical representation methods such as sketching, geometric construction techniques, as well as computer assisted design (CAD), orthographic projection, and 3-D modeling.</p>
 		</div>
+		<div class="PopBox">
+			<h2>Game Art Design</h2>
+			<p>This course introduces students to techniques used in the electronic game industry. Students will focus on the principles used in game design including mathematical and virtual modeling. Emphasis is placed on areas related to art, history, ethics, plot development, storyboarding, programming, 2D visual theory, and interactive play technologies. Students develop physical and virtual games using hands-on experiences and a variety of software.</p>
+		</div>
+		<div class="PopBox">
+			<h2>Project Lead The Way<br />Engineering</h2>
+			<p>In these foundation Project Lead the Way (PLTW) courses, students are exposed to the design process, research and analysis, teamwork, communication methods, global and human impacts, engineering standards, and technical documentation. Students use 3D solid modeling design software to help them design solutions to solve proposed problems and learn how to document their work and communicate solutions to peers and members of the professional community.</p>
+		</div>
+		<div class="PopBox">
+			<h2>Project Lead The Way<br />Principles of Biomedical Sciences</h2>
+			<p>In this foundation Project Lead the Way (PLTW) class, students survey engineering and are exposed to major concepts they will encounter in a postsecondary engineering course of study. Students employ engineering and scientific concepts in the solution of engineering design problems. They develop problem-solving skills and apply their knowledge of research and design to create solutions to various challenges, documenting their work and communicating solutions to peers and members of the professional community.</p>
+		</div>
+		
 		<!--
 			Computer Science
 			SciViz
@@ -110,7 +132,20 @@
 		-->
 	</section>
 	
-
+	
+	<section id="ProjFrame">
+		<div class="SlantL">
+			<h1>Student Projects</h1>
+			<p>Our students are shmart and totally not Aviral-like.</p>
+		</div>
+		<div id="ProjSelect">
+			<input type="radio" name="Projects" value="TwoPoint" id="TwoPoint" />
+			<label for="TwoPoint">Two Point Perspective</label>
+		</div>
+	</section>
+	
+	
+	
 	<script>
 		/*function DensePrep(i){
 			var xmlhttp;
@@ -298,10 +333,18 @@
 		
 		function ClassPopBox(a){
 			document.getElementsByClassName('PopBox')[a].className = 'PopBox PopBoxA';
-			document.getElementsByClassName('PopBox')[a].addEventListener("click", function(){
-				alert();
-				document.getElementsByClassName('PopBox')[a].className = 'PopBox';
-			});
+			setTimeout(function(){
+				window.addEventListener("click", ClassPopBoxC);
+				document.getElementsByTagName("BODY")[0].style.cursor = "pointer";
+				document.getElementsByClassName("Grid9")[0].style.pointerEvents = "none";
+			
+				function ClassPopBoxC(e){
+					document.getElementsByClassName('PopBox')[a].className = 'PopBox';
+					window.removeEventListener("click", ClassPopBoxC);
+					document.getElementsByTagName("BODY")[0].style.cursor = "";
+					document.getElementsByClassName("Grid9")[0].style.pointerEvents = "all";
+				}
+			}, 400);
 		}
 	</script>
 </body>

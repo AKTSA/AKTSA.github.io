@@ -197,6 +197,7 @@ h1{
 	background-position: center center;
 	background-attachment:fixed;
 }
+
 #MotFrame{
 	width:100%;
 }
@@ -208,11 +209,30 @@ h1{
 	background-attachment:fixed;
 	padding: 15vh 0;
 }
+
 #ClassFrame{
 	position:relative;
 	min-height:50vh;
 	padding: 5vh 0;
 }
+
+#ProjFrame{
+	background-image:url('http://aktsa.org/img/VRobots4.jpg');
+	background-size:cover;
+	background-position: 50% 50%;
+	background-attachment:fixed;
+	min-height:80vh;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -337,6 +357,24 @@ Hero Frame
 	pointer:initial;
 }
 
+/*
+	Projects Frame
+*/
+#ProjFrame div:nth-child(1){
+	width:40vw;
+	top:10vh;
+}
+
+#ProjSelect{
+	float:right;
+	margin-top:20vh;
+}
+#ProjSelect input{
+	display:none;
+}
+#ProjSelect label{
+	cursor:pointer;
+}
 
 
 
@@ -360,6 +398,8 @@ Hero Frame
 
 .SlantL{
 	position:relative;
+	text-align:right;
+	padding:5vh 0;
 }
 .SlantL::before{
     background:#674172;
@@ -384,6 +424,10 @@ Hero Frame
     top:0;
     display:block;
     left:-90%;
+}
+.SlantL *{
+	position:relative;
+	z-index:1;
 }
 
 .SlantR{
@@ -413,6 +457,10 @@ Hero Frame
     display:block;
     right:-90%;
 }
+.SlantR *{
+	position:relative;
+	z-index:1;
+}
 
 
 
@@ -432,3 +480,12 @@ Hero Frame
 }
 
 sup { vertical-align: top; font-size: 0.6em; }
+
+.PopBox::after{
+	content:'Click anywhere to close';
+	position:absolute;
+	bottom:1px;
+	right:1px;
+	font-size:90%;
+	font-family:monospace;
+}
