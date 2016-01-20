@@ -221,7 +221,7 @@ h1{
 	background-size:cover;
 	background-position: 50% 50%;
 	background-attachment:fixed;
-	min-height:80vh;
+	text-align:right;
 }
 
 
@@ -366,14 +366,88 @@ Hero Frame
 }
 
 #ProjSelect{
-	float:right;
+	display:inline-block;
 	margin-top:20vh;
 }
 #ProjSelect input{
 	display:none;
 }
+
 #ProjSelect label{
 	cursor:pointer;
+	position:relative;
+	padding:3vh 10vw;
+	display:block;
+	text-align:left;
+	transition: all 0.5s ease;
+	left:0;
+}
+#ProjSelect label:nth-of-type(odd){
+    color:black;
+}
+#ProjSelect label:nth-of-type(even){
+    color:white;
+}
+#ProjSelect label span{
+    position:relative;
+    z-index:1;
+}
+#ProjSelect label:nth-of-type(odd)::before{
+    background:#bdc3c7;
+    z-index:0;
+    transform:skewX(-30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:0;
+}
+#ProjSelect label:nth-of-type(odd)::after{
+    background:#bdc3c7;
+    z-index:0;
+    transform:skewX(-30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:90%;
+}
+#ProjSelect label:nth-of-type(even)::before{
+    background:#2c3e50;
+    z-index:0;
+    transform:skewX(30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:0;
+}
+#ProjSelect label:nth-of-type(even)::after{
+    background:#2c3e50;
+    z-index:0;
+    transform:skewX(30deg);
+    content:"";
+    position:absolute;
+    width:120%;
+    height:100%;
+    top:0;
+    z-index:0;
+    display:block;
+    left:90%;
+}
+
+#ProjSelect input:checked + label{
+	left:-10%;
+	font-weight:bold;
 }
 
 

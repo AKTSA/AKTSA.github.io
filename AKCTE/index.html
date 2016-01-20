@@ -139,8 +139,23 @@
 			<p>Our students are shmart and totally not Aviral-like.</p>
 		</div>
 		<div id="ProjSelect">
-			<input type="radio" name="Projects" value="TwoPoint" id="TwoPoint" />
-			<label for="TwoPoint">Two Point Perspective</label>
+			<input onclick="ChangeProjBack(0);" type="radio" checked name="Projects" value="TwoPoint" id="VexRobot" />
+			<label for="VexRobot"><span>VEX Robotics</span></label>
+			
+			<input onclick="ChangeProjBack(1);" type="radio" name="Projects" value="TwoPoint" id="TwoPoint" />
+			<label for="TwoPoint"><span>Two Point Perspective</span></label>
+			
+			<input onclick="ChangeProjBack(2);" type="radio" name="Projects" value="TwoPoint" id="PuzzleCube" />
+			<label for="PuzzleCube"><span>Puzzle Cube</span></label>
+			
+			<input onclick="ChangeProjBack(3);" type="radio" name="Projects" value="TwoPoint" id="BridgeD" />
+			<label for="BridgeD"><span>Bridge Design</span></label>
+			
+			<input onclick="ChangeProjBack(4);" type="radio" name="Projects" value="TwoPoint" id="HouseD" />
+			<label for="HouseD"><span>House Design</span></label>
+			
+			<input onclick="ChangeProjBack(5);" type="radio" name="Projects" value="TwoPoint" id="WebSite" />
+			<label for="WebSite"><span>Website Creation</span></label>
 		</div>
 	</section>
 	
@@ -345,6 +360,29 @@
 					document.getElementsByClassName("Grid9")[0].style.pointerEvents = "all";
 				}
 			}, 400);
+		}
+		
+		function ChangeProjBack(a){
+			switch(a){
+				case 0:
+					document.getElementById("ProjFrame").style.backgroundImage = "url('http://aktsa.org/img/VRobots4.jpg')";
+					break;
+				case 1:
+					document.getElementById("ProjFrame").style.backgroundImage = "url('http://cleantech4us.github.io/AKCTE/Projects/Proj1.jpg')";
+					break;
+				case 2:
+					document.getElementById("ProjFrame").style.backgroundImage = "url('http://cleantech4us.github.io/AKCTE/Projects/Proj3.jpg')";
+					break;
+				case 3:
+					document.getElementById("ProjFrame").style.backgroundImage = "url('http://cleantech4us.github.io/AKCTE/Projects/Proj4.jpg')";
+					break;
+				case 4:
+					document.getElementById("ProjFrame").style.backgroundImage = "url('http://cleantech4us.github.io/AKCTE/Projects/Proj5.jpg')";
+					break;
+				case 5:
+					document.getElementById("ProjFrame").style.backgroundImage = "url('http://cleantech4us.github.io/AKCTE/Projects/Proj6.png')";
+					break;
+			}
 		}
 	</script>
 </body>
