@@ -113,7 +113,7 @@ h1{
 }
 
 
-
+/*
 #LocalNav{
     width:30px;
     height:150px;
@@ -183,7 +183,7 @@ h1{
 #LocalNav li input[type=radio]:checked+label{
     background:white;
 }
-
+*/
 
 
 /*
@@ -207,6 +207,11 @@ h1{
 	background-position: 50% 0;
 	background-attachment:fixed;
 	padding: 15vh 0;
+}
+#ClassFrame{
+	position:relative;
+	min-height:50vh;
+	padding: 5vh 0;
 }
 
 
@@ -284,6 +289,54 @@ Hero Frame
 	padding-left:5vw;
 }
 
+/*
+	Classes Frame
+*/
+#ClassFrame .Grid9{
+	border-spacing:10px;
+	margin-top:5vh;
+}
+#ClassFrame .Grid9 div div{
+	height:15vh;
+	border-style:solid;
+	border-color:black;
+	border-width:5px;
+	transition: background 0.5s ease;
+}
+#ClassFrame .Grid9 div div:hover{
+	background:black;
+	cursor:pointer;
+}
+
+#ClassFrame .PopBox{
+	position:fixed;
+	width:0;
+	height:0;
+	left:50vw;
+	top:50vh;
+	opacity:0;
+	pointer-events:none;
+	background:black;
+	z-index:100;
+	transition: all 0.25s ease-in;
+	  display: flex;
+  justify-content: center;
+  flex-direction: column;
+	padding: 5vw;
+}
+#ClassFrame .PopBoxA{
+	cursor:pointer;	
+	width:70vw;
+	height:auto;
+	left:10vw;
+	top:50%;
+	transform:translateY(-50%);
+	opacity:1;
+	pointer-events:all;
+	transition: all 0.5s ease-out;
+	pointer:initial;
+}
+
 
 
 
@@ -305,7 +358,9 @@ Hero Frame
 ========================
 */
 
-
+.SlantL{
+	position:relative;
+}
 .SlantL::before{
     background:#674172;
     z-index:0;
@@ -315,7 +370,6 @@ Hero Frame
     width:120%;
     height:100%;
     top:0;
-    z-index:0;
     display:block;
     left:-10%;
 }
@@ -332,6 +386,9 @@ Hero Frame
     left:-90%;
 }
 
+.SlantR{
+	position:relative;
+}
 .SlantR::before{
     background:#674172;
     z-index:0;
@@ -341,7 +398,6 @@ Hero Frame
     width:120%;
     height:100%;
     top:0;
-    z-index:0;
     display:block;
     right:-10%;
 }
@@ -372,4 +428,7 @@ Hero Frame
 .Grid9 div div{
 	display:table-cell;
 	width:33%;
+	vertical-align:middle;
 }
+
+sup { vertical-align: top; font-size: 0.6em; }

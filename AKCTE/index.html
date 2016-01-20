@@ -20,7 +20,7 @@
 			--><li><a><del>Design Brief</del></a></li>
 		</ul>
 	</nav>
-	<nav id="LocalNav">
+<!--	<nav id="LocalNav">
 		<ul>
 			<li>
 				<input id="SB1" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#MeetingsFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
@@ -48,7 +48,7 @@
 				<div>Links</div>
 			</li>
 		</ul>
-	</nav>
+	</nav>-->
 
 	<header id="HeroFrame">
 		<h1><img src="/images/AK%20Logo.png" alt="Ardrey Kell" /> <div>CTE<br /><span>Career and Technical Education</span></div></h1>
@@ -70,27 +70,44 @@
 	
 	
 	<section id="ClassFrame">
-		<div class="SlantL">
-			<h1>Classes Offered</h1>
-			
-		</div>
+		<h1>Classes Offered</h1>
+		
 		<div class="Grid9">
 			<div>
-				<div></div>
-				<div></div>
-				<div></div>
+				<div onclick="document.getElementsByClassName('PopBox')[0].className = 'PopBox PopBoxA';">
+					AP Computer Science
+				</div>
+				<div onclick="document.getElementsByClassName('PopBox')[1].className = 'PopBox PopBoxA';">
+					Scientific Visualization
+				</div>
+				<div onclick="document.getElementsByClassName('PopBox')[2].className = 'PopBox PopBoxA';">
+					Drafting
+				</div>
 			</div>
 			<div>
-				<div></div>
-				<div></div>
-				<div></div>
-			</div>
-			<div>
-				<div></div>
-				<div></div>
-				<div></div>
+				<div>Game Art Design</div>
+				<div>PLTW Engineering</div>
+				<div>PLTW Biomedical Sciences</div>
 			</div>
 		</div>
+		<!--Pop Boxes-->
+		<div class="PopBox">
+			This is a college-level introductory course in computer science. Because the design and implementation of computer programs to solve problems involve skills that are fundamental to the study of computer science, a large part of the course is built around the development of computer programs that correctly solve a given problem. At the same time, the design and implementation of computer programs is used as a context for introducing other important aspects of computer science, including the development and analysis of algorithms, the development and use of fundamental data structures, the study of standard algorithms and typical applications, and the use of logic and formal methods. In addition, the responsible use of these systems is an integral part of the course.
+		</div>
+		<div class="PopBox">
+			This course introduces students to the use of complex graphic tools. Emphasis is placed on the principles, concepts, and use of complex graphic and visualization tools as applied to the study of science and technology. Students use complex 2D graphics, animation, editing, and image analysis tools to better understand, illustrate, explain, and present technical, mathematical, and/or scientific concepts and principles. Emphasis is placed on the use of computer-enhanced images to generate both conceptual and data-driven models, data-driven charts and animations. Science, math, and visual design concepts are reinforced throughout the course. Activities are structured to integrate physical and social sciences, mathematics, English language arts, and art.
+		</div>
+		<div class="PopBox">
+			This course introduces students to the use of simple and complex graphic tools used to communicate and understand ideas and concepts found in the areas of architecture, manufacturing, engineering, science, and mathematics. Topics include problem-solving strategies, classical representation methods such as sketching, geometric construction techniques, as well as computer assisted design (CAD), orthographic projection, and 3-D modeling.
+		</div>
+		<!--
+			Computer Science
+			SciViz
+			Drafting
+			Game Art Design
+			PLTW Engineering
+			PLTW Biomed
+		-->
 	</section>
 	
 
@@ -276,6 +293,16 @@
 			div.innerHTML = s;
 			return div.childNodes[0];
 		}*/
+		
+		
+		
+		function ClassPopBox(a){
+			document.getElementsByClassName('PopBox')[a].className = 'PopBox PopBoxA';
+			document.getElementsByClassName('PopBox')[a].addEventListener("click", function(){
+				alert();
+				document.getElementsByClassName('PopBox')[a].className = 'PopBox';
+			});
+		}
 	</script>
 </body>
 
