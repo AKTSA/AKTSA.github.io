@@ -222,6 +222,7 @@ h1{
 	background-position: 50% 50%;
 	background-attachment:fixed;
 	text-align:right;
+	transition: background-image 0.5s ease;
 }
 
 
@@ -329,32 +330,30 @@ Hero Frame
 }
 
 #ClassFrame .PopBox{
-	position:fixed;
-	width:0;
-	height:0;
-	left:50vw;
-	top:50vh;
+	position:fixed;	
+	width:70vw;
+	height:auto;
+	transform:translateY(-50%)scale(0);
+	left:10vw;
+	top:50%;
 	opacity:0;
 	pointer-events:none;
 	background:black;
 	z-index:100;
 	transition: all 0.25s ease-in;
-	  display: flex;
-  justify-content: center;
-  flex-direction: column;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 	padding: 5vw;
 }
 #ClassFrame .PopBoxA{
-	cursor:pointer;	
-	width:70vw;
-	height:auto;
+	cursor:pointer;
 	left:10vw;
 	top:50%;
-	transform:translateY(-50%);
+	transform:translateY(-50%)scale(1);
 	opacity:1;
 	pointer-events:all;
 	transition: all 0.5s ease-out;
-	pointer:initial;
 }
 
 /*
