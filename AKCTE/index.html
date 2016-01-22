@@ -191,7 +191,7 @@
 			"http://cleantech4us.github.io/AKCTE/Projects/Proj3.jpg",
 			"http://cleantech4us.github.io/AKCTE/Projects/Proj4.jpg",
 			"http://cleantech4us.github.io/AKCTE/Projects/Proj5.jpg",
-			"http://cleantech4us.github.io/AKCTE/Projects/Proj6.jpg"
+			"http://cleantech4us.github.io/AKCTE/Projects/Proj6.png"
 		);
 		
 		/*function DensePrep(i){
@@ -383,7 +383,7 @@
 			document.getElementsByTagName("BODY")[0].style.cursor = "pointer"; //Disables clikcing and stuff
 			document.getElementsByClassName("Grid9")[0].style.pointerEvents = "none";
 			
-			var scrollPos = document.body.scrollTop; //Grabs the current scroll position
+			var scrollPos = window.scrollY;//document.body.scrollTop; //Grabs the current scroll position
 			document.getElementsByTagName("HTML")[0].style.top = "-" + scrollPos + "px"; //Sets scroll pos as the top value so...
 			document.getElementsByTagName("HTML")[0].style.position="fixed"; //... when fixed here, it's in the right place
 			document.getElementsByTagName("HTML")[0].style.overflowY="scroll";//Hacky s*** to get stuff working
