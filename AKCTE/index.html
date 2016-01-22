@@ -138,6 +138,14 @@
 			<h1>Student Projects</h1>
 			<p>Our students are shmart and totally not Aviral-like.</p>
 		</div>
+		<div id="ProjInfo">
+			<p style="display:block;">Students from AKTSA built robots to perform specific tasks both under drive control and autonomously for competition.</p>
+			<p>This is a two-point perspective picture created by a Drafting 1 student. Students started out by drawing two points on the page and then using shapes that would converge at one of those two points would create a realistic picture.</p>
+			<p>This is a puzzle cube engineered from start to finish by an Intro to Engineering Design Student. The students were required to brainstorm over 25 different parts and then create 5 possible designs for a puzzle cube and afterward to pick one and build it.</p>
+			<p>POE students built this bridge and tested it for its efficiency. It came out with an efficiency over 2000 to win the award for top efficiency in these students' class.</p>
+			<p>Drafting 2 students create architectural plans using CAD programs as part of their class projects and eventually go on to build full real life models of these plans.</p>
+			<p>Students from AK TSA create a website promoting awareness of eco-friendly recycling of electronic products.</p>
+		</div>
 		<div id="ProjSelect">
 			<input onclick="ChangeProjBack(0);" type="radio" checked name="Projects" value="TwoPoint" id="VexRobot" />
 			<label for="VexRobot"><span>VEX Robotics</span></label>
@@ -159,9 +167,33 @@
 		</div>
 	</section>
 	
+	<section id="TeachFrame">
+		<h1>Teachers</h1>
+	</section>
+	
+	
 	
 	
 	<script>
+		//
+		//IMAGE PRELOADING CRAP
+		//
+		var images = new Array()
+		function preload() {
+			for (i = 0; i < preload.arguments.length; i++) {
+				images[i] = new Image()
+				images[i].src = preload.arguments[i]
+			}
+		}
+		preload(
+			"http://aktsa.org/img/VRobots4.jpg",
+			"http://cleantech4us.github.io/AKCTE/Projects/Proj1.jpg",
+			"http://cleantech4us.github.io/AKCTE/Projects/Proj3.jpg",
+			"http://cleantech4us.github.io/AKCTE/Projects/Proj4.jpg",
+			"http://cleantech4us.github.io/AKCTE/Projects/Proj5.jpg",
+			"http://cleantech4us.github.io/AKCTE/Projects/Proj6.jpg"
+		);
+		
 		/*function DensePrep(i){
 			var xmlhttp;
 			xmlhttp = new XMLHttpRequest();
@@ -346,20 +378,34 @@
 		
 		
 		
-		function ClassPopBox(a){
-			document.getElementsByClassName('PopBox')[a].className = 'PopBox PopBoxA';
-			setTimeout(function(){
-				window.addEventListener("click", ClassPopBoxC);
-				document.getElementsByTagName("BODY")[0].style.cursor = "pointer";
-				document.getElementsByClassName("Grid9")[0].style.pointerEvents = "none";
+		function ClassPopBox(a){//Pops the box explanation for each class
+			document.getElementsByClassName('PopBox')[a].className = 'PopBox PopBoxA'; //Shows the box
+			document.getElementsByTagName("BODY")[0].style.cursor = "pointer"; //Disables clikcing and stuff
+			document.getElementsByClassName("Grid9")[0].style.pointerEvents = "none";
 			
-				function ClassPopBoxC(e){
-					document.getElementsByClassName('PopBox')[a].className = 'PopBox';
-					window.removeEventListener("click", ClassPopBoxC);
-					document.getElementsByTagName("BODY")[0].style.cursor = "";
-					document.getElementsByClassName("Grid9")[0].style.pointerEvents = "all";
-				}
-			}, 400);
+			var scrollPos = document.body.scrollTop; //Grabs the current scroll position
+			document.getElementsByTagName("HTML")[0].style.top = "-" + scrollPos + "px"; //Sets scroll pos as the top value so...
+			document.getElementsByTagName("HTML")[0].style.position="fixed"; //... when fixed here, it's in the right place
+			document.getElementsByTagName("HTML")[0].style.overflowY="scroll";//Hacky s*** to get stuff working
+			document.getElementsByTagName("HTML")[0].style.width="100%";
+			
+			setTimeout(function(){
+				window.addEventListener("click", ClassPopBoxC);//Delays the addition of the event listener...
+			}, 400);								//... so that it doesn't fire on the current click
+			
+			
+			function ClassPopBoxC(e){ //Resets stuff
+				document.getElementsByClassName('PopBox')[a].className = 'PopBox'; //Closes the box
+				window.removeEventListener("click", ClassPopBoxC);				//Kills the event listener
+				document.getElementsByTagName("BODY")[0].style.cursor = "";		//Resets clicking
+				document.getElementsByClassName("Grid9")[0].style.pointerEvents = "all";
+				
+				document.getElementsByTagName("HTML")[0].style.position="";	//Reenables scrolling in body
+				document.getElementsByTagName("HTML")[0].style.overflowY="";
+				document.getElementsByTagName("HTML")[0].style.width="";
+				document.getElementsByTagName("HTML")[0].style.top="";
+				window.scrollTo(0, scrollPos);								//Resets to original position
+			}
 		}
 		
 		function ChangeProjBack(a){
@@ -383,6 +429,10 @@
 					document.getElementById("ProjFrame").style.backgroundImage = "url('http://cleantech4us.github.io/AKCTE/Projects/Proj6.png')";
 					break;
 			}
+			for(var i = 0; i < 6; i++){
+				document.getElementById('ProjInfo').getElementsByTagName("P")[i].style.display = "none";
+			}
+			document.getElementById('ProjInfo').getElementsByTagName("P")[a].style.display = "block";
 		}
 	</script>
 </body>

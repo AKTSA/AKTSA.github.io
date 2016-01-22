@@ -84,7 +84,7 @@ code {
 }
 
 #GlobalNav li::before {
-	transform: skewX(-3deg);
+	transform: skewX(-5deg);
 	content: "";
 	position: absolute;
 	top: 0;

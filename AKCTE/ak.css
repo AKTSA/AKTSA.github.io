@@ -58,7 +58,7 @@ h1{
     color:black;
 }
 #GlobalNav li::before{
-    transform:skewX(-3deg);
+    transform:skewX(-5deg);
     content:"";
     position:absolute;
     top:0;
@@ -223,6 +223,11 @@ h1{
 	background-attachment:fixed;
 	text-align:right;
 	transition: background-image 0.5s ease;
+	position:relative;
+}
+
+#TeachFrame{
+	padding: 10vh 0;
 }
 
 
@@ -448,8 +453,22 @@ Hero Frame
 	left:-10%;
 	font-weight:bold;
 }
+#ProjSelect label:hover{
+	left:5%;
+}
 
-
+#ProjInfo{
+	position:absolute;
+	left:5vw;
+	bottom: 5vh;
+	text-align:left;
+	background:rgba(44, 62, 80,0.7);
+	padding:1vw 2vw;
+	max-width:50vw;
+}
+#ProjInfo p{
+	display:none;
+}
 
 
 
