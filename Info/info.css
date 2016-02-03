@@ -791,7 +791,9 @@ h1{
 #CommServReq li:nth-child(6){
     transition-delay:1.2s;
 }
-
+#CommServReq li:nth-child(7){
+    transition-delay:1.4s;
+}
 
 
 
