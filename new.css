@@ -622,7 +622,7 @@ header{
     padding: 5vw;
     font-size:115%;
 }
-#OffFrame tr:nth-child(odd){
+#OffFrame tr:nth-child(even){
     background:#bdc3c7;
     color:black;
 }
