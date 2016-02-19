@@ -113,7 +113,7 @@ h1{
 }
 
 
-/*
+
 #LocalNav{
     width:30px;
     height:150px;
@@ -183,7 +183,7 @@ h1{
 #LocalNav li input[type=radio]:checked+label{
     background:white;
 }
-*/
+
 
 
 /*
@@ -227,7 +227,15 @@ h1{
 }
 
 #TeachFrame{
-	padding: 10vh 0;
+	padding: 0 0 10vh 0;
+	background-image:url('https://upload.wikimedia.org/wikipedia/commons/8/83/Japanese_High_school_Language_Lab1.JPG');
+	background-size:cover;
+	background-position: 50% 50%;
+	background-attachment:fixed;
+}
+
+#LinkFrame{
+	padding: 3vh 0 0 0;
 }
 
 
@@ -308,6 +316,8 @@ Hero Frame
 	position:relative;
 	padding: 5vh 0 5vh 5vw;
     transition: all 0.5s ease-out;
+	
+	left:-100vw;
 }
 #AKFrame p{
 	position:relative;
@@ -327,7 +337,17 @@ Hero Frame
 	border-style:solid;
 	border-color:black;
 	border-width:5px;
-	transition: background 0.5s ease;
+	transition: all 0.5s ease;
+	
+	position:relative;
+	top:30px;
+	opacity:0;
+}
+#ClassFrame .Grid9 div div:nth-child(2){
+	transition: background 0.5s ease 0s, opacity 0.5s ease 0.1s, top 0.5s ease 0.1s;
+}
+#ClassFrame .Grid9 div div:nth-child(3){
+	transition: background 0.5s ease 0s, opacity 0.5s ease 0.2s, top 0.5s ease 0.1s;
 }
 #ClassFrame .Grid9 div div:hover{
 	background:black;
@@ -367,11 +387,16 @@ Hero Frame
 #ProjFrame div:nth-child(1){
 	width:40vw;
 	top:10vh;
+	left:-100vw;
+	transition: left 0.5s ease;
 }
 
 #ProjSelect{
 	display:inline-block;
 	margin-top:20vh;
+	right:-100vw;
+	position:relative;
+	transition: right 0.5s ease 0.2s;
 }
 #ProjSelect input{
 	display:none;
@@ -465,6 +490,9 @@ Hero Frame
 	background:rgba(44, 62, 80,0.7);
 	padding:1vw 2vw;
 	max-width:50vw;
+	
+	transition: opacity 0.5s ease 0.6s;
+	opacity:0;
 }
 #ProjInfo p{
 	display:none;
@@ -472,7 +500,168 @@ Hero Frame
 
 
 
+/*
+	Teachers Frame
+*/
 
+#TeachTitleBanner{
+	padding-top:10vh;
+	padding-bottom:10vh;
+	background:#674172;
+}
+
+.Grid6{
+	width:90vw;
+	height:80vh;
+	margin-top:2vh;
+	margin-left:auto;
+	margin-right:auto;
+	
+	position:relative;
+	left:-10vw;
+	opacity:0;
+	transition: opacity 0.5s ease, left 0.5s ease;
+}
+.Grid6 td{
+	overflow:hidden;
+	border-style:solid;
+	border-color:black;
+	background:white;
+	padding:0;
+	position:relative;
+}
+.Grid6 td div{
+	-webkit-transition: all 0.5s ease;
+	        transition: all 0.5s ease;
+	transform:none;
+	position:absolute;
+	overflow:hidden;
+	top:0;
+	margin:0 auto;
+	width:100%;
+	padding-bottom:23vh;
+	cursor:pointer;
+	color:black;
+}
+.Grid6 td div:hover{
+	transform:translateY(-40vh);
+	background:black;
+	color:white;
+}
+.Grid6 h3{
+	padding-top:19vh;
+	padding-bottom:19vh;
+	margin:0;
+}
+
+.Info{
+	position:fixed;
+	-webkit-transition:all 1s ease;
+	        transition:all 1s ease;
+	z-index:5;
+	background:white;
+	width:100vw;
+	height:calc(100vh - 100px);
+	background:#674172;
+	color:white;
+	top:100px;
+}
+.HiddenInfo{
+	left:-100vw;
+}
+.ShowInfo{
+	opacity:1;
+	left:0;
+}
+.Info h1{
+	font-size:500%;
+	margin:5vh 0;
+}
+.Info button{
+	font-size:125%;
+	padding: 20px 50px;
+	background:black;
+	color:white;
+	cursor:pointer;
+	border-style:none;
+	-webkit-transition:all 0.25s ease;
+	        transition:all 0.25s ease;
+	position:absolute;
+	bottom:0;
+	right:0;
+}
+.Info button:hover{
+	background:white;
+	color:black;
+}
+#TeachDiv{
+	padding-left:20px;
+	overflow-y:auto;
+	max-height:55vh;
+}
+#TeachImg{
+	margin-left:20px;
+	width:20vw;
+	float:right;
+	margin-right:40px;
+}
+
+#TeachFrame small{
+	background:rgba(0,0,0,0.6);
+	padding:5px;
+	position:absolute;
+	right:0;
+	margin-top:3vh;
+}
+
+
+/*
+	Buttom Frame
+*/
+.BigButton{
+	display:inline-block;
+	color:white;
+	padding:10px;
+	transition:all 0.5s ease;
+    margin-bottom:10px;
+    text-decoration:none;
+    position:relative;
+    right:100vw;
+}
+.BigButton:hover{
+	color:black;
+	text-decoration:none !important;
+    transition-delay:0s !important;
+}
+.BigButton::before{
+    content:'';
+    display:block;
+    position:absolute;
+    width:100%;
+    height:100%;
+    z-index:-1;
+    top:0;
+    left:0;
+    transform:skewx(-10deg);
+    transition: all 0.5s ease;
+    
+	background:#7A52CC;
+}
+.BigButton:hover::before{   
+	background:#F4F4F4;
+}
+.BigButton:nth-child(4){
+    transition-delay:0.15s;
+}
+.BigButton:nth-child(3){
+    transition-delay:0.3s;
+}
+.BigButton:nth-child(2){
+    transition-delay:0.45s;
+}
+.BigButton:nth-child(1){
+    transition-delay:0.6s;
+}
 
 
 
@@ -580,4 +769,110 @@ sup { vertical-align: top; font-size: 0.6em; }
 	right:1px;
 	font-size:90%;
 	font-family:monospace;
+}
+
+
+
+/*
+ * Mobile Stuff! Woot! Finally!
+ * ============================
+ */
+@media (max-width : 768px) {
+    #LocalNav{
+        display:none;
+    }
+
+	#HeroFrame img{
+		vertical-align:middle;
+		position:relative;
+		top:2vh;
+		width:30%;
+		right:-20px;
+	}
+    
+    #AKFrame div{
+        display:block !important;
+        width:90% !important;
+        margin:0 !important;
+		padding:0 !important;
+		text-align:center;;
+		background:rgba(103, 65, 114, 0.7);
+		left: 5vw !important;
+    }
+	#AKFrame div::before{
+		display:none;
+	}
+	#AKFrame div::after{
+		display:none;
+	}
+	
+    #ContFrame div div div{
+        width:90% !important;
+        margin-left:auto;
+        margin-right:auto;
+		opacity:1;
+		top:0;
+    }
+    
+    #MeetFrame div{
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+		text-align:center;
+		left:0;
+    }
+    #MeetFrame div::before{
+        transform:none;
+        opacity: 0.9;
+        width:100%;
+    }
+    
+    #AttendFrame{
+        padding: 5vh 0 0 0;
+    }
+    #AttendFrame div{
+        position:static;
+        width:90%;
+        max-width: none;
+        margin-left:auto;
+        margin-right:auto;
+        left:0; top:0;
+        transform:none;
+    }
+    #AttendFrame h2{
+        width:100%;
+        text-align:center;
+        right:0;
+    }
+    #AttendFrame ul{
+        width:100%;
+        right:0;
+    }
+    #AttendFrame li{
+        width:100%;
+        right:0;
+    }
+    #AttendFrame li::before{
+        transform:none !important;
+        width:100% !important;
+    }
+    #AttendFrame li::after{
+        display:none !important;
+    }
+    
+    #InfoFrame div{
+        width:80%;
+        margin-left:auto;
+        margin-right:auto;
+        text-align:center;
+		right:0 !important;
+    }
+    #InfoFrame div::before{
+        transform:none;
+        opacity: 0.9;
+        width:100%;
+    }
+    #InfoFrame div::after{
+        display:none;
+    }
 }

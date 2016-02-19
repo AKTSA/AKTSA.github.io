@@ -7,6 +7,7 @@
 	<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 	<script src="/JSDep/noframework.waypoints.min.js"></script>
 	<script src="/JSDep/smooth-scroll.js"></script>
+	<script src="http://cleantech4us.github.io/AKCTE/CTE.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -17,38 +18,38 @@
 			--><li><a href="/Info/">Members</a></li><!--
 			--><li><a href="/"><span style="color:#7A52CC;">AK</span> TSA</a></li><!--
 			--><li><a>AK CTE</a></li><!--
-			--><li><a><del>Design Brief</del></a></li>
+			--><li><a href="http://dronebasics.github.io/">Design Brief</a></li>
 		</ul>
 	</nav>
-<!--	<nav id="LocalNav">
+	<nav id="LocalNav">
 		<ul>
 			<li>
-				<input id="SB1" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#MeetingsFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+				<input id="SB1" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#MotFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
 				<label for="SB1"></label>
-				<div>Meetings</div>
+				<div>About</div>
 			</li>
 			<li>
-				<input id="SB2" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#CommFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+				<input id="SB2" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#ClassFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
 				<label for="SB2"></label>
-				<div>Community</div>
+				<div>Courses</div>
 			</li>
 			<li>
-				<input id="SB3" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#CompFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+				<input id="SB3" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#ProjFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
 				<label for="SB3"></label>
-				<div>Competitions</div>
+				<div>Projects</div>
 			</li>
 			<li>
-				<input id="SB4" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#UpFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+				<input id="SB4" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#TeachFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
 				<label for="SB4"></label>
-				<div>Updates</div>
+				<div>Teachers</div>
 			</li>
 			<li>
-				<input id="SB5" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#RefFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
+				<input id="SB5" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#LinkFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
 				<label for="SB5"></label>
 				<div>Links</div>
 			</li>
 		</ul>
-	</nav>-->
+	</nav>
 
 	<header id="HeroFrame">
 		<h1><img src="/images/AK%20Logo.png" alt="Ardrey Kell" /> <div>CTE<br /><span>Career and Technical Education</span></div></h1>
@@ -168,10 +169,82 @@
 	</section>
 	
 	<section id="TeachFrame">
-		<h1>Teachers</h1>
+		<h1 id="TeachTitleBanner">Teachers</h1>
+		
+		<div id="TeacherInfo" data-open="0" class="HiddenInfo Info">
+			<h1 id="TeachH1">Hello</h1>
+			<img id="TeachImg" src="" />
+			<div id="TeachDiv"></div>
+			<button onclick="OpenInfo();">Close</button>
+		</div>
+		
+		<table class="Grid6">
+			<tr>
+				<td>
+					<div onclick="OpenInfo(0);">
+						<h3>
+							Jason Sheffield
+						</h3>
+						<img src="http://cleantech4us.github.io/AKCTE/Teacher/sheff.jpg" alt="" style="width:20vw;" />
+					</div>
+				</td>
+				<td>
+					<div onclick="OpenInfo(1);">
+						<h3>
+							Elaine Frair
+						</h3>
+						<img src="http://cleantech4us.github.io/AKCTE/Teacher/friar.jpg" alt="" style="width:20vw;" />
+					</div>
+				</td>
+				<td>
+					<div onclick="OpenInfo(2);">
+						<h3>
+							John Glenn
+						</h3>
+						<img src="http://cleantech4us.github.io/AKCTE/Teacher/glenn.jpg" alt="" style="width:20vw;" />
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<div onclick="OpenInfo(3);">
+						<h3>
+							Rachel Robinson
+						</h3>
+						<img src="http://cleantech4us.github.io/AKCTE/Teacher/robinson.jpg" alt="" style="width:20vw;" />
+					</div>
+				</td>
+				<td>
+					<div onclick="OpenInfo(4);">
+						<h3>
+							Michael Hicks
+						</h3>
+						<img src="http://cleantech4us.github.io/AKCTE/Teacher/hicks.jpg" alt="" style="width:20vw;" />
+					</div>
+				</td>
+				<td>
+					<div onclick="OpenInfo(5);">
+						<h3>
+							Melissa Shaffer
+						</h3>
+						<img src="http://cleantech4us.github.io/AKCTE/Teacher/shaffer.jpg" alt="" style="width:20vw;" />
+					</div>
+				</td>
+			</tr>
+		</table>
+		<small>Additional teachers decline to be displayed on this page.</small>
 	</section>
 	
-	
+	<section id="LinkFrame">
+		<h1>Additional Links</h1>
+		<p>
+			<a class="BigButton" href="http://schools.cms.k12.nc.us/ardreykellHS/Pages/Default.aspx">Ardrey Kell High School</a>
+			<a class="BigButton" href="http://schools.cms.k12.nc.us/ardreykellHS/Pages/FacultyAndStaff.aspx">Faculty and Staff</a>
+			<a class="BigButton" href="http://www.cms.k12.nc.us/Pages/default.aspx">Charlotte Mecklenburg Schools</a>
+			<!--<a class="BigButton" href="http://media.wix.com/ugd/b5ab26_b85efcedabee459d89a42e674e2bba84.pdf">Interest Meeting Handout</a>
+			<a class="BigButton" href="https://docs.google.com/forms/d/1U8tzE-R1czVthU7A6R6B0FUk4VUtSIcG82wqWJhCd7c/viewform">Student Information Form</a>-->
+		</p>
+	</section>
 	
 	
 	<script>
@@ -193,112 +266,51 @@
 			"http://cleantech4us.github.io/AKCTE/Projects/Proj5.jpg",
 			"http://cleantech4us.github.io/AKCTE/Projects/Proj6.png"
 		);
-		
-		/*function DensePrep(i){
-			var xmlhttp;
-			xmlhttp = new XMLHttpRequest();
-			xmlhttp.onreadystatechange = function() {
-				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-					var navHolder = String(xmlhttp.responseText);
-					var navInject = navHolder.split('</nav>')[2].split('<div id="BigPanelWrapperParent">')[0].trim();
-					//NO IDEA WHY ANY OF THIS WORKS BUT IT DOES
-					document.getElementById("GlobalNav").parentNode.insertBefore(parseStringEl(navInject), document.getElementById("GlobalNav").nextSibling);
-					
-					document.getElementsByTagName("LINK")[0].href = "/Dense.css";
-					document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[7].id = "CurrPage";
-					document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[7].getElementsByTagName("UL")[0].getElementsByTagName("LI")[i].id = "CurrPage2";
-					
-					if(i == 0){
-						document.getElementById("MeetingsFrame").style.display = "block";
-					} else if(i == 1){
-						document.getElementById("CommFrame").style.display = "block";
-					} else if(i == 2){
-						document.getElementById("CompFrame").style.display = "block";
-					} else if(i == 3){
-						document.getElementById("UpFrame").style.display = "block";
-					} else if(i == 4){
-						document.getElementById("RefFrame").style.display = "block";
-					}
-				}
-			}
-			xmlhttp.open("GET", "/index.html", true);
-			xmlhttp.send();
-		}
-		if(location.search == "?Meet"){
-			DensePrep(0);
-		} else if(location.search == "?Comm"){
-			DensePrep(1);
-		} else if(location.search == "?Comp"){
-			DensePrep(2);
-		} else if(location.search == "?Up"){
-			DensePrep(3);
-		} else if(location.search == "?Link"){
-			DensePrep(4);
-		} else{
 			
 			
 			
 			
 			
-			
-			
-			
-			smoothScroll.init(); 
+		smoothScroll.init(); 
 		
 		var waypoint1 = new Waypoint({
-			element: document.getElementById('CommFrame'),
+			element: document.getElementById('MotFrame'),
 			handler: function() {
-				document.getElementById("CommFrame").getElementsByTagName("DIV")[0].style.left = "0";
-				for (i = 0; i < 6; i++) {
-					document.getElementById("CommServReq").getElementsByTagName("UL")[0].getElementsByTagName("LI")[i].style.left = 0;
-				}
+				document.getElementById("AKFrame").getElementsByTagName("DIV")[0].style.left = "0";
 			},
 			offset: '60%'
 		});
 		var waypoint2 = new Waypoint({
-			element: document.getElementById('Meet'),
+			element: document.getElementById('ClassFrame'),
 			handler: function() {
-				for (i = 0; i < 10; i++) {
-					document.getElementById("Meet").getElementsByTagName("UL")[0].getElementsByTagName("LI")[i].style.right = 0;
+				for (i = 0; i < 7; i+=4) {
+					for(j = 0; j < 3; j++){
+						document.getElementById("ClassFrame").getElementsByClassName("Grid9")[0].getElementsByTagName("DIV")[i].getElementsByTagName("DIV")[j].style.top = 0;
+						document.getElementById("ClassFrame").getElementsByClassName("Grid9")[0].getElementsByTagName("DIV")[i].getElementsByTagName("DIV")[j].style.opacity = 1;
+					}
 				}
 			},
 			offset: '60%'
 		});
 		var waypoint3 = new Waypoint({
-			element: document.getElementById('CompFrame'),
+			element: document.getElementById('ProjFrame'),
 			handler: function() {
-				for (i = 0; i < 3; i++) {
-					document.getElementById("CompFrame").getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[i].style.opacity = 1;
-					document.getElementById("CompFrame").getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[i].style.top = 0;
-				}
-				document.getElementById("CompFrame").getElementsByTagName("DIV")[9].style.opacity = 1;
-				document.getElementById("CompFrame").getElementsByTagName("DIV")[9].style.top = 0;
-				document.getElementById("CompFrame").getElementsByTagName("DIV")[8].style.opacity = 1;
-				document.getElementById("CompFrame").getElementsByTagName("DIV")[8].style.top = 0;
-				document.getElementById("CompFrame").getElementsByTagName("DIV")[7].style.opacity = 1;
-				document.getElementById("CompFrame").getElementsByTagName("DIV")[7].style.top = 0;
+				document.getElementById("ProjFrame").getElementsByTagName("DIV")[0].style.left = 0;
+				document.getElementById("ProjSelect").style.right = 0;
+				document.getElementById("ProjInfo").style.opacity = 1;
 			},
 			offset: '60%'
 		});
 		var waypoint4 = new Waypoint({
-			element: document.getElementById('UpFrameHero'),
+			element: document.getElementById('TeachFrame'),
 			handler: function() {
-				document.getElementById("UpFrameHero").style.left = 0;
-			},
-			offset: '60%'
-		});
-		var waypoint5 = new Waypoint({
-			element: document.getElementById('UpFrameHero'),
-			handler: function() {
-				for (i = 0; i < 3; i++) {
-					document.getElementById("UpFrame").getElementsByTagName("DIV")[1].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[2*i].getElementsByTagName("DIV")[0].style.opacity = 1;
-					document.getElementById("UpFrame").getElementsByTagName("DIV")[1].getElementsByTagName("DIV")[0].getElementsByTagName("DIV")[2*i].getElementsByTagName("DIV")[0].style.left = 0;
-				}
+				document.getElementById("TeachFrame").getElementsByClassName("Grid6")[0].style.left = 0;
+				document.getElementById("TeachFrame").getElementsByClassName("Grid6")[0].style.opacity = 1;
 			},
 			offset: '30%'
 		});
-		var waypoint6 = new Waypoint({
-			element: document.getElementById('RefFrame'),
+		var waypoint5 = new Waypoint({
+			element: document.getElementById('LinkFrame'),
 			handler: function() {
 				for (i = 0; i < document.getElementsByClassName("BigButton").length; i++) {
 					document.getElementsByClassName("BigButton")[i].style.right = 0;
@@ -309,13 +321,13 @@
 					}
 				}, 1000);
 			},
-			offset: '80%'
+			offset: '90%'
 		});
 		
 		
 		
 		var waypointnav1 = new Waypoint({
-			element: document.getElementById('MeetingsFrame'),
+			element: document.getElementById('MotFrame'),
 			handler: function(direction) {
 				document.getElementById("SB1").checked = true;
 				if(direction == 'up'){
@@ -325,7 +337,7 @@
 			offset:'30%'
 		});
 		var waypointnav2 = new Waypoint({
-			element: document.getElementById('CommFrame'),
+			element: document.getElementById('ClassFrame'),
 			handler: function(direction) {
 				if(direction == "down"){
 					document.getElementById("SB2").checked = true;
@@ -336,7 +348,7 @@
 			offset:'50%'
 		});
 		var waypointnav3 = new Waypoint({
-			element: document.getElementById('CompFrame'),
+			element: document.getElementById('ProjFrame'),
 			handler: function(direction) {
 				if(direction == "down"){
 					document.getElementById("SB3").checked = true;
@@ -347,7 +359,7 @@
 			offset:'50%'
 		});
 		var waypointnav4 = new Waypoint({
-			element: document.getElementById('UpFrame'),
+			element: document.getElementById('TeachFrame'),
 			handler: function(direction) {
 				if(direction == "down"){
 					document.getElementById("SB4").checked = true;
@@ -358,7 +370,7 @@
 			offset:'50%'
 		});
 		var waypointnav5 = new Waypoint({
-			element: document.getElementById('RefFrame'),
+			element: document.getElementById('LinkFrame'),
 			handler: function(direction) {
 				if(direction == "down"){
 					document.getElementById("SB5").checked = true;
@@ -368,13 +380,8 @@
 			},
 			offset:'80%'
 		});
-		}
 		
-		function parseStringEl(s){
-			var div = document.createElement('div');
-			div.innerHTML = s;
-			return div.childNodes[0];
-		}*/
+		
 		
 		
 		
