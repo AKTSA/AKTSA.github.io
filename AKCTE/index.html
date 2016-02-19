@@ -122,7 +122,9 @@
 			<h2>Project Lead The Way<br />Principles of Biomedical Sciences</h2>
 			<p>In this foundation Project Lead the Way (PLTW) class, students survey engineering and are exposed to major concepts they will encounter in a postsecondary engineering course of study. Students employ engineering and scientific concepts in the solution of engineering design problems. They develop problem-solving skills and apply their knowledge of research and design to create solutions to various challenges, documenting their work and communicating solutions to peers and members of the professional community.</p>
 		</div>
-		
+		<div class="TitleBG" id="PopHide" style="display:none;">
+			
+		</div>
 		<!--
 			Computer Science
 			SciViz
@@ -390,11 +392,13 @@
 			document.getElementsByTagName("BODY")[0].style.cursor = "pointer"; //Disables clikcing and stuff
 			document.getElementsByClassName("Grid9")[0].style.pointerEvents = "none";
 			
-			var scrollPos = window.scrollY;//document.body.scrollTop; //Grabs the current scroll position
+			document.getElementById("PopHide").style.display = "block";
+			
+			/*var scrollPos = window.scrollY;//document.body.scrollTop; //Grabs the current scroll position
 			document.getElementsByTagName("HTML")[0].style.top = "-" + scrollPos + "px"; //Sets scroll pos as the top value so...
 			document.getElementsByTagName("HTML")[0].style.position="fixed"; //... when fixed here, it's in the right place
 			document.getElementsByTagName("HTML")[0].style.overflowY="scroll";//Hacky s*** to get stuff working
-			document.getElementsByTagName("HTML")[0].style.width="100%";
+			document.getElementsByTagName("HTML")[0].style.width="100%";*/
 			
 			setTimeout(function(){
 				window.addEventListener("click", ClassPopBoxC);//Delays the addition of the event listener...
@@ -407,11 +411,12 @@
 				document.getElementsByTagName("BODY")[0].style.cursor = "";		//Resets clicking
 				document.getElementsByClassName("Grid9")[0].style.pointerEvents = "all";
 				
-				document.getElementsByTagName("HTML")[0].style.position="";	//Reenables scrolling in body
+				document.getElementById("PopHide").style.display = "none";
+				/*document.getElementsByTagName("HTML")[0].style.position="";	//Reenables scrolling in body
 				document.getElementsByTagName("HTML")[0].style.overflowY="";
 				document.getElementsByTagName("HTML")[0].style.width="";
 				document.getElementsByTagName("HTML")[0].style.top="";
-				window.scrollTo(0, scrollPos);								//Resets to original position
+				window.scrollTo(0, scrollPos);								//Resets to original position*/
 			}
 		}
 		

@@ -84,6 +84,9 @@ Colors and/or backgrounds
     opacity:1;
 	background-image:url("/images/nats.jpg");
 }
+.Panel:nth-child(4) .PanelBeforeChild::before{
+	background-image:url('http://cleantech4us.github.io/AKCTE/Projects/Proj3.jpg');
+}
 
 .Panel:nth-child(1) .PanelBeforeChild{
 	background:#c0392b;

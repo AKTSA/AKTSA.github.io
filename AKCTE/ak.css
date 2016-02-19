@@ -539,7 +539,7 @@ Hero Frame
 	top:0;
 	margin:0 auto;
 	width:100%;
-	padding-bottom:23vh;
+	padding-bottom:50vh;
 	cursor:pointer;
 	color:black;
 }
@@ -764,13 +764,16 @@ sup { vertical-align: top; font-size: 0.6em; }
 
 .PopBox::after{
 	content:'Click anywhere to close';
-	position:absolute;
-	bottom:1px;
-	right:1px;
+	position:fixed;
+	bottom:0;
+	right:0;
 	font-size:90%;
 	font-family:monospace;
 }
 
+.MobileOnly{
+	display:none;
+}
 
 
 /*
@@ -792,12 +795,12 @@ sup { vertical-align: top; font-size: 0.6em; }
     
     #AKFrame div{
         display:block !important;
-        width:90% !important;
-        margin:0 !important;
-		padding:0 !important;
-		text-align:center;;
-		background:rgba(103, 65, 114, 0.7);
-		left: 5vw !important;
+        width:80% !important;
+        margin:0 auto !important;
+		padding:4vw !important;
+		text-align:center;
+		background:rgba(103, 65, 114, 0.9);
+		position:static;
     }
 	#AKFrame div::before{
 		display:none;
@@ -805,74 +808,84 @@ sup { vertical-align: top; font-size: 0.6em; }
 	#AKFrame div::after{
 		display:none;
 	}
+	#AKFrame p{
+		margin:0;
+		padding:0;
+	}
 	
-    #ContFrame div div div{
-        width:90% !important;
-        margin-left:auto;
-        margin-right:auto;
-		opacity:1;
-		top:0;
-    }
-    
-    #MeetFrame div{
-        width:80%;
-        margin-left:auto;
-        margin-right:auto;
-		text-align:center;
+	.PopBox{
+		max-height:80vh;
+		overflow-y:auto;
+	}
+	
+	#ProjSelect{
+		width:100%;
 		left:0;
+		top:-10vh;
+	}
+	#ProjFrame .SlantL{
+		display:block !important;
+		width:80% !important;
+		margin:0 auto !important;
+		padding:4vw !important;
+		text-align:center;
+		background:rgba(103, 65, 114, 0.9);
+		position:relative;
+		top:5vh;
+	}
+	#ProjFrame .SlantL::before{
+		display:none;
+	}
+	#ProjFrame .SlantL::after{
+		display:none;
+	}
+	#ProjFrame #ProjSelect label{
+		width:60vw;
+		left:10vw;
+		text-align:center;
+	}
+	#ProjFrame label::before{
+		display:none !important;
+	}
+	#ProjFrame label::after{
+		display:none !important;
+	}
+	#ProjFrame label:nth-of-type(odd){
+		background:#bdc3c7;
+	}
+	#ProjFrame label:nth-of-type(even){
+		background:#2c3e50;
+	}
+	#ProjFrame #ProjSelect input:checked + label{
+		left:5vw;
+	}
+	#ProjInfo{
+		position:static;
+		margin: 15vh auto 0 auto;
+		opacity: 1;
+		height:40vh;
+		overflow-y:auto;
+		width:75vw;
+		max-width:80vw;
+		padding: 0 5vw;
+		text-align:center;
+		
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	#LinkFrame a{
+        display:block;
+        left:0 !important;
     }
-    #MeetFrame div::before{
-        transform:none;
-        opacity: 0.9;
-        width:100%;
+    #LinkFrame a::before{
+        transform:inherit;
     }
-    
-    #AttendFrame{
-        padding: 5vh 0 0 0;
-    }
-    #AttendFrame div{
-        position:static;
-        width:90%;
-        max-width: none;
-        margin-left:auto;
-        margin-right:auto;
-        left:0; top:0;
-        transform:none;
-    }
-    #AttendFrame h2{
-        width:100%;
-        text-align:center;
-        right:0;
-    }
-    #AttendFrame ul{
-        width:100%;
-        right:0;
-    }
-    #AttendFrame li{
-        width:100%;
-        right:0;
-    }
-    #AttendFrame li::before{
-        transform:none !important;
-        width:100% !important;
-    }
-    #AttendFrame li::after{
-        display:none !important;
-    }
-    
-    #InfoFrame div{
-        width:80%;
-        margin-left:auto;
-        margin-right:auto;
-        text-align:center;
-		right:0 !important;
-    }
-    #InfoFrame div::before{
-        transform:none;
-        opacity: 0.9;
-        width:100%;
-    }
-    #InfoFrame div::after{
-        display:none;
-    }
+	
+	
+	
+	.MobileOnly{
+		display:inline;
+	}
 }
