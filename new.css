@@ -625,7 +625,7 @@ header{
     padding: 5vw;
     font-size:115%;
 }
-#OffFrame tr:nth-child(even){
+#OffFrame tr:nth-child(odd){
     background:#bdc3c7;
     color:black;
 }
@@ -640,8 +640,24 @@ header{
 	margin:0;
 }
 #AwardFrame p{
-    margin: 20vh 10vw;
-    font-size:125%;
+	/*margin: 20vh 10vw;
+	font-size:125%;*/
+	margin: 5vh;
+}
+#AwardFrame table{
+	margin: 0 auto;
+	border-collapse:collapse;
+	margin-bottom: 5vh;
+	position:relative;
+	transition: left 0.5s ease, opacity 0.5s ease;
+	left:-20%; opacity: 0;
+}
+#AwardFrame td, th{
+	padding: 20px;
+}
+#AwardFrame tr:nth-child(odd){
+    background:#bdc3c7;
+    color:black;
 }
 
 

@@ -204,9 +204,9 @@
 		</div>
 		<section id="OffFrame">
 		    <table>
-		        <tr>
+		        <!--<tr>
 					<td colspan="3">Congratulations to our new 2016 officer team!</td>
-				</tr>
+				</tr-->
 				<tr>
 		            <td colspan="2">President: Anusha Khansaheb</td>
 		            <td>Vice President: Vaishakh Kallattil</td>
@@ -228,17 +228,95 @@
 			<h1>Awards</h1>
 		</div>
 		<section id="AwardFrame">
-            <p>I honestly don't know off the top of my head what we've managed to win.<br />If you won something last year, let us know!<br />-Your Webmaster Team</p>
+            <!--<p>I honestly don't know off the top of my head what we've managed to win.<br />If you won something last year, let us know!<br />-Your Webmaster Team</p>-->
+			<p>Results from Regionals, 2015:</p>
+			<table id="WeWonStuff">
+				<tr>
+					<th>Event</th>
+					<th>Place</th>
+					<th>Members</th>
+				</tr>
+				<tr>
+					<td>Architectural Renovation</td>
+					<td>2nd</td>
+					<td>Team</td>
+				</tr>
+				<tr>
+					<td>2D Computer Aided Design</td>
+					<td>1st</td>
+					<td>Team</td>
+				</tr>
+				<tr>
+					<td>3D Computer Aided Design</td>
+					<td>3rd</td>
+					<td>Aryan Gupta</td>
+				</tr>
+				<tr>
+					<td>Career Prep</td>
+					<td>2nd</td>
+					<td>Anisha Ponnapati</td>
+				</tr>
+				<tr>
+					<td>Dragster</td>
+					<td>1st</td>
+					<td>Nick Spina</td>
+				</tr>
+				<tr>
+					<td>Fashion Design</td>
+					<td>1st</td>
+					<td>Team</td>
+				</tr>
+				<tr>
+					<td>Flight Endurance</td>
+					<td>1st</td>
+					<td>Wilfred Wong</td>
+				</tr>
+				<tr>
+					<td>Manufacturing Prototype</td>
+					<td>1st</td>
+					<td>Sjan Guditi, Sommon Sarmadi</td>
+				</tr>
+				<tr>
+					<td>Music Production</td>
+					<td>1st</td>
+					<td>Team</td>
+				</tr>
+				<tr>
+					<td>Photographic Technology</td>
+					<td>1st</td>
+					<td>Sabrina Ho</td>
+				</tr>
+				<tr>
+					<td>Career Prep</td>
+					<td>2nd</td>
+					<td>Anisha Ponnapati</td>
+				</tr>
+				<tr>
+					<td>Scientific and Technical Visualization</td>
+					<td>1st</td>
+					<td>Paul Myers, Alec Probst, Stephen Wardlaw</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Structural Engineering</td>
+					<td>1st</td>
+					<td>Team</td>
+				</tr>
+				<tr>
+					<td>2nd</td>
+					<td>Team</td>
+				</tr>
+			</table>
 		</section>
         
         
         
-        <!--<section id="EndFrame">
+        <section id="EndFrame">
             <p>An <span style="color:red;font-family:'Audiowide', sans-serif;"><span style="color:#7A52CC;">AK</span> TSA</span> Creation</p>
-            <p>Site Design By Michael Xing</p>
-            <p><a href="http://imakewebthings.com/waypoints/">Waypoints.js</a> and <a href="https://github.com/cferdinandi/smooth-scroll">SmoothScroll</a> used under the MIT lictense.</p>
+            <!--<p>Site Design By Michael Xing</p>
+            <p><a href="http://imakewebthings.com/waypoints/">Waypoints.js</a> and <a href="https://github.com/cferdinandi/smooth-scroll">SmoothScroll</a> used under the MIT lictense.</p>-->
+			<p>Click <a href="competition.html">here</a> for copyright, sources, and other competition information</p>
         </section>
-        -->
+        
         
         
         
@@ -337,6 +415,14 @@
 					handler: function(direction) {
 						document.getElementById("OffFrame").getElementsByTagName("TABLE")[0].style.opacity = 1;
 						document.getElementById("OffFrame").getElementsByTagName("TABLE")[0].style.left = 0;
+					},
+            	    offset:'60%'
+				});
+				var waypoint8 = new Waypoint({
+					element: document.getElementById('AwardFrame'),
+					handler: function(direction) {
+						document.getElementById("WeWonStuff").style.opacity = 1;
+						document.getElementById("WeWonStuff").style.left = 0;
 					},
             	    offset:'60%'
 				});
