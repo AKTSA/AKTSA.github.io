@@ -635,19 +635,26 @@ header{
     padding:10vh;
     margin:0;
     margin:0;
+	
 }
 #AwardFrame{
 	margin:0;
+	background-image:url("/images/new/PackingFood.JPG");
+	background-position:center;
+	background-size:cover;
+	background-attachment:fixed;
+	padding-bottom:5vh;
 }
 #AwardFrame p{
 	/*margin: 20vh 10vw;
 	font-size:125%;*/
-	margin: 5vh;
+	padding: 5vh;
+	margin:0;
 }
 #AwardFrame table{
 	margin: 0 auto;
 	border-collapse:collapse;
-	margin-bottom: 5vh;
+	/*margin-bottom: 5vh;*/
 	position:relative;
 	transition: left 0.5s ease, opacity 0.5s ease;
 	left:-20%; opacity: 0;
@@ -658,6 +665,9 @@ header{
 #AwardFrame tr:nth-child(odd){
     background:#bdc3c7;
     color:black;
+}
+#AwardFrame tr:nth-child(even){
+    background:#2c3e50;
 }
 
 
