@@ -1,0 +1,27 @@
+body{
+	margin:0;
+	padding:0;
+	width:100%;
+	overflow-x:hidden;
+}
+#LargeWrap{
+	height:100vh;
+}
+
+.Panel{
+	display:inline-block;
+	height:100vh;
+	width:10vw;
+	margin:0;
+	padding:0;
+	transition: transform 0.5s ease-in-out;
+	transform:scaleX(1);
+	transform-origin: left center;
+	transform-style:preserve-3d;
+}
+.Panel:nth-child(odd){
+	background:black;
+}
+.Panel:nth-child(even){
+	background:green;
+}
