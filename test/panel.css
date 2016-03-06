@@ -14,14 +14,66 @@ body{
 	width:10vw;
 	margin:0;
 	padding:0;
-	transition: transform 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, opacity 0.25s ease, background 0.25s ease;
 	transform:scaleX(1);
 	transform-origin: left center;
 	transform-style:preserve-3d;
 }
-.Panel:nth-child(odd){
-	background:black;
+
+.Panel:nth-child(1), .Panel:nth-child(1)::before{
+	background:rgba(192, 57, 43, 1);
 }
-.Panel:nth-child(even){
-	background:green;
+.Panel:nth-child(2), .Panel:nth-child(2)::before{
+	background:rgba(31, 58, 147, 1);
+}
+.Panel:nth-child(3), .Panel:nth-child(3)::before{
+	background:rgba(44, 62, 80, 1);
+}
+.Panel:nth-child(4), .Panel:nth-child(4)::before{
+	background:rgba(142, 68, 173, 1);
+}
+.Panel:nth-child(5), .Panel:nth-child(5)::before{
+	background:rgba(30, 130, 76, 1);
+}
+
+
+.NoBefore:before{
+	opacity:0 !important;
+}
+
+.Panel:hover{
+	transition: transform 0.5s ease-in-out, opacity 0.25s ease 0.25s;
+}
+
+.Panel::before{
+	opacity:1;
+	pointer-events:none;
+    content:'';
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    position:absolute;
+    transform:skew(-3deg);
+    background-size:cover;
+	background-attachment:fixed;
+    background-position:50% 50%;
+	background-color:black;
+	
+	transform-origin: left top;
+}
+
+.PanelBG{
+	background-position:center center;
+	background-attachment:fixed;
+	background-size:cover;
+	display:block;
+	position:absolute;
+	z-index:-1;
+	top:0;
+	left:0;
+	width:100%;
+	height:100vh;
+	opacity:0;
+	transition: opacity 0.5s ease;
 }
