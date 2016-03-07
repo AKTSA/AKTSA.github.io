@@ -273,7 +273,8 @@ header{
     color:black;
 }
 #GlobalNav li::before{
-    transform:skewX(-5deg);
+    transform:skewX(-20deg);
+	transform-origin: center right !important;
     content:"";
     position:absolute;
     top:0;
@@ -285,6 +286,10 @@ header{
     -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
 }
+#GlobalNav li:nth-child(1)::before{
+	transform:skewX(-20deg)scaleX(2);
+}
+
 #GlobalNav li:hover::before{   
     background:#ecf0f1 !important;
 }
