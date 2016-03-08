@@ -1,8 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:300);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu|Nunito:700|Open+Sans);
+
+
 body{
 	margin:0;
 	padding:0;
 	width:100%;
 	overflow-x:hidden;
+	height:100vh;
+	overflow-y:hidden;
 }
 #LargeWrap{
 	height:100vh;
@@ -16,7 +22,7 @@ body{
 	padding:0;
 	transition: transform 0.5s ease-in-out, opacity 0.25s ease, background 0.25s ease;
 	transform:scaleX(1);
-	transform-origin: left center;
+	transform-origin: left top;
 	transform-style:preserve-3d;
 }
 
@@ -61,6 +67,7 @@ body{
 	background-color:black;
 	
 	transform-origin: left top;
+	transition: opacity 0.5s ease;
 }
 
 .PanelBG{
@@ -76,4 +83,24 @@ body{
 	height:100vh;
 	opacity:0;
 	transition: opacity 0.5s ease;
+}
+
+
+
+.MoveTitle{
+	position:absolute;
+
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+	font-size:200%;
+	margin:0;
+	text-align:center;
+	
+	z-index:5;
+	
+	top:0; left:6vw;
+	width:100vh;
+	
+	transform:rotate(90deg);
+	transform-origin:left top;
 }

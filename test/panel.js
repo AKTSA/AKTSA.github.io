@@ -22,22 +22,12 @@ function panelHov(e){
 		document.getElementById("Panel3").style.opacity = 0.2;
 		document.getElementById("Panel4").style.opacity = 1;
 		document.getElementById("Panel5").style.opacity = 1;
+		/*document.getElementById("Panel1").className = "Panel";
+		document.getElementById("Panel2").className = "Panel";
+		document.getElementById("Panel3").className = "Panel NoBefore";
+		document.getElementById("Panel4").className = "Panel";
+		document.getElementById("Panel5").className = "Panel";*/
 		return;
-	}
-	
-	switch(e){
-		case 2:
-			
-			break;
-		case 3:
-			
-			break;
-		case 4:
-			
-			break;
-		case 5:
-			
-			break;
 	}
 	
 	for(i = 1; i <= 5; i++){
@@ -46,14 +36,33 @@ function panelHov(e){
 			el.style.transform = "translateX(0vw)scale(1)";
 			document.getElementById("PanelBG" + i).style.opacity = 0;
 			document.getElementById("Panel" + i).style.opacity = 1;
+			//document.getElementById("Panel" + i).className = "Panel";
+			
 		} else if(i == e){
 			el.style.transform = "translateX(0vw)scale(6)";
 			document.getElementById("PanelBG" + i).style.opacity = 1;
 			document.getElementById("Panel" + i).style.opacity = 0.2;
+			//document.getElementById("Panel" + i).className = "Panel NoBefore";
 		} else if(i > e){
 			el.style.transform = "translateX(50vw)scale(1)";
 			document.getElementById("PanelBG" + i).style.opacity = 0;
 			document.getElementById("Panel" + i).style.opacity = 1;
+			//document.getElementById("Panel" + i).className = "Panel";
 		}
+	}
+	
+	switch(e){
+		case 2:
+			document.getElementById("Panel1").style.background = "rgba(192, 57, 43, 0)";
+			break;
+		case 3:
+			document.getElementById("Panel2").style.background = "rgba(31, 58, 147, 0)";
+			break;
+		case 4:
+			document.getElementById("Panel3").style.background = "rgba(44, 62, 80, 0)";
+			break;
+		case 5:
+			document.getElementById("Panel4").style.background = "rgba(142, 68, 173, 0)";
+			break;
 	}
 }
