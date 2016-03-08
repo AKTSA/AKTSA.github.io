@@ -95,12 +95,15 @@ body{
 	font-size:200%;
 	margin:0;
 	text-align:center;
+	color:white;
+	pointer-events:none;
 	
 	z-index:5;
-	
 	top:0; left:6vw;
 	width:100vh;
 	
 	transform:rotate(90deg);
 	transform-origin:left top;
+	
+	transition: transform 0.5s ease;
 }

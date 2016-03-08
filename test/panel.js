@@ -26,7 +26,12 @@ function panelHov(e){
 		document.getElementById("Panel2").className = "Panel";
 		document.getElementById("Panel3").className = "Panel NoBefore";
 		document.getElementById("Panel4").className = "Panel";
-		document.getElementById("Panel5").className = "Panel";*/
+		document.getElementById("Panel5").className = "Panel";*/	
+			document.getElementById("Head1").removeAttribute("style");	
+			document.getElementById("Head2").removeAttribute("style");	
+			document.getElementById("Head3").removeAttribute("style");	
+			document.getElementById("Head4").removeAttribute("style");	
+			document.getElementById("Head5").removeAttribute("style");
 		return;
 	}
 	
@@ -36,18 +41,22 @@ function panelHov(e){
 			el.style.transform = "translateX(0vw)scale(1)";
 			document.getElementById("PanelBG" + i).style.opacity = 0;
 			document.getElementById("Panel" + i).style.opacity = 1;
-			//document.getElementById("Panel" + i).className = "Panel";
+			//document.getElementById("Panel" + i).className = "Panel";			
+			document.getElementById("Head" + i).removeAttribute("style");
 			
 		} else if(i == e){
 			el.style.transform = "translateX(0vw)scale(6)";
 			document.getElementById("PanelBG" + i).style.opacity = 1;
 			document.getElementById("Panel" + i).style.opacity = 0.2;
 			//document.getElementById("Panel" + i).className = "Panel NoBefore";
+			
+			document.getElementById("Head" + i).style.transform = "rotate(0deg)";
 		} else if(i > e){
 			el.style.transform = "translateX(50vw)scale(1)";
 			document.getElementById("PanelBG" + i).style.opacity = 0;
 			document.getElementById("Panel" + i).style.opacity = 1;
-			//document.getElementById("Panel" + i).className = "Panel";
+			//document.getElementById("Panel" + i).className = "Panel";		
+			document.getElementById("Head" + i).removeAttribute("style");
 		}
 	}
 	
