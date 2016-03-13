@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:300);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu|Nunito:700|Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu|Nunito:700|Open+Sans|Audiowide);
 
 
 body{
@@ -106,4 +106,16 @@ body{
 	transform-origin:left top;
 	
 	transition: transform 0.5s ease;
+}
+
+
+
+.MainTitle{
+	font-family:"Audiowide", sans-serif;
+	font-size:1000%;
+	color:#7A52CC;
+	font-weight:bold;
+}
+.MainTitle span{
+	color:red;
 }

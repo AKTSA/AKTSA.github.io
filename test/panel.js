@@ -32,6 +32,7 @@ function panelHov(e){
 			document.getElementById("Head3").removeAttribute("style");	
 			document.getElementById("Head4").removeAttribute("style");	
 			document.getElementById("Head5").removeAttribute("style");
+		document.getElementById("Head3").style.transform = "rotate(0deg)translateY(calc(50vh - 50%))translateX(17vw)";
 		return;
 	}
 	
@@ -50,7 +51,7 @@ function panelHov(e){
 			document.getElementById("Panel" + i).style.opacity = 0.2;
 			//document.getElementById("Panel" + i).className = "Panel NoBefore";
 			
-			document.getElementById("Head" + i).style.transform = "rotate(0deg)";
+			document.getElementById("Head" + i).style.transform = "rotate(0deg)translateY(calc(50vh - 50%))";
 		} else if(i > e){
 			el.style.transform = "translateX(50vw)scale(1)";
 			document.getElementById("PanelBG" + i).style.opacity = 0;
@@ -62,15 +63,19 @@ function panelHov(e){
 	
 	switch(e){
 		case 2:
+			document.getElementById("Head2").style.transform = "rotate(0deg)translateY(calc(50vh - 50%))translateX(10vw)";
 			document.getElementById("Panel1").style.background = "rgba(192, 57, 43, 0)";
 			break;
 		case 3:
+			document.getElementById("Head3").style.transform = "rotate(0deg)translateY(calc(50vh - 50%))translateX(17vw)";
 			document.getElementById("Panel2").style.background = "rgba(31, 58, 147, 0)";
 			break;
 		case 4:
+			document.getElementById("Head4").style.transform = "rotate(0deg)translateY(calc(50vh - 50%))translateX(28vw)";
 			document.getElementById("Panel3").style.background = "rgba(44, 62, 80, 0)";
 			break;
 		case 5:
+			document.getElementById("Head5").style.transform = "rotate(0deg)translateY(calc(50vh - 50%))translateX(35vw)";
 			document.getElementById("Panel4").style.background = "rgba(142, 68, 173, 0)";
 			break;
 	}
