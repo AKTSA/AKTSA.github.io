@@ -4,6 +4,7 @@
 		<title>AK TSA</title>
 		<link rel="stylesheet" type="text/css" href="panel.css" />
 		<script src="panel.js"></script>
+		<base target="_parent" />
 	</head>
 	<body>
 		<div style='background-image:url("/images/VEXbg.png");' class="PanelBG" id="PanelBG1"></div>
@@ -12,19 +13,19 @@
 		<div style='background-image:url("http://cleantech4us.github.io/AKCTE/Projects/Proj3.jpg");' class="PanelBG" id="PanelBG4"></div>
 		<div class="PanelBG" id="PanelBG5"></div>
 		<div id="LargeWrap" onmouseleave="panelHov(-1);">
-			<a id="Panel1" class="Panel" onmouseover="panelHov(1);">
+			<a href="/VEX/" id="Panel1" class="Panel" onmouseover="panelHov(1);">
 			
 			</a><!--
-			--><a id="Panel2" class="Panel" onmouseover="panelHov(2);">
+			--><a href="/Info/" id="Panel2" class="Panel" onmouseover="panelHov(2);">
 				
 			</a><!--
 			--><section id="Panel3" class="Panel" onmouseover="panelHov(3);">
 				
 			</section><!--
-			--><a id="Panel4" class="Panel" onmouseover="panelHov(4);">
+			--><a href="/AKCTE/" id="Panel4" class="Panel" onmouseover="panelHov(4);">
 				
 			</a><!--
-			--><a id="Panel5" class="Panel" onmouseover="panelHov(5);">
+			--><a href="http://dronebasics.github.io/" id="Panel5" class="Panel" onmouseover="panelHov(5);">
 				
 			</a>
 		</div>
@@ -35,9 +36,11 @@
 		<h1 class="MoveTitle" id="Head2">
 			Member Information
 		</h1>
-		<h1 class="MoveTitle MainTitle" id="Head3">
-			AK <span>TSA</span>
-		</h1>
+		<div class="MoveTitle" id="Head3">
+			<h1 class="MainTitle">AK <span>TSA</span></h1>
+			<h2 style="font-size:100%;" id="Head3Sub">Innovate Today. Change Tomorrow.</h2>
+			<p style="font-size:50%;">⌄ Scroll Down to Learn More ⌄</p>
+		</div>
 		<h1 class="MoveTitle" id="Head4">
 			AK CTE
 		</h1>

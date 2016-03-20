@@ -89,7 +89,7 @@ body{
 
 .MoveTitle{
 	position:absolute;
-
+	
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
 	font-size:200%;
@@ -105,17 +105,37 @@ body{
 	transform:rotate(90deg);
 	transform-origin:left top;
 	
-	transition: transform 0.5s ease;
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 
 
 
 .MainTitle{
 	font-family:"Audiowide", sans-serif;
-	font-size:1000%;
+	font-size:500%;
 	color:#7A52CC;
 	font-weight:bold;
 }
+.MainTitle{
+	margin:0;
+}
+#Head3Sub{
+    font-family: 'Raleway', sans-serif;
+	margin:0;
+	font-weight:lighter;
+}
 .MainTitle span{
 	color:red;
+}
+
+
+
+#Head2{
+	transform:translateX(9vw)rotate(90deg);
+}
+#Head4{
+	transform:translateX(79vw)rotate(90deg);
+}
+#Head5{
+	transform:translateX(90vw)rotate(90deg);
 }
