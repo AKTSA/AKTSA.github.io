@@ -712,6 +712,14 @@ header{
 		height:calc(100vh - 100px);
 		margin-top:100px;
 	}
+	#BigPanelWrapper{
+		display:inline !important;
+	}
+	#NewPanelWrapper{
+		display:none;
+	}
+	
+	
 	.Panel{
 		display:none;
 	}
