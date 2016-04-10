@@ -6,7 +6,12 @@
 		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
 		<script src="/JSDep/noframework.waypoints.min.js"></script>
 		<script src="/JSDep/smooth-scroll.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="/JSDep/ideal-image-slider.css">
+		<link rel="stylesheet" href="/JSDep/ideal-default.css">
+		
+		<script src="/JSDep/ideal-image-slider.js"></script>
 	</head>
     <body><!--
 		
@@ -195,8 +200,14 @@
 			<h1>Community Service</h1>
 		</div>
 		<section id="CommFrame">
-			<img src="/images/cs1.jpg" alt="AK TSA participates in the 2nd Harvest Food Bank" />
-			<div>The AK TSA participates in helping the Second Harvest Food Bank collect money.</div>
+			<!--<img src="/images/cs1.jpg" alt="AK TSA participates in the 2nd Harvest Food Bank" />
+			<div>The AK TSA participates in helping the Second Harvest Food Bank collect money.</div>-->
+			<div id="slider">
+				<img src="/images/cs1.jpg" alt="AK TSA participates in the 2nd Harvest Food Bank">
+				<img src="/images/cs2.jpg" alt="AK TSA helps clean up the school campus">
+				<img src="/images/cs3.jpg" alt="AK TSA builds robots for kids">
+			</div>
+
 		</section>
 		
 		<div id="OffHeroFrame">
@@ -403,13 +414,13 @@
 					},
 					offset:'60%'
 				});
-				var waypoint6 = new Waypoint({
+				/*var waypoint6 = new Waypoint({
 					element: document.getElementById('CommFrame'),
 					handler: function(direction) {
 						document.getElementById("CommFrame").getElementsByTagName("DIV")[0].style.opacity = 1;
 						document.getElementById("CommFrame").getElementsByTagName("DIV")[0].style.top = "75vh";
 					}
-				});
+				});*/
 				var waypoint7 = new Waypoint({
 					element: document.getElementById('OffFrame'),
 					handler: function(direction) {
@@ -505,6 +516,11 @@
 				
 				document.getElementById("BigPanelWrapperParent").appendChild(el);
 			}
+			
+			
+			
+			//Ideal Slider
+			new IdealImageSlider.Slider('#slider');
 		</script>
 	</body>
 </html>

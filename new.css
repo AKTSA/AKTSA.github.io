@@ -582,11 +582,12 @@ header{
     transform-style:preserve-3d;
     min-height:80vh;
 }
-#CommFrame img{
+#CommFrame div{ /*Used to be img*/
     max-height:75vh;
-    max-width:90vw;
+    max-width:60vw;
+	margin:0 auto;
 }
-#CommFrame div{
+/*#CommFrame div{
     position:absolute;
     top:75vh;
     left:50%;
@@ -598,7 +599,7 @@ header{
     transition: all 0.5s ease;
     top:80vh;
     opacity:0;
-}
+}*/
 
 
 #OffHeroFrame{
