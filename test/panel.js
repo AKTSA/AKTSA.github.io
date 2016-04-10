@@ -17,7 +17,7 @@ function panelHov(e){
 		document.getElementById("Panel3").style.opacity = 0.2;
 		document.getElementById("Panel4").style.opacity = 1;
 		document.getElementById("Panel5").style.opacity = 1;
-		/*document.getElementById("Panel1").className = "Panel";
+		/*document.getElementById("Panel1").className = "Panel";	
 		document.getElementById("Panel2").className = "Panel";
 		document.getElementById("Panel3").className = "Panel NoBefore";
 		document.getElementById("Panel4").className = "Panel";
