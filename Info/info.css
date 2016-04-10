@@ -338,7 +338,7 @@ h1{
 
 #UpFrame{
     background-attachment: fixed;
-    background-image:url("http://restorationrva.org/wordpress/wp-content/uploads/2014/07/2086-network-2880x1800-abstract-wallpaper-2.jpg");
+    background-image:url("/images/network.jpg");
     background-size: cover;
     background-position: 50% 50%;
 	padding: 5vh 0;
