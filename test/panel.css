@@ -133,6 +133,9 @@ body{
 #Head2{
 	transform:translateX(9vw)rotate(90deg);
 }
+#Head3{
+	width:60vw;
+}
 #Head4{
 	transform:translateX(79vw)rotate(90deg);
 }

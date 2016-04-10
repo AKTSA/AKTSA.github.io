@@ -1,11 +1,6 @@
 function panelHov(e){
 	
 	if(e == -1){//Reset
-		/*document.getElementById("Panel1").style.transform="scale(1.1)translateX(0%)";
-		document.getElementById("Panel2").style.transform="scale(1.1)translateX(9.1%)";
-		document.getElementById("Panel3").style.transform="scale(5.6)translateX(3.57%)";
-		document.getElementById("Panel4").style.transform="scale(1.1)translateX(436%)";
-		document.getElementById("Panel5").style.transform="scale(1.1)translateX(445%)";*/
 		document.getElementById("Panel1").style.transform="translateX(0vw)scale(1.1)";
 		document.getElementById("Panel2").style.transform="translateX(1vw)scale(1.1)";
 		document.getElementById("Panel3").style.transform="translateX(2vw)scale(5.6)";
@@ -31,7 +26,7 @@ function panelHov(e){
 		document.getElementById("Head3").style.opacity = 1;
 			document.getElementById("Head1").style.transform = "rotate(90deg)translateY(-1vw)";
 			document.getElementById("Head2").style.transform = "rotate(90deg)translateY(-11vw)";
-			document.getElementById("Head3").style.transform = "rotate(0deg)translateY(calc(50vh - 50%))translateX(17vw)";
+			document.getElementById("Head3").style.transform = "rotate(0deg)translateY(calc(50vh - 50%))translateX(13vw)";
 			document.getElementById("Head4").style.transform = "rotate(90deg)translateY(-78vw)";
 			document.getElementById("Head5").style.transform = "rotate(90deg)translateY(-89vw)";
 		return;
@@ -67,6 +62,7 @@ function panelHov(e){
 	} else{
 		document.getElementById("Head3").style.opacity = 1;
 	}
+	
 	switch(e){
 		case 1:
 			document.getElementById("Head2").style.transform = "rotate(90deg)translateY(-60vw)";
@@ -76,7 +72,7 @@ function panelHov(e){
 			document.getElementById("Panel1").style.background = "rgba(192, 57, 43, 0)";
 			break;
 		case 3:
-			document.getElementById("Head3").style.transform = "rotate(0deg)translateY(calc(50vh - 50%))translateX(17vw)";
+			document.getElementById("Head3").style.transform = "rotate(0deg)translateY(calc(50vh - 50%))translateX(13vw)";
 			document.getElementById("Panel2").style.background = "rgba(31, 58, 147, 0)";
 			break;
 		case 4:
