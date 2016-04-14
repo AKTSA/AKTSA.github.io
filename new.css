@@ -580,7 +580,6 @@ header{
     padding:5vh;
     position:relative;
     transform-style:preserve-3d;
-    min-height:80vh;
 }
 #CommFrame div{ /*Used to be img*/
     max-height:75vh;
@@ -696,6 +695,13 @@ header{
 .DenseOnly{
 	display:none;
 }
+
+
+.iis-caption{
+	max-width:80% !important;
+	text-align:left;
+}
+
 
 
 /*

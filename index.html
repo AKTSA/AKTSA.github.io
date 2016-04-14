@@ -12,6 +12,7 @@
 		<link rel="stylesheet" href="/JSDep/ideal-default.css">
 		
 		<script src="/JSDep/ideal-image-slider.js"></script>
+		<script src="/JSDep/ideal-captions.js"></script>
 	</head>
     <body><!--
 		
@@ -203,9 +204,9 @@
 			<!--<img src="/images/cs1.jpg" alt="AK TSA participates in the 2nd Harvest Food Bank" />
 			<div>The AK TSA participates in helping the Second Harvest Food Bank collect money.</div>-->
 			<div id="slider">
-				<img src="/images/cs1.jpg" alt="AK TSA participates in the 2nd Harvest Food Bank">
-				<img src="/images/cs2.jpg" alt="AK TSA helps clean up the school campus">
-				<img src="/images/cs3.jpg" alt="AK TSA builds robots for kids">
+				<img src="/images/cs1.jpg" alt="AK TSA volunteers in the 2nd Harvest Food Bank, collecting donations to help feed people in need.">
+				<img src="/images/cs2.jpg" alt="AK TSA participates in a campus beautification program, helping to pick up trash and keep Ardrey Kell clean.">
+				<img src="/images/cs3.jpg" alt="AK TSA builds robots that help are meant to help young kids learn.">
 			</div>
 
 		</section>
@@ -494,7 +495,9 @@
 			
 			
 			//Ideal Slider
-			new IdealImageSlider.Slider('#slider');
+			var slider = new IdealImageSlider.Slider('#slider');
+			slider.addCaptions();
+			slider.start();
 		</script>
 	</body>
 </html>
