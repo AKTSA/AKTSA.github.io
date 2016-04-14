@@ -24,6 +24,7 @@ body{
 	transform:scaleX(1);
 	transform-origin: left top;
 	transform-style:preserve-3d;
+	position:relative;z-index:5;
 }
 
 .Panel:nth-child(1), .Panel:nth-child(1)::before{
@@ -34,6 +35,7 @@ body{
 }
 .Panel:nth-child(3), .Panel:nth-child(3)::before{
 	background:rgba(44, 62, 80, 1);
+	z-index:1;
 }
 .Panel:nth-child(4), .Panel:nth-child(4)::before{
 	background:rgba(142, 68, 173, 1);
@@ -68,6 +70,8 @@ body{
 	
 	transform-origin: left top;
 	transition: opacity 0.5s ease;
+	z-index:5;
+
 }
 
 .PanelBG{
@@ -76,7 +80,7 @@ body{
 	background-size:cover;
 	display:block;
 	position:absolute;
-	z-index:-1;
+	z-index:-5;
 	top:0;
 	left:0;
 	width:100%;
@@ -115,6 +119,8 @@ body{
 	font-size:500%;
 	color:#7A52CC;
 	font-weight:bold;
+	position:relative;
+	z-index:-1;
 }
 .MainTitle{
 	margin:0;
@@ -135,6 +141,8 @@ body{
 }
 #Head3{
 	width:60vw;
+	position:absolute;
+	z-index:1;
 }
 #Head4{
 	transform:translateX(79vw)rotate(90deg);
