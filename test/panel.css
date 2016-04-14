@@ -105,7 +105,7 @@ body{
 	transform:rotate(90deg);
 	transform-origin:left top;
 	
-	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+	transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out, width 0.5s ease-in-out;
 }
 
 
@@ -141,4 +141,17 @@ body{
 }
 #Head5{
 	transform:translateX(90vw)rotate(90deg);
+}
+
+#SplashBG{
+	position:absolute;
+	width:60%;
+	height:100vh;
+	left:20vw;
+	background:radial-gradient(black, rgba(0,0,0,0), rgba(0,0,0,0));
+	pointer-events:none;
+	z-index:1;
+	transition: opacity 0.5s ease;
+	opacity:1;
+	top:0;
 }
