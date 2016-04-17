@@ -539,6 +539,11 @@ header{
 .Projectb{
     position:absolute;
     height:80vh;
+	width:120vh;
+	
+	
+	object-fit:cover;
+	object-position:center;
 }
 /*.Projectba{
     position:absolute;
@@ -806,10 +811,13 @@ header{
 		display:none;
 	}
     
+	
     #CommFrame div{
         opacity:1;
-        top:75vh;
     }
+	#slider{
+		position:static;
+	}
     
     #OffFrame table{
         width:100%;
