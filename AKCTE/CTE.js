@@ -7,7 +7,7 @@ function OpenInfo(e){
 		switch(e){
 			case 0:
 				document.getElementById("TeachH1").textContent = "Jason Sheffield";
-				document.getElementById("TeachDiv").textContent = "My name is Jason Sheffield and I have been a teacher here at Ardrey Kell since 2011, prior to that I spent 18 years teaching at Harding University High School. I have a Master's Degree in Trade and Industrial Education form North Carolina A&T and a Bachelor's Degree in Mechanical Engineering from the University of Tennessee (Go Vols). I grew up in England and spend way too much time watching soccer.";
+				document.getElementById("TeachDiv").textContent = "My name is Jason Sheffield and I have been a teacher here at Ardrey Kell High School since 2011, prior to that, I spent 18 years teaching at Harding University High School. I have a Master's Degree in Trade and Industrial Education form North Carolina A&T and a Bachelor's Degree in Mechanical Engineering from the University of Tennessee (Go Vols). I grew up in England and spend way too much time watching the beautiful game. I have been blessed to have found a woman way too good for me who inexplicably married me in 1992 - Suzanne is an Exceptional Children's teacher at Independence High School. Suzanne and I are the proud parents of a wonderful young man - Gabriel Quinn.";
 				document.getElementById("TeachImg").src = "http://cleantech4us.github.io/AKCTE/Teacher/sheff.jpg";
 				break;
 			case 1:
