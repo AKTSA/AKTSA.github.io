@@ -1,0 +1,195 @@
+@import url(http://fonts.googleapis.com/css?family=Audiowide);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu|Nunito:700|Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Raleway:300);
+
+html, body{
+    max-width:100%;
+    overflow-x:hidden;
+}
+
+body{
+	margin:0;
+	font-family: 'Open Sans', sans-serif;
+    color:white;
+    background:#1B5E20;
+    text-align:center;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin:0;
+}
+h1{
+	font-size:200%;
+}
+
+
+
+/*
+    Global Navigation
+*/
+#GlobalNav{
+    background:#1E824C;
+    width:100%;
+    position:fixed;
+    height:100px;
+    top:0;
+    left:0;
+    z-index:100;
+    transform-style: preserve-3d;
+    transition: all 0.15s linear;
+}
+#GlobalNav ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+    top:50%;
+    transform:translateY(-50%);
+    position:relative;
+    height:100%;
+}
+#GlobalNav li{
+    display:inline-block;
+    width:20%;
+    font-size:20px;
+    line-height:100px;
+    height:100%;
+    transition: all 0.5s ease;
+    overflow:hidden;
+}
+#GlobalNav li:hover a{
+    color:black;
+}
+#GlobalNav li::before{
+    transform:skewX(-20deg);
+	transform-origin: center right !important;
+    content:"";
+    position:absolute;
+    top:0;
+    width:20%;
+    height:100%;
+    z-index:0;
+    transition: all 0.5s ease;
+    -webkit-transform-origin: 100% 0;
+    -ms-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+}
+#GlobalNav li:nth-child(1)::before{
+	transform:skewX(-20deg)scaleX(2);
+}
+#GlobalNav li:hover::before{   
+    background:#ecf0f1 !important;
+}
+#GlobalNav li a{
+    position:relative;
+    z-index:10;
+    width:100%;
+    height:100%;
+    text-decoration:none;
+    color:white;
+    display:inline-block;
+}
+
+#GlobalNav li:nth-child(1)::before{
+    left:0;
+    background:#c0392b;
+}
+#GlobalNav li:nth-child(2)::before{
+    left:20%;
+    background:#1F3A93;
+}
+#GlobalNav li:nth-child(3)::before{
+    left:40%;
+    background:#22313F;
+}
+#GlobalNav li:nth-child(4)::before{
+    left:60%;
+    background:#8e44ad;
+}
+#GlobalNav li:nth-child(5)::before{
+    background:#1E824C;
+    left:80%;
+}
+#GlobalNav li:nth-child(5):hover{
+    background:#ecf0f1;
+}
+
+#GlobalNav li:nth-child(3) a{  
+	font-family:"Audiowide", sans-serif; 
+    color:#FF0000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#DispFrame{
+	width:100%;
+	height:calc(100vh - 100px);
+	margin-top:100px;
+	border:none;
+	display:block;
+}
+
+
+#OffNav{
+	position:fixed;
+	bottom:0;left:0;
+	font-size:0;
+	text-align:left;
+	padding:5px;
+	background:#7A52CC;
+}
+
+#OffNav a{
+	font-size:16px;
+	padding:10px;
+	display:inline-block;
+	text-decoration:none;
+	background:#7A52CC;
+	color:white;
+	transition: all 0.5s ease;
+}
+#OffNav a:hover{
+	color:black;
+	background:#F4F4F4;
+}
+#OffNav a:active{
+	color:white;
+	background:black;
+}
+#OffNav a.CurrPage{
+	pointer-events:none;
+	color:black;
+	background:#F4F4F4;
+}
+/*
+background:#7A52CC;
+}
+.BigButton:hover::before{   
+	background:#F4F4F4;
+}
+*/
