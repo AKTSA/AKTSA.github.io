@@ -97,7 +97,7 @@ Colors and/or backgrounds
 }
 .Panel:nth-child(3) .PanelBeforeChild::before{
     opacity:1;
-	background-image:url("/images/nats.jpg");
+	background-image:url("/images/new/heroBG.JPG");
 }
 .Panel:nth-child(4) .PanelBeforeChild::before{
 	background-image:url('/images/CTEProj3.jpg');
@@ -753,7 +753,7 @@ header{
 	.Panel:nth-child(3){
 		display:block;
 		width:100% !important;
-		background-image:url("/images/nats.jpg");
+		background-image:url("/images/new/heroBG.JPG");
 		background-size:cover;
 		background-position:50% 50%;
 		background-attachment:fixed;
