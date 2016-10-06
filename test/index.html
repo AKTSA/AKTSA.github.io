@@ -1,18 +1,127 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!--script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-	<script>tinymce.init({ selector:'#mainbox' });</script-->
 	<title>AK TSA Test Page</title>
+	<style>
+
+		.SurroundBtn{
+			background:white;
+			color:black;
+			padding:20px 50px;
+			margin-top:200px;
+			margin-left:200px;
+			border:none;
+			position:relative;
+		}
+		.SurroundBtn::after{
+			position:absolute;
+			display:block;
+			bottom:0; left:0;
+			width:0;
+			height:5px;
+			background:black;
+			content:'';
+			transition: width 0.5s ease;
+			cursor:pointer;
+		}
+		.SurroundBtn:hover::after{
+			width:100%;
+		}
+		.SurroundBtn::before{
+			position:absolute;
+			display:block;
+			top:0; right:0;
+			width:0;
+			height:5px;
+			background:black;
+			content:'';
+			transition: width 0.5s ease;
+			cursor:pointer;
+		}
+		.SurroundBtn:hover::before{
+			width:100%;
+		}
+		.SurroundBtn .LeftPseudo{
+			position:absolute;
+			display:block;
+			bottom:0; left:0;
+			width:5px;
+			height:0;
+			background:black;
+			transition: height 0.5s ease;
+			cursor:pointer;
+		}
+		.SurroundBtn:hover .LeftPseudo{
+			height:100%;
+		}
+		.SurroundBtn .RightPseudo{
+			position:absolute;
+			display:block;
+			top:0; right:0;
+			width:5px;
+			height:0;
+			background:black;
+			transition: height 0.5s ease;
+			cursor:pointer;
+		}
+		.SurroundBtn:hover .RightPseudo{
+			height:100%;
+		}
+
+
+
+		.MainBtn{
+
+			color:black;
+			padding:15px 45px;
+			margin-top:200px;
+			margin-left:200px;
+			border:5px black solid;
+			position:relative;
+			transition: color 0.5s ease;
+			overflow:hidden;
+		}
+		.MainBtn:hover{
+			color:white;
+		}
+		.MainBtn span{
+			position:relative;
+			z-index:1;
+		}
+		.MainBtn::before{
+			content:'';
+			background:black;
+			width:100%;
+			height:200%;
+			position:absolute;
+			left: -200%; top:-25%;
+			z-index:0;
+			transform:rotate(45deg);
+			transition: left 0.5s ease-in;
+		}
+		.MainBtn:hover::before{
+			left:-25%;
+			transition: left 0.5s ease-out;
+		}
+		.MainBtn::after{
+			content:'';
+			background:black;
+			width:100%;
+			height:200%;
+			position:absolute;
+			right: -200%; bottom:-25%;
+			z-index:0;
+			transform:rotate(45deg);
+			transition: right 0.5s ease-in;
+		}
+		.MainBtn:hover::after{
+			right:-25%;
+			transition: right 0.5s ease-out;
+		}
+	</style>
 </head>
 <body>
-	<!--form action="http://www.michaelxing.tk/aktsa/form.php" method="post">
-		<textarea name="mainbox" id="mainbox">
-			Easy (and free!) You should check out our premium features.
-		</textarea>
-		<input type="submit" />
-		
-	</form-->
-	<p>This is a test page. There is nothing here. Please go away.</p>
+	<button class="SurroundBtn">Hello<div class="LeftPseudo"></div><div class="RightPseudo"></div></button>
+	<button class="MainBtn"><span>Hello Too</span></button>
 </body>
 </html>
