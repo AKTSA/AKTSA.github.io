@@ -1,0 +1,146 @@
+@import url(http://fonts.googleapis.com/css?family=Audiowide|Open+Sans);
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.Hero h1{
+	font-family:"Audiowide", sans-serif;
+	font-size:1000%;
+	margin:0;
+	color:#7A52CC;
+}
+.Hero h1 span{
+	color:#f00;
+}
+.Hero h2{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+	font-size:200%;
+	margin:0;
+}
+
+nav{
+	position:absolute;
+	top:10px; right:10px;
+}
+
+.SurroundBtn{
+	background:white;
+	color:black;
+	padding:15px 30px;
+	display:inline-block;
+	border:none;
+	position:relative;
+	cursor:pointer;
+	vertical-align:top;
+}
+
+
+.SurroundBtn::before, .SurroundBtn::after, .SurroundBtn .LeftPseudo, .SurroundBtn .RightPseudo{
+	position:absolute;
+	display:block;
+	/*bottom:0; left:0;
+	width:0;
+	height:5px;*/
+	background:black;
+	/*content:'';*/
+	transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+	opacity:0;
+}
+.SurroundBtn:hover::before, .SurroundBtn:hover::after, .SurroundBtn:hover .LeftPseudo, .SurroundBtn:hover .RightPseudo{
+	opacity:1;
+}
+
+.SurroundBtn::before, .SurroundBtn::after{
+	height:3px; width:0;
+	content:'';
+}
+.SurroundBtn:hover::before, .SurroundBtn:hover::after{
+	width:100%;
+}
+.SurroundBtn:active::before, .SurroundBtn:active::after{
+	height:1px;
+}
+
+.SurroundBtn::before{
+	top:0;right:0;
+}
+.SurroundBtn::after{
+	bottom:0; left:0;
+}
+
+
+
+.SurroundBtn .LeftPseudo, .SurroundBtn .RightPseudo{
+	width:3px; height:0;
+}
+.SurroundBtn:hover .LeftPseudo, .SurroundBtn:hover .RightPseudo{
+	height:100%;
+}
+.SurroundBtn:active .LeftPseudo, .SurroundBtn:active .RightPseudo{
+	width:1px;
+}
+.SurroundBtn .LeftPseudo{
+	bottom:0;left:0;
+}
+.SurroundBtn .RightPseudo{
+	top:0;right:0;
+}
+
+
+
+
+.MainBtn{
+	vertical-align:top;
+	background:white;
+	color:black;
+	padding:12px 27px;
+	display:inline-block;
+	border:3px black solid;
+	position:relative;
+	transition: color 0.5s ease;
+	overflow:hidden;
+	cursor:pointer;
+}
+.MainBtn:hover{
+	color:white;
+}
+.MainBtn span{
+	position:relative;
+	z-index:1;
+}
+.MainBtn::before{
+	content:'';
+	background:black;
+	width:200%;
+	height:200%;
+	position:absolute;
+	left: -200%; top:-25%;
+	z-index:0;
+	transform:rotate(45deg);
+	transition: left 0.5s ease-in, opacity 0.5s ease;
+}
+.MainBtn:hover::before{
+	left:-75%;
+	transition: left 0.5s ease-out, opacity 0.5s ease;
+}
+.MainBtn::after{
+	content:'';
+	background:black;
+	width:200%;
+	height:200%;
+	position:absolute;
+	right: -200%; bottom:-25%;
+	z-index:0;
+	transform:rotate(45deg);
+	transition: right 0.5s ease-in, opacity 0.5s ease;
+}
+.MainBtn:hover::after{
+	right:-75%;
+	transition: right 0.5s ease-out, opacity 0.5s ease;;
+}
+.MainBtn:active::before, .MainBtn:active::after{
+	opacity:0.8;
+}
