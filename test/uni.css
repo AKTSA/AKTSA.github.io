@@ -1,42 +1,67 @@
-@import url(http://fonts.googleapis.com/css?family=Audiowide|Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Audiowide|Open+Sans|Raleway:300);
 
 body{
 	font-family: 'Open Sans', sans-serif;
+	margin:0;padding:0;
 }
 
 
-.Hero h1{
+
+
+#Hero{
+	height:90vh;
+	background-size:cover;
+	background-attachment:fixed;
+}
+
+
+
+
+
+.MainTitle{
 	font-family:"Audiowide", sans-serif;
-	font-size:1000%;
-	margin:0;
 	color:#7A52CC;
 }
-.Hero h1 span{
-	color:#f00;
+.MainTitle span{
+	color:#FF0000;
 }
-.Hero h2{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-	font-size:200%;
-	margin:0;
-}
+
+
 
 nav{
-	position:absolute;
+	position:fixed;
 	top:10px; right:10px;
+	color:white;
+	z-index:100;
+	text-align:right;
 }
 
+nav a{
+	color:white;
+	text-decoration:none;
+}
+
+
+
+
 .SurroundBtn{
-	background:white;
-	color:black;
+	/*background:white;
+	color:black;*/
 	padding:15px 30px;
 	display:inline-block;
 	border:none;
 	position:relative;
 	cursor:pointer;
 	vertical-align:top;
+	margin-left:3px;
+	transition: background 0.2s ease;
 }
-
+.SurroundBtn:active, .SurroundBtn.CurrPage{
+	background:rgba(0,0,0, 0.6);
+}
+.SurroundBtn.CurrPage{
+	cursor:default;
+}
 
 .SurroundBtn::before, .SurroundBtn::after, .SurroundBtn .LeftPseudo, .SurroundBtn .RightPseudo{
 	position:absolute;
@@ -49,7 +74,7 @@ nav{
 	transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
 	opacity:0;
 }
-.SurroundBtn:hover::before, .SurroundBtn:hover::after, .SurroundBtn:hover .LeftPseudo, .SurroundBtn:hover .RightPseudo{
+.SurroundBtn:hover::before, .SurroundBtn:hover::after, .SurroundBtn:hover .LeftPseudo, .SurroundBtn:hover .RightPseudo, .CurrPage.SurroundBtn::before, .CurrPage.SurroundBtn::after, .CurrPage.SurroundBtn .LeftPseudo, .CurrPage.SurroundBtn .RightPseudo{
 	opacity:1;
 }
 
@@ -57,11 +82,8 @@ nav{
 	height:3px; width:0;
 	content:'';
 }
-.SurroundBtn:hover::before, .SurroundBtn:hover::after{
+.SurroundBtn:hover::before, .SurroundBtn:hover::after, .CurrPage.SurroundBtn::before, .CurrPage.SurroundBtn::after{
 	width:100%;
-}
-.SurroundBtn:active::before, .SurroundBtn:active::after{
-	height:1px;
 }
 
 .SurroundBtn::before{
@@ -76,11 +98,8 @@ nav{
 .SurroundBtn .LeftPseudo, .SurroundBtn .RightPseudo{
 	width:3px; height:0;
 }
-.SurroundBtn:hover .LeftPseudo, .SurroundBtn:hover .RightPseudo{
+.SurroundBtn:hover .LeftPseudo, .SurroundBtn:hover .RightPseudo, .SurroundBtn.CurrPage .LeftPseudo, .SurroundBtn.CurrPage .RightPseudo{
 	height:100%;
-}
-.SurroundBtn:active .LeftPseudo, .SurroundBtn:active .RightPseudo{
-	width:1px;
 }
 .SurroundBtn .LeftPseudo{
 	bottom:0;left:0;
@@ -104,9 +123,17 @@ nav{
 	overflow:hidden;
 	cursor:pointer;
 }
-.MainBtn:hover{
+.MainBtn:hover, .MainBtn.CurrPage{
 	color:white;
 }
+.MainBtn.CurrPage{
+	background:rgba(0,0,0,0.6);
+	cursor:default;
+}
+.MainBtn.CurrPage::before, .MainBtn.CurrPage::after{
+	display:none;
+}
+
 .MainBtn span{
 	position:relative;
 	z-index:1;
@@ -114,33 +141,33 @@ nav{
 .MainBtn::before{
 	content:'';
 	background:black;
-	width:200%;
-	height:200%;
+	width:100%;
+	height:100%;
 	position:absolute;
-	left: -200%; top:-25%;
+	left: -125%; top:0;
 	z-index:0;
-	transform:rotate(45deg);
-	transition: left 0.5s ease-in, opacity 0.5s ease;
+	transform:skewX(45deg);
+	transition: left 0.3s ease-in, background 0.2s ease;
 }
 .MainBtn:hover::before{
-	left:-75%;
-	transition: left 0.5s ease-out, opacity 0.5s ease;
+	left:calc(-50% + 1px);
+	transition: left 0.3s ease-out, background 0.2s ease;
 }
 .MainBtn::after{
 	content:'';
 	background:black;
-	width:200%;
-	height:200%;
+	width:100%;
+	height:100%;
 	position:absolute;
-	right: -200%; bottom:-25%;
+	right: -125%; bottom:0;
 	z-index:0;
-	transform:rotate(45deg);
-	transition: right 0.5s ease-in, opacity 0.5s ease;
+	transform:skewX(45deg);
+	transition: right 0.3s ease-in, background 0.2s ease;
 }
 .MainBtn:hover::after{
-	right:-75%;
-	transition: right 0.5s ease-out, opacity 0.5s ease;;
+	right:-50%;
+	transition: right 0.3s ease-out, background 0.2s ease;;
 }
 .MainBtn:active::before, .MainBtn:active::after{
-	opacity:0.8;
+	background:rgb(51,51,51);
 }

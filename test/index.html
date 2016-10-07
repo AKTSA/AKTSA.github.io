@@ -3,21 +3,106 @@
 <head>
 	<title>AK TSA Test Page</title>
 	<link rel="stylesheet" type="text/css" href="uni.css" />
+	<link rel="stylesheet" type="text/css" href="home.css" />
+	
+	<script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+	<script src="/JSDep/jquery.smoothState.js"></script>
 </head>
-<body>
+<body><div id="main">
 
+	
+		
+		
 	<nav>
-		<a class="MainBtn"><span>Home</span></a>
-		<a class="SurroundBtn">About<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
-		<a class="SurroundBtn">Member Information<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
-		<a class="SurroundBtn">Officer Pages<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
-		<a class="SurroundBtn">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
+		    <a class="CurrPage MainBtn"><span>Home</span>
+		</a><a href="/test/about.html" class="SurroundBtn">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+		</a><a class="SurroundBtn">Member Information<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+		</a><a class="SurroundBtn">Officer Pages<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+		</a><a class="SurroundBtn">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
 	</nav>
-
-	<section class="Hero">
-		<h1>AK <span>TSA</span></h1>
-		<h2>Ardrey Kell High School<br />Technology Student Association</h2>
-	</section>
-
+		
+		
+		
+		
+		
+		
+		
+		
+		<section id="Hero">
+			<div>
+				<h1 class="MainTitle">AK <span>TSA</span></h1>
+				<h2>Ardrey Kell High School<br />Technology Student Association</h2>
+			</div>
+		</section>
+	
+		<section id="HeroMotto">
+			<h2>Innovate Today. Change Tomorrow.</h2>
+		</section>
+	
+	
+		<p style="margin-bottom:200vh;">This is test</p>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	
+	
+	
+	</div>
+	<script>
+		/*;(function ($) {
+			'use strict';
+			var $body    = $('html, body'), // Define jQuery collection 
+				content  = $('#main').smoothState({
+					onStart : {
+						duration: 250,
+						render: function ($container) {
+							// Add your CSS animation reversing class
+							$container.addClass('is-exiting');
+							
+							// Restart your animation
+							smoothState.restartCSSAnimations();
+							
+						}
+					}
+				}).data('smoothState');
+		})(jQuery);*/
+		
+			var options = {
+				prefetch: true,
+				cacheLength: 2,
+				onStart: {
+					duration: 250, // Duration of our animation
+					render: function ($container) {
+						// Add your CSS animation reversing class
+						$container.addClass('is-exiting');
+						
+						// Restart your animation
+						smoothState.restartCSSAnimations();
+					}
+				},
+				onReady: {
+					duration: 0,
+					render: function ($container, $newContent) {
+						// Remove your CSS animation reversing class
+						$container.removeClass('is-exiting');
+						
+						// Inject the new content
+						$container.html($newContent);
+						
+					}
+				}
+			},
+			smoothState = $('#main').smoothState(options).data('smoothState');
+		
+	</script>
 </body>
 </html>
