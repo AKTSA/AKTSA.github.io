@@ -38,7 +38,7 @@
 		var temp = location.search.split("?")[1];
 		if(temp){
 			//location.replace("https://michaelxing.azurewebsites.net/admin/?p=" + location.search.split("?")[1]);
-			document.getElementById("DispFrame").src = "https://aktsa.azurewebsites.net/off.php?p=" + temp;
+			document.getElementById("DispFrame").src = "https://aktsa.azurewebsites.net/off.php?id=" + temp;
 			document.getElementById("navLink3").className = "";
 			if(document.getElementById("navLink" + temp)){
 				document.getElementById("navLink" + temp).className = "CurrPage";
