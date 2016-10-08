@@ -1,7 +1,7 @@
 
 #Hero{
 	background-position:left center;
-	background-image:url('/images/new/heroBG.JPG');
+	background-image:url('/images/new/heroBGTEST.JPG');
 	color:white;
 	animation-name: fadeInUp;
 	animation-duration: 0.25s;
