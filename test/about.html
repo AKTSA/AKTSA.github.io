@@ -1,70 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>AK TSA Test Page</title>
-	<link rel="stylesheet" type="text/css" href="uni.css" />
-	
-	<!--script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-	<script src="/JSDep/jquery.smoothState.js"></script-->
-</head>
-<body><div id="main">
-	
-		
-		
+	<head>
+		<title>AK TSA Test About Page</title>
+		<link rel="stylesheet" type="text/css" href="uni.css" />
+		<link rel="stylesheet" type="text/css" href="home.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="change.js"></script>
+	</head>
+	<body onload="setUpPage();">
+		<nav>
+			<a href="/test" class="MainBtn"><span>Home</span>
+			</a><a href="/test/about.html" class="SurroundBtn">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a class="SurroundBtn">Member Information<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a class="SurroundBtn">Officer Pages<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a class="SurroundBtn">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
+		</nav>
+		<div id="MainWrap">
+			<div id="ContentWrap">
+				
+				
+				<!--
+				
+				=========================================================================================
+				
+												PRIMARY CONTENT BEGINS HERE
 
-	<nav>
-		    <a href="/test" class="MainBtn"><span>Home</span>
-		</a><a class="CurrPage SurroundBtn">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-		</a><a class="SurroundBtn">Member Information<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-		</a><a class="SurroundBtn">Officer Pages<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-		</a><a class="SurroundBtn">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
-	</nav>
-		
-		
-		
-		
-		
-		
-		
-		
-	
-	
-	<p style="margin-bottom:200vh;">This is test</p>
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
-	
-	
-	</div>
-	<script>
-		/*;(function ($) {
-  'use strict';
-  var $body    = $('html, body'), // Define jQuery collection 
-      content  = $('#main').smoothState({
-        onStart : {
-          duration: 250,
-          render: function () {
-			  $main.addClass('is-exiting');
-			  content.restartCSSAnimations();
-            // Scroll user to the top
-            $body.animate({ 'scrollTop': 0 });
+				=========================================================================================
+ 
+				-->
+				
+				
 
-          }
-        }
-      }).data('smoothState');
-})(jQuery);*/
-	</script>
-</body>
+
+				<p style="margin-bottom:200vh;">This is a baller test</p>
+
+
+
+
+
+			</div>
+		</div>
+	</body>
 </html>
