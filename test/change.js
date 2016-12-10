@@ -25,81 +25,112 @@ function changePage() {
 		wrapper.innerHTML = responseText;
 
 
-		var oldContent = $('#MainWrap');
-		var newContent = wrapper.querySelector('#MainWrap');
+		var oldContent = $('.MainWrap');
+		var newContent = wrapper.querySelector('.MainWrap');
 
 		main.append(newContent);
-		newContent.style.opacity = 0;
+		//newContent.style.opacity = 0;
 		animate(oldContent, newContent);
 
 		document.title = responseText.split("<title>")[1].split("</title>")[0];
+		//document.getElementsByTagName("HEAD")[0].innerHTML = responseText.split("<head>")[1].split("</head>")[0];
 	});
 }
+
+
+
+
+
 
 function animate(oldContent, newContent) {
 
 	oldContent.get(0).style.position = 'absolute';
 	oldContent.get(0).style.width = '100%';
 	oldContent.get(0).style.top = 0;
+	//oldContent.get(0).style.zIndex = 99;
 
-	var fadeOut = oldContent.animate({
-		opacity: 0
-	}, 1000);
+	oldContent.animate({
+		top: "100vh"
+	}, 500);
+	if(oldContent.get(0).getElementsByClassName("HomeHero")[0]){
 
-	var fadeIn = $(newContent).animate({
-		opacity: 1
-	}, 1000, function(){
-		oldContent.remove();
-		changingPage = false;
-		console.log("Page Transition Complete");
-	});
+		document.getElementById("HomeHero").style.position = 'relative';
+		document.getElementById("HomeHero").style.width = "100%";
+		document.getElementById("HomeHero").style.top = 0;
+		$(document.getElementById("HomeHero")).animate({
+			top:"-200vh"
+		},500);
+	}
+
+	var fadeIn = function(){
+		
+		
+		$("html, body").animate({"scrollTop": "0px"}, 500);
+		
+		
+		if(newContent.getElementsByClassName("HomeHero")[0]){
+			document.getElementById("HomeHero").style.position = 'relative';
+			document.getElementById("HomeHero").style.width = "100%";
+			document.getElementById("HomeHero").style.top = "-200vh";
+			$(document.getElementById("HomeHero")).animate({
+				top:"0"
+			},500);
+		}
+		newContent.style.position = "relative";
+		newContent.style.top = "100vh";
+		$(newContent).animate({
+			top:0
+		}, 500, function(){
+			oldContent.remove();
+			changingPage = false;
+			console.log("Page Transition Complete");
+		})
+	}();
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 function setUpPage(){
 	main = $('body');
 
 	window.addEventListener('popstate', changePage);
 
-	
-	
-	
-	/*
-	
-	
-	var ses = "input[type=text], input[type=date], input[type=email], input[type=tel]";
-			
-			$(ses).on('focusin', function() {
-			  $(this).parent().find('label').addClass('active');
-			});
-	
-	
-	*/
+
+
+
+
 	$("a").on('click', function(e){
-		
-	//})
-	
-	//document.addEventListener('click', function(e) {
+
 		if(changingPage){
-			console.log("Page transition in progress; click listeners halted");
+			console.log("Page transition in progress; links disabled");
 			e.preventDefault();
 			return;
 		}
-		
-		
-		//var el = e.target;
 
-		//while (el && !el.href) {
-		//	el = el.parentNode;
-		//}
+		var el = e.target;
 
-		//if (el) {
+		while (el && !el.href) {
+			el = el.parentNode;
+		}
+
+		if (el) {
 			changingPage = true;
 			console.log("Animating Page Transition");
 			e.preventDefault();
-			history.pushState(null, null, e.target.href);
+			history.pushState(null, null, el.href);
 			changePage();
 
 			return;
-		//}
+		}
 	});
 }
