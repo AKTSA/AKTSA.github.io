@@ -125,6 +125,16 @@ function setUpPage(){
 
 		if (el) {
 			changingPage = true;
+			
+			
+			var temp = document.getElementsByClassName("SurroundBtn");
+			for(i = 0; i < temp.length; i++){
+				temp[i].className = "SurroundBtn";
+			}
+			document.getElementsByClassName("MainBtn")[0].className = "MainBtn";
+			el.className += " CurrPage";
+			
+			
 			console.log("Animating Page Transition");
 			e.preventDefault();
 			history.pushState(null, null, el.href);
