@@ -58,7 +58,9 @@ nav a{
 }
 
 
-
+.CurrPage{
+	pointer-events:none;
+}
 
 .SurroundBtn{
 	/*background:white;
