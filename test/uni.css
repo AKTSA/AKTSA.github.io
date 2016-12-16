@@ -166,7 +166,8 @@ nav a{
 	transition: left 0.3s ease-in, background 0.2s ease;
 }
 .MainBtn:hover::before{
-	left:calc(-50% + 1px);
+	left:-49%;
+	/*left:calc(-50% + 1px);*/
 	transition: left 0.3s ease-out, background 0.2s ease;
 }
 .MainBtn::after{
