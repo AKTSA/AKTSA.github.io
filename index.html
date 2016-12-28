@@ -59,51 +59,6 @@
 				</li>
 			</ul>
 		</nav>
-		<nav class="DenseOnly" id="MainNav">
-			<ul>
-				<li><a href="/?home"><span>Home</span></a>
-					<ul><li>
-						<a href="/?home"><span class="MainTitle">AK <span class="TSA">TSA</span></a>
-					</li></ul>
-				</li>
-				<li>
-					<a><span>About</span></a>
-					<ul>
-						<li><a href="/?Proj">Projects</a></li>
-						<li><a href="/?Comm">Community Service</a></li>
-						<li><a href="/?Off">Officers</a></li>
-						<li><a href="/?Award">Awards</a></li>
-					</ul>
-				</li>
-				<li>
-					<a><span>Member Information</span></a>
-					<ul>
-						<li><a href="/Info?Meet">Meeting Schedule</a></li>
-						<li><a href="/Info?Comm">Community Service</a></li>
-						<li><a href="/Info?Comp">Competitions</a></li>
-						<li><a href="/Info?Up">Communication</a></li>
-						<li><a href="/Info?Link">Helpful Links</a></li>
-					</ul>
-				</li>
-				<li>
-					<a><span>Officer Pages</span></a>
-					<ul>
-						<li><a href="/off?3">President</a></li>
-						<li><a href="/off?4">Vice President</a></li>
-						<li><a href="/off?5">Secretary</a></li>
-						<li><a href="/off?6">Treasurer</a></li>
-						<li><a href="/off?7">Sergeant at Arms</a></li>
-						<li><a href="/off?1">Webmaster</a></li>
-					</ul>
-				</li>
-				<li><a href="/VEX?home"><span>VEX Robotics</span></a>
-					<ul><li>
-						<a href="/VEX?home"><img src="/images/VEX-Robotics.png" alt="VEX Robotics" /></a>
-					</li></ul>
-				</li>
-				<li>
-			</ul>
-		</nav>
 		
 		<div id="BigPanelWrapperParent"><span id="BigPanelWrapper"><!--
 			The main nav accessible by scrolling all the way up
@@ -357,37 +312,6 @@
         
         
 		<script>
-			if(location.search == "?home"){
-				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
-				document.getElementById("AboutHeroFrame").style.display = "block";
-				document.getElementById("AboutFrame").style.display = "block";
-				document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].id = "CurrPage";
-                document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].id = "CurrPage2";
-			} else if(location.search == "?Proj"){
-				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
-				document.getElementById("ProjectsHeroFrame").style.display = "block";
-				document.getElementById("ProjectsFrame").style.display = "block";;
-				document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].id = "CurrPage";
-                document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].getElementsByTagName("UL")[0].getElementsByTagName("LI")[0].id = "CurrPage2";
-			} else if(location.search == "?Comm"){
-				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
-				document.getElementById("CommHeroFrame").style.display = "block";
-				document.getElementById("CommFrame").style.display = "block";
-				document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].id = "CurrPage";
-                document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].getElementsByTagName("UL")[0].getElementsByTagName("LI")[1].id = "CurrPage2";
-			} else if(location.search == "?Off"){
-				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
-				document.getElementById("OffHeroFrame").style.display = "block";
-				document.getElementById("OffFrame").style.display = "block";
-				document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].id = "CurrPage";
-                document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].id = "CurrPage2";
-			} else if(location.search == "?Award"){
-				document.getElementsByTagName("LINK")[0].href = "/Dense.css";
-				document.getElementById("AwardHeroFrame").style.display = "block";
-				document.getElementById("AwardFrame").style.display = "block";
-				document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].id = "CurrPage";
-                document.getElementById("MainNav").getElementsByTagName("UL")[0].getElementsByTagName("LI")[2].getElementsByTagName("UL")[0].getElementsByTagName("LI")[3].id = "CurrPage2";
-			} else{
 				
 			
 				
@@ -520,7 +444,7 @@
 					},
 					offset:'50%'
 				});
-			}
+			
 			
 			
 			

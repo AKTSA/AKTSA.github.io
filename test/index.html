@@ -15,13 +15,19 @@
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="change.js"></script>
+		
+		<script src="skrollr.js"></script>
+		
+		<script id="pageJS" src="/test/pageJS/index.js"></script>
 	</head>
 	<body onload="setUpPage();">
 		<nav>
-			<a href="/test" class="MainBtn"><span>Home</span>
-			</a><a href="/test/about.html" class="SurroundBtn">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a class="SurroundBtn">Member Information<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a class="SurroundBtn">Officer Pages<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			<a href="/test" class="MainBtn CurrPage"><span>Home</span>
+			</a> <a href="/test/about.html" class="SurroundBtn">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a class="SurroundBtn">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a class="SurroundBtn">Officers<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a class="SurroundBtn">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a class="SurroundBtn">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
 			</a><a class="SurroundBtn">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
 		</nav>
 		<div id="NavBG"><h1 class="MainTitle">AK <span>TSA</span></h1></div>
@@ -31,7 +37,7 @@
 
 
 			<section class="Hero HomeHero" id="HomeHero">
-				<div>
+				<div class="HomeHeroWrap">
 					<h1 class="MainTitle">AK <span>TSA</span></h1>
 					<h2>Ardrey Kell High School<br />Technology Student Association</h2>
 				</div>
@@ -58,13 +64,95 @@
 				</section>
 
 
-				<p style="margin-bottom:200vh;">This is test</p>
+				<div style="
+							position:fixed; top:0;
+							height:100vh;width:100vw;
+							transform:skew(30deg);
+							background:red;
+							z-index:5;
+							left:-150vw;
+						" data-250="left:-150vw;" data-2000="left:175vw;"></div>
+				<div style="
+							position:fixed; top:0;
+							height:100vh;width:100vw;
+							transform:skew(-30deg);
+							background:green;
+							z-index:5;
+							right:-150vw;
+						" data-250="right:-150vw;" data-2000="right:175vw;"></div>
 
 
+				
+				<section id="IntroFrame" class="InfoFrame" style="margin-top:700px;">
+					<p>We are the Ardrey Kell High School Technology Student Association.<br />We are a club of students that participates in technology-based projects. We are a team that competes in TSA conferences in the regional, state, and national levels. Above all, we are a band of enthusiasts that come together to share our love of science, technology, engineering, and math, and to push the boundaries of what's possible. </p>
+				</section>
+
+				
+				
+				
+				
 
 
+				<div style="
+							position:fixed; top:72px;
+							height:calc(50vh - 36px);
+							width:100vw;
+							background:red;
+							z-index:5;
+							left:-100vw;
+						" data-1500="left:-100vw;" data-2000="left:100vw;"></div>
+				<div style="
+							position:fixed; bottom:0;
+							height:calc(50vh - 36px);
+							width:100vw;
+							background:green;
+							z-index:5;
+							right:-100vw;
+						" data-1500="right:-100vw;" data-2000="right:100vw;"></div>
+				
+				
+				
+				
+				
+				<section class="InfoFrame" style="margin-top:100px;">
+					<p>Innovate Today. Change Tomorrow.<br />Our motto is a reflection of what we believe to be not only true, but possible. In our modern, interconnected world, technology literacy is more important than ever. The wonder of technology is that it allows anyone, no matter their age, gender, race, ethnicity, religion, or any other factor, to be the change they wish to see in the world. Technology empowers everyone to do great things. And that's exactly what we aim to do.</p>
+				</section>
+
+				
+				
+				
+				
+
+
+				<div style="
+							position:fixed; left:0;
+							height:100vh;
+							width:50%;
+							background:red;
+							z-index:5;
+							top:-100vh;
+						" data-1900="top:-100vh;" data-3000="top:100vh;"></div>
+				<div style="
+							position:fixed; right:0;
+							height:100vh;
+							width:50%;
+							background:green;
+							z-index:5;
+							bottom:-100vh;
+						" data-1900="bottom:-100vh;" data-3000="bottom:100vh;"></div>
+				
+				
+				
+				
+				
+				<section class="InfoFrame" style="margin-top:300px;">
+					
+					<img src="/images/new/crest.png" alt="The official crest of AK TSA" style="width:15vw;" />
+					<p style="float:right;text-align:left;">The official crest of the AK TSA is something really cool, I'm sure. Unfortunately, I haven't found anyone good enough at Illustrator to draw and good enough at BSing corporate speak to describe it yet. Therefore, you get to look at this amazingly drawn placeholder that I made in MS Paint. I don't know why I insisted on writing out the words with a trackpad rather than just using the text tool. It actually took more work this way.</p>
+				</section>
 
 			</div>
 		</div>
+		
 	</body>
 </html>

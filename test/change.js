@@ -23,7 +23,7 @@ function changePage() {
 	loadPage(url).then(function(responseText) {
 		var wrapper = document.createElement('div');
 		wrapper.innerHTML = responseText;
-
+		//console.log(responseText);
 
 		var oldContent = $('.MainWrap');
 		var newContent = wrapper.querySelector('.MainWrap');
@@ -33,7 +33,9 @@ function changePage() {
 		animate(oldContent, newContent);
 
 		document.title = responseText.split("<title>")[1].split("</title>")[0];
-		//document.getElementsByTagName("HEAD")[0].innerHTML = responseText.split("<head>")[1].split("</head>")[0];
+		changePageJS(responseText.split('<script id="pageJS" src="')[1].split('"></script>')[0]);
+		//document.getElementById("pageJS").src = responseText.split('<script id="pageJS" src="')[1].split('"></script>')[0];
+		//newLoad();
 	});
 }
 
@@ -84,6 +86,7 @@ function animate(oldContent, newContent) {
 			oldContent.remove();
 			changingPage = false;
 			console.log("Page Transition Complete");
+			newLoad();
 		})
 	}();
 }
@@ -95,12 +98,28 @@ function animate(oldContent, newContent) {
 
 
 
+function changePageJS(el)
+{
+	document.getElementsByTagName("HEAD")[0].removeChild(document.getElementById("pageJS"));
+	var s = document.createElement("script");
+	s.src = el;
+	s.innerHTML = null;
+	s.id = "pageJS";
+	//document.getElementById("output").innerHTML = "";
+	document.getElementsByTagName("HEAD")[0].appendChild(s);
+}
 
 
 
 
+
+
+//var s;
 
 function setUpPage(){
+	newLoad();
+	
+	
 	main = $('body');
 
 	window.addEventListener('popstate', changePage);
@@ -125,6 +144,8 @@ function setUpPage(){
 
 		if (el) {
 			changingPage = true;
+			
+			newUnload();
 			
 			
 			var temp = document.getElementsByClassName("SurroundBtn");
