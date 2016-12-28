@@ -289,12 +289,81 @@ nav a{
 
 
 .InfoFrame{
-	height:80vh;
+	/*height:80vh;
 	display: flex;
-	align-items: center;
+	align-items: center;*/
 	overflow:hidden;
 	z-index:1;
 	text-align:center;
 	width:40%;
 	margin-left:30%;
+}
+
+.InvertFrame{
+	color:white;
+	background:#2c3e50;
+}
+
+
+
+.PicDiv{
+	background-position:center;
+	background-size:cover;
+	background-attachment:fixed;
+	overflow:hidden;
+}
+
+
+
+#SlantPicDiv1::before{
+	background-position:top left;
+	background-size:cover;
+	background-attachment:fixed;
+	content:'';
+	background-image:url('/images/cs3.jpg');
+	transform: skewX(-30deg);
+	position:absolute;
+	width:200vw;
+	height:100%;
+	top:0;left:-50vw;
+}
+#SlantPicDiv2::before{
+	background-position:top left;
+	background-size:cover;
+	background-attachment:fixed;
+	content:'';
+	background-image:url('/images/VRobots4.jpg');
+	transform: skewX(30deg);
+	position:absolute;
+	width:200vw;
+	height:100%;
+	top:0;left:-50vw;
+}
+#SlantPicDiv3::before, #SlantPicDiv5::before{
+	background-position:top left;
+	background-size:cover;
+	background-attachment:fixed;
+	content:'';
+	background-image:url('/images/new/PackingFood.JPG');
+	position:absolute;
+	width:200vw;
+	height:100%;
+	top:0;left:-50vw;
+}
+#SlantPicDiv4::before, #SlantPicDiv6::before{
+	background-position:top left;
+	background-size:cover;
+	background-attachment:fixed;
+	content:'';
+	background-image:url('/images/new/FoodBank.JPG');
+	position:absolute;
+	width:200vw;
+	height:100%;
+	top:0;left:-50vw;
+}
+#SlantPicDiv3::before, #SlantPicDiv6::before{
+	transform:skew(30deg);
+}
+#SlantPicDiv4::before, #SlantPicDiv5::before{
+	transform:skew(-30deg);
 }
