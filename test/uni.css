@@ -385,6 +385,7 @@ nav a{
 */
 
 .HeroWrap{
+	margin:0;
 	min-height:70vh;
  	background-attachment:fixed;
 	background-size:cover;
@@ -408,9 +409,63 @@ nav a{
 
 
 
+section{
+	margin: 75px;
+}
+
+
+
+label{
+	cursor:pointer;
+}
+
 .PhotoGallery{
-	width:70%;
-	margin: 0 auto;
-	min-height:40vh;
+	width:90%;
+	margin: 30px auto;
+	height:500px;
 	background:#34495e;
+	position:relative;
+	overflow-y:hidden;
+}
+.PhotoGallery ul{
+	margin:0; padding:0;
+	list-style:none;
+	height:100%;
+	width:20%;
+}
+.PhotoGallery li{
+	margin:0; padding:0;
+	display:block;
+	height:25%;
+}
+.PhotoGallery input{
+	display:none;
+}
+
+.PhotoGallery label{
+	display:inline-block;
+	line-height:125px;
+	color:white;
+	background:black;
+	margin:0; padding: 0 10px;
+	
+	height:100%;
+	width:100%;
+	left:0; top:0;
+	z-index:1; position:relative;
+}
+.PhotoGallery input:checked~label{
+	color:black;
+	background:white;
+}
+
+.PhotoGallery div{
+	position:absolute;
+	top:100%; left:0; width:100%; height:100%;
+	background:green;
+	z-index:0;
+	transition: top 0.5s ease;
+}
+.PhotoGallery input:checked+div{
+	top:0;
 }
