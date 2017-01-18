@@ -367,3 +367,50 @@ nav a{
 #SlantPicDiv4::before, #SlantPicDiv5::before{
 	transform:skew(-30deg);
 }
+
+
+
+
+
+
+/*
+
+=======================================================================
+
+							ABOUT PAGE CSS
+
+=======================================================================
+
+
+*/
+
+.HeroWrap{
+	min-height:70vh;
+ 	background-attachment:fixed;
+	background-size:cover;
+	background-image:url('/images/fdesign2.jpg');
+	background-position:center;
+	position:relative;
+}
+.HeroWrap::before{
+	content:'';
+	position:absolute;
+	top:0; left:0;
+	height:100%; width:100%;
+	background-image:linear-gradient(to bottom, rgba(255,255,255,0) 60%, white);
+}
+.HeroWrap h1{
+	margin:0;
+	line-height:60vh;
+	font-size:500%;
+	padding-left:5%;
+}
+
+
+
+.PhotoGallery{
+	width:70%;
+	margin: 0 auto;
+	min-height:40vh;
+	background:#34495e;
+}
