@@ -234,6 +234,7 @@ nav a{
 	position:relative;
 	z-index:99;
 	overflow:hidden;
+	margin:0;
 }
 #HomeHero h1{
 	font-size:1000%;
@@ -456,7 +457,7 @@ label{
 }
 .PhotoGallery input:checked~label{
 	color:black;
-	background:white;
+	background:none;
 }
 
 .PhotoGallery div{
