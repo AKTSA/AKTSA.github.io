@@ -212,6 +212,32 @@ nav a{
 
 
 
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+	position:relative;
+	z-index:10;
+}
+ 
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 0;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: rgba(0,0,255,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0,0,255,0.2); 
+}
+
+
 
 
 /*
@@ -420,19 +446,32 @@ label{
 	cursor:pointer;
 }
 
+
+
+
+
 .PhotoGallery{
 	width:90%;
 	margin: 30px auto;
 	height:500px;
-	background:#34495e;
 	position:relative;
 	overflow-y:hidden;
+	box-shadow: inset 0 0 20px rgba(0,0,0,0.5); 
+}
+.PhotoGallery::after{
+	content:'';
+	width:100%;	height:100%;
+	top:0; left:0; position:absolute;
+	z-index:-2;
+	background:#34495e;
 }
 .PhotoGallery ul{
 	margin:0; padding:0;
 	list-style:none;
 	height:100%;
 	width:20%;
+	overflow-y:scroll;
+	overflow-x:hidden;
 }
 .PhotoGallery li{
 	margin:0; padding:0;
@@ -447,26 +486,51 @@ label{
 	display:inline-block;
 	line-height:125px;
 	color:white;
-	background:black;
-	margin:0; padding: 0 10px;
+	background:#34495e;
+	margin:0; padding: 0 5px 0 15px;
+	box-shadow: inset 0 0 5px rgba(0,0,0,0.3); 
 	
 	height:100%;
 	width:100%;
 	left:0; top:0;
 	z-index:1; position:relative;
+	
+	transition: background 0.5s ease-out, padding 0.5s ease-out;
 }
 .PhotoGallery input:checked~label{
 	color:black;
-	background:none;
+	background:rgba(255, 255, 255, 0.4);
+	padding: 0 0 0 20px;
 }
 
 .PhotoGallery div{
 	position:absolute;
-	top:100%; left:0; width:100%; height:100%;
-	background:green;
-	z-index:0;
-	transition: top 0.5s ease;
+	top:0; left:0; width:100%; height:100%;
+	background:black;
+	z-index:-1;
+	transition: transform 0.5s ease;
+	overflow:hidden;
+	text-align:center;
+	
+	transform:translateY(100%);
 }
 .PhotoGallery input:checked+div{
-	top:0;
+	transform:translateY(0);
+}
+
+.PhotoGallery div img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+
+.PhotoGallery div p{
+	position:absolute;
+	max-width:60%;
+	right:0; bottom:0;
+	padding:20px;	margin:0;
+	color:white;
+	z-index:1;
+	text-align:right;
+	background:rgba(0,0,0,0.3);
 }
