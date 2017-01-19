@@ -33,7 +33,7 @@ function changePage() {
 		animate(oldContent, newContent);
 
 		document.title = responseText.split("<title>")[1].split("</title>")[0];
-		changePageJS(responseText.split('<script id="pageJS" src="')[1].split('"></script>')[0]);
+		//changePageJS(responseText.split('<script id="pageJS" src="')[1].split('"></script>')[0]);
 		//document.getElementById("pageJS").src = responseText.split('<script id="pageJS" src="')[1].split('"></script>')[0];
 		//newLoad();
 	});
@@ -79,14 +79,19 @@ function animate(oldContent, newContent) {
 			},500);
 		}
 		newContent.style.position = "relative";
-		newContent.style.top = "100vh";
+		if(oldContent.get(0).getElementsByClassName("HomeHero")[0]){
+			newContent.style.top = "calc(90vh - 72px)";
+		} else{
+			newContent.style.top = "100vh";
+		}
 		$(newContent).animate({
 			top:0
 		}, 500, function(){
 			oldContent.remove();
 			changingPage = false;
 			console.log("Page Transition Complete");
-			newLoad();
+			//newLoad();
+			window.setTimeout(function(){location.reload();},100);
 		})
 	}();
 }

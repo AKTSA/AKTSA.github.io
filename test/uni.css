@@ -4,6 +4,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	margin:0;padding:0;
 	overflow-x:hidden;
+	background:#ecf0f1;
 }
 
 
@@ -206,7 +207,8 @@ nav a{
 
 
 .ContentWrap{
-	padding-top:72px;
+	padding:72px 0 0 0;/*72px top*/
+	margin:0;
 }
 
 
@@ -425,13 +427,13 @@ nav a{
 	position:absolute;
 	top:0; left:0;
 	height:100%; width:100%;
-	background-image:linear-gradient(to bottom, rgba(255,255,255,0) 60%, white);
+	background-image:linear-gradient(to bottom, rgba(236, 240, 241,0) 60%, rgb(236, 240, 241));
 }
 .HeroWrap h1{
 	margin:0;
 	line-height:60vh;
 	font-size:500%;
-	padding-left:5%;
+	padding-left:75px;
 }
 
 
@@ -451,7 +453,7 @@ label{
 
 
 .PhotoGallery{
-	width:90%;
+	width:100%;
 	margin: 30px auto;
 	height:500px;
 	position:relative;
@@ -508,7 +510,7 @@ label{
 	top:0; left:0; width:100%; height:100%;
 	background:black;
 	z-index:-2;
-	transition: transform 0.5s ease;
+	transition: transform 1s ease;
 	overflow:hidden;
 	text-align:center;
 	
@@ -521,7 +523,7 @@ label{
 }
 .PhotoGallery input:checked~div{
 	transform:translateY(0) !important;
-	transition: transform 0.5s ease !important;
+	transition: transform 1s ease !important;
 	z-index:-1;
 }
 
@@ -540,4 +542,76 @@ label{
 	z-index:1;
 	text-align:right;
 	background:rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
+#CommServ .TableOut{
+	width:100%;
+	min-height:300px;
+	color:white;
+	background:black;
+	text-align:center;
+}
+#CommServ .TableCel{
+	width:33%; height:100%;
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.5); 
+	background-position:center;
+	background-size:cover;
+	position:relative; z-index:1;
+	
+	transition:transform 0.5s ease;
+	transform:scale(1);
+	
+	overflow-y:hidden;
+	
+}
+#CommServ .TableCel:hover{
+	transform:scale(1.05);
+	z-index:2;
+}
+
+#CommServ h3{
+	margin:0;
+}
+#CommServ .TextWrap{
+	padding:0;
+	margin:0; position:absolute;
+	background:rgba(0,0,0,0.3);
+	transform:translateY(100%);
+	transition: transform 0.5s ease;
+	height:100%; width:100%;
+	min-height:300px;
+	
+	display: flex;
+	align-items: center;
+}
+#CommServ p{
+	padding: 0 5px;
+	margin:0;
+}
+#CommServ .TableCel:hover .TextWrap{
+	transform:translateY(0);
+}
+
+#CommServ .TableCel:nth-child(1){
+	background-image:url('/images/cs2.jpg');
+}
+#CommServ .TableCel:nth-child(2){
+	background-image:url('/images/cs1.jpg');
+}
+
+
+
+.TableOut{
+	display:table;
+}
+.TableRow{
+	display:table-row;
+}
+.TableCel{
+	display:table-cell;
 }
