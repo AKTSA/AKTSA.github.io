@@ -88,7 +88,7 @@ function animate(oldContent, newContent) {
 			top:0
 		}, 500, function(){
 			oldContent.remove();
-			changingPage = false;
+			//changingPage = false;
 			console.log("Page Transition Complete");
 			//newLoad();
 			window.setTimeout(function(){location.reload();},100);
