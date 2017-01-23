@@ -648,16 +648,14 @@ label{
 	margin:0;
 }
 #OffIntro .TextWrap{
-	padding:0;
+	padding:10px 0;
 	margin:0; position:absolute;
-	background:rgba(0,0,0,0.3);
+	/*background:rgba(0,0,0,0.3);*/
+	background:rgb(52, 73, 94);
 	transform:translateY(100%);
 	transition: transform 0.5s ease;
-	height:100%; width:100%;
-	min-height:300px;
-	
-	display: flex;
-	align-items: center;
+	width:100%;
+	bottom:0; left:0;
 }
 #OffIntro .TextWrap div{
 	width:100%;
@@ -674,13 +672,13 @@ label{
 	background-image:url('https://i.imgur.com/iBj8SBk.jpg');
 }
 #OffIntro .TableCel:nth-child(2){
-	background-image:url('/images/cs1.jpg');
+	/*background-image:url('/images/cs1.jpg');*/
 }
 #OffIntro .TableCel:nth-child(3){
 	background-image:url('http://i.imgur.com/X6OtAFW.jpg');
 }
 #OffIntro .TableCel:nth-child(4){
-	background-image:url('/images/cs2.jpg');
+	/*background-image:url('/images/cs2.jpg');*/
 }
 #OffIntro .TableCel:nth-child(5){
 	background-image:url('https://pbs.twimg.com/profile_images/736763645510725632/ICe9Z_2V.jpg');
