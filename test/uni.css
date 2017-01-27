@@ -687,3 +687,13 @@ label{
 	background-image:url('https://michaelxing.tk/old/aktsa/img/nats.jpg');
 }
 
+#WeWonStuff{
+	width:100%;
+	border-collapse:collapse;
+}
+#WeWonStuff tr:nth-child(odd){
+	background:rgb(189, 195, 199);
+}
+#WeWonStuff td, th{
+	padding:5px;
+}
