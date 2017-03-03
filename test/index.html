@@ -69,7 +69,7 @@
 							background-image:url('/images/fdesign2.jpg');
 							background-position:top center;
 							position:absolute;
-						" data-top="height:100vh;" data-top-bottom="height:0vh;"></div></div>
+						" data--1-top="height:0vh;" data-top="height:100vh;"></div></div>
 				
 				<div style="position:relative;" data-bottom-top="top:-100vh;" data-top="top:0vh;">
 					<div class="PicDiv" id="SlantPicDiv1" style="
@@ -92,12 +92,12 @@
 				<section id="IntroFrame" class="InfoFrame" style="margin-top:10vh;margin-bottom:40vh;">
 					<p>We are the Ardrey Kell High School Technology Student Association.<br />We are a club of students that participates in technology-based projects. We are a team that competes in TSA conferences in the regional, state, and national levels. Above all, we are a band of enthusiasts that come together to share our love of science, technology, engineering, and math, and to push the boundaries of what's possible. </p>
 				</section>
-
 				
 				
 				
 				
-
+				
+				
 				<div style="position:relative;height:100vh;" data-bottom-top="top:-100vh;" data-top="top:0;">
 					<div class="PicDiv" style="
 							position:absolute; top:0;
@@ -210,5 +210,17 @@
 			</div>
 		</div>
 		
+		
+		   <script>
+			   if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+				   console.log("IE or Edge; Utilizing JS Scroll to disable jitteryness")
+				   $('body').on("mousewheel", function () {
+						event.preventDefault();
+						var wd = event.wheelDelta;
+						var csp = window.pageYOffset;
+						window.scrollTo(0, csp - wd);
+				   });
+			   }
+    </script>
 	</body>
 </html>
