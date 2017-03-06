@@ -148,6 +148,15 @@ function setUpPage(){
 		}
 
 		if (el) {
+			
+			
+			if(el.host != window.location.host){
+				console.log("Link to other domain; abandoning animated page transition");
+				return;
+			}
+			e.preventDefault();
+			
+			
 			changingPage = true;
 			
 			newUnload();
@@ -162,7 +171,7 @@ function setUpPage(){
 			
 			
 			console.log("Animating Page Transition");
-			e.preventDefault();
+			
 			history.pushState(null, null, el.href);
 			changePage();
 
