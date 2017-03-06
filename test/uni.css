@@ -199,6 +199,58 @@ nav a{
 
 
 
+.BigBtn{
+	vertical-align:top;
+	color:black;
+	padding:12px 27px;
+	display:inline-block;
+	border:3px #000 solid;
+	position:relative;
+	transition: color 0.5s ease-in, border 0.2s ease;
+	overflow:hidden;
+	cursor:pointer;
+	text-decoration:none;
+}
+.BigBtn:hover{
+	color:white;
+	transition: color 0.5s ease-out, border 0.2s ease;
+}
+.BigBtn:active{
+	
+	border:3px #8e44ad solid;
+}
+
+
+.BigBtn::before{
+	content:'';
+	background:white;
+	width:100%;
+	height:100%;
+	position:absolute;
+	left: 0; top:0;
+	z-index:-2;
+}
+
+.BigBtn::after{
+	content:'';
+	background:#8e44ad;
+	width:200%;
+	height:100%;
+	position:absolute;
+	right: 150%; bottom:0;
+	z-index:-1;
+	transform:skewX(45deg);
+	transition: right 0.5s ease-in, background 0.2s ease;
+}
+.BigBtn:hover::after{
+	right:-50%;
+	transition: right 0.5s ease-out, background 0.2s ease;;
+}
+.BigBtn:active::after{
+	background:black;
+}
+
+
 
 
 
@@ -253,7 +305,7 @@ nav a{
 }
 
 
-
+code{background:#2c3e50;color:white;font-family:'Lucida Console',monospace;padding:5px;border-radius:5px;}
 
 .CenterWrap{
 	display: flex;
@@ -733,7 +785,7 @@ label{
 }
 
 #MembMain{
-	width:88%;
+	width:calc(100% - 150px);
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:-40vh;
@@ -780,21 +832,41 @@ label{
 #MembMain .UpBox{
 	display:inline-block;width:50%;
 	height:100px;
+	min-height:10vw;
 	vertical-align:top;
 	position:relative;
 	overflow:hidden;
+	z-index:1;
 }
 #MembMain .HoverBox{
-	width:100%;
+	width:calc(100% - 10px);
 	position:absolute;
 	height:100%;
 	color:white;
-	padding:5px;
-	background:radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0) 50%);
+	padding:0 5px;
 	
 	top:-100%;
 	transition: top 0.5s ease;
 }
 #MembMain .UpBox:hover .HoverBox{
 	top:0;
+}
+#MembMain .UpBox::before{
+	content:'';
+	top:0; left:0; width:100%; height:100%;
+	position:absolute;
+	z-index:0;
+	background:radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0));
+	opacity:0; transition: opacity 0.5s ease;
+}
+#MembMain .UpBox:hover::before{
+	opacity:1;
+}
+
+#MembMain .UpBox p{
+	margin:0; padding:0;
+}
+
+#MembMain .BigBtn{
+	margin-bottom:10px;
 }
