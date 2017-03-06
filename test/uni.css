@@ -697,3 +697,40 @@ label{
 #WeWonStuff td, th{
 	padding:5px;
 }
+
+
+
+
+
+
+/*
+
+=======================================================================
+
+							MEMBER PAGE CSS
+
+=======================================================================
+
+
+*/
+
+#MembHeroWrap{
+	background-image:url('/images/new/FoodBank.JPG');
+}
+#MembHeroWrap h1{
+	line-height:initial;
+	text-shadow: -1px -1px white, 1px 1px white, 1px -1px white, -1px 1px white;
+	padding-top:5vh;
+}
+
+#MembMain{
+	width:88%;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:-40vh;
+	background:rgb(41, 128, 185);
+	position:relative;
+	z-index:5;
+	min-height:500px;
+}
+
