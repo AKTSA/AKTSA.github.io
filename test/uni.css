@@ -255,6 +255,15 @@ nav a{
 
 
 
+.CenterWrap{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+
+
 /*
 
 =======================================================================
@@ -719,8 +728,8 @@ label{
 }
 #MembHeroWrap h1{
 	line-height:initial;
-	text-shadow: -1px -1px white, 1px 1px white, 1px -1px white, -1px 1px white;
-	padding-top:5vh;
+	text-shadow: -2px -2px white, 2px 2px white, 2px -2px white, -2px 2px white;
+	padding-top:6vh;
 }
 
 #MembMain{
@@ -728,9 +737,64 @@ label{
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:-40vh;
-	background:rgb(41, 128, 185);
+	background:#ecf0f1;
 	position:relative;
 	z-index:5;
 	min-height:500px;
 }
 
+#MembMain .Lean{
+	display:inline-block;
+	width:50%;
+	margin:0;
+	vertical-align: top;
+}
+
+#MembMain h2{
+	text-align:center;
+}
+
+#MembMain #CommBox p{
+	margin:0;
+	font-size:75%;
+}
+
+#MembMain ul{
+	margin:0;
+	padding:0 3vw;
+	list-style:none;
+}
+#MembMain li{
+	padding:10px;
+}
+#MembMain li:nth-child(odd){
+	background:#bdc3c7;
+	color:black;
+}
+#MembMain li:nth-child(even){
+	background:#34495e;
+	color:white;
+}
+
+
+#MembMain .UpBox{
+	display:inline-block;width:50%;
+	height:100px;
+	vertical-align:top;
+	position:relative;
+	overflow:hidden;
+}
+#MembMain .HoverBox{
+	width:100%;
+	position:absolute;
+	height:100%;
+	color:white;
+	padding:5px;
+	background:radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0) 50%);
+	
+	top:-100%;
+	transition: top 0.5s ease;
+}
+#MembMain .UpBox:hover .HoverBox{
+	top:0;
+}
