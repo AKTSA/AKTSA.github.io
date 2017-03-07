@@ -266,21 +266,21 @@ nav a{
 
 
 
-/* Let's get this party started */
+/* Let's get this party started
 ::-webkit-scrollbar {
     width: 12px;
 	position:relative;
 	z-index:10;
 }
  
-/* Track */
+/* Track
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
     border-radius: 0;
 }
  
-/* Handle */
+/* Handle
 ::-webkit-scrollbar-thumb {
     border-radius: 0;
     background: rgba(0,0,255,0.3); 
@@ -290,7 +290,7 @@ nav a{
 ::-webkit-scrollbar-thumb:window-inactive {
 	background: rgba(0,0,255,0.2); 
 }
-
+*/
 
 
 
@@ -710,6 +710,7 @@ label{
 }
 #OffIntro .TextWrap{
 	padding:10px 0;
+	display:block;
 	margin:0; position:absolute;
 	/*background:rgba(0,0,0,0.3);*/
 	background:rgb(52, 73, 94);
@@ -717,6 +718,7 @@ label{
 	transition: transform 0.5s ease;
 	width:100%;
 	bottom:0; left:0;
+	color:white; text-decoration:none;
 }
 #OffIntro .TextWrap div{
 	width:100%;
@@ -895,4 +897,42 @@ label{
 	width:100%;
 	height:calc(100vh - 72px);
 	display:block;
+}
+
+#OffNav{
+	position:fixed;
+	bottom:0;left:0;
+	z-index:10;
+	/*font-size:0;*/
+	text-align:left;
+	padding:5px;
+	background:#7A52CC;
+}
+
+/*#OffNav a{
+	font-size:16px;
+	padding:10px;
+	display:inline-block;
+	text-decoration:none;
+	background:#7A52CC;
+	color:white;
+	transition: all 0.5s ease;
+}
+#OffNav a:hover{
+	color:black;
+	background:#F4F4F4;
+}
+#OffNav a:active{
+	color:white;
+	background:black;
+}*/
+#OffNav a.CurrPage{
+	pointer-events:none;
+	color:white;
+	background:#8e44ad;
+}
+
+#OffPage::before{
+	background:#9b59b6;
+	content:''; position:absolute; z-index:-3; left:0; top:0; width:100%; height:100%;
 }
