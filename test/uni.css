@@ -870,3 +870,29 @@ label{
 #MembMain .BigBtn{
 	margin-bottom:10px;
 }
+
+
+
+
+
+
+/*
+
+=======================================================================
+
+							OFFICER PAGE CSS
+
+=======================================================================
+
+
+*/
+
+
+#OffFrame{
+	margin:0;
+	padding:0;
+	border:none;
+	width:100%;
+	height:calc(100vh - 72px);
+	display:block;
+}
