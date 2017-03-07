@@ -19,7 +19,7 @@ function loadData() {
 			document.getElementById("MeetBox").textContent = "";
 			for(i = 0; i < el["meet"].length; i++){
 				var temp = document.createElement("LI");
-				temp.textContent = timeConverter(parseDate(el["meet"][i]), false);
+				temp.textContent = timeConverter(Date.parse(el["meet"][i]), false);
 				document.getElementById("MeetBox").appendChild(temp);
 				//document.getElementById("MeetBox").innerHTML += "<li>" + el["meet"][i] + "</li>";
 			}
@@ -27,7 +27,7 @@ function loadData() {
 			document.getElementById("CommBox").textContent = "";
 			for(i = 0; i < el['comm'].length; i++){
 				var temp = document.createElement("LI");
-				temp.textContent = timeConverter(parseDate(el["comm"][i]["date"]), true);
+				temp.textContent = timeConverter(Date.parse(el["comm"][i]["date"]), true);
 				var temp2 = document.createElement("P");
 				temp2.textContent = el["comm"][i]["notes"];
 				temp.appendChild(temp2);
@@ -57,8 +57,4 @@ function timeConverter(UNIX_timestamp, wantMin){
 		var time = month + ' ' + date + ', ' + year;
 	}
 	return time;
-}
-
-function parseDate(a){
-	a=a.split(/\W\D?/);return new Date(a[3],"anebarprayunulugepctovec".search(a[1])/2,a[2],a[4],a[5],a[6]);
 }
