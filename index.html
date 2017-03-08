@@ -1,476 +1,259 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Ardrey Kell Technology Student Association</title>
-		<link rel="stylesheet" type="text/css" href="new.css" />
-		<link rel="icon" href="/favicon.ico" type="image/x-icon" />
-		<script src="/JSDep/noframework.waypoints.min.js"></script>
-		<script src="/JSDep/smooth-scroll.js"></script>
+		<title>AK TSA Test Page</title>
+		<link rel="stylesheet" type="text/css" href="uni.css" />
 		
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
-		<meta name="author" content="Michael Xing" />
-		<meta charset="UTF-8" />
-		
-		<link rel="stylesheet" href="/JSDep/ideal-image-slider.css">
-		<link rel="stylesheet" href="/JSDep/ideal-default.css">
-		
-		<script src="/JSDep/ideal-image-slider.js"></script>
-		<script src="/JSDep/ideal-captions.js"></script>
-	</head>
-    <body><!--
-		Nav at the top of page, accessible by scrolling down
-		--><nav id="GlobalNav">
-			<ul>
-				<li><a href="/VEX/">VEX</a></li><!--
-				--><li><a href="/Info">Info</a></li><!--
-				--><li><a><span style="color:#7A52CC;">AK</span> TSA</a></li><!--
-				--><li><a href="/off">Officer Pages</a></li><!--
-				--><li><a href="http://member.aktsa.org/">Login</a></li>
-			</ul>
-		</nav>
-		<!--Sidebar nav-->
-		<nav id="LocalNav">
-			<ul>
-				<li>
-					<input id="SB1" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#AboutHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
-					<label for="SB1"></label>
-					<div>About</div>
-				</li>
-				<li>
-					<input id="SB2" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#ProjectsHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
-					<label for="SB2"></label>
-					<div>Projects</div>
-				</li>
-				<li>
-					<input id="SB3" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#CommHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
-					<label for="SB3"></label>
-					<div>Community</div>
-				</li>
-				<li>
-					<input id="SB4" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#OffHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false, offset:100});" />
-					<label for="SB4"></label>
-					<div>Officers</div>
-				</li>
-				<li>
-					<input id="SB5" type="radio" name="SideBar" onclick="smoothScroll.animateScroll(null, '#AwardHeroFrame', {speed: 1000, easing: 'easeInOutCubic', updateURL: false});" />
-					<label for="SB5"></label>
-					<div>Awards</div>
-				</li>
-			</ul>
-		</nav>
-		
-		<div id="BigPanelWrapperParent"><span id="BigPanelWrapper"><!--
-			The main nav accessible by scrolling all the way up
-			--><a href="/VEX/" class="Panel">
-				<div class="PanelBeforeParent">
-					<div class="PanelBeforeChild"></div>
-					<h2 class="NonDisp">VEX Robotics</h2>
-				</div>
-			</a><!--
-			
-			--><a href="/Info/" class="Panel">
-				<div class="PanelBeforeParent">
-					<div class="PanelBeforeChild"></div>
-					<h2 class="NonDisp">Member Information</h2>
-				</div>
-			</a><!--
-			
-			--><section class="Panel">
-				<div class="PanelBeforeParent">
-					<div class="PanelBeforeChild"></div>
-					<header>
-						<h1 class="NonDisp">
-							<span style="color:#7A52CC;">AK</span> <span style="color:#FF0000">TSA</span>
-						</h1>
-						<h2 class="SecDisp">Innovate Today. Change Tomorrow.</h2>
-						<p class="SecDisp">
-							&#8964; Scroll Down to Learn More &#8964;
-						</p>
-					</header>
-					<div class="TitleBG" id="TitleBG"></div>
-				</div>
-			</section><!--
-			
-			--><a href="/off" class="Panel">
-				<div class="PanelBeforeParent">
-					<div class="PanelBeforeChild"></div>
-					<h2 class="NonDisp">Officer Pages</h2>
-				</div>
-			</a><!--
-			
-			--><a href="http://member.aktsa.org/" class="Panel">
-				<div class="PanelBeforeParent">
-					<div class="PanelBeforeChild"></div>
-					<h2 class="NonDisp">Member Login</h2>
-				</div>
-			</a>
-		</span></div>
-		
-		<div id="AboutHeroFrame">
-			<h2>#ThisIs<span style="color:#c0392b;">TSA</span></h2>
-		</div>
-		
-		<section id="AboutFrame">
-			<div>
-				<p>
-					We are the
-					<span style="color:#7A52CC;">Ardrey Kell High School</span>
-					<span style="color:#FF0000">Technology Student Association</span>,
-					a school supported club that participates in several technology-based events and projects.
-					AK TSA also competes against other schools' TSA clubs at the Regional, State, and National levels!
-				</p>
-			</div>
-		</section>
-		
-		<div id="ProjectsHeroFrame">
-			<h1>Student Projects</h1>
-		</div>
-		
-		<section id="ProjectsFrame">
-			<img class="Projectb ProjLimg" src="/images/IMG_20150322_160628.jpg" alt="VEX Robotics" />
-			<!--<img class="Projectba HoverOp ProjLimg" src="/images/IMG_20150322_160628.jpg" alt="" />-->
-			<div class="Projecta ProjL" id="Project1a">
-				<div>
-					<h2>VEX Robotics</h2>
-					<p>The Technology Student Association at Ardrey Kell builds robots to perform specific tasks both under drive control and autonomously for competition.</p>
-				</div>
-			</div>
-			
-			<img class="Projectb ProjRimg" src="/images/fdesign1.jpg" alt="Fashion Design" />
-			<!--<img class="Projectba HoverOp ProjRimg" src="/images/fdesign1.jpg" alt="" />-->
-			<div id="Project2a" class="Projecta ProjR">
-				<div>
-					<h2>Fashion Design</h2>
-					<p>The Technology Student Association at Ardrey Kell creates and designs new trends in fashion.</p>
-				</div>
-			</div>
-			
-			<img class="Projectb ProjLimg" src="/images/Drone.png" alt="Webmasters" />
-			<!--<img class="Projectba HoverOp ProjLimg" src="/images/Clean.png" alt="" />-->
-			<div class="Projecta ProjL" id="Project3a">
-				<div>
-					<h2>Webmasters</h2>
-					<p>Students from the Technology Student Association at Ardrey Kell create a website promoting awareness of the amazing technology behind drones.</p>
-				</div>
-			</div>
-		</section>
-		
-		<div id="CommHeroFrame">
-			<h1>Community Service</h1>
-		</div>
-		<section id="CommFrame">
-			<!--<img src="/images/cs1.jpg" alt="AK TSA participates in the 2nd Harvest Food Bank" />
-			<div>The AK TSA participates in helping the Second Harvest Food Bank collect money.</div>-->
-			<div id="slider">
-				<img src="/images/cs1.jpg" alt="AK TSA volunteers in the 2nd Harvest Food Bank, collecting donations to help feed people in need.">
-				<img src="/images/cs2.jpg" alt="AK TSA participates in a campus beautification program, helping to pick up trash and keep Ardrey Kell clean.">
-				<img src="/images/cs3.jpg" alt="AK TSA builds robots that help are meant to help young kids learn.">
-			</div>
-
-		</section>
-		
-		<div id="OffHeroFrame">
-		    <h1>Officer Team</h1>
-		</div>
-		<section id="OffFrame">
-		    <table>
-		        <!--<tr>
-					<td colspan="3">Congratulations to our new 2016 officer team!</td>
-				</tr-->
-				<tr>
-		            <td colspan="3">President: Anusha Khansaheb</td>
-		        </tr>
-		        <tr>
-		            <td colspan="2">Vice President: Max Kegley</td>
-		            <td>Secretary: Keon Richard Kim</td>
-		        </tr>
-		        <tr>
-		            <td>Treasurer: Makenzie Kelly</td>
-		            <td>Reporter: Anshool Pradhan</td>
-		            <!--<td>Sergeant At Arms: Rachel Tomas</td>-->
-		            <td>Webmaster: Michael Xing</td>
-		            <!--<td>VEX Fail: Aviral Agarwal</td>-->
-		        </tr>
-		    </table>
-		</section>
-		
-		<div id="AwardHeroFrame">
-			<h1>Awards</h1>
-		</div>
-		<section id="AwardFrame">
-            <!--<p>I honestly don't know off the top of my head what we've managed to win.<br />If you won something last year, let us know!<br />-Your Webmaster Team</p>-->
-			<p>These are the results from NCTSA States, 2016. Congratulations to the following winners:</p>
-			<table id="WeWonStuff">
-				<tr>
-					<th>Event</th>
-					<th>Place</th>
-					<th>Members</th>
-				</tr>
-				<tr>
-					<td>Architectural Renovation</td>
-					<td>1st</td>
-					<td>Jackson Dye, Rachel Ehrman, Anusha Khansaheb, Chase Ralston, & Katie Zhao</td>
-				</tr>
-				<tr>
-					<td rowspan = "2">Biotechnology Design</td>
-					<td>1st</td>
-					<td>Vibhu Ambil, Manivannan Senthil, & Katie Zhao</td>
-				</tr>
-				<tr>
-					<td>3rd</td>
-					<td>Abdurakhmon Abdulatipov, Hannah Dong, Jin Gao, Aryan Gupta, Lucas Lu, & Carissa Tai</td>
-				</tr>
-				<tr>
-					<td>Career Preparation</td>
-					<td>1st</td>
-					<td>Anisha Ponnapati</td>
-				</tr>
-				<tr>
-					<td>CAD 3D, Engineering</td>
-					<td>3rd</td>
-					<td>Aryan Gupta</td>
-				</tr>
-				<tr>
-					<td>Debating Technological Issues</td>
-					<td>2nd</td>
-					<td>Douglas Dubrowski & Matthew Lyons</td>
-				</tr>
-				<tr>
-					<td>Desktop Publishing</td>
-					<td>1st</td>
-					<td>Sunnie Kwak</td>
-				</tr>
-				<tr>
-					<td>Essays on Technology</td>
-					<td>3rd</td>
-					<td>Carolyn Sanderlin</td>
-				</tr>
-				<tr>
-					<td>Extemporaneous Speech</td>
-					<td>2nd</td>
-					<td>Michael Xing</td>
-				</tr>
-				<tr>
-					<td>Flight Endurance</td>
-					<td>2nd</td>
-					<td>Katie Zhao</td>
-				</tr>
-				<tr>
-					<td rowspan = "2">Music Production</td>
-					<td>2nd</td>
-					<td>John Casabonne, Ishan Jolly, Keon Kim, & Grant Kinsey</td>
-				</tr>
-				<tr>
-					<td>3rd</td>
-					<td>Maxwell Kegley & Makenzie Kelly</td>
-				</tr>
-				<tr>
-					<td>Photographic Technology</td>
-					<td>2nd</td>
-					<td>Sabrina Ho</td>
-				</tr>
-				<tr>
-					<td>Prepared Presentation</td>
-					<td>1st</td>
-					<td>Manivannan Sentil</td></td>
-				</tr>
-				<tr>
-					<td>Scientific Visualization</td>
-					<td>3rd</td>
-					<td>Alec Probst & Stephen Wardlaw</td>
-				</tr>
-				<tr>
-					<td>Structural Engineering</td>
-					<td>2nd</td>
-					<td>Kevin Carney & Ishan Jolly</td>
-				</tr>
-				<tr>
-					<td>Systems Control</td>
-					<td></td>
-					<td>Karan Malhotra, Hazim Mukhtar, & Samuel Unferth</td>
-				</tr>
-				<tr>
-					<td>Webmaster</td>
-					<td>1st</td>
-					<td>Aviral Agarwal, Timmothy Rossow, Sarosh Santosh, & Michael Xing </td>
-				</tr>
-			</table>
-		</section>
-        
-        
-        
-        <section id="EndFrame">
-            <p>An <span style="color:red;font-family:'Audiowide', sans-serif;"><span style="color:#7A52CC;">AK</span> TSA</span> Creation</p>
-            <!--<p>Site Design By Michael Xing</p>
-            <p><a href="http://imakewebthings.com/waypoints/">Waypoints.js</a> and <a href="https://github.com/cferdinandi/smooth-scroll">SmoothScroll</a> used under the MIT lictense.</p>-->
-			<p>Click <a href="competition.html">here</a> for credits, thanks, and more.</p>
-        </section>
-        
-        
-        
-        
-        
+		<!--Polyfills-->
+		<script src="promise.js"></script>
+		<script src="fetch.js"></script>
 		<script>
-				
-			
-				
-            	smoothScroll.init(); 
-            	
-				var waypoint = new Waypoint({
-					element: document.getElementById('AboutHeroFrame'),
-					handler: function(direction) {
-						//alert('Basic waypoint triggered')
-						//alert(direction);
-						if(direction == "down"){
-							document.getElementsByTagName("NAV")[0].style.pointerEvents = "all";
-							document.getElementsByTagName("NAV")[0].style.opacity = "1";
-							document.getElementsByTagName("NAV")[1].style.right = "0";
-						} else{
-							document.getElementsByTagName("NAV")[0].style.pointerEvents = "none";
-							document.getElementsByTagName("NAV")[0].style.opacity = "0"; 
-							document.getElementsByTagName("NAV")[1].style.right = "-50px";                          
-						}
-					},
-					offset: 100
-				});
-				var waypoint2 = new Waypoint({
-					element: document.getElementById('AboutFrame'),
-					handler: function(direction) {
-						document.getElementById("AboutFrame").getElementsByTagName("DIV")[0].style.left = "0";
-					},
-					offset:'30%'
-				});
-				var waypoint3 = new Waypoint({
-					element: document.getElementById('Project1a'),
-					handler: function(direction) {
-						document.getElementById("Project1a").style.left = "50vw";
-					},
-					offset:'60%'
-				});
-				var waypoint4 = new Waypoint({
-					element: document.getElementById('Project2a'),
-					handler: function(direction) {
-						document.getElementById("Project2a").style.left = "10vw";
-					},
-					offset:'60%'
-				});
-				var waypoint5 = new Waypoint({
-					element: document.getElementById('Project3a'),
-					handler: function(direction) {
-						document.getElementById("Project3a").style.left = "50vw";
-					},
-					offset:'60%'
-				});
-				/*var waypoint6 = new Waypoint({
-					element: document.getElementById('CommFrame'),
-					handler: function(direction) {
-						document.getElementById("CommFrame").getElementsByTagName("DIV")[0].style.opacity = 1;
-						document.getElementById("CommFrame").getElementsByTagName("DIV")[0].style.top = "75vh";
-					}
-				});*/
-				var waypoint7 = new Waypoint({
-					element: document.getElementById('OffFrame'),
-					handler: function(direction) {
-						document.getElementById("OffFrame").getElementsByTagName("TABLE")[0].style.opacity = 1;
-						document.getElementById("OffFrame").getElementsByTagName("TABLE")[0].style.left = 0;
-					},
-            	    offset:'60%'
-				});
-				var waypoint8 = new Waypoint({
-					element: document.getElementById('AwardFrame'),
-					handler: function(direction) {
-						document.getElementById("WeWonStuff").style.opacity = 1;
-						document.getElementById("WeWonStuff").style.left = 0;
-					},
-            	    offset:'60%'
-				});
-            	
-            	//--------------------
-            	//NAVIGATION WAYPOINTS
-            	//--------------------
-            	var waypointnav1 = new Waypoint({
-					element: document.getElementById('AboutHeroFrame'),
-					handler: function(direction) {
-						if(direction == "down"){
-	        	            document.getElementById("SB1").checked = true;
-						} else{
-							document.getElementById("SB1").checked = false;
-						}
-					},
-					offset:'30%'
-				});
-            	var waypointnav2 = new Waypoint({
-					element: document.getElementById('ProjectsHeroFrame'),
-					handler: function(direction) {
-            	        if(direction == "down"){
-            	            document.getElementById("SB2").checked = true;
-            	        } else{
-            	            document.getElementById("SB1").checked = true;
-            	        }
-					},
-					offset:'50%'
-				});
-            	var waypointnav3 = new Waypoint({
-					element: document.getElementById('CommHeroFrame'),
-					handler: function(direction) {
-            	        if(direction == "down"){
-            	            document.getElementById("SB3").checked = true;
-            	        } else{
-            	            document.getElementById("SB2").checked = true;
-            	        }
-					},
-					offset:'50%'
-				});
-            	var waypointnav4 = new Waypoint({
-					element: document.getElementById('OffHeroFrame'),
-					handler: function(direction) {
-            	        if(direction == "down"){
-            	            document.getElementById("SB4").checked = true;
-            	        } else{
-            	            document.getElementById("SB3").checked = true;
-            	        }
-					},
-					offset:'50%'
-				});
-            	var waypointnav5 = new Waypoint({
-					element: document.getElementById('AwardHeroFrame'),
-					handler: function(direction) {
-            	        if(direction == "down"){
-            	            document.getElementById("SB5").checked = true;
-            	        } else{
-            	            document.getElementById("SB4").checked = true;
-            	        }
-					},
-					offset:'50%'
-				});
-			
-			
-			
-			
-			
-			
-			//WEBKIT Home Fix
-			var isWebkit = 'WebkitAppearance' in document.documentElement.style;
-			if(isWebkit){
-				//alert();
-				document.getElementById("BigPanelWrapper").style.display = "none";
-				var el = document.createElement("IFRAME");
-				el.src = "/old/panel/panel.html";
-				el.style.height = "100%";
-				el.style.width = "100%";
-				el.style.border = "0";
-				el.setAttribute("id", "NewPanelWrapper");
-				
-				document.getElementById("BigPanelWrapperParent").appendChild(el);
+			if (!window.Promise) {
+				window.Promise = Promise;
 			}
-			
-			
-			
-			//Ideal Slider
-			var slider = new IdealImageSlider.Slider('#slider');
-			slider.addCaptions();
-			slider.start();
 		</script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="change.js"></script>
+		
+		<script src="skrollr.js"></script>
+		
+		<script id="pageJS" src="/pageJS/index.js"></script>
+	</head>
+	<body onload="setUpPage();">
+		<nav>
+			<a href="/" class="MainBtn CurrPage"><span>Home</span>
+			</a> <a href="/about.html" class="SurroundBtn">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="/member.html" class="SurroundBtn">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="/off.html" class="SurroundBtn">Officers<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="/cte.html" class="SurroundBtn">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="https://realityplusplus.github.io/" class="SurroundBtn">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="https://aktsa.azurewebsites.net/" class="SurroundBtn">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
+		</nav>
+		<div id="NavBG"><h1 class="MainTitle">AK <span>TSA</span></h1></div>
+		<div class="MainWrap">
+
+
+
+
+			<section class="Hero HomeHero" id="HomeHero">
+				<div class="HomeHeroWrap">
+					<h1 class="MainTitle">AK <span>TSA</span></h1>
+					<h2>Ardrey Kell High School<br />Technology Student Association</h2>
+				</div>
+				
+				
+				<div style="
+							position:fixed;
+							color:white;
+							background:#c0392b;
+							top:72px;
+							z-index:101;
+							right:0;
+							padding:20px;
+							border-top-left-radius:20px;
+							border-bottom-left-radius:20px;
+							text-align:right;
+					">
+					The login button is up here <span style="font-size:300%;line-height:0%;position:relative;top:10px;">&#8657;</span>
+				</div>
+				
+				
+				<div style="
+							position:absolute;
+							color:white;
+							background:#2c3e50;
+							bottom:0;
+							z-index:100;
+							left:0;
+							max-width:30vw;
+							padding:20px 20px 20px 40px;
+							border-top-right-radius:20px;
+							text-align:left;
+					">
+					We're trialing a new website design. It's not final yet. Please don't freak out if anything breaks.
+				</div>
+			</section>
+
+
+
+
+			<div class="ContentWrap" id="HomeCW">
+				
+				
+				<!--
+				
+				=========================================================================================
+				
+												PRIMARY CONTENT BEGINS HERE
+
+				=========================================================================================
+ 
+				-->
+				
+				
+				<section id="HeroMotto">
+					<h2>Innovate Today. Change Tomorrow.</h2>
+				</section>
+				
+
+				<div style="position:relative;height:50vh"><div class="PicDiv" style="
+							width:100vw;
+							background-image:url('/images/fdesign2.jpg');
+							background-position:top center;
+							position:absolute;
+						" data--1-top="height:0vh;" data-top="height:100vh;"></div></div>
+				
+				<div style="position:relative;" data-bottom-top="top:-100vh;" data-top="top:0vh;">
+					<div class="PicDiv" id="SlantPicDiv1" style="
+							position:absolute; top:0;
+							height:100vh;width:100vw;
+							transform:skew(30deg);
+							z-index:5;
+							left:-150vw;
+						" data-bottom-top="left:-150vw;" data-top="left:175vw;"></div>
+					<div class="PicDiv" id="SlantPicDiv2" style="
+							position:absolute; top:0;
+							height:100vh;width:100vw;
+							transform:skew(-30deg);
+							z-index:5;
+							right:-150vw;
+						" data-bottom-top="right:-150vw;" data-top="right:175vw;"></div>
+				</div>
+
+				
+				<section id="IntroFrame" class="InfoFrame" style="margin-top:10vh;margin-bottom:40vh;">
+					<p>We are the Ardrey Kell High School Technology Student Association.<br />We are a club of students that participates in technology-based projects. We are a team that competes in TSA conferences in the regional, state, and national levels. Above all, we are a band of enthusiasts that come together to share our love of science, technology, engineering, and math, and to push the boundaries of what's possible. </p>
+				</section>
+				
+				
+				
+				
+				
+				
+				<div style="position:relative;height:100vh;" data-bottom-top="top:-100vh;" data-top="top:0;">
+					<div class="PicDiv" style="
+							position:absolute; top:0;
+							height:calc(50vh + 36px);
+							width:100vw;
+							background-image:url('/images/IMG_20150322_160628.jpg');
+							z-index:5;
+							left:-100vw;
+						" data-bottom-top="left:-100vw;" data-top="left:100vw;"></div>
+					<div style="
+							position:absolute; top:0;
+							width:100vw; height:100vh;
+							z-index:5;
+							right:-100vw;
+						" data-bottom-top="right:-100vw;" data-top="right:100vw;">
+						<div class="PicDiv" style="
+							background-image:url('/images/CTEProj3.jpg');
+							background-position-y:10vh;
+							height:calc(50vh - 36px); width:100%;
+							bottom:0; position:absolute;
+												   "></div>
+					</div>
+				</div>
+				
+				
+				
+				
+				<section class="InfoFrame" style="margin-top:-40vh;margin-bottom:20vh;">
+					<p>Innovate Today. Change Tomorrow.<br />Our motto is a reflection of what we believe to be not only true, but possible. In our modern, interconnected world, technology literacy is more important than ever. The wonder of technology is that it allows anyone, no matter their age, gender, race, ethnicity, religion, or any other factor, to be the change they wish to see in the world. Technology empowers everyone to do great things. And that's exactly what we aim to do.</p>
+				</section>
+
+				
+				
+				
+				
+
+				<div style="position:relative;height:100vh;" data-bottom-top="top:-100vh;" data-top="top:0;">
+					<div class="PicDiv" style="
+							position:absolute; top:0;
+							height:100vh;
+							width:100%;
+							background-image:url('/images/cs1.jpg');
+							z-index:5;
+						" data-bottom-top="left:-100%;" data-top="left:100%;"></div>
+					<div class="PicDiv" style="
+							position:absolute; top:0;
+							height:100vh;
+							width:100%;
+							background-image:url('/images/CTEProj1.jpg');
+							z-index:5;
+							bottom:-100vh;
+						" data-bottom-top="right:-100%;" data-top="right:100%;"></div>
+				</div>
+				
+				
+				
+				
+				<section class="InfoFrame" style="margin-top:-40vh;display:flex;align-items:center;">
+					
+					<img src="/images/new/crest.png" alt="The official crest of AK TSA" style="width:15vw;" />
+					<p style="float:right;text-align:left;">The official crest of the AK TSA is something really cool, I'm sure. Unfortunately, I haven't found anyone good enough at Illustrator to draw and good enough at BSing corporate speak to describe it yet. Therefore, you get to look at this amazingly drawn placeholder that I made in MS Paint. I don't know why I insisted on writing out the words with a trackpad rather than just using the text tool. It actually took more work this way.</p>
+				</section>
+				
+				
+				
+				
+
+				
+				<div style="position:relative;height:150vh;" data-bottom-top="top:-100vh;" data-top="top:0;">
+					<div class="PicDiv" id="SlantPicDiv3" style="
+							position:absolute; top:0;
+							height:150vh;width:100vw;
+							transform:skew(-30deg);
+							z-index:5;
+							left:-150vw;
+						" data-bottom-top="left:-150vw;" data-top="left:150vw;"></div>
+					<div class="PicDiv" id="SlantPicDiv4" style="
+							position:absolute; top:0;
+							height:150vh;width:100vw;
+							transform:skew(30deg);
+							z-index:5;
+							right:-150vw;
+						" data-bottom-top="right:-150vw;" data-top="right:150vw;"></div>
+				
+
+
+					<div class="PicDiv" id="SlantPicDiv5" style="
+							position:absolute; top:0;
+							height:150vh;width:100vw;
+							transform:skew(30deg);
+							z-index:5;
+							left:-150vw;
+						" data-bottom-top="left:-150vw;" data-top="left:150vw;"></div>
+					<div class="PicDiv" id="SlantPicDiv6" style="
+							position:absolute; top:0;
+							height:150vh;width:100vw;
+							transform:skew(-30deg);
+							z-index:5;
+							right:-150vw;
+						" data-bottom-top="right:-150vw;" data-top="right:150vw;"></div>
+				</div>
+				
+				<div style="height:100vh;margin-top:-100vh;">
+					<section class="InfoFrame InvertFrame" style="padding:80px 0;position:relative;top:calc(50vh + 36px);transform:translateY(-50%);">
+						<p style="font-weight:bold;margin:0;font-size:500%;" class="MainTitle">AK <span>TSA</span></p>
+						<p style="margin:0;position:relative;top:-20px;">Advisor: Mr. Sheffield &nbsp;&nbsp;&nbsp; Room A304<br />Website by Michael Xing</p>
+					</section>
+				</div>
+			
+			</div>
+		</div>
+		
+		
+		   <script>
+			   if (document.documentMode || /Edge/.test(navigator.userAgent)) {
+				   console.log("IE or Edge; Utilizing JS Scroll to disable jitteryness")
+				   $('body').on("mousewheel", function () {
+						event.preventDefault();
+						var wd = event.wheelDelta;
+						var csp = window.pageYOffset;
+						window.scrollTo(0, csp - wd);
+				   });
+			   }
+    </script>
 	</body>
 </html>

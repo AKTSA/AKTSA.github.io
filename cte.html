@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>AK CTE Test Page</title>
+		<link rel="stylesheet" type="text/css" href="uni.css" />
+		
+		<!--Polyfills-->
+		<script src="promise.js"></script>
+		<script src="fetch.js"></script>
+		<script>
+			if (!window.Promise) {
+				window.Promise = Promise;
+			}
+		</script>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="change.js"></script>
+		
+		<script src="skrollr.js"></script>
+		
+		<script id="pageJS" src="/pageJS/cte.js"></script>
+	</head>
+	<body onload="setUpPage();">
+		<nav>
+			<a href="/" class="MainBtn"><span>Home</span>
+			</a> <a href="/about.html" class="SurroundBtn">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="/member.html" class="SurroundBtn">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="/off.html" class="SurroundBtn">Officers<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="//cte.html" class="SurroundBtn CurrPage">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="https://realityplusplus.github.io/" class="SurroundBtn">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="https://aktsa.azurewebsites.net/" class="SurroundBtn">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
+		</nav>
+		<div id="NavBG"><h1 class="MainTitle">AK <span>TSA</span></h1></div>
+		<div class="MainWrap">
+			<div class="ContentWrap">
+				
+				
+				<!--
+				
+				=========================================================================================
+				
+												PRIMARY CONTENT BEGINS HERE
+
+				=========================================================================================
+ 
+				-->
+				
+                <iframe id="OffFrame" src="/old/AKCTE" style="height:calc(100vh + 100px);position:absolute;top:-100px;"></iframe>
+				
+
+				<div style="
+							position:absolute;
+							color:white;
+							background:#2c3e50;
+							bottom:0;
+							z-index:100;
+							left:0;
+							max-width:30vw;
+							padding:20px;
+							border-top-right-radius:20px;
+							text-align:right;
+					">
+					This page is unfinished.
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
