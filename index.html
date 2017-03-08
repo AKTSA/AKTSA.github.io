@@ -244,16 +244,6 @@
 		</div>
 		
 		
-		   <script>
-			   if (document.documentMode || /Edge/.test(navigator.userAgent)) {
-				   console.log("IE or Edge; Utilizing JS Scroll to disable jitteryness")
-				   $('body').on("mousewheel", function () {
-						event.preventDefault();
-						var wd = event.wheelDelta;
-						var csp = window.pageYOffset;
-						window.scrollTo(0, csp - wd);
-				   });
-			   }
-    </script>
+		   
 	</body>
 </html>
