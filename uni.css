@@ -36,6 +36,7 @@ nav{
 	color:white;
 	z-index:100;
 	text-align:right;
+	white-space:nowrap;
 }
 
 nav a{
