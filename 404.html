@@ -2,12 +2,103 @@
 <html>
 	<head>
 		<title>404 AK TSA</title>
+		<style>
+		@import url(http://fonts.googleapis.com/css?family=Audiowide);
+			body{
+				background:#c0392b;color:white;
+			}
+			.deepshadow {
+    text-shadow: 
+      0 -1px 0 #fff, 
+      0 1px 0 #2e2e2e, 
+      0 2px 0 #2c2c2c, 
+      0 3px 0 #2a2a2a, 
+      0 4px 0 #282828, 
+      0 5px 0 #262626, 
+      0 6px 0 #242424, 
+      0 7px 0 #222, 
+      0 8px 0 #202020, 
+      0 9px 0 #1e1e1e, 
+      0 10px 0 #1c1c1c, 
+      0 11px 0 #1a1a1a, 
+      0 12px 0 #181818, 
+      0 13px 0 #161616, 
+      0 14px 0 #141414, 
+      0 15px 0 #121212, 
+      0 22px 30px rgba(0, 0, 0, 0.9);
+				font-family:"Audiowide", sans-serif;
+				color: #e0dfdc;
+				font-size:1000%;margin:0;
+ 				
+			}
+			
+			
+
+.BigBtn{
+	background:none;
+	font-size:16px;
+	vertical-align:top;
+	color:black;
+	padding:12px 27px;
+	display:inline-block;
+	border:3px #000 solid;
+	position:relative;
+	transition: color 0.5s ease-in, border 0.2s ease;
+	overflow:hidden;
+	cursor:pointer;
+	text-decoration:none;
+}
+.BigBtn:hover{
+	color:white;
+	transition: color 0.5s ease-out, border 0.2s ease;
+}
+.BigBtn:active{
+	
+	border:3px #8e44ad solid;
+}
+
+
+.BigBtn::before{
+	content:'';
+	background:white;
+	width:100%;
+	height:100%;
+	position:absolute;
+	left: 0; top:0;
+	z-index:-2;
+}
+
+.BigBtn::after{
+	content:'';
+	background:#8e44ad;
+	width:200%;
+	height:100%;
+	position:absolute;
+	right: 150%; bottom:0;
+	z-index:-1;
+	transform:skewX(45deg);
+	transition: right 0.5s ease-in, background 0.2s ease;
+}
+.BigBtn:hover::after{
+	right:-50%;
+	transition: right 0.5s ease-out, background 0.2s ease;;
+}
+.BigBtn:active::after{
+	background:black;
+}
+			
+
+			p{
+				margin:0;
+			}
+		</style>
 	</head>
 	<body>
 		<div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);font-family:sans-serif;text-align:center;">
-			<h1 style="font-size:1000%;color:red;margin:0;">404</h1>
+			<h1 class="deepshadow">404</h1>
 			<h2>Aviral Broke It<sup style="font-size:50%;">TM</sup> :(</h2>
-			<a style="margin-top:20vh;" href="/">Back Home</a>
+			<p><a class="BigBtn" href="/">Home Page</a> <button onclick="window.history.back();" class="BigBtn">Back</button></p>
+		
 		</div>
 	</body>
 </html>
