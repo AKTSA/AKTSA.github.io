@@ -547,7 +547,7 @@ label{
 	list-style:none;
 	height:100%;
 	width:20%;
-	overflow-y:scroll;
+	overflow-y:hidden;
 	overflow-x:hidden;
 }
 .PhotoGallery li{
@@ -571,13 +571,15 @@ label{
 	width:100%;
 	left:0; top:0;
 	z-index:1; position:relative;
+	text-shadow:none;
 	
-	transition: background 0.5s ease-out, padding 0.5s ease-out;
+	transition: background 0.5s ease-out, padding 0.5s ease-out, text-shadow 0.5s ease;
 }
 .PhotoGallery input:checked+label{
 	color:black;
-	background:rgba(255, 255, 255, 0.4);
+	background:rgba(255, 255, 255, 0);
 	padding: 0 0 0 20px;
+	text-shadow: 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white, 0px 0px 1px white;
 }
 
 .PhotoGallery div{
