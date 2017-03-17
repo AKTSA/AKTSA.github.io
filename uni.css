@@ -249,6 +249,7 @@ nav a{
 }
 .BigBtn:active::after{
 	background:black;
+	transition: right 0.05s ease-out, background 0.2s ease;;
 }
 
 
