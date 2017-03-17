@@ -19,7 +19,7 @@ function loadPage(url) {
 
 function changePage() {
 	var url = window.location.href;
-
+	
 	loadPage(url).then(function(responseText) {
 		var wrapper = document.createElement('div');
 		wrapper.innerHTML = responseText;
@@ -161,7 +161,7 @@ function setUpPage(){
 			
 			newUnload();
 			
-			
+			window.setTimeout(function(){window.location.assign(el.href);},3000);//Fail safe in case of error
 			var temp = document.getElementsByClassName("SurroundBtn");
 			for(i = 0; i < temp.length; i++){
 				temp[i].className = "SurroundBtn";
@@ -174,7 +174,9 @@ function setUpPage(){
 			
 			history.pushState(null, null, el.href);
 			changePage();
-
+			
+			
+			
 			return;
 		}
 	});
