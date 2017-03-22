@@ -161,7 +161,7 @@ function setUpPage(){
 			
 			newUnload();
 			
-			window.setTimeout(function(){window.location.assign(el.href);},3000);//Fail safe in case of error
+			window.setTimeout(function(){window.location.assign(el.href);},2000);//Fail safe in case of error
 			var temp = document.getElementsByClassName("SurroundBtn");
 			for(i = 0; i < temp.length; i++){
 				temp[i].className = "SurroundBtn";
