@@ -846,6 +846,7 @@ label{
 	position:relative;
 	overflow:hidden;
 	z-index:1;
+	background-position:center;background-size:cover;
 }
 #MembMain .HoverBox{
 	width:calc(100% - 10px);
@@ -1192,4 +1193,386 @@ label{
 .CTETeach .InfoCell p{
 	margin: 0 20px 20px 20px !important;
 	text-align:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+================================================
+
+		MOBILE AND SMALL SCREEN WIDTH
+
+================================================
+*/
+@media (max-width : 1079px) {/*Fix that dumb nav overlap*/
+	nav a{
+		padding-left: 5px !important;
+		padding-right:5px !important;
+	}
+	#MemberHeroWord{
+		display:none;
+	}
+}
+@media (max-width : 500px){
+	section.HeroWrap, .HomeHero, #HeroMotto{
+		margin-left:0 !important;
+		margin-right:0 !important;
+	}
+	.HeroWrap h1{
+		padding: 0 !important;
+		text-align:center !important;
+	}
+	section{
+		margin-left:10px !important;
+		margin-right: 10px !important;
+	}
+	.InfoFrame{
+		margin-left: 30% !important;
+	}
+}
+@media (max-width : 700px) {
+	body{
+		font-size:80%;
+	}
+	nav{
+		top:11px;
+		
+		right:-110px;
+		transition: right 0.5s ease;
+	}
+	nav::before{
+		content:'Navigation';
+		background:black;
+		text-align:center;
+		width:100px;
+		height:50px;
+		line-height:50px;
+		right:120px;
+		position:absolute;
+		transform:translateX(0px);
+		transition: transform 0.5s ease;
+		top:0;
+	}
+	nav:hover{
+		right:0px;
+	}
+	nav:hover::before{
+		transform:translateX(110px);
+	}
+	
+	nav a:nth-child(1){
+		margin-top:50px !important;;
+	}
+	
+	nav a{
+		display:block !important;
+		text-align:center;
+		
+		background:#2c3e50 !important;
+		border:none !important;
+		color:white !important;
+		
+		margin:0 !important;
+		padding-left:0 !important;
+		padding-right:0 !important;
+		width:110px;
+		
+		transition: background 0.5s ease, color 0.5s ease !important;
+	}
+	nav .MainBtn{
+		font-weight:bold;
+	}
+	nav a:hover{
+		background:rgba(0,0,0,0.5) !important;
+	}
+	nav a:active{
+		background:rgba(255,255,255,0.5) !important;
+		color:black !important;
+	}
+	nav a::before{
+		display:none !important;
+	}
+	nav a::after{
+		display:none !important;
+	}
+	nav div{
+		display:none !important;
+	}
+	nav .CurrPage{
+		color:black !important;
+		background:white !important;
+	}
+	
+	
+	
+	
+	
+	/*
+		ABOUT PAGE
+	*/
+	.PhotoGallery{
+		width:100%;
+		margin: 30px auto;
+		height:inherit;
+		position:relative;
+		overflow-y:auto;
+		box-shadow:none; 
+	}
+	.PhotoGallery::after{
+		display:none;
+	}
+	.PhotoGallery ul{
+		margin:0; padding:0;
+		list-style:none;
+		height:100%;
+		width:100%;
+		
+	}
+	.PhotoGallery li{
+		margin:0; padding:0;
+		display:block;
+		height:initial;
+	}
+	.PhotoGallery input{
+		display:none;
+	}
+	
+	.PhotoGallery label{
+		display:block;
+		line-height:initial;
+		color:black;
+		background:none;
+		padding: 20px 0 !important;
+		box-shadow:none;
+		font-size:125%;
+		
+		
+		text-shadow:none;
+		text-align:center;
+		transition:none;
+		pointer-events:none;
+	}
+	
+	.PhotoGallery div{
+		position:relative;
+		top:0; left:0; width:100%; height:100%;
+		background:black;
+		z-index:-2;
+		overflow:hidden;
+		text-align:center;
+		
+		transform:none;
+	}
+	
+	.PhotoGallery div p{
+		position:absolute;
+		max-width:100%;
+		width:calc(100% - 40px);
+		text-align:left;
+	}
+	
+	
+	#CommServ .TableOut, #OffIntro .TableOut{
+		display:block;
+		background:none;
+	}
+	#CommServ .TableRow, #OffIntro .TableRow{
+		display:block;
+	}
+	#CommServ .TableCel{
+		display:block;
+		margin-top:20px;
+		width:100%;
+		box-shadow:none;
+		
+		transition:none;
+		transform:none;
+		
+		overflow-y:auto;
+		
+	}
+	#CommServ .TableCel:hover{
+		transform:none;
+	}
+	
+	#CommServ .TextWrap{
+		position:relative;
+		transform:translateY(0);
+		transition:none;
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	#OffIntro .TableOut{
+		color:white;
+		text-align:center;
+	}
+	#OffIntro .TableCel{
+		width:100%; height:100%;
+		min-height:400px;
+		box-shadow:none;
+		position:relative; z-index:1;
+		display:block;
+		
+		transition:none;
+		transform:none;
+		
+		overflow-y:auto;
+		
+		margin-top:20px;
+		
+	}
+	#OffIntro .TableCel:hover{
+		transform:none;
+	}
+	
+	#OffIntro .TextWrap{
+		position:relative;
+		/*background:rgba(0,0,0,0.3);*/
+		transform:none;
+		transition: none;
+		text-align:left;
+		width:100%;
+		top:0;
+		bottom:initial;
+		left:0;
+		color:white; text-decoration:none;
+	}
+	#OffIntro h3{
+		padding-left:5px;
+	}
+	
+	
+	
+	/*
+		MEMBER PAGE
+	*/
+	
+	
+	
+	#MembMain{
+		width:initial !important;
+		margin-left:10px;
+		margin-right:10px;
+		margin-top:-40vh;
+		background:#ecf0f1;
+		position:relative;
+		z-index:5;
+		min-height:500px;
+		padding-top:20px;
+	}
+	
+	#MembMain .Lean{
+		display:block;
+		width:100%;
+		margin:0;
+		vertical-align: top;
+	}
+	
+	#MembMain .UpBox{
+		display:block;width:100%;
+		height:initial;
+		min-height:10vw;
+		overflow:auto;
+		background-size:contain;
+		background-repeat:no-repeat;
+		background-position:left;
+	}
+	#MembMain .HoverBox{
+		width:calc(100% - 20px);
+		position:relative;
+		height:100%;
+		min-height:10vw;
+		color:white;
+		padding:0 5px;
+		
+		display:flex;
+		align-items:center;
+		
+		
+		
+		top:0;right:0;
+		text-align:right !important;
+		transition: none;
+	}
+	#MembMain a{
+		text-decoration:none !important;
+	}
+	#MembMain .UpBox p{
+		width:100%;
+		text-decoration:none !important;
+		padding-left:40px;
+	}
+	#MembMain .UpBox::before{
+		display:none;
+	}
+	
+	#MembMain .UpBox:nth-child(1){
+		background-color:rgb(58,88,158);
+	}
+	#MembMain .UpBox:nth-child(2){
+		background-color:rgb(97,170,223);
+	}
+	#UpBox3{
+		background-color:rgb(226,18,78) !important;
+	}
+	#UpBox4{
+		background-color:rgb(51,51,51) !important;
+	}
+	
+	
+	/*
+		CTE Teachers
+	*/
+	.CTETeach .TableOut{
+		min-height:30vw !important;
+		width:100% !important;
+		position:relative;
+	}
+	.CTETeach .TableCel{
+		height:initial !important;
+		overflow:auto;
+		width:100% !important;
+		box-shadow:none !important;
+		pointer-events:none;
+		display:none !important;
+	}
+	
+	.CTETeach .InfoCell{
+		position:relative; left:0;top:0;width:100%;height:initial;
+		color:white;
+		
+		z-index:4;
+		
+		transition:none;
+		overflow-y:auto;
+		margin-top:20px;
+		
+		background:#34495e;
+		box-shadow: none !important;
+	}
+	
+	.CTETeach .InfoCell h3{
+		margin:20px !important;
+	}
+	.CTETeach .InfoCell p{
+		margin: 0 20px 20px 20px !important;
+		text-align:left;
+	}
 }
