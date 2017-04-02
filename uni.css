@@ -633,6 +633,7 @@ label{
 	color:white;
 	background:black;
 	text-align:center;
+	height:300px;
 }
 #CommServ .TableCel{
 	width:33%; height:100%;
@@ -645,7 +646,7 @@ label{
 	transform:scale(1);
 	
 	overflow-y:hidden;
-	
+	overflow:hidden;
 }
 #CommServ .TableCel:hover{
 	transform:scale(1.05);
@@ -690,6 +691,7 @@ label{
 #OffIntro .TableOut{
 	width:100%;
 	min-height:300px;
+	height:300px;
 	color:white;
 	background:black;
 	text-align:center;
@@ -705,7 +707,7 @@ label{
 	transform:scale(1);
 	
 	overflow-y:hidden;
-	
+	overflow:hidden;
 }
 #OffIntro .TableCel:hover{
 	transform:scale(1.05);
