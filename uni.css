@@ -1388,6 +1388,7 @@ label{
 	#CommServ .TableOut, #OffIntro .TableOut{
 		display:block;
 		background:none;
+		height:initial !important;
 	}
 	#CommServ .TableRow, #OffIntro .TableRow{
 		display:block;
@@ -1546,6 +1547,7 @@ label{
 		min-height:30vw !important;
 		width:100% !important;
 		position:relative;
+		height:initial !important;
 	}
 	.CTETeach .TableCel{
 		height:initial !important;
