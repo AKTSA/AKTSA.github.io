@@ -747,16 +747,16 @@ label{
 	background-image:url('/images/max.jpg');
 }
 #OffIntro .TableCel:nth-child(3){
-	background-image:url('http://i.imgur.com/X6OtAFW.jpg');
-}
-#OffIntro .TableCel:nth-child(4){
 	background-image:url('/images/Makenzie.jpg');
 }
-#OffIntro .TableCel:nth-child(5){
+#OffIntro .TableCel:nth-child(4){
 	background-image:url('https://pbs.twimg.com/profile_images/736763645510725632/ICe9Z_2V.jpg');
 }
-#OffIntro .TableCel:nth-child(6){
+#OffIntro .TableCel:nth-child(5){
 	background-image:url('https://michaelxing.tk/old/aktsa/img/nats.jpg');
+}
+#OffIntro .TableCel:nth-child(6){
+	background-image:url('http://i.imgur.com/X6OtAFW.jpg');
 }
 
 #WeWonStuff{
