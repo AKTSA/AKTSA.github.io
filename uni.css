@@ -1635,4 +1635,23 @@ label{
 		margin: 0 20px 20px 20px !important;
 		text-align:left;
 	}
+	
+	#ClassClose{
+		display:none;
+	}
+	
+	#CTEHero{
+		font-size:80%;
+	}
+	#CTEHero img{
+		max-width:30vh !important;
+	}
+	#CTEHero span{
+		left:-20vh;
+		position:relative;top:-5vh;
+	}
+	#CTEHero p{
+		left:30vh !important;
+		top:-30vh !important;
+	}
 }
