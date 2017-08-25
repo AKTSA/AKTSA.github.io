@@ -217,7 +217,7 @@ nav a{
 	transition: color 0.5s ease-out, border 0.2s ease;
 }
 .BigBtn:active{
-	
+
 	border:3px #8e44ad solid;
 }
 
@@ -283,7 +283,7 @@ nav a{
 	position:absolute;
 	left: 0; top:0;
 	z-index:-2;
-	
+
 	transition: background 0.2s ease;
 }
 
@@ -330,23 +330,23 @@ nav a{
 	position:relative;
 	z-index:10;
 }
- 
+
 /* Track
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 0;
 }
- 
+
 /* Handle
 ::-webkit-scrollbar-thumb {
     border-radius: 0;
-    background: rgba(0,0,255,0.3); 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background: rgba(0,0,255,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-	background: rgba(0,0,255,0.2); 
+	background: rgba(0,0,255,0.2);
 }
 */
 
@@ -388,6 +388,7 @@ code{background:#2c3e50;color:white;font-family:'Lucida Console',monospace;paddi
 #HomeHero{
 	background-color:#2c3e50;
 	background-position:left center;
+	/*background-image: url('https://scontent-iad3-1.cdninstagram.com/t51.2885-15/e35/19436835_1932687060307712_3855680124024258560_n.jpg');*/
 	background-image:url('/images/new/heroBGTEST.JPG');
 	/*background-image:url('/images/IMG_20150322_160628.jpg');*/
 	color:white;
@@ -590,7 +591,7 @@ label{
 	height:500px;
 	position:relative;
 	overflow-y:hidden;
-	box-shadow: inset 0 0 20px rgba(0,0,0,0.5); 
+	box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
 }
 .PhotoGallery::after{
 	content:'';
@@ -622,14 +623,14 @@ label{
 	color:white;
 	background:#34495e;
 	margin:0; padding: 0 5px 0 15px;
-	box-shadow: inset 0 0 5px rgba(0,0,0,0.3); 
-	
+	box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+
 	height:100%;
 	width:100%;
 	left:0; top:0;
 	z-index:1; position:relative;
 	text-shadow:none;
-	
+
 	transition: background 0.5s ease-out, padding 0.5s ease-out, text-shadow 0.5s ease;
 }
 .PhotoGallery input:checked+label{
@@ -647,7 +648,7 @@ label{
 	transition: transform 1s ease;
 	overflow:hidden;
 	text-align:center;
-	
+
 	transform:translateY(-100%);
 }
 .PhotoGallery label:hover+div{
@@ -693,14 +694,14 @@ label{
 }
 #CommServ .TableCel{
 	width:33%; height:100%;
-	box-shadow: inset 0 0 10px rgba(0,0,0,0.5); 
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
 	background-position:center;
 	background-size:cover;
 	position:relative; z-index:1;
-	
+
 	transition:transform 0.5s ease;
 	transform:scale(1);
-	
+
 	overflow-y:hidden;
 	overflow:hidden;
 }
@@ -720,7 +721,7 @@ label{
 	transition: transform 0.5s ease;
 	height:100%; width:100%;
 	min-height:300px;
-	
+
 	display: flex;
 	align-items: center;
 }
@@ -754,14 +755,14 @@ label{
 }
 #OffIntro .TableCel{
 	width:16.6%; height:100%;
-	box-shadow: inset 0 0 10px rgba(0,0,0,0.5); 
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
 	background-position:center;
 	background-size:cover;
 	position:relative; z-index:1;
-	
+
 	transition:transform 0.5s ease;
 	transform:scale(1);
-	
+
 	overflow-y:hidden;
 	overflow:hidden;
 }
@@ -912,7 +913,7 @@ label{
 	height:100%;
 	color:white;
 	padding:0 5px;
-	
+
 	top:-100%;
 	transition: top 0.5s ease;
 }
@@ -1006,7 +1007,7 @@ label{
 }
 
 #OffPage::before{
-	background:#9b59b6;
+	/*background:#9b59b6;*/
 	content:''; position:absolute; z-index:-3; left:0; top:0; width:100%; height:100%;
 }
 
@@ -1076,8 +1077,8 @@ label{
 	overflow-y:hidden;
 	background:#34495e;
 	color:white;
-	
-	box-shadow: inset 0 0 10px rgba(0,0,0,0.5); 
+
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
 }
 #CTEClasses .ClassOpen p{
 	color:white;
@@ -1145,9 +1146,9 @@ label{
 	background-position:center;
 	min-height:70vh;
 	z-index:0;
-	
-	box-shadow: inset 0 0 10px rgba(0,0,0,0.5); 
-	
+
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+
 	transition:background 0.5s ease;
 	background-image:url('/images/VRobots4.jpg');
 }
@@ -1211,7 +1212,7 @@ label{
 	background:rgba(44, 62, 80,0.7);
 	padding:1vw 2vw;
 	max-width:40vw;
-	
+
 	transition: opacity 0.5s ease 0.6s;
 	z-index:2;
 	color:white;
@@ -1238,10 +1239,10 @@ label{
 .CTETeach .InfoCell{
 	position:absolute; left:0;top:0;width:100%;height:100%;
 	 color:white;
-	
+
 	transition: left 0.5s ease;
 	overflow-y:auto;
-	
+
 	background:#34495e;box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
 }
 
@@ -1305,7 +1306,7 @@ label{
 	}
 	nav{
 		top:11px;
-		
+
 		right:-110px;
 		transition: right 0.5s ease;
 	}
@@ -1328,24 +1329,24 @@ label{
 	nav:hover::before{
 		transform:translateX(110px);
 	}
-	
+
 	nav a:nth-child(1){
 		margin-top:50px !important;;
 	}
-	
+
 	nav a{
 		display:block !important;
 		text-align:center;
-		
+
 		background:#2c3e50 !important;
 		border:none !important;
 		color:white !important;
-		
+
 		margin:0 !important;
 		padding-left:0 !important;
 		padding-right:0 !important;
 		width:110px;
-		
+
 		transition: background 0.5s ease, color 0.5s ease !important;
 	}
 	nav .MainBtn{
@@ -1371,11 +1372,11 @@ label{
 		color:black !important;
 		background:white !important;
 	}
-	
-	
-	
-	
-	
+
+
+
+
+
 	/*
 		ABOUT PAGE
 	*/
@@ -1385,7 +1386,7 @@ label{
 		height:inherit;
 		position:relative;
 		overflow-y:auto;
-		box-shadow:none; 
+		box-shadow:none;
 	}
 	.PhotoGallery::after{
 		display:none;
@@ -1395,7 +1396,7 @@ label{
 		list-style:none;
 		height:100%;
 		width:100%;
-		
+
 	}
 	.PhotoGallery li{
 		margin:0; padding:0;
@@ -1405,7 +1406,7 @@ label{
 	.PhotoGallery input{
 		display:none;
 	}
-	
+
 	.PhotoGallery label{
 		display:block;
 		line-height:initial;
@@ -1414,14 +1415,14 @@ label{
 		padding: 20px 0 !important;
 		box-shadow:none;
 		font-size:125%;
-		
-		
+
+
 		text-shadow:none;
 		text-align:center;
 		transition:none;
 		pointer-events:none;
 	}
-	
+
 	.PhotoGallery div{
 		position:relative;
 		top:0; left:0; width:100%; height:100%;
@@ -1429,18 +1430,18 @@ label{
 		z-index:-2;
 		overflow:hidden;
 		text-align:center;
-		
+
 		transform:none;
 	}
-	
+
 	.PhotoGallery div p{
 		position:absolute;
 		max-width:100%;
 		width:calc(100% - 40px);
 		text-align:left;
 	}
-	
-	
+
+
 	#CommServ .TableOut, #OffIntro .TableOut{
 		display:block;
 		background:none;
@@ -1454,30 +1455,30 @@ label{
 		margin-top:20px;
 		width:100%;
 		box-shadow:none;
-		
+
 		transition:none;
 		transform:none;
-		
+
 		overflow-y:auto;
-		
+
 	}
 	#CommServ .TableCel:hover{
 		transform:none;
 	}
-	
+
 	#CommServ .TextWrap{
 		position:relative;
 		transform:translateY(0);
 		transition:none;
-		
-		
+
+
 	}
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 	#OffIntro .TableOut{
 		color:white;
 		text-align:center;
@@ -1488,19 +1489,19 @@ label{
 		box-shadow:none;
 		position:relative; z-index:1;
 		display:block;
-		
+
 		transition:none;
 		transform:none;
-		
+
 		overflow-y:auto;
-		
+
 		margin-top:20px;
-		
+
 	}
 	#OffIntro .TableCel:hover{
 		transform:none;
 	}
-	
+
 	#OffIntro .TextWrap{
 		position:relative;
 		/*background:rgba(0,0,0,0.3);*/
@@ -1516,15 +1517,15 @@ label{
 	#OffIntro h3{
 		padding-left:5px;
 	}
-	
-	
-	
+
+
+
 	/*
 		MEMBER PAGE
 	*/
-	
-	
-	
+
+
+
 	#MembMain{
 		width:initial !important;
 		margin-left:10px;
@@ -1536,14 +1537,14 @@ label{
 		min-height:500px;
 		padding-top:20px;
 	}
-	
+
 	#MembMain .Lean{
 		display:block;
 		width:100%;
 		margin:0;
 		vertical-align: top;
 	}
-	
+
 	#MembMain .UpBox{
 		display:block;width:100%;
 		height:initial;
@@ -1560,12 +1561,12 @@ label{
 		min-height:10vw;
 		color:white;
 		padding:0 5px;
-		
+
 		display:flex;
 		align-items:center;
-		
-		
-		
+
+
+
 		top:0;right:0;
 		text-align:right !important;
 		transition: none;
@@ -1581,7 +1582,7 @@ label{
 	#MembMain .UpBox::before{
 		display:none;
 	}
-	
+
 	#MembMain .UpBox:nth-child(1){
 		background-color:rgb(58,88,158);
 	}
@@ -1594,8 +1595,8 @@ label{
 	#UpBox4{
 		background-color:rgb(51,51,51) !important;
 	}
-	
-	
+
+
 	/*
 		CTE Teachers
 	*/
@@ -1613,21 +1614,21 @@ label{
 		pointer-events:none;
 		display:none !important;
 	}
-	
+
 	.CTETeach .InfoCell{
 		position:relative; left:0;top:0;width:100%;height:initial;
 		color:white;
-		
+
 		z-index:4;
-		
+
 		transition:none;
 		overflow-y:auto;
 		margin-top:20px;
-		
+
 		background:#34495e;
 		box-shadow: none !important;
 	}
-	
+
 	.CTETeach .InfoCell h3{
 		margin:20px !important;
 	}
@@ -1635,11 +1636,11 @@ label{
 		margin: 0 20px 20px 20px !important;
 		text-align:left;
 	}
-	
+
 	#ClassClose{
 		display:none;
 	}
-	
+
 	#CTEHero{
 		font-size:80%;
 	}

@@ -3,7 +3,7 @@
 	<head>
 		<title>About - AK TSA</title>
 		<link rel="stylesheet" type="text/css" href="uni.css" />
-		
+
 		<!--Polyfills-->
 		<script src="promise.js"></script>
 		<script src="fetch.js"></script>
@@ -12,13 +12,13 @@
 				window.Promise = Promise;
 			}
 		</script>
-		
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="change.js"></script>
-		
-		
+
+
 		<script id="pageJS" src="/pageJS/about.js"></script>
-		
+
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
 		<meta name="author" content="Michael Xing" />
@@ -37,22 +37,22 @@
 		<div id="NavBG"><h1 class="MainTitle">AK <span>TSA</span></h1></div>
 		<div class="MainWrap">
 			<div class="ContentWrap">
-				
-				
+
+
 				<!--
-				
+
 				=========================================================================================
-				
+
 												PRIMARY CONTENT BEGINS HERE
 
 				=========================================================================================
- 
+
 				-->
-				
+
                 <section class="HeroWrap">
                     <h1>About Us</h1>
                 </section>
-                
+
 				<!--div style="
 							position:fixed;
 							color:white;
@@ -66,7 +66,7 @@
 					">
 					Certain text and images on this page are not finalized.
 				</div-->
-				
+
 				<section>
 					<h2>Our Projects</h2>
 					<div class="PhotoGallery">
@@ -111,7 +111,7 @@
 						</ul>
 					</div>
 				</section>
-				
+
 				<section id="CommServ">
 					<h2>Community Service Activities</h2>
 					<div class="TableOut"><div class="TableRow">
@@ -135,10 +135,10 @@
 						</div>
 					</div></div>
 				</section>
-				
+
 				<section id="OffIntro">
 					<h2>Officer Team</h2>
-					<div class="TableOut"><div class="TableRow">
+					<!-- <div class="TableOut"><div class="TableRow">
 						<div class="TableCel">
 							<a href="/off.html" class="TextWrap">
 								<h3>President</h3>
@@ -175,14 +175,15 @@
 								<p>Keon Richard Kim...?</p>
 							</a>
 						</div>
-					</div></div>
+					</div></div> -->
+					<h3 style="text-align: center">Updated Officer Bios Coming Soon</h3>
 					<br /><br />
 					<p>Congratulations to the following club members making up your 2017-2018 officer team:</p>
 					<br />
-					<table style="width:100%;text-align:center;border-collapse:collapse;">
-						<tr style="background:#ccc;"><td colspan="3">President: Anshool Pradhan</td></tr>
+					<table id="WeWonStuff" style="text-align: center;">
+						<tr><td colspan="3">President: Anshool Pradhan</td></tr>
 						<tr><td>Vice President: Charlotte Cheng</td><td>Secretary: Hannah Dong</td><td>Treasurer: Sophia Shi</td></tr>
-						<tr style="background:#ccc;"><td>Reporter: Connor D'Appollonio</td><td>Webmaster: Agnim Agarwal</td><td>Executive Robotics Director: Sungwoo Lee</td></tr>
+						<tr><td>Reporter: Connor D'Appollonio</td><td>Webmaster: Agnim Agarwal</td><td>Executive Robotics Director: Sungwoo Lee</td></tr>
 					</table>
 					<!--President- Anshool Pradhan
 Vice President- Charlotte Cheng
@@ -192,10 +193,10 @@ Reporter- Connor D'Appollonio
 Webmaster- Agnim Agarwal
 Vex Correspondent- Sungwoo Lee-->
 				</section>
-				
+
 				<section>
 					<h2>Past Awards</h2>
-					<p>These are the results from NCTSA States, 2016. Congratulations to the following winners:</p>
+					<p>These are the results from TSA Nationals, 2017. Congratulations to the following winners:</p>
 					<table id="WeWonStuff">
 						<tr>
 							<th>Event</th>
@@ -203,58 +204,89 @@ Vex Correspondent- Sungwoo Lee-->
 							<th>Members</th>
 						</tr>
 						<tr>
-							<td>Architectural Renovation</td>
+							<td>3D Animation</td>
+							<td>6th</td>
+							<td>Anna Goddard &amp; Dave Kubala</td>
+						</tr>
+						<tr>
+							<td>Essays On Technology</td>
+							<td>6th</td>
+							<td>Charlotte Cheng</td>
+						</tr>
+						<tr>
+							<td>Extemporaneous Speech</td>
+							<td>7th</td>
+							<td>Michael Xing</td>
+						</tr>
+						<tr>
+							<td>Prepared Presentation</td>
+							<td>4th</td>
+							<td>Ishani Deliwala</td>
+						</tr>
+						<td>Webmasters</td>
+						<td>2nd</td>
+						<td>Timothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
+					</table>
+					<p>These are the results from NCTSA States, 2017. Congratulations to the following winners:</p>
+					<table id="WeWonStuff">
+						<tr>
+							<th>Event</th>
+							<th>Place</th>
+							<th>Members</th>
+						</tr>
+						<tr>
+							<td>3D Animation</td>
+							<td>3rd</td>
+							<td>Anna Goddard &amp; Dave Kubala</td>
+						</tr>
+						<tr>
+							<td>Architectural Design</td>
 							<td>1st</td>
-							<td>Jackson Dye, Rachel Ehrman, Anusha Khansaheb, Chase Ralston, & Katie Zhao</td>
+							<td>Jackson Dye, Rachel Ehrman, Anusha Khansaheb, &amp; Katie Zhao</td>
 						</tr>
 						<tr>
 							<td>Biotechnology Design</td>
-							<td>1st<br />3rd</td>
-							<td>Vibhu Ambil, Manivannan Senthil, & Katie Zhao<br />Abdurakhmon Abdulatipov, Hannah Dong, Jin Gao, Aryan Gupta, Lucas Lu, & Carissa Tai</td>
+							<td>2nd</td>
+							<td>Bhavana Ambil, Hannah Dong, Manivannan Senthil, Carissa Tai, &amp; Katie Zhao</td>
 						</tr>
 						<!--tr>
 							<td>3rd</td>
 							<td>Abdurakhmon Abdulatipov, Hannah Dong, Jin Gao, Aryan Gupta, Lucas Lu, & Carissa Tai</td>
 						</tr-->
 						<tr>
-							<td>Career Preparation</td>
-							<td>1st</td>
-							<td>Anisha Ponnapati</td>
-						</tr>
-						<tr>
-							<td>CAD 3D, Engineering</td>
+							<td>Children's Stories</td>
 							<td>3rd</td>
-							<td>Aryan Gupta</td>
+							<td>Yashika Ghandi, Sunny Gorrepati, Joshita Padala, &amp; Imad Rahu</td>
 						</tr>
 						<tr>
 							<td>Debating Technological Issues</td>
 							<td>2nd</td>
-							<td>Douglas Dubrowski & Matthew Lyons</td>
-						</tr>
-						<tr>
-							<td>Desktop Publishing</td>
-							<td>1st</td>
-							<td>Sunnie Kwak</td>
+							<td>Timothy Rossow &amp; Michael Xing</td>
 						</tr>
 						<tr>
 							<td>Essays on Technology</td>
 							<td>3rd</td>
-							<td>Carolyn Sanderlin</td>
+							<td>Charlotte Cheng</td>
 						</tr>
 						<tr>
 							<td>Extemporaneous Speech</td>
-							<td>2nd</td>
-							<td>Michael Xing</td>
+							<td>1st<br>2nd</td>
+							<td>Adarsh Sukumar<br>Michael Xing</td>
 						</tr>
 						<tr>
-							<td>Flight Endurance</td>
+							<td>Fashion Design</td>
 							<td>2nd</td>
-							<td>Katie Zhao</td>
+							<td>Tobi Akinyelu, Makenzie Kelly, Sophia Shi, &amp; Gabrielle Skelton</td>
+						</tr>
+						<tr>
+							<td>Future Technology Teacher</td>
+							<td>1st</td>
+							<td>Ishani Deliwala</td>
 						</tr>
 						<tr>
 							<td>Music Production</td>
-							<td>2nd<br />3rd</td>
-							<td>John Casabonne, Ishan Jolly, Keon Kim, & Grant Kinsey<br />Maxwell Kegley & Makenzie Kelly</td>
+							<td>2nd</td>
+							<td>Joseph D'Apollonio, Gabriel Goldhagen, Max Kegley, Makenzie Kelly, &amp; Keon Kim</td>
 						</tr>
 						<!--tr>
 							<td>3rd</td>
@@ -263,37 +295,42 @@ Vex Correspondent- Sungwoo Lee-->
 						<tr>
 							<td>Photographic Technology</td>
 							<td>2nd</td>
-							<td>Sabrina Ho</td>
+							<td>Yashika Gandhi</td>
 						</tr>
 						<tr>
 							<td>Prepared Presentation</td>
-							<td>1st</td>
-							<td>Manivannan Sentil</td>
+							<td>1st<br>3rd</td>
+							<td>Manivannan Senthil<br>Ishani Deliwala</td>
 						</tr>
 						<tr>
-							<td>Scientific Visualization</td>
+							<td>SciViz</td>
+							<td>1st</td>
+							<td>Anna Goddard, Elijah Hubble, &amp; Dave Kubala</td>
+						</tr>
+						<tr>
+							<td>STEM Careers</td>
 							<td>3rd</td>
-							<td>Alec Probst &amp; Stephen Wardlaw</td>
+							<td>Hannah Dong</td>
 						</tr>
 						<tr>
 							<td>Structural Engineering</td>
 							<td>2nd</td>
-							<td>Kevin Carney &amp; Ishan Jolly</td>
+							<td>Rohit Chaudhuri &amp; Prakash Ray</td>
 						</tr>
 						<tr>
-							<td>Systems Control</td>
-							<td>1st</td>
-							<td>Karan Malhotra, Hazim Mukhtar, &amp; Samuel Unferth</td>
+							<td>Transportation Modeling</td>
+							<td>2nd</td>
+							<td>Koushik Sridhar</td>
 						</tr>
 						<tr>
 							<td>Webmaster</td>
 							<td>1st</td>
-							<td>Aviral Agarwal, Timmothy Rossow, Sarosh Santosh, &amp; Michael Xing </td>
+							<td>Aviral Agarwal, Joshita Padala, Timothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
 						</tr>
 					</table>
 				</section>
 
-				
+
 
 
 			</div>
