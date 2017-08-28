@@ -3,7 +3,7 @@
 	<head>
 		<title>AK CTE</title>
 		<link rel="stylesheet" type="text/css" href="uni.css" />
-		
+
 		<!--Polyfills-->
 		<script src="promise.js"></script>
 		<script src="fetch.js"></script>
@@ -12,63 +12,63 @@
 				window.Promise = Promise;
 			}
 		</script>
-		
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="change.js"></script>
-		
-		
-		
+
+
+
 		<script id="pageJS" src="/pageJS/cte.js"></script>
-		
+
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
 		<meta name="author" content="Michael Xing" />
 		<meta charset="UTF-8" />
 	</head>
 	<body onload="setUpPage();" style="overflow-x:hidden;max-width:100vw;width:100%;">
-		<nav>
-			<a href="/" class="MainBtn"><span>Home</span>
-			</a> <a href="/about.html" class="SurroundBtn">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/member.html" class="SurroundBtn">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/off.html" class="SurroundBtn">Officers<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="//cte.html" class="SurroundBtn CurrPage">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="https://realityplusplus.github.io/" class="SurroundBtn">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="https://aktsa.azurewebsites.net/" class="SurroundBtn">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
+		<nav onclick="expandNav()">
+			<a href="/" class="MainBtn Nav"><span>Home</span>
+			</a> <a href="/about.html" class="SurroundBtn Nav">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="/member.html" class="SurroundBtn Nav">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="/off.html" class="SurroundBtn Nav">Officers<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="//cte.html" class="SurroundBtn CurrPage Nav">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="https://realityplusplus.github.io/" class="SurroundBtn Nav">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="https://aktsa.azurewebsites.net/" class="SurroundBtn Nav">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
 		</nav>
 		<div id="NavBG"><h1 class="MainTitle">AK <span>TSA</span></h1></div>
 		<div class="MainWrap">
 			<div class="ContentWrap">
-				
-				
+
+
 				<!--
-				
+
 				=========================================================================================
-				
+
 												PRIMARY CONTENT BEGINS HERE
 
 				=========================================================================================
- 
+
 				-->
-				
+
 				<section class="HeroWrap" id="CTEHero">
                     <h1>
 						<img style="position:absolute;max-width:55vh;margin-top:14vh;" src="/images/AK%20Logo.png" alt="Ardrey Kell" /> <span style="margin-left:50vh;text-shadow: -2px -2px white, 2px 2px white, 2px -2px white, -2px 2px white;">CTE</span>
 						<p style="margin:0;color:white;position:relative;top:-21vh;left:50vh;font-size:20%;line-height:100%;width:235px;text-shadow: 0px 0px 2px black;">Career and Technical Education</p>
 					</h1>
-					
+
                 </section>
-				
-				
+
+
 				<section id="HeroMotto" style="padding-left:15vw; padding-right:15vw;">
 					Ardrey Kell High School is a student-centered community that implements a challenging curriculum leading to the development of creative and independent thinkers who have a strong sense of honor, respect, and service.
-				</section>				
-				
+				</section>
+
 				<section>
 					<p>AK's Career and Technical Education department is one of the fastest growing branches in the school and easily the most important. With interesting courses ranging from design to programming and everything in between, all taught by experienced teachers, these classes prepare students for life in the 21st century and beyond.</p>
 				</section>
-				
-				
-				
+
+
+
 				<section id="CTEClasses">
 					<h2>Course Offerings</h2>
 					<span id="ClassClose"><button onclick="openPanel(-1);" class="BigBtn">X</button></span>
@@ -121,17 +121,17 @@
 							<h3>Project Lead The Way<br />Principles of Biomedical Sciences</h3>
 							<p>In this foundation Project Lead the Way (PLTW) class, students survey engineering and are exposed to major concepts they will encounter in a postsecondary engineering course of study. Students employ engineering and scientific concepts in the solution of engineering design problems. They develop problem-solving skills and apply their knowledge of research and design to create solutions to various challenges, documenting their work and communicating solutions to peers and members of the professional community.</p>
 						</div>
-						
+
 					</div>
-					
-					
+
+
 				</section>
-				
-				
-				
+
+
+
 				<section id="CTEProj">
 					<h2>Student Projects</h2>
-					
+
 					<div>
 						<p>Our students engage in a wide variety of real world and hands-on projects. Click to learn about a few of them.</p>
 					</div>
@@ -146,28 +146,28 @@
 					<div id="ProjFrame"><div id="ProjSelect">
 						<input onclick="ChangeProjBack(0);" type="radio" checked name="Projects" value="TwoPoint" id="VexRobot" />
 						<label for="VexRobot"><span>VEX Robotics</span></label>
-						
+
 						<input onclick="ChangeProjBack(1);" type="radio" name="Projects" value="TwoPoint" id="TwoPoint" />
 						<label for="TwoPoint"><span>Two-Point Perspective</span></label>
-						
+
 						<input onclick="ChangeProjBack(2);" type="radio" name="Projects" value="TwoPoint" id="PuzzleCube" />
 						<label for="PuzzleCube"><span>Puzzle Cube</span></label>
-						
+
 						<input onclick="ChangeProjBack(3);" type="radio" name="Projects" value="TwoPoint" id="BridgeD" />
 						<label for="BridgeD"><span>Bridge Design</span></label>
-						
+
 						<input onclick="ChangeProjBack(4);" type="radio" name="Projects" value="TwoPoint" id="HouseD" />
 						<label for="HouseD"><span>House Design</span></label>
-						
+
 						<input onclick="ChangeProjBack(5);" type="radio" name="Projects" value="TwoPoint" id="WebSite" />
 						<label for="WebSite"><span>Website Creation</span></label>
 					</div></div>
 				</section>
-				
-				
-				
-		
-				
+
+
+
+
+
 				<section id="OffIntro" class="CTETeach">
 					<h2>Teachers</h2>
 					<div class="TableOut"><div class="TableRow">
@@ -203,7 +203,7 @@
 							</a>
 						</div>
 					</div>
-					
+
 						<div class="InfoCell" id="TeachInfo0">
 							<h3>Jason Sheffield</h3>
 							<p>My name is Jason Sheffield and I have been a teacher here at Ardrey Kell High School since 2011, prior to that, I spent 18 years teaching at Harding University High School. I have a Master's Degree in Trade and Industrial Education form North Carolina A&amp;T and a Bachelor's Degree in Mechanical Engineering from the University of Tennessee (Go Vols). I grew up in England and spend way too much time watching the beautiful game. I have been blessed to have found a woman way too good for me who inexplicably married me in 1992 - Suzanne is an Exceptional Children's teacher at Independence High School. Suzanne and I are the proud parents of a wonderful young man - Gabriel Quinn.</p>
@@ -229,15 +229,15 @@
 							<p>The 2016-2017 school year marks my 11th year as a teacher.  Originally from Michigan, I lived & taught computer/business classes in Yuma, Arizona for 7 years prior to moving to North Carolina in 2013.  This is my fourth year at Ardrey Kell as a Marketing teacher, DECA advisor, and assistant softball coach. </p>
 						</div>
 						<div class="InfoCell" id="TeachInfo-1" style="background:#bdc3c7;left:100%;z-index:-2;box-shadow: inset 0 0 20px rgba(0,0,0,0.5); ">
-							
+
 						</div>
 					</div>
-					
+
 					<small>Additional teachers declined to be displayed on this page.</small>
 				</section>
-				
-				
-				
+
+
+
 				<section>
 					<h2>Additional Links</h2>
 					<p>
@@ -248,5 +248,17 @@
 				</section>
 			</div>
 		</div>
+		<script>
+			function expandNav() {
+				if ($('nav').hasClass('open')) {
+					$('.Nav').css('display', 'none');
+					$('nav').removeClass('open');
+				} else {
+					$('.Nav').css('display', 'block');
+					$('nav').addClass('open');
+					//  $('.Nav::').css('transform', 'translateX(110px)');
+				}
+			}
+		</script>
 	</body>
 </html>

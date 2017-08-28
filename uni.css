@@ -1304,7 +1304,7 @@ label{
 	body{
 		font-size:80%;
 	}
-	nav{
+	/*nav{
 		top:11px;
 
 		right:-110px;
@@ -1323,10 +1323,10 @@ label{
 		transition: transform 0.5s ease;
 		top:0;
 	}
-	nav:hover{
+	nav:active{
 		right:0px;
 	}
-	nav:hover::before{
+	nav:active::before{
 		transform:translateX(110px);
 	}
 
@@ -1352,7 +1352,7 @@ label{
 	nav .MainBtn{
 		font-weight:bold;
 	}
-	nav a:hover{
+	nav a:active{
 		background:rgba(0,0,0,0.5) !important;
 	}
 	nav a:active{
@@ -1371,10 +1371,44 @@ label{
 	nav .CurrPage{
 		color:black !important;
 		background:white !important;
+	}*/
+	nav{
+		top:11px;
+
+		right:-110px;
+		transition: right 0.5s ease;
 	}
+	nav::before {
+		content:'Navigation';
+		background:black;
+		text-align:center;
+		width:100px;
+		height:50px;
+		line-height:50px;
+		right:120px;
+		position:absolute;
+		transform:translateX(0px);
+		transition: transform 0.5s ease;
+		top:0;
+	}
+	.Nav{
+		display:none;
+		text-align:center;
 
+		background:#2c3e50 !important;
+		border:none !important;
+		color:white !important;
 
-
+		margin:0 !important;
+		padding-left:0 !important;
+		padding-right:0 !important;
+		width:110px;
+		position: relative;
+		left: -110px;
+		top: 50px;
+		/*transform: translateX(110px);*/
+		transition: background 0.5s ease, color 0.5s ease !important;
+	}
 
 
 	/*
