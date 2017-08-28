@@ -1395,19 +1395,23 @@ label{
 		display:none;
 		text-align:center;
 
-		background:#2c3e50 !important;
-		border:none !important;
+		background:rgba(0,0,0,0.7) !important;
 		color:white !important;
+		border: none !important;
 
 		margin:0 !important;
 		padding-left:0 !important;
 		padding-right:0 !important;
-		width:110px;
+		width:100px;
 		position: relative;
-		left: -110px;
+		left: -120px;
 		top: 50px;
 		/*transform: translateX(110px);*/
 		transition: background 0.5s ease, color 0.5s ease !important;
+	}
+
+	.Nav::before, .Nav::after, .LeftPseudo, .RightPseudo {
+		display: none !important;
 	}
 
 
