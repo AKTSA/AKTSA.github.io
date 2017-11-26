@@ -391,7 +391,7 @@ code{background:#2c3e50;color:white;font-family:'Lucida Console',monospace;paddi
 	/*background-image: url('https://scontent-atl3-1.cdninstagram.com/t51.2885-15/e35/17586888_1779180809062006_6689336453131927552_n.jpg');*/
 	/*background-image:url('/images/new/heroBGTEST.JPG');*/
 	background-image:url('https://scontent-atl3-1.cdninstagram.com/t51.2885-15/e35/17662944_1145856828853631_618169561966968832_n.jpg');
-	background-size: 80%;
+	background-size: cover;
 	color:white;
 	position:relative;
 	z-index:99;
