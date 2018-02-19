@@ -69,6 +69,7 @@
 		</div>
 		<script>
 			function expandNav() {
+  if($(window).width() <= 960) {
 				if ($('nav').hasClass('open')) {
 					$('.Nav').css('display', 'none');
 					$('nav').removeClass('open');
@@ -76,6 +77,7 @@
 					$('.Nav').css('display', 'block');
 					$('nav').addClass('open');
 					//  $('.Nav::').css('transform', 'translateX(110px)');
+}
 				}
 			}
 		</script>

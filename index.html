@@ -46,7 +46,7 @@
 					<h2>Ardrey Kell High School<br />Technology Student Association</h2>
 				</div>
 
-<!-- 
+<!--
 				<div style="
 							position:fixed;
 							color:white;
@@ -248,6 +248,7 @@
 		</div>
 		<script>
 			function expandNav() {
+  if($(window).width() <= 960) {
 				if ($('nav').hasClass('open')) {
 					$('.Nav').css('display', 'none');
 					$('nav').removeClass('open');
@@ -255,6 +256,7 @@
 					$('.Nav').css('display', 'block');
 					$('nav').addClass('open');
 					//  $('.Nav::').css('transform', 'translateX(110px)');
+}
 				}
 			}
 		</script>

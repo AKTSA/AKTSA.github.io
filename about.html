@@ -97,7 +97,7 @@
 							</li>
 							<li>
 								<input type="radio" name="ProjRadio" id="Proj4" />
-								<label for="Proj4">Webmasters</label>
+								<label for="Proj4">Webmaster</label>
 								<div>
 									<img src="/images/Drone.png" />
 									<p>Participants are required to design, build, and launch a website that features the school’s career and technology/engineering program, the TSA chapter, and the chapter’s ability to research and present a given topic pertaining to technology.</p>
@@ -223,7 +223,7 @@ Vex Correspondent- Sungwoo Lee-->
 							<td>4th</td>
 							<td>Ishani Deliwala</td>
 						</tr>
-						<td>Webmasters</td>
+						<td>Webmaster</td>
 						<td>2nd</td>
 						<td>Timmothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
 					</table>
@@ -337,6 +337,7 @@ Vex Correspondent- Sungwoo Lee-->
 		</div>
 		<script>
 			function expandNav() {
+  if($(window).width() <= 960) {
 				if ($('nav').hasClass('open')) {
 					$('.Nav').css('display', 'none');
 					$('nav').removeClass('open');
@@ -344,6 +345,7 @@ Vex Correspondent- Sungwoo Lee-->
 					$('.Nav').css('display', 'block');
 					$('nav').addClass('open');
 					//  $('.Nav::').css('transform', 'translateX(110px)');
+}
 				}
 			}
 		</script>
