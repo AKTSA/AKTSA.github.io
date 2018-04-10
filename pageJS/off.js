@@ -1,9 +1,9 @@
 function newLoad(){
 	console.log("Officer Page Loaded");
-	
+
 	var temp = location.search.split("?")[1];
 	if(!temp){
-		temp = 3;
+		temp = 31;
 	}
 		document.getElementById("OffFrame").src = "https://aktsa.azurewebsites.net/off.php?id=" + temp;
 		if(document.getElementById("navLink" + temp)){
@@ -13,5 +13,5 @@ function newLoad(){
 }
 
 function newUnload(){
-	
+
 }

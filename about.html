@@ -1,45 +1,53 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>About - AK TSA</title>
-		<link rel="stylesheet" type="text/css" href="uni.css" />
 
-		<!--Polyfills-->
-		<script src="promise.js"></script>
-		<script src="fetch.js"></script>
-		<script>
-			if (!window.Promise) {
-				window.Promise = Promise;
-			}
-		</script>
+<head>
+	<title>About - AK TSA</title>
+	<link rel="stylesheet" type="text/css" href="uni.css" />
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="change.js"></script>
+	<!--Polyfills-->
+	<script src="promise.js"></script>
+	<script src="fetch.js"></script>
+	<script>
+		if (!window.Promise) {
+			window.Promise = Promise;
+		}
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="change.js"></script>
 
 
-		<script id="pageJS" src="/pageJS/about.js"></script>
+	<script id="pageJS" src="/pageJS/about.js"></script>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
-		<meta name="author" content="Michael Xing" />
-		<meta charset="UTF-8" />
-	</head>
-	<body onload="setUpPage();">
-		<nav onclick="expandNav()">
-			<a href="/" class="MainBtn Nav"><span>Home</span>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
+	<meta name="author" content="Agnim Agarwal" />
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="/JSDep/ideal-image-slider.css">
+	<link rel="stylesheet" href="/JSDep/ideal-default.css">
+
+	<script src="/JSDep/ideal-image-slider.js"></script>
+	<script src="/JSDep/ideal-captions.js"></script>
+</head>
+
+<body onload="setUpPage();">
+	<nav onclick="expandNav()">
+		<a href="/" class="MainBtn Nav"><span>Home</span>
 			</a> <a href="/about.html" class="SurroundBtn CurrPage Nav">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
 			</a><a href="/member.html" class="SurroundBtn Nav">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
 			</a><a href="/off.html" class="SurroundBtn Nav">Officers<div class="LeftPseudo"></div><div class="RightPseudo"></div>
 			</a><a href="/cte.html" class="SurroundBtn Nav">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
 			</a><a href="https://aktsa.org/aquabot" class="SurroundBtn Nav">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
 			</a><a href="https://aktsa.azurewebsites.net" class="SurroundBtn Nav">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
-		</nav>
-		<div id="NavBG"><h1 class="MainTitle">AK <span>TSA</span></h1></div>
-		<div class="MainWrap">
-			<div class="ContentWrap">
+	</nav>
+	<div id="NavBG">
+		<h1 class="MainTitle">AK <span>TSA</span></h1></div>
+	<div class="MainWrap">
+		<div class="ContentWrap">
 
 
-				<!--
+			<!--
 
 				=========================================================================================
 
@@ -49,11 +57,11 @@
 
 				-->
 
-                <section class="HeroWrap">
-                    <h1>About Us</h1>
-                </section>
-
-				<!--div style="
+			<section class="HeroWrap">
+				<h1>About Us</h1>
+			</section>
+				<section id="HeroMotto" style="padding-left:15vw; padding-right:15vw;"></section>
+			<!--div style="
 							position:fixed;
 							color:white;
 							background:#2c3e50;
@@ -67,9 +75,15 @@
 					Certain text and images on this page are not finalized.
 				</div-->
 
-				<section>
-					<h2>Our Projects</h2>
-					<div class="PhotoGallery">
+			<section>
+				<h2>Our Projects</h2>
+				<div id="slider">
+					<img src="/images/IMG_20150322_160628.jpg" alt="Students build and program robots to accomplish an objective and learn valuable life skills and develop teamwork.">
+					<img src="/images/fdesign1.jpg" alt="TSA members will demonstrate an understanding of and expertise in using research and design to convey a wearable technology concept.">
+					<img src="/images/cs3.jpg" alt="Participants built animatronic contraptions to fulfill certain goals. Pictured here, TSA members built animatronic toys for children.">
+					<img src="/images/Drone.png" alt="Participants are required to design, build, and launch a website that features the school’s career and technology/engineering program, the TSA chapter, and the chapter’s ability to research and present a given topic pertaining to technology.">
+				</div>
+				<!--<div class="PhotoGallery">
 						<ul>
 							<li>
 								<input type="radio" checked name="ProjRadio" id="Proj1" />
@@ -103,241 +117,317 @@
 									<p>Participants are required to design, build, and launch a website that features the school’s career and technology/engineering program, the TSA chapter, and the chapter’s ability to research and present a given topic pertaining to technology.</p>
 								</div>
 							</li>
-							<!--li>
+							<li>
 								<input type="radio" name="ProjRadio" id="Proj5" />
 								<label for="Proj5">Test</label>
 								<div></div>
-							</li-->
+							</li>
 						</ul>
+					</div-->
+			</section>
+
+			<section id="CommServ">
+				<h2>Community Service Activities</h2>
+				<div class="TableOut">
+					<div class="TableRow">
+						<div class="TableCel">
+							<div class="TextWrap">
+								<div>
+									<h3>Campus Cleanup</h3>
+									<p>As part of a coordinated effort across all clubs in the school to beautify the campus and create an environment more condusive to education, the AK TSA maintains a sector of the school, cleaning the area and keeping it presentable for the students
+										to enjoy.</p>
+								</div>
+							</div>
+						</div>
+						<div class="TableCel">
+							<div class="TextWrap">
+								<div>
+									<h3>Food Bank</h3>
+									<p>Loaves and Fishes is a local charitable organization which distributes donated food to people in need via local food pantries. Students from AK TSA help obtain cans, collect donations, and sort food to help the entire process.</p>
+								</div>
+							</div>
+						</div>
+						<div class="TableCel">
+							<div class="TextWrap">
+								<div>
+									<h3>Cancer Cure Bracelets</h3>
+									<p>To help raise awareness of and fund research for a cure to cancer, students from AK TSA sold wristbands to students across the school. 100% of proceeds from the sales were donated to charity to help find "AKure".</p>
+								</div>
+							</div>
+						</div>
 					</div>
-				</section>
+				</div>
+			</section>
 
-				<section id="CommServ">
-					<h2>Community Service Activities</h2>
-					<div class="TableOut"><div class="TableRow">
-						<div class="TableCel">
-							<div class="TextWrap"><div>
-								<h3>Campus Cleanup</h3>
-								<p>As part of a coordinated effort across all clubs in the school to beautify the campus and create an environment more condusive to education, the AK TSA maintains a sector of the school, cleaning the area and keeping it presentable for the students to enjoy.</p>
-							</div></div>
-						</div>
-						<div class="TableCel">
-							<div class="TextWrap"><div>
-								<h3>Food Bank</h3>
-								<p>Loaves and Fishes is a local charitable organization which distributes donated food to people in need via local food pantries. Students from AK TSA help obtain cans, collect donations, and sort food to help the entire process.</p>
-							</div></div>
-						</div>
-						<div class="TableCel">
-							<div class="TextWrap"><div>
-								<h3>Cancer Cure Bracelets</h3>
-								<p>To help raise awareness of and fund research for a cure to cancer, students from AK TSA sold wristbands to students across the school. 100% of proceeds from the sales were donated to charity to help find "AKure".</p>
-							</div></div>
-						</div>
-					</div></div>
-				</section>
-
-				<section id="OffIntro">
-					<h2>Officer Team</h2>
-					<!-- <div class="TableOut"><div class="TableRow">
-						<div class="TableCel">
-							<a href="/off.html" class="TextWrap">
+			<section id="OffIntro">
+				<h2>Officer Team</h2>
+				<div class="TableOut">
+					<div class="TableRow" id="Row1">
+						<div class="TableCel" id="TableCel0">
+							<a onclick="ClassOpen(0);" class="TextWrap" id="TblText0">
 								<h3>President</h3>
-								<p>Anusha Khansaheb</p>
-							</a>
-						</div>
-						<div class="TableCel">
-							<a href="/off.html?22" class="TextWrap">
-								<h3>Vice President</h3>
-								<p>Max Kegley</p>
-							</a>
-						</div>
-						<div class="TableCel">
-							<a href="/off.html?5" class="TextWrap">
-								<h3>Treasurer</h3>
-								<p>Makenzie Kelly</p>
-							</a>
-						</div>
-						<div class="TableCel">
-							<a href="/off.html?33" class="TextWrap">
-								<h3>Reporter</h3>
 								<p>Anshool Pradhan</p>
 							</a>
 						</div>
-						<div class="TableCel">
-							<a href="/off.html?1" class="TextWrap">
-								<h3>Srgt. at Arms &amp; Webmaster</h3>
-								<p>Michael Xing</p>
+						<div class="TableCel" id="TableCel1">
+							<a onclick="ClassOpen(1);" class="TextWrap" id="TblText1">
+								<h3>Vice President</h3>
+								<p>Charlotte Cheng</p>
 							</a>
 						</div>
-						<div class="TableCel">
-							<a href="/off.html?72" class="TextWrap">
+						<div class="TableCel" id="TableCel2">
+							<a onclick="ClassOpen(2);" class="TextWrap" id="TblText2">
 								<h3>Secretary</h3>
-								<p>Keon Richard Kim...?</p>
+								<p>Hannah Dong</p>
 							</a>
 						</div>
-					</div></div> -->
-					<h3 style="text-align: center">Updated Officer Bios Coming Soon</h3>
-					<br /><br />
-					<p>Congratulations to the following club members making up your 2017-2018 officer team:</p>
-					<br />
-					<table id="WeWonStuff" style="text-align: center;">
-						<tr><td colspan="3">President: Anshool Pradhan</td></tr>
-						<tr><td>Vice President: Charlotte Cheng</td><td>Secretary: Hannah Dong</td><td>Treasurer: Sophia Shi</td></tr>
-						<tr><td>Reporter: Connor D'Appollonio</td><td>Webmaster: Agnim Agarwal</td><td>Executive Robotics Director: Sungwoo Lee</td></tr>
-					</table>
-					<!--President- Anshool Pradhan
-Vice President- Charlotte Cheng
-Secretary- Hannah Dong
-Treasurer- Sophia Shi
-Reporter- Connor D'Appollonio
-Webmaster- Agnim Agarwal
-Vex Correspondent- Sungwoo Lee-->
-				</section>
+						<!-- <div class="TableCel" id="TableCel3" style="width: 12.5%">
+							<a onclick="ClassOpen(3);" class="TextWrap" id="TblText3">
+								<h3>Treasurer</h3>
+								<p>Sophia Shi</p>
+							</a>
+						</div> -->
+						<!-- <div class="TableCel" id="TableCel4">
+							<a onclick="ClassOpen(4);" class="TextWrap" id="TblText4">
+								<h3>Reporter</h3>
+								<p>Joseph D'Appolonio</p>
+							</a>
+						</div> -->
+						<div class="TableCel" id="TableCel3">
+							<a onclick="ClassOpen(3);" class="TextWrap" id="TblText3">
+								<h3>Srgt. at Arms &amp; Webmaster</h3>
+								<p>Agnim Agarwal</p>
+							</a>
+						</div>
+						<!-- <div class="TableCel" id="TableCel6">
+							<a onclick="ClassOpen(6);" class="TextWrap" id="TblText6">
+								<h3>Executive Robotics Director</h3>
+								<p>Sungwoo Lee</p>
+							</a>
+						</div> -->
+					</div>
+				</div>
+				<div id="Frames">
+					<!-- <div style="height: 0px;">
+							<iframe id="ClassOpenFrame0" style="
+						width: 50%;
+						position: relative;
+						top: -300px;
+						height: 150px;
+						left: 16.6%;
+						z-index: 3;
+						border: 1px solid black;
+						box-sizing: border-box;
+						display: none;
+						"
+							></iframe>
+						</div> -->
 
-				<section>
-					<h2>Past Awards</h2>
-					<p>These are the results from TSA Nationals, 2017. Congratulations to the following winners:</p>
-					<table id="WeWonStuff">
-						<tr>
-							<th>Event</th>
-							<th>Place</th>
-							<th>Members</th>
-						</tr>
-						<tr>
-							<td>3D Animation</td>
-							<td>6th</td>
-							<td>Anna Goddard &amp; Dave Kubala</td>
-						</tr>
-						<tr>
-							<td>Essays On Technology</td>
-							<td>6th</td>
-							<td>Charlotte Cheng</td>
-						</tr>
-						<tr>
-							<td>Extemporaneous Speech</td>
-							<td>7th</td>
-							<td>Michael Xing</td>
-						</tr>
-						<tr>
-							<td>Prepared Presentation</td>
-							<td>4th</td>
-							<td>Ishani Deliwala</td>
-						</tr>
-						<td>Webmaster</td>
+					<!-- <div style="height: 0px;">
+							<iframe id="ClassOpenFrame1" style="
+						width: 50%;
+						position: relative;
+						top: -300px;
+						height: 150px;
+						left: 33.3%;
+						z-index: 3;
+						border: 1px solid black;
+						box-sizing: border-box;
+						display: none;
+						"
+							></iframe>
+						</div> -->
+				</div>
+				<div style="height: 300px;z-index: 2;position: relative;top: 0px;background: rgba(0,0,0,.5);display: none;cursor: pointer;" id="BlCover" onclick="ClassOpen(-1);"></div>
+
+				<!-- Modal Structure -->
+
+
+				<!--President- Anshool Pradhan
+	Vice President- Charlotte Cheng
+	Secretary- Hannah Dong
+	Treasurer- Sophia Shi
+	Reporter- Connor D'Appollonio
+	Webmaster- Agnim Agarwal
+	Vex Correspondent- Sungwoo Lee-->
+
+
+				<!-- <div id="modal1" class="modal" style="overflow: hidden;">
+						<div class="modal-content" style="height: 50vh;">
+							<iframe style="width: 100%; height: 100%;" id="OffSrc0" src="https://aktsa.azurewebsites.net/off.php?id=1"></iframe>
+						</div>
+						<div class="modal-footer">
+							<a href="#!" class="modal-action modal-close BigBtn" style="float: right; margin: 5px;">Close</a>
+						</div>
+					</div> -->
+			</section>
+
+			<section>
+				<h2>Past Awards</h2>
+				<p>These are the results from TSA Nationals, 2017. Congratulations to the following winners:</p>
+				<table id="WeWonStuff">
+					<tr>
+						<th>Event</th>
+						<th>Place</th>
+						<th>Members</th>
+					</tr>
+					<tr>
+						<td>3D Animation</td>
+						<td>6th</td>
+						<td>Anna Goddard &amp; Dave Kubala</td>
+					</tr>
+					<tr>
+						<td>Essays On Technology</td>
+						<td>6th</td>
+						<td>Charlotte Cheng</td>
+					</tr>
+					<tr>
+						<td>Extemporaneous Speech</td>
+						<td>7th</td>
+						<td>Michael Xing</td>
+					</tr>
+					<tr>
+						<td>Prepared Presentation</td>
+						<td>4th</td>
+						<td>Ishani Deliwala</td>
+					</tr>
+					<td>Webmaster</td>
+					<td>2nd</td>
+					<td>Timmothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
+				</table>
+
+				<p>These are the results from NCTSA States, 2017. Congratulations to the following winners:</p>
+				<table id="WeWonStuff">
+					<tr>
+						<th>Event</th>
+						<th>Place</th>
+						<th>Members</th>
+					</tr>
+					<tr>
+						<td>3D Animation</td>
+						<td>3rd</td>
+						<td>Anna Goddard &amp; Dave Kubala</td>
+					</tr>
+					<tr>
+						<td>Architectural Design</td>
+						<td>1st</td>
+						<td>Jackson Dye, Rachel Ehrman, Anusha Khansaheb, &amp; Katie Zhao</td>
+					</tr>
+					<tr>
+						<td>Biotechnology Design</td>
 						<td>2nd</td>
-						<td>Timmothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
-					</table>
-					<p>These are the results from NCTSA States, 2017. Congratulations to the following winners:</p>
-					<table id="WeWonStuff">
-						<tr>
-							<th>Event</th>
-							<th>Place</th>
-							<th>Members</th>
-						</tr>
-						<tr>
-							<td>3D Animation</td>
-							<td>3rd</td>
-							<td>Anna Goddard &amp; Dave Kubala</td>
-						</tr>
-						<tr>
-							<td>Architectural Design</td>
-							<td>1st</td>
-							<td>Jackson Dye, Rachel Ehrman, Anusha Khansaheb, &amp; Katie Zhao</td>
-						</tr>
-						<tr>
-							<td>Biotechnology Design</td>
-							<td>2nd</td>
-							<td>Bhavana Ambil, Hannah Dong, Manivannan Senthil, Carissa Tai, &amp; Katie Zhao</td>
-						</tr>
-						<!--tr>
+						<td>Bhavana Ambil, Hannah Dong, Manivannan Senthil, Carissa Tai, &amp; Katie Zhao</td>
+					</tr>
+					<!--tr>
 							<td>3rd</td>
 							<td>Abdurakhmon Abdulatipov, Hannah Dong, Jin Gao, Aryan Gupta, Lucas Lu, & Carissa Tai</td>
 						</tr-->
-						<tr>
-							<td>Children's Stories</td>
-							<td>3rd</td>
-							<td>Yashika Ghandi, Sunny Gorrepati, Joshita Padala, &amp; Imad Rahu</td>
-						</tr>
-						<tr>
-							<td>Debating Technological Issues</td>
-							<td>2nd</td>
-							<td>Timmothy Rossow &amp; Michael Xing</td>
-						</tr>
-						<tr>
-							<td>Essays on Technology</td>
-							<td>3rd</td>
-							<td>Charlotte Cheng</td>
-						</tr>
-						<tr>
-							<td>Extemporaneous Speech</td>
-							<td>1st<br>2nd</td>
-							<td>Adarsh Sukumar<br>Michael Xing</td>
-						</tr>
-						<tr>
-							<td>Fashion Design</td>
-							<td>2nd</td>
-							<td>Tobi Akinyelu, Makenzie Kelly, Sophia Shi, &amp; Gabrielle Skelton</td>
-						</tr>
-						<tr>
-							<td>Future Technology Teacher</td>
-							<td>1st</td>
-							<td>Ishani Deliwala</td>
-						</tr>
-						<tr>
-							<td>Music Production</td>
-							<td>2nd</td>
-							<td>Joseph D'Apollonio, Gabriel Goldhagen, Max Kegley, Makenzie Kelly, &amp; Keon Kim</td>
-						</tr>
-						<!--tr>
+					<tr>
+						<td>Children's Stories</td>
+						<td>3rd</td>
+						<td>Yashika Ghandi, Sunny Gorrepati, Joshita Padala, &amp; Imad Rahu</td>
+					</tr>
+					<tr>
+						<td>Debating Technological Issues</td>
+						<td>2nd</td>
+						<td>Timmothy Rossow &amp; Michael Xing</td>
+					</tr>
+					<tr>
+						<td>Essays on Technology</td>
+						<td>3rd</td>
+						<td>Charlotte Cheng</td>
+					</tr>
+					<tr>
+						<td>Extemporaneous Speech</td>
+						<td>1st<br>2nd</td>
+						<td>Adarsh Sukumar<br>Michael Xing</td>
+					</tr>
+					<tr>
+						<td>Fashion Design</td>
+						<td>2nd</td>
+						<td>Tobi Akinyelu, Makenzie Kelly, Sophia Shi, &amp; Gabrielle Skelton</td>
+					</tr>
+					<tr>
+						<td>Future Technology Teacher</td>
+						<td>1st</td>
+						<td>Ishani Deliwala</td>
+					</tr>
+					<tr>
+						<td>Music Production</td>
+						<td>2nd</td>
+						<td>Joseph D'Apollonio, Gabriel Goldhagen, Max Kegley, Makenzie Kelly, &amp; Keon Kim</td>
+					</tr>
+					<!--tr>
 							<td>3rd</td>
 							<td>Maxwell Kegley & Makenzie Kelly</td>
 						</tr-->
-						<tr>
-							<td>Photographic Technology</td>
-							<td>2nd</td>
-							<td>Yashika Gandhi</td>
-						</tr>
-						<tr>
-							<td>Prepared Presentation</td>
-							<td>1st<br>3rd</td>
-							<td>Manivannan Senthil<br>Ishani Deliwala</td>
-						</tr>
-						<tr>
-							<td>SciViz</td>
-							<td>1st</td>
-							<td>Anna Goddard, Elijah Hubble, &amp; Dave Kubala</td>
-						</tr>
-						<tr>
-							<td>STEM Careers</td>
-							<td>3rd</td>
-							<td>Hannah Dong</td>
-						</tr>
-						<tr>
-							<td>Structural Engineering</td>
-							<td>2nd</td>
-							<td>Rohit Chaudhuri &amp; Prakash Ray</td>
-						</tr>
-						<tr>
-							<td>Transportation Modeling</td>
-							<td>2nd</td>
-							<td>Koushik Sridhar</td>
-						</tr>
-						<tr>
-							<td>Webmaster</td>
-							<td>1st</td>
-							<td>Aviral Agarwal, Joshita Padala, Timmothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
-						</tr>
-					</table>
-				</section>
+					<tr>
+						<td>Photographic Technology</td>
+						<td>2nd</td>
+						<td>Yashika Gandhi</td>
+					</tr>
+					<tr>
+						<td>Prepared Presentation</td>
+						<td>1st<br>3rd</td>
+						<td>Manivannan Senthil<br>Ishani Deliwala</td>
+					</tr>
+					<tr>
+						<td>SciViz</td>
+						<td>1st</td>
+						<td>Anna Goddard, Elijah Hubble, &amp; Dave Kubala</td>
+					</tr>
+					<tr>
+						<td>STEM Careers</td>
+						<td>3rd</td>
+						<td>Hannah Dong</td>
+					</tr>
+					<tr>
+						<td>Structural Engineering</td>
+						<td>2nd</td>
+						<td>Rohit Chaudhuri &amp; Prakash Ray</td>
+					</tr>
+					<tr>
+						<td>Transportation Modeling</td>
+						<td>2nd</td>
+						<td>Koushik Sridhar</td>
+					</tr>
+					<tr>
+						<td>Webmaster</td>
+						<td>1st</td>
+						<td>Aviral Agarwal, Joshita Padala, Timmothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
+					</tr>
+				</table>
+				<p>To see our additional awards, see our <a href="awards.html">awards</a> page.</p>
+			</section>
 
 
 
 
-			</div>
 		</div>
-		<script>
-			function expandNav() {
-  if($(window).width() <= 960) {
+	</div>
+	<script id="pageJS" src="/pageJS/about.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			if ($(window).width() > 1079) {
+
+				if (document.getElementById('BlCover').style.display = "none") {
+					$.each(new Array(10), function(i) {
+						$("#TableCel" + i).hover(function() {
+							$("#TblText" + i).slideDown(250); //1000 = 1 second animation
+
+						}, function() {
+							$("#TblText" + i).slideUp(250);
+							// $("#TblText" + i).css("display: flex;");
+						}); //1000 = 1 second animation
+						//setting the height and width to '' will clear the inserted style, leaving you with your original style
+					});
+				}
+			}
+		});
+	</script>
+	<script>
+		function expandNav() {
+			if ($(window).width() <= 960) {
 				if ($('nav').hasClass('open')) {
 					$('.Nav').css('display', 'none');
 					$('nav').removeClass('open');
@@ -345,9 +435,18 @@ Vex Correspondent- Sungwoo Lee-->
 					$('.Nav').css('display', 'block');
 					$('nav').addClass('open');
 					//  $('.Nav::').css('transform', 'translateX(110px)');
-}
 				}
 			}
-		</script>
-	</body>
+		}
+	</script>
+	<script>
+		var slider = new IdealImageSlider.Slider({
+			selector: '#slider',
+			height: 400
+		});
+		slider.addCaptions();
+		slider.start();
+	</script>
+</body>
+
 </html>

@@ -559,7 +559,7 @@ code{background:#2c3e50;color:white;font-family:'Lucida Console',monospace;paddi
 	position:absolute;
 	top:0; left:0;
 	height:100%; width:100%;
-	background-image:linear-gradient(to bottom, rgba(236, 240, 241,0) 60%, rgb(236, 240, 241));
+	/* background-image:linear-gradient(to bottom, rgba(236, 240, 241,0) 60%, rgb(236, 240, 241)); */
 }
 .HeroWrap h1{
 	margin:0;
@@ -743,47 +743,52 @@ label{
 }
 
 
-
 #OffIntro .TableOut{
 	width:100%;
+	float: left;
 	min-height:300px;
 	height:300px;
 	color:white;
 	background:black;
 	text-align:center;
+	margin-bottom: 75px;
 }
 #OffIntro .TableCel{
-	width:16.6%; height:100%;
 	box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
 	background-position:center;
 	background-size:cover;
 	position:relative; z-index:1;
 
-	transition:transform 0.5s ease;
+	/*transition:transform 0.5s ease;*/
+	-ms-transition: transform 0.5s ease;
 	transform:scale(1);
 
 	overflow-y:hidden;
 	overflow:hidden;
 }
 #OffIntro .TableCel:hover{
-	transform:scale(1.05);
+	/*transform:scale(1.05);*/
 	z-index:2;
 }
 
 #OffIntro h3{
 	margin:0;
+	font-size: medium;
 }
 #OffIntro .TextWrap{
 	padding:10px 0;
-	display:block;
+	display:none;
 	margin:0; position:absolute;
 	/*background:rgba(0,0,0,0.3);*/
-	background:rgb(52, 73, 94);
-	transform:translateY(100%);
+	background:rgba(0, 0, 0, 0.5);
+	/*transform:translateY(100%);*/
 	transition: transform 0.5s ease;
+	-ms-transition: transform 0.5s ease;
 	width:100%;
-	bottom:0; left:0;
+	bottom: 0; left:0;
 	color:white; text-decoration:none;
+	cursor: pointer;
+	/*visibility: hidden;*/
 }
 #OffIntro .TextWrap div{
 	width:100%;
@@ -791,36 +796,135 @@ label{
 #OffIntro p{
 	padding: 0 5px;
 	margin:0;
+
 }
 #OffIntro .TableCel:hover .TextWrap{
 	transform:translateY(0);
 }
+#OffIntro #TableCel00 {
+	width: 12.5% !important;
+}
 
-#OffIntro .TableCel:nth-child(1){
-	background-image:url('https://i.imgur.com/iBj8SBk.jpg');
-}
-#OffIntro .TableCel:nth-child(2){
-	background-image:url('/images/max.jpg');
-}
-#OffIntro .TableCel:nth-child(3){
-	background-image:url('/images/Makenzie.jpg');
-}
-#OffIntro .TableCel:nth-child(4){
+#OffIntro #Row1 .TableCel:nth-child(1){ /*President*/
 	background-image:url('https://pbs.twimg.com/profile_images/736763645510725632/ICe9Z_2V.jpg');
 }
-#OffIntro .TableCel:nth-child(5){
+#OffIntro #Row1 .TableCel:nth-child(2){ /*Vice President*/
+	background-image:url('/images/char.jpg');
+	background-size: 300%;
+}
+#OffIntro #Row1 .TableCel:nth-child(3){ /*Secretary*/
+	background-image:url('https://i.imgur.com/p48VOEI.png');
+}
+#OffIntro #Row1 .TableCel:nth-child(4){ /*Treasurer*/
+	background-image:url('images/agnim.jpg');
+}
+#OffIntro #Row1 .TableCel:nth-child(5){ /*Reporter*/
 	background-image:url('https://michaelxing.tk/old/aktsa/img/nats.jpg');
 }
-#OffIntro .TableCel:nth-child(6){
+#OffIntro #Row1 .TableCel:nth-child(6){ /*Webmaster*/
 	background-image:url('http://i.imgur.com/X6OtAFW.jpg');
+}
+#OffIntro #Row1 .TableCel:nth-child(7){ /*Robotics Director*/
+	background-image:url('http://i.imgur.com/X6OtAFW.jpg');
+}
+#OffIntro .BigBox:hover p{
+	opacity:1;
+}
+#OffIntro .BigBox:active p{
+	opacity:0.8;
+	transition: opacity 0.1s ease;
+}
+
+#OffIntro button{
+	background:none;
+	padding: 10px 13px;
+}
+#OffIntro .ClassOpen{
+	max-width:0vh;
+	position: relative;
+	width: 50%;
+	float: left;
+	transition: max-height 0.2s ease-out;
+	overflow-y:hidden;
+	background:#34495e;
+	color:white;
+	height: 300px;
+	overflow: hidden;
+	box-shadow: inset 0 0 10px rgba(0,0,0,0.9);
+	z-index: 1;
+}
+#OffIntro .ClassOpen p{
+	color:white;
+	opacity:1; background:none;
+	text-align:left;
+	margin:20px;
+}
+#OffIntro .ClassOpen h3{
+	margin:20px;
+}
+
+#OffIntro .ClassArrow{
+	font-size:400%;
+	color:white;
+	width:100%;
+	display:inline-block;
+	text-align:center;
+	position:absolute;
+	top:80%;
+	transition: opacity 0.5s ease;
+	opacity:0;
+}
+
+#OffIntro #ClassClose{
+	position:absolute;
+	right:20px;
+	top:120em;
+	transform:translateY(-50%);
+	opacity:0;
+	transition: opacity 0.5s ease;
+	-ms-transition: opacity 0.5s ease;
+	pointer-events:none;
+}
+
+#OffIntro .ClassOpenFrame {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 3;
+}
+
+#OffIntro .ClassOpenBack {
+	width: 100%;
+	height: 300px;
+	position: absolute;
+	z-index: -1;
+	background-color:#34495e;
+}
+
+#OffIntro .ClassOpenBackBack {
+	position: relative;
+	width: 100%;
+}
+#OffIntro .expand:hover {
+	text-decoration: none !important;
+	color: lightblue;
 }
 
 #WeWonStuff{
 	width:100%;
 	border-collapse:collapse;
+	border: 1px solid black;
+	box-sizing: border-box;
 }
 #WeWonStuff tr:nth-child(odd){
-	background:rgb(189, 195, 199);
+	background:rgb(180, 198, 231);
+	/* color: white; */
+}
+#WeWonStuff td:nth-child(1), th:nth-child(1) {
+	width: 25%;
+}
+#WeWonStuff td:nth-child(2), th:nth-child(2) {
+	width: %;
 }
 #WeWonStuff td, th{
 	padding:5px;
