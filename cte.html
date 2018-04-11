@@ -24,6 +24,78 @@
 		<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
 		<meta name="author" content="Michael Xing" />
 		<meta charset="UTF-8" />
+		<style>
+		#OffIntro .TableOut{
+width:100%;
+min-height:150px;
+height:150px;
+color:white;
+/* background:black; */
+text-align:center;
+}
+#OffIntro .TableCel{
+width:16.6%; height:100%;
+box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+background-position:center;
+background-size:cover;
+position:relative; z-index:1;
+
+transition:transform 0.5s ease;
+transform:scale(1);
+
+overflow-y:hidden;
+overflow:hidden;
+}
+#OffIntro .TableCel:hover{
+transform:scale(1.05);
+z-index:2;
+}
+
+#OffIntro h3{
+margin:0;
+}
+#OffIntro .TextWrap{
+padding:10px 0;
+display:block;
+margin:0; position:absolute;
+/*background:rgba(0,0,0,0.3);*/
+background:rgb(52, 73, 94);
+transform:translateY(100%);
+transition: transform 0.5s ease;
+width:100%;
+bottom:0; left:0;
+color:white; text-decoration:none;
+}
+#OffIntro .TextWrap div{
+width:100%;
+}
+#OffIntro p{
+padding: 0 5px;
+margin:0;
+}
+#OffIntro .TableCel:hover .TextWrap{
+transform:translateY(0);
+}
+
+#OffIntro .TableCel:nth-child(1){
+background-image:url('https://i.imgur.com/iBj8SBk.jpg');
+}
+#OffIntro .TableCel:nth-child(2){
+background-image:url('/images/max.jpg');
+}
+#OffIntro .TableCel:nth-child(3){
+background-image:url('/images/Makenzie.jpg');
+}
+#OffIntro .TableCel:nth-child(4){
+background-image:url('https://pbs.twimg.com/profile_images/736763645510725632/ICe9Z_2V.jpg');
+}
+#OffIntro .TableCel:nth-child(5){
+background-image:url('https://michaelxing.tk/old/aktsa/img/nats.jpg');
+}
+#OffIntro .TableCel:nth-child(6){
+background-image:url('https://i.imgur.com/X6OtAFW.jpg');
+}
+		</style>
 	</head>
 	<body onload="setUpPage();" style="overflow-x:hidden;max-width:100vw;width:100%;">
 		<nav onclick="expandNav()">
@@ -168,7 +240,7 @@
 
 
 
-				<section id="OffIntro" class="CTETeach">
+				<section id="OffIntro" class="CTETeach" style="height: 75vh !important;">
 					<h2>Teachers</h2>
 					<div class="TableOut"><div class="TableRow">
 						<div class="TableCel" style="background-image:url('/images/teachers/sheff.jpg');">
@@ -231,36 +303,27 @@
 						<div class="InfoCell" id="TeachInfo-1" style="background:#bdc3c7;left:100%;z-index:-2;box-shadow: inset 0 0 20px rgba(0,0,0,0.5); ">
 
 						</div>
+
+
+
+
 					</div>
+					
 
-					<small>Additional teachers declined to be displayed on this page.</small>
 				</section>
-
-
-
+				<!-- <section style="height: 65vh;"></section> -->
 				<section>
+					<!-- <small>Additional teachers declined to be displayed on this page.</small> -->
+				</section>
+				<!-- <section>
 					<h2>Additional Links</h2>
 					<p>
 						<a class="BigBtn" href="http://schools.cms.k12.nc.us/ardreykellHS/Pages/Default.aspx">Ardrey Kell High School</a>
 						<a class="BigBtn" href="http://schools.cms.k12.nc.us/ardreykellHS/Pages/FacultyAndStaff.aspx">Faculty and Staff</a>
 						<a class="BigBtn" href="http://www.cms.k12.nc.us/Pages/default.aspx">Charlotte Mecklenburg Schools</a>
 					</p>
-				</section>
+				</section> -->
 			</div>
 		</div>
-		<script>
-			function expandNav() {
-  if($(window).width() <= 960) {
-				if ($('nav').hasClass('open')) {
-					$('.Nav').css('display', 'none');
-					$('nav').removeClass('open');
-				} else {
-					$('.Nav').css('display', 'block');
-					$('nav').addClass('open');
-					//  $('.Nav::').css('transform', 'translateX(110px)');
-}
-				}
-			}
-		</script>
 	</body>
 </html>
