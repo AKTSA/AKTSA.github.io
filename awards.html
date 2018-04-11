@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>About - AK TSA</title>
-		<link rel="stylesheet" type="text/css" href="uni.css" />
 
-		<!--Polyfills-->
-		<script src="promise.js"></script>
-		<script src="fetch.js"></script>
-		<script>
-			if (!window.Promise) {
-				window.Promise = Promise;
-			}
-		</script>
+<head>
+	<title>About - AK TSA</title>
+	<link rel="stylesheet" type="text/css" href="uni.css" />
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="change.js"></script>
+	<!--Polyfills-->
+	<script src="promise.js"></script>
+	<script src="fetch.js"></script>
+	<script>
+		if (!window.Promise) {
+			window.Promise = Promise;
+		}
+	</script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="change.js"></script>
 
 
-		<script id="pageJS" src="/pageJS/about.js"></script>
+	<script id="pageJS" src="/pageJS/about.js"></script>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
-		<meta name="author" content="Agnim Agarwal" />
-		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="/JSDep/ideal-image-slider.css">
-		<link rel="stylesheet" href="/JSDep/ideal-default.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
+	<meta name="author" content="Agnim Agarwal" />
+	<meta charset="UTF-8" />
+	<link rel="stylesheet" href="/JSDep/ideal-image-slider.css">
+	<link rel="stylesheet" href="/JSDep/ideal-default.css">
 
-		<script src="/JSDep/ideal-image-slider.js"></script>
-		<script src="/JSDep/ideal-captions.js"></script>
-    <style>
-      .AwardsHeroWrap {
-        background:  linear-gradient(to right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('images/awards.jpg');
-        background-size: 100% 85%;
-        background-attachment: fixed;
-        line-height:initial;
-        text-shadow: -2px -2px white, 2px 2px white, 2px -2px white, -2px 2px white;
-      }
+	<script src="/JSDep/ideal-image-slider.js"></script>
+	<script src="/JSDep/ideal-captions.js"></script>
+	<style>
+		.AwardsHeroWrap {
+			background: linear-gradient(to right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url('images/awards.jpg');
+			background-size: 100% 85%;
+			background-attachment: fixed;
+			line-height: initial;
+			text-shadow: -2px -2px white, 2px 2px white, 2px -2px white, -2px 2px white;
+		}
+	</style>
+</head>
 
-    </style>
-	</head>
-	<body onload="setUpPage();">
-		<nav onclick="expandNav()">
-			<a href="/" class="MainBtn Nav"><span>Home</span>
+<body onload="setUpPage();">
+	<nav onclick="expandNav()">
+		<a href="/" class="MainBtn Nav"><span>Home</span>
 			</a> <a href="/about.html" class="SurroundBtn Nav">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
 			</a><a href="/member.html" class="SurroundBtn Nav">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/off.html" class="SurroundBtn Nav">Officers<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="/awards.html" class="SurroundBtn Nav CurrPage">Awards<div class="LeftPseudo"></div><div class="RightPseudo"></div>
 			</a><a href="/cte.html" class="SurroundBtn Nav">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
 			</a><a href="https://aktsa.org/aquabot" class="SurroundBtn Nav">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
 			</a><a href="https://aktsa.azurewebsites.net" class="SurroundBtn Nav">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
-		</nav>
-		<div id="NavBG"><h1 class="MainTitle">AK <span>TSA</span></h1></div>
-		<div class="MainWrap">
-			<div class="ContentWrap">
+	</nav>
+	<div id="NavBG">
+		<h1 class="MainTitle">AK <span>TSA</span></h1></div>
+	<div class="MainWrap">
+		<div class="ContentWrap">
 
 
-				<!--
+			<!--
 
 				=========================================================================================
 
@@ -64,328 +66,330 @@
 
 				-->
 
-                <section class="HeroWrap AwardsHeroWrap">
-                    <h1>Awards</h1>
-                </section>
+			<section class="HeroWrap AwardsHeroWrap">
+				<h1>Awards</h1>
+			</section>
 
-                	<section id="HeroMotto" style="padding-left:15vw; padding-right:15vw;"></section>
+			<section id="HeroMotto" style="padding-left:15vw; padding-right:15vw;"></section>
+			<section>
+				Our chapter takes competition very seriously. Since TSA was introduced to our school, we've won several awards at the regional, state, and national conferences. Below is a list of our awards from the past 3 years.
+			</section>
+			<section>
+				<p>TSA Nationals, 2017</p>
+				<table id="WeWonStuff">
+					<tr>
+						<th>Event</th>
+						<th>Place</th>
+						<th>Members</th>
+					</tr>
+					<tr>
+						<td>3D Animation</td>
+						<td>6th</td>
+						<td>Anna Goddard &amp; Dave Kubala</td>
+					</tr>
+					<tr>
+						<td>Essays On Technology</td>
+						<td>6th</td>
+						<td>Charlotte Cheng</td>
+					</tr>
+					<tr>
+						<td>Extemporaneous Speech</td>
+						<td>7th</td>
+						<td>Michael Xing</td>
+					</tr>
+					<tr>
+						<td>Prepared Presentation</td>
+						<td>4th</td>
+						<td>Ishani Deliwala</td>
+					</tr>
+					<td>Webmaster</td>
+					<td>2nd</td>
+					<td>Timmothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
+				</table>
 
-				<section>
-					<p>TSA Nationals, 2017</p>
-					<table id="WeWonStuff">
-						<tr>
-							<th>Event</th>
-							<th>Place</th>
-							<th>Members</th>
-						</tr>
-						<tr>
-							<td>3D Animation</td>
-							<td>6th</td>
-							<td>Anna Goddard &amp; Dave Kubala</td>
-						</tr>
-						<tr>
-							<td>Essays On Technology</td>
-							<td>6th</td>
-							<td>Charlotte Cheng</td>
-						</tr>
-						<tr>
-							<td>Extemporaneous Speech</td>
-							<td>7th</td>
-							<td>Michael Xing</td>
-						</tr>
-						<tr>
-							<td>Prepared Presentation</td>
-							<td>4th</td>
-							<td>Ishani Deliwala</td>
-						</tr>
-						<td>Webmaster</td>
+				<p>NCTSA States, 2017</p>
+				<table id="WeWonStuff">
+					<tr>
+						<th>Event</th>
+						<th>Place</th>
+						<th>Members</th>
+					</tr>
+					<tr>
+						<td>3D Animation</td>
+						<td>3rd</td>
+						<td>Anna Goddard &amp; Dave Kubala</td>
+					</tr>
+					<tr>
+						<td>Architectural Design</td>
+						<td>1st</td>
+						<td>Jackson Dye, Rachel Ehrman, Anusha Khansaheb, &amp; Katie Zhao</td>
+					</tr>
+					<tr>
+						<td>Biotechnology Design</td>
 						<td>2nd</td>
-						<td>Timmothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
-					</table>
-
-					<p>NCTSA States, 2017</p>
-					<table id="WeWonStuff">
-						<tr>
-							<th>Event</th>
-							<th>Place</th>
-							<th>Members</th>
-						</tr>
-						<tr>
-							<td>3D Animation</td>
-							<td>3rd</td>
-							<td>Anna Goddard &amp; Dave Kubala</td>
-						</tr>
-						<tr>
-							<td>Architectural Design</td>
-							<td>1st</td>
-							<td>Jackson Dye, Rachel Ehrman, Anusha Khansaheb, &amp; Katie Zhao</td>
-						</tr>
-						<tr>
-							<td>Biotechnology Design</td>
-							<td>2nd</td>
-							<td>Bhavana Ambil, Hannah Dong, Manivannan Senthil, Carissa Tai, &amp; Katie Zhao</td>
-						</tr>
-						<!--tr>
+						<td>Bhavana Ambil, Hannah Dong, Manivannan Senthil, Carissa Tai, &amp; Katie Zhao</td>
+					</tr>
+					<!--tr>
 							<td>3rd</td>
 							<td>Abdurakhmon Abdulatipov, Hannah Dong, Jin Gao, Aryan Gupta, Lucas Lu, & Carissa Tai</td>
 						</tr-->
-						<tr>
-							<td>Children's Stories</td>
-							<td>3rd</td>
-							<td>Yashika Ghandi, Sunny Gorrepati, Joshita Padala, &amp; Imad Rahu</td>
-						</tr>
-						<tr>
-							<td>Debating Technological Issues</td>
-							<td>2nd</td>
-							<td>Timmothy Rossow &amp; Michael Xing</td>
-						</tr>
-						<tr>
-							<td>Essays on Technology</td>
-							<td>3rd</td>
-							<td>Charlotte Cheng</td>
-						</tr>
-						<tr>
-							<td>Extemporaneous Speech</td>
-							<td>1st<br>2nd</td>
-							<td>Adarsh Sukumar<br>Michael Xing</td>
-						</tr>
-						<tr>
-							<td>Fashion Design</td>
-							<td>2nd</td>
-							<td>Tobi Akinyelu, Makenzie Kelly, Sophia Shi, &amp; Gabrielle Skelton</td>
-						</tr>
-						<tr>
-							<td>Future Technology Teacher</td>
-							<td>1st</td>
-							<td>Ishani Deliwala</td>
-						</tr>
-						<tr>
-							<td>Music Production</td>
-							<td>2nd</td>
-							<td>Joseph D'Apollonio, Gabriel Goldhagen, Max Kegley, Makenzie Kelly, &amp; Keon Kim</td>
-						</tr>
-						<!--tr>
+					<tr>
+						<td>Children's Stories</td>
+						<td>3rd</td>
+						<td>Yashika Ghandi, Sunny Gorrepati, Joshita Padala, &amp; Imad Rahu</td>
+					</tr>
+					<tr>
+						<td>Debating Technological Issues</td>
+						<td>2nd</td>
+						<td>Timmothy Rossow &amp; Michael Xing</td>
+					</tr>
+					<tr>
+						<td>Essays on Technology</td>
+						<td>3rd</td>
+						<td>Charlotte Cheng</td>
+					</tr>
+					<tr>
+						<td>Extemporaneous Speech</td>
+						<td>1st<br>2nd</td>
+						<td>Adarsh Sukumar<br>Michael Xing</td>
+					</tr>
+					<tr>
+						<td>Fashion Design</td>
+						<td>2nd</td>
+						<td>Tobi Akinyelu, Makenzie Kelly, Sophia Shi, &amp; Gabrielle Skelton</td>
+					</tr>
+					<tr>
+						<td>Future Technology Teacher</td>
+						<td>1st</td>
+						<td>Ishani Deliwala</td>
+					</tr>
+					<tr>
+						<td>Music Production</td>
+						<td>2nd</td>
+						<td>Joseph D'Apollonio, Gabriel Goldhagen, Max Kegley, Makenzie Kelly, &amp; Keon Kim</td>
+					</tr>
+					<!--tr>
 							<td>3rd</td>
 							<td>Maxwell Kegley & Makenzie Kelly</td>
 						</tr-->
-						<tr>
-							<td>Photographic Technology</td>
-							<td>2nd</td>
-							<td>Yashika Gandhi</td>
-						</tr>
-						<tr>
-							<td>Prepared Presentation</td>
-							<td>1st<br>3rd</td>
-							<td>Manivannan Senthil<br>Ishani Deliwala</td>
-						</tr>
-						<tr>
-							<td>SciViz</td>
-							<td>1st</td>
-							<td>Anna Goddard, Elijah Hubble, &amp; Dave Kubala</td>
-						</tr>
-						<tr>
-							<td>STEM Careers</td>
-							<td>3rd</td>
-							<td>Hannah Dong</td>
-						</tr>
-						<tr>
-							<td>Structural Engineering</td>
-							<td>2nd</td>
-							<td>Rohit Chaudhuri &amp; Prakash Ray</td>
-						</tr>
-						<tr>
-							<td>Transportation Modeling</td>
-							<td>2nd</td>
-							<td>Koushik Sridhar</td>
-						</tr>
-						<tr>
-							<td>Webmaster</td>
-							<td>1st</td>
-							<td>Aviral Agarwal, Joshita Padala, Timmothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
-						</tr>
-					</table>
-          <p>TSA Nationals, 2016</p>
-          <table id="WeWonStuff">
-            <tr>
-							<th>Event</th>
-							<th>Place</th>
-							<th>Members</th>
-						</tr>
-            <tr>
-              <td>Biotechnology Design</td>
-              <td>5th</td>
-              <td>Vibhu Ambil, Mani Senthil, &amp; Katie Zhao</td>
-            </tr>
-            <tr>
-              <td>CAD 3D, Engineering</td>
-              <td>7th</td>
-              <td>Samuel Unferth</td>
-            </tr>
-            <tr>
-              <td>Music Production</td>
-              <td>4th</td>
-              <td>Max Kegley &amp; Mackenzie Kelly</td>
-            </tr>
-            <tr>
-              <td>Prepared Presentation</td>
-              <td>7th</td>
-              <td>Mani Senthil</td>
-            </tr>
-            <tr>
-              <td>Webmaster</td>
-              <td>5th</td>
-              <td>Aviral Agarwal, Aryan Gupta, Timmothy Rossow, Sarosh Santosh, &amp; Michael Xing</td>
-            </tr>
-          </table>
-          <p>NCTSA States, 2016</p>
-          <table id="WeWonStuff">
-            <tr>
-							<th>Event</th>
-							<th>Place</th>
-							<th>Members</th>
-						</tr>
-            <tr>
-              <td>Architectural Renovation</td>
-              <td>1st</td>
-              <td>Jackson Dye, Rachel Ehrmann, Anusha Khansaheb, Chase Ralston, &amp; Katie Zhao</td>
-            </tr>
-            <tr>
-              <td>Biotechnology Design</td>
-              <td>1st<br>3rd</td>
-              <td>Vibhu Ambil, Mani Senthil, &amp; Katie Zhao<br>Abdurakhmon Abdulatipov, Hannah Dong, Jin Gao, Aryan Gupta, Lucas Lu, &amp; Carissa Tai</td>
-            </tr>
-            <tr>
-              <td>Career Preparation</td>
-              <td>1st</td>
-              <td>Anisha Ponnapati</td>
-            </tr>
-            <tr>
-              <td>CAD 3D, Engineering</td>
-              <td>3rd</td>
-              <td>Aryan Gupta</td>
-            </tr>
-            <tr>
-              <td>Debating Technological Issues</td>
-              <td>2nd</td>
-              <td>Douglas Dubrowski &amp; Matthew Lyons</td>
-            </tr>
-            <tr>
-              <td>Desktop Publishing</td>
-              <td>1st</td>
-              <td>Sunnie Kwak</td>
-            </tr>
-            <tr>
-              <td>Essays On Technology</td>
-              <td>3rd</td>
-              <td>Carolyn Sanderlin</td>
-            </tr>
-            <tr>
-              <td>Extemporaneous Speech</td>
-              <td>2nd</td>
-              <td>Michael Xing</td>
-            </tr>
-            <tr>
-              <td>Flight Endurance</td>
-              <td>2nd</td>
-              <td>Katie Zhao</td>
-            </tr>
-            <tr>
-              <td>Music Production</td>
-              <td>2nd<br>3rd</td>
-              <td>John Casabonne, Ishan Jolly, Keon Kim, &amp; Grant Kinsey<br>Max Kegley &amp; Mackenzie Kelly</td>
-            </tr>
-            <tr>
-              <td>Photographic Technology</td>
-              <td>2nd</td>
-              <td>Sabrina Ho</td>
-            </tr>
-            <tr>
-              <td>Prepared Presentation</td>
-              <td>2nd</td>
-              <td>Manivannan Senthil</td>
-            </tr>
-            <tr>
-              <td>SciVis</td>
-              <td>3rd</td>
-              <td>Alec Probst &amp; Stephen Wardlaw</td>
-            </tr>
-            <tr>
-              <td>Structural Engineering</td>
-              <td>2nd</td>
-              <td>Kevin Carney &amp; Ishan Jolly</td>
-            </tr>
-            <tr>
-              <td>Systems Control</td>
-              <td>1st</td>
-              <td>Hazim Mukhtar, Karan Malhotra, &amp; Samuel Unferth</td>
-            </tr>
-            <tr>
-              <td>Webmaster</td>
-              <td>1st</td>
-              <td>Aviral Agarwal, Aryan Gupta, Timmothy Rossow, Sarosh Santosh, &amp; Michael Xing</td>
-            </tr>
-          </table>
-          <p>TSA Nationals, 2015</p>
-          <table id="WeWonStuff">
-            <tr>
-							<th>Event</th>
-							<th>Place</th>
-							<th>Members</th>
-						</tr>
-            <tr>
-              <td>Engineering Design</td>
-              <td>4th</td>
-              <td>Carson Orr, Kevin Carney, Nick Spina, Jake Cheek, &amp; Jackson Wright</td>
-            </tr>
-            <tr>
-              <td>Technology Bowl, Written Test</td>
-              <td>10th</td>
-              <td>Aviral Agarwal</td>
-            </tr>
-          </table>
-          <p>NCTSA States, 2015</p>
-          <table id="WeWonStuff">
-            <tr>
-							<th>Event</th>
-							<th>Place</th>
-							<th>Members</th>
-						</tr>
-            <tr>
-              <td>Engineering Design</td>
-              <td>1st</td>
-              <td>Carson Orr, Kevin Carney, Nick Spina, Jake Cheek, &amp; Jackson Wright</td>
-            </tr>
-            <tr>
-              <td>Fashion Design</td>
-              <td>1st</td>
-              <td>Yara Bauer, Katherine Norwine, Isabel Hoerr, &amp; Irene Zhou</td>
-            </tr>
-            <tr>
-              <td>Music Production</td>
-              <td>1st</td>
-              <td>Keon Kim, John Casabonne, Ishan Jolly, David Knoble, Yash Makwana, &amp; Haley Pratt</td>
-            </tr>
-            <tr>
-              <td>Debating Technological Issues</td>
-              <td>2nd</td>
-              <td>Anisha Ponnapati &amp; Abhijith Tammanagari</td>
-            </tr>
-            <tr>
-              <td>Career Prep</td>
-              <td>2nd</td>
-              <td>Anisha Ponnapati</td>
-            </tr>
-          </table>
-				</section>
+					<tr>
+						<td>Photographic Technology</td>
+						<td>2nd</td>
+						<td>Yashika Gandhi</td>
+					</tr>
+					<tr>
+						<td>Prepared Presentation</td>
+						<td>1st<br>3rd</td>
+						<td>Manivannan Senthil<br>Ishani Deliwala</td>
+					</tr>
+					<tr>
+						<td>SciViz</td>
+						<td>1st</td>
+						<td>Anna Goddard, Elijah Hubble, &amp; Dave Kubala</td>
+					</tr>
+					<tr>
+						<td>STEM Careers</td>
+						<td>3rd</td>
+						<td>Hannah Dong</td>
+					</tr>
+					<tr>
+						<td>Structural Engineering</td>
+						<td>2nd</td>
+						<td>Rohit Chaudhuri &amp; Prakash Ray</td>
+					</tr>
+					<tr>
+						<td>Transportation Modeling</td>
+						<td>2nd</td>
+						<td>Koushik Sridhar</td>
+					</tr>
+					<tr>
+						<td>Webmaster</td>
+						<td>1st</td>
+						<td>Aviral Agarwal, Joshita Padala, Timmothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
+					</tr>
+				</table>
+				<p>TSA Nationals, 2016</p>
+				<table id="WeWonStuff">
+					<tr>
+						<th>Event</th>
+						<th>Place</th>
+						<th>Members</th>
+					</tr>
+					<tr>
+						<td>Biotechnology Design</td>
+						<td>5th</td>
+						<td>Vibhu Ambil, Mani Senthil, &amp; Katie Zhao</td>
+					</tr>
+					<tr>
+						<td>CAD 3D, Engineering</td>
+						<td>7th</td>
+						<td>Samuel Unferth</td>
+					</tr>
+					<tr>
+						<td>Music Production</td>
+						<td>4th</td>
+						<td>Max Kegley &amp; Mackenzie Kelly</td>
+					</tr>
+					<tr>
+						<td>Prepared Presentation</td>
+						<td>7th</td>
+						<td>Mani Senthil</td>
+					</tr>
+					<tr>
+						<td>Webmaster</td>
+						<td>5th</td>
+						<td>Aviral Agarwal, Aryan Gupta, Timmothy Rossow, Sarosh Santosh, &amp; Michael Xing</td>
+					</tr>
+				</table>
+				<p>NCTSA States, 2016</p>
+				<table id="WeWonStuff">
+					<tr>
+						<th>Event</th>
+						<th>Place</th>
+						<th>Members</th>
+					</tr>
+					<tr>
+						<td>Architectural Renovation</td>
+						<td>1st</td>
+						<td>Jackson Dye, Rachel Ehrmann, Anusha Khansaheb, Chase Ralston, &amp; Katie Zhao</td>
+					</tr>
+					<tr>
+						<td>Biotechnology Design</td>
+						<td>1st<br>3rd</td>
+						<td>Vibhu Ambil, Mani Senthil, &amp; Katie Zhao<br>Abdurakhmon Abdulatipov, Hannah Dong, Jin Gao, Aryan Gupta, Lucas Lu, &amp; Carissa Tai</td>
+					</tr>
+					<tr>
+						<td>Career Preparation</td>
+						<td>1st</td>
+						<td>Anisha Ponnapati</td>
+					</tr>
+					<tr>
+						<td>CAD 3D, Engineering</td>
+						<td>3rd</td>
+						<td>Aryan Gupta</td>
+					</tr>
+					<tr>
+						<td>Debating Technological Issues</td>
+						<td>2nd</td>
+						<td>Douglas Dubrowski &amp; Matthew Lyons</td>
+					</tr>
+					<tr>
+						<td>Desktop Publishing</td>
+						<td>1st</td>
+						<td>Sunnie Kwak</td>
+					</tr>
+					<tr>
+						<td>Essays On Technology</td>
+						<td>3rd</td>
+						<td>Carolyn Sanderlin</td>
+					</tr>
+					<tr>
+						<td>Extemporaneous Speech</td>
+						<td>2nd</td>
+						<td>Michael Xing</td>
+					</tr>
+					<tr>
+						<td>Flight Endurance</td>
+						<td>2nd</td>
+						<td>Katie Zhao</td>
+					</tr>
+					<tr>
+						<td>Music Production</td>
+						<td>2nd<br>3rd</td>
+						<td>John Casabonne, Ishan Jolly, Keon Kim, &amp; Grant Kinsey<br>Max Kegley &amp; Mackenzie Kelly</td>
+					</tr>
+					<tr>
+						<td>Photographic Technology</td>
+						<td>2nd</td>
+						<td>Sabrina Ho</td>
+					</tr>
+					<tr>
+						<td>Prepared Presentation</td>
+						<td>2nd</td>
+						<td>Manivannan Senthil</td>
+					</tr>
+					<tr>
+						<td>SciVis</td>
+						<td>3rd</td>
+						<td>Alec Probst &amp; Stephen Wardlaw</td>
+					</tr>
+					<tr>
+						<td>Structural Engineering</td>
+						<td>2nd</td>
+						<td>Kevin Carney &amp; Ishan Jolly</td>
+					</tr>
+					<tr>
+						<td>Systems Control</td>
+						<td>1st</td>
+						<td>Hazim Mukhtar, Karan Malhotra, &amp; Samuel Unferth</td>
+					</tr>
+					<tr>
+						<td>Webmaster</td>
+						<td>1st</td>
+						<td>Aviral Agarwal, Aryan Gupta, Timmothy Rossow, Sarosh Santosh, &amp; Michael Xing</td>
+					</tr>
+				</table>
+				<p>TSA Nationals, 2015</p>
+				<table id="WeWonStuff">
+					<tr>
+						<th>Event</th>
+						<th>Place</th>
+						<th>Members</th>
+					</tr>
+					<tr>
+						<td>Engineering Design</td>
+						<td>4th</td>
+						<td>Carson Orr, Kevin Carney, Nick Spina, Jake Cheek, &amp; Jackson Wright</td>
+					</tr>
+					<tr>
+						<td>Technology Bowl, Written Test</td>
+						<td>10th</td>
+						<td>Aviral Agarwal</td>
+					</tr>
+				</table>
+				<p>NCTSA States, 2015</p>
+				<table id="WeWonStuff">
+					<tr>
+						<th>Event</th>
+						<th>Place</th>
+						<th>Members</th>
+					</tr>
+					<tr>
+						<td>Engineering Design</td>
+						<td>1st</td>
+						<td>Carson Orr, Kevin Carney, Nick Spina, Jake Cheek, &amp; Jackson Wright</td>
+					</tr>
+					<tr>
+						<td>Fashion Design</td>
+						<td>1st</td>
+						<td>Yara Bauer, Katherine Norwine, Isabel Hoerr, &amp; Irene Zhou</td>
+					</tr>
+					<tr>
+						<td>Music Production</td>
+						<td>1st</td>
+						<td>Keon Kim, John Casabonne, Ishan Jolly, David Knoble, Yash Makwana, &amp; Haley Pratt</td>
+					</tr>
+					<tr>
+						<td>Debating Technological Issues</td>
+						<td>2nd</td>
+						<td>Anisha Ponnapati &amp; Abhijith Tammanagari</td>
+					</tr>
+					<tr>
+						<td>Career Prep</td>
+						<td>2nd</td>
+						<td>Anisha Ponnapati</td>
+					</tr>
+				</table>
+			</section>
 
 
 
 
-			</div>
 		</div>
-		<script>
-			function expandNav() {
-  if($(window).width() <= 960) {
+	</div>
+	<script>
+		function expandNav() {
+			if ($(window).width() <= 960) {
 				if ($('nav').hasClass('open')) {
 					$('.Nav').css('display', 'none');
 					$('nav').removeClass('open');
@@ -393,17 +397,18 @@
 					$('.Nav').css('display', 'block');
 					$('nav').addClass('open');
 					//  $('.Nav::').css('transform', 'translateX(110px)');
-}
 				}
 			}
-		</script>
-		<script>
-	    var slider = new IdealImageSlider.Slider({
-	      selector: '#slider',
-	      height: 400
-	    });
-	    slider.addCaptions();
-	    slider.start();
-	  </script>
-	</body>
+		}
+	</script>
+	<script>
+		var slider = new IdealImageSlider.Slider({
+			selector: '#slider',
+			height: 400
+		});
+		slider.addCaptions();
+		slider.start();
+	</script>
+</body>
+
 </html>

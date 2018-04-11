@@ -31,10 +31,11 @@ body{
 
 nav{
 	position:fixed;
-	top:10px; right:10px;
+	width: 100%;
+	top:10px;
 	color:white;
 	z-index:100;
-	text-align:right;
+	text-align:center;
 	white-space:nowrap;
 }
 
@@ -45,7 +46,7 @@ nav a{
 
 #NavBG{
 	position:fixed;
-	top:0; right:0;
+	top:0; left:0;
 	z-index:98;
 	width:100%;
 	height:72px;
@@ -57,6 +58,9 @@ nav a{
 	line-height:72px;
 	font-size:60px;
 	padding-left:10px;
+}
+#NavBG .MainTitle {
+	display: none;
 }
 
 
@@ -459,20 +463,13 @@ code{background:#2c3e50;color:white;font-family:'Lucida Console',monospace;paddi
 	text-align:center;
 	width:40%;
 	background: #2c3e50;
-	opacity: 0.8;
+	opacity: 1;
 	color: white;
 	padding: 20px;
-	text-align: justify;
-	position: relative;
-	left: 20vw;
+	margin: 0 auto;
 	margin-top: 20vh !important;
 }
-.Left {
-	margin-left: -10%;
-}
-.Right {
-	margin-left: 30%;
-}
+
 
 .InvertFrame{
 	color:white;
@@ -962,6 +959,7 @@ label{
 
 #MembHeroWrap{
 	background-image:url('/images/new/FoodBank.JPG');
+	background-attachment: fixed;
 }
 #MembHeroWrap h1{
 	line-height:initial;
@@ -1391,13 +1389,21 @@ label{
 
 ================================================
 */
-@media (max-width : 1079px) {/*Fix that dumb nav overlap*/
+@media (max-width : 749px) {/*Fix that dumb nav overlap*/
 	nav a{
 		padding-left: 5px !important;
 		padding-right:5px !important;
 	}
 	#MemberHeroWord{
 		display:none;
+	}
+	.InfoFrame {
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+		width: 100vw !important;
+		left: 0 !important;
+		margin-left: 0 !important;
+
 	}
 }
 @media (max-width : 500px){
@@ -1414,7 +1420,8 @@ label{
 		margin-right: 10px !important;
 	}
 	.InfoFrame{
-		margin-left: 30% !important;
+
+		/* margin-left: 30% !important; */
 	}
 }
 @media (max-width : 700px) {
@@ -1502,7 +1509,8 @@ label{
 		width:100px;
 		height:50px;
 		line-height:50px;
-		right:120px;
+		left: -100px !important;
+		margin-left: 0 !important;
 		position:absolute;
 		transform:translateX(0px);
 		transition: transform 0.5s ease;
@@ -1521,7 +1529,7 @@ label{
 		padding-right:0 !important;
 		width:100px;
 		position: relative;
-		left: -120px;
+		left: -100px;
 		top: 50px;
 		/*transform: translateX(110px);*/
 		transition: background 0.5s ease, color 0.5s ease !important;
