@@ -1516,6 +1516,7 @@ label{
 		transition: transform 0.5s ease;
 		top:0;
 	}
+
 	.Nav{
 		display:none;
 		text-align:center;
@@ -1527,7 +1528,7 @@ label{
 		margin:0 !important;
 		padding-left:0 !important;
 		padding-right:0 !important;
-		width:100px;
+		width:100px !important;
 		position: relative;
 		left: -100px;
 		top: 50px;
@@ -1538,7 +1539,12 @@ label{
 	.Nav::before, .Nav::after, .LeftPseudo, .RightPseudo {
 		display: none !important;
 	}
-
+	.Nav:active {
+		display: none !important;
+	}
+	.Nav:hover {
+		/* display: none !important; */
+	}
 
 	/*
 		ABOUT PAGE
