@@ -1,133 +1,149 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Competition Requirements - AK TSA</title>
-		<style>
-			@import url(http://fonts.googleapis.com/css?family=Arvo);
 
-			html, body{
-				width:100%;
-				overflow-x:hidden;
-			}
+<head>
+	<title>Competition Requirements - AK TSA</title>
+	<style>
+		@import url(http://fonts.googleapis.com/css?family=Arvo);
 
-			body{
-				margin:0;
-				font-family: 'Arvo', serif;
-				color:white;
-				background:#2c3e50;
-				text-align:center;
+		html,
+		body {
+			width: 100%;
+			overflow-x: hidden;
+		}
 
-				display: flex;
-				align-items: center;
-				justify-content: center;
+		body {
+			margin: 0;
+			font-family: 'Arvo', serif;
+			color: white;
+			background: #2c3e50;
+			text-align: center;
 
-				min-height:100vh;
-			}
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
-			a{
-				color:white !important;
-			}
-			a:hover{
-				text-decoration:none;
-			}
+			min-height: 100vh;
+		}
 
-			h2{
-				display:inline-block;
-			}
+		a {
+			color: white !important;
+		}
 
-.BigBtn{
-	vertical-align:top;
-	color:black !important;
-	padding:12px 27px;
-	display:inline-block;
-	border:3px #000 solid;
-	position:relative;
-	transition: color 0.5s ease-in, border 0.2s ease;
-	overflow:hidden;
-	cursor:pointer;
-	text-decoration:none;
-}
-.BigBtn:hover{
-	color:white !important;
-	transition: color 0.5s ease-out, border 0.2s ease;
-}
-.BigBtn:active{
+		a:hover {
+			text-decoration: none;
+		}
 
-	border:3px #8e44ad solid;
-}
+		h2 {
+			display: inline-block;
+		}
+
+		.BigBtn {
+			vertical-align: top;
+			color: black !important;
+			padding: 12px 27px;
+			display: inline-block;
+			border: 3px #000 solid;
+			position: relative;
+			transition: color 0.5s ease-in, border 0.2s ease;
+			overflow: hidden;
+			cursor: pointer;
+			text-decoration: none;
+		}
+
+		.BigBtn:hover {
+			color: white !important;
+			transition: color 0.5s ease-out, border 0.2s ease;
+		}
+
+		.BigBtn:active {
+
+			border: 3px #8e44ad solid;
+		}
 
 
-.BigBtn::before{
-	content:'';
-	background:white;
-	width:100%;
-	height:100%;
-	position:absolute;
-	left: 0; top:0;
-	z-index:-2;
-}
+		.BigBtn::before {
+			content: '';
+			background: white;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -2;
+		}
 
-.BigBtn::after{
-	content:'';
-	background:#8e44ad;
-	width:200%;
-	height:100%;
-	position:absolute;
-	right: 150%; bottom:0;
-	z-index:-1;
-	transform:skewX(45deg);
-	transition: right 0.5s ease-in, background 0.2s ease;
-}
-.BigBtn:hover::after{
-	right:-50%;
-	transition: right 0.5s ease-out, background 0.2s ease;;
-}
-.BigBtn:active::after{
-	background:black;
-	transition: right 0.05s ease-out, background 0.2s ease;;
-}
-			#bib p{
-				text-align:left;
-				padding-left:40px;
-				text-indent:-40px;
-				line-height:200%;
-				font-family:serif;
-				margin:0;
-			}
+		.BigBtn::after {
+			content: '';
+			background: #8e44ad;
+			width: 200%;
+			height: 100%;
+			position: absolute;
+			right: 150%;
+			bottom: 0;
+			z-index: -1;
+			transform: skewX(45deg);
+			transition: right 0.5s ease-in, background 0.2s ease;
+		}
 
-			hr{
-				border:0;height:1px;
-				background-image:-webkit-linear-gradient(left,rgba(0,0,0,0.1),rgba(255,255,255,1),rgba(0,0,0,0.1));
-				background-image:-moz-linear-gradient(left,rgba(0,0,0,0.1),rgba(255,255,255,1),rgba(0,0,0,0.1));
-				background-image:-ms-linear-gradient(left,rgba(0,0,0,0.1),rgba(255,255,255,1),rgba(0,0,0,0.1));
-				background-image:linear-gradient(left,rgba(0,0,0,0.1),rgba(255,255,255,1),rgba(0,0,0,0.1));
-			}
-		</style>
-	</head>
-	<body>
-		<div style="max-width:50vw;">
-			<h1>Competition Information</h1>
-			<p>For the judges of the 2018 TSA State Conference</p>
-			<hr />
-			<a class="BigBtn" href="/">Back Home</a>
+		.BigBtn:hover::after {
+			right: -50%;
+			transition: right 0.5s ease-out, background 0.2s ease;
+			;
+		}
 
-			<hr />
+		.BigBtn:active::after {
+			background: black;
+			transition: right 0.05s ease-out, background 0.2s ease;
+			;
+		}
 
-			<details>
-				<summary><h2>Copyright Checklist</h2></summary>
-				<p>Available <a href="/old/CopyrightChecklist.pdf">here</a>.</p>
-			</details>
+		#bib p {
+			text-align: left;
+			padding-left: 40px;
+			text-indent: -40px;
+			line-height: 200%;
+			font-family: serif;
+			margin: 0;
+		}
 
-			<hr />
+		hr {
+			border: 0;
+			height: 1px;
+			background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.1));
+			background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.1));
+			background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.1));
+			background-image: linear-gradient(left, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 1), rgba(0, 0, 0, 0.1));
+		}
+	</style>
+</head>
 
-			<details>
-				<summary><h2>LEAP Resume</h2></summary>
-				<p>Available <a href="leap_resume2.pdf">here</a>.</p>
-			</details>
+<body>
+	<div style="max-width:50vw;">
+		<h1>Competition Information</h1>
+		<p>For the judges of the 2018 TSA National Conference</p>
+		<hr />
+		<a class="BigBtn" href="/">Back Home</a>
 
-			<hr />
+		<hr />
 
-			<!-- <details id="bib">
+		<details>
+			<summary>
+				<h2>Copyright Checklist</h2></summary>
+			<p>Available <a href="/old/CopyrightChecklist.pdf">here</a>.</p>
+		</details>
+
+		<hr />
+
+		<details>
+			<summary>
+				<h2>LEAP Resume</h2></summary>
+			<p>Available <a href="leap_resume2.pdf">here</a>.</p>
+		</details>
+
+		<hr />
+
+		<!-- <details id="bib">
 				<summary><h2>Bibliography</h2></summary>
 				<p style="text-align:center;">Works Cited</p>
 				<!--p>Amato, Andrew. "Drone Sales Numbers: Nobody Knows, So We Venture A Guess - DRONELIFE." DRONELIFE. 16 Apr. 2015. Web. 14 Apr. 2016.</p>
@@ -149,55 +165,50 @@ Wikipedia Editors. "Augmented Reality." Wikipedia. Wikimedia Foundation, 30 Mar.
 
 			<hr />
 
+-->
+		<details id="bib">
+			<summary>
+				<h2>Bibliography</h2></summary>
+			<p style="text-align:center;">Works Cited</p>
+			<p>McCarthy, J. (2007). What is artificial intelligence? Retrieved July 15, 2017 from http://wwwformal.stanford.edu/jmc/whatisai/node1.html Wikipedia. (2017).</p>
+			<p>Wikipedia: Artificial Intelligence. Retrieved July 15, 2017 from https://en.wikipedia.org/wiki/Artificial_intelligence
+			</p>
+			<p>The List of Lists. (2001). Asimov’s 3 Laws. Retrieved July 15, 2017 from https://www.auburn.edu/~vestmon/robotics.html
+			</p>
+		</details>
+		<hr>
+		<details>
+			<summary>
+				<h2>Images</h2></summary>
+			<p>All images were either created by AK TSA or used under Creative Commons or Public Domain.</p>
+			<ul>
+				<li>Google Fonts</li>
+				<li>Wikipedia</li>
+				<li>https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/17883574_1492756420775822_7802020512848250901_n.jpg?_nc_cat=0&oh=425aed1fc21bcabeb823f4bc0b19fb5d&oe=5B9947B4</li>
+				<li>http://robohub.org/wp-content/uploads/2017/02/grid-AI.jpg</li>
+				<li>http://tomtunguz.com/images/ml_icons.jpg</li>
+				<li>http://irisbooth.com/wp-content/uploads/2017/05/tech2.jpg</li>
+				<li>https://images.pexels.com/photos/159304/network-cable-ethernet-computer-159304.jpeg?w=940&h=650&auto=compress&cs=tinysrgb</li>
+				<li>https://images.pexels.com/photos/277407/pexels-photo-277407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940</li>
+				<li>https://images.pexels.com/photos/260551/pexels-photo-260551.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940</li>
+				<li>https://img.grouponcdn.com/deal/pQxxk6ntS7iAJSUiq2LH/Cx-3867x2578/v1/c700x420.jpg</li>
+				<li>https://images.pexels.com/photos/207489/pexels-photo-207489.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940</li>
+				<li>http://www.symondrake.com/wordpress/wp-content/uploads/2015/02/deepwater.png</li>
+				<li>https://inhabitat.com/wp-content/blogs.dir/1/files/2014/06/power-storing-wires-lead.jpg</li>
+				<li>https://images.pexels.com/photos/240834/pexels-photo-240834.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940</li>
+				<li>http://www.gracelinks.org/library/resizer.php?src=/images/hor_6704.jpg&w=600&h=300&zc=1&q=100</li>
+				<li>https://wallpaperstudio10.com/static/wpdb/wallpapers/1920x1080/175820.jpg</li>
+				<li>https://images.pexels.com/photos/50987/money-card-business-credit-card-50987.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940</li>
+				<li>http://www.embex-engineering.com/fileadmin/redaktion/Bilder/Hardware/Hardware_Uebersicht_01.jpg</li>
+				<li>https://www.takeda.com/siteassets/system/who-we-are/contact-us/contact1600x900.jpg</li>
+				<li>https://s3.amazonaws.com/files.cnas.org/title/AI-Hero.jpg?mtime=20170725094403g</li>
+				<!-- <li></li> -->
+			</ul>
+		</details>
 
-			<details> -->
-				<summary><h2>Images</h2></summary>
-				<p>All images were either created by AK TSA or used under Creative Commons or Public Domain.</p>
-				<ul>
-					<li>Google Fonts</li>
-					<li>
-					http://core0.staticworld.net/images/article/2013/04/facebook_home_logo_580-100034106-large.jpg</li><li>
-					https://pixabay.com/static/uploads/photo/2015/03/10/17/30/twitter-667462_960_720.png</li><li>
-					https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/08_comment-512.png</li>
-					<li>http://www.pngmart.com/files/3/Star-PNG-Pic.png                                                                               </li><li>https://static.pexels.com/photos/24962/pexels-photo.jpg</li>
-<li>https://c1.staticflickr.com/8/7388/14119699604_8c775a5e17_b.jpg                                                               </li>
-<li>https://c1.staticflickr.com/9/8409/27972275293_6fd819aedd_b.jpg                                                               </li>
-<li>http://kctv.images.worldnow.com/images/10956737_G.jpg                                                                         </li>
-<li>https://c1.staticflickr.com/4/3632/3744953433_e3b523e24d_b.jpg                                                                </li>
-<li>https://upload.wikimedia.org/wikipedia/commons/b/be/Google_Glass_with_frame.jpg                                               </li>
-<li>https://c1.staticflickr.com/9/8829/27820253593_af4698f0a1_b.jpg                                                               </li>
-<li>https://upload.wikimedia.org/wikipedia/commons/2/25/Google_Glass_Explorer_Edition.jpeg                                        </li>
-<li>https://c1.staticflickr.com/6/5728/20841075594_b91257de92_b.jpg                                                               </li>
-<li>https://c1.staticflickr.com/8/7533/15716942894_ed8c4f2e52_b.jpg                                                               </li>
-<li>https://c1.staticflickr.com/8/7791/17131947549_67aaeb1931_b.jpg                                                               </li>
-<li>https://userscontent2.emaze.com/images/ac315fff-308a-4fc6-9f69-1a60c07df893/c528f93ffbd92023853c40d886232d74.jpg              </li>
-<li>https://static.pexels.com/photos/1944/lights-abstract-curves-long-exposure.jpg                                                </li>
-<li>https://c1.staticflickr.com/6/5044/5335125988_a656efded1_b.jpg                                                                </li>
-<li>https://static.pexels.com/photos/5795/medicine-thermometer-tablets-pills.jpg                                                  </li>
-<li>https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg                                                          </li><li>https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/USA-Harvard_University_Yard.jpg/1280px-USA-Harvard_University_Yard.jpg</li>
-<li>http://resumbrae.com/ub/dms423_f08/06/sutherland-hmd.jpg                                                                        </li>
-<li>https://static.pexels.com/photos/315437/pexels-photo-315437.jpeg                                                                </li>
-<li>https://upload.wikimedia.org/wikipedia/commons/f/fc/Augmented_reality_world_globe.png                                           </li>
-<li>https://upload.wikimedia.org/wikipedia/commons/b/b0/ViewAR_BUTLERS_Screenshot.jpg                                               </li>
-<li>https://static.pexels.com/photos/5110/road-dawn-mountains-sky.jpeg                                                              </li>
-<li>http://maxpixel.freegreatpicture.com/static/photo/1x/Data-Hacker-Hacking-Computer-Security-Internet-1685092.jpg                 </li>
-<li>https://c1.staticflickr.com/3/2824/13334048894_001d3e53d1_b.jpg                                                                 </li>
-<li>https://upload.wikimedia.org/wikipedia/commons/3/31/Network_hacking.jpg                                                         </li>
-<li>https://upload.wikimedia.org/wikipedia/commons/d/dd/Google_Glass_Main.jpg                                                       </li>
-<li>https://c1.staticflickr.com/8/7367/15867880743_f954b09377_b.jpg                                                                 </li>
-<li>https://c1.staticflickr.com/6/5728/20841075594_b91257de92_b.jpg                                                                 </li>
-<li>https://c1.staticflickr.com/9/8016/28170409310_3a36de4116_b.jpg                                                                 </li>
-<li>https://c1.staticflickr.com/2/1541/25081061586_6428102f6c.jpg                                                                   </li>
-<li>http://www.roadtovr.com/wp-content/uploads/2015/10/project-xray-hololens-action.jpg                                             </li>
-<li>https://c1.staticflickr.com/8/7791/17131947549_67aaeb1931_b.jpg                                                                 </li>
-<li>https://i.vimeocdn.com/video/593696354_1280x720.jpg                                                                             </li>
-					<li>Wikipedia</li>
-				</ul>
-			</details>
+		<hr />
 
-			<hr />
-
-			<!-- <details>
+		<!-- <details>
 				<summary><h2>Videos</h2></summary>
 				<p>All videos were either created by AK TSA or used under Creative Commons or Public Domain.</p>
 				<ul>
@@ -214,21 +225,23 @@ Wikipedia Editors. "Augmented Reality." Wikipedia. Wikimedia Foundation, 30 Mar.
 
 			<hr /> -->
 
-			<details>
-				<summary><h2>Software Libraries</h2></summary>
-				<p>The following code libraries were licensed under Apache or MIT.</p>
-				<ul>
-					<li>JQuery</li>
-					<li>Skrollr.js</li>
-					<li>Waypoints.js</li>
-					<li>Rellax.js</li>
-					<li>Animate On Scroll (JS)</li>
-					<li>Detect Mobile Browsers (JS)</li>
-					<li>Materialize</li>
-					<li>Semantic UI</li>
-					<li>UIkit</li>
-				</ul>
-			</details>
-		</div>
-	</body>
+		<details>
+			<summary>
+				<h2>Software Libraries</h2></summary>
+			<p>The following code libraries were licensed under Apache or MIT.</p>
+			<ul>
+				<li>JQuery</li>
+				<li>Skrollr.js</li>
+				<li>Waypoints.js</li>
+				<li>Rellax.js</li>
+				<li>Animate On Scroll (JS)</li>
+				<li>Detect Mobile Browsers (JS)</li>
+				<li>Materialize</li>
+				<li>Semantic UI</li>
+				<li>UIkit</li>
+			</ul>
+		</details>
+	</div>
+</body>
+
 </html>
