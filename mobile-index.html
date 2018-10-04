@@ -93,8 +93,26 @@
 <body onload="setUpPage();" style="max-width:100vw;width:100vw;overflow-x:hidden;">
 
 	
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+	
 	<div id="NavBG">
 		<h1 class="MainTitle">AK <span>TSA</span></h1></div>
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+	<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 	
 	<div class="MainWrap">
 
