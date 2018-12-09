@@ -27,7 +27,7 @@ for (i = 2; i < 4; i++) {
 
 function ClassOpen(a) {
 	if(document.documentElement.clientWidth > 960) {
-	for(i = 0; i < 300; i++) {
+	for(i = 0; i < 4; i++) {
 		//console.log("i = " + i);
 
 		if(i != a){
