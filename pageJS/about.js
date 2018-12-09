@@ -4,7 +4,7 @@ function newLoad(){
 }
 
 // var src = new Array("31", "26", "25", "21", "37", "1", "30");
-var src = new Array("31", "26", "25", "122");
+var src = new Array("26", "18", "97", "73", "151", "122");
 for (i = 0; i < 4; i++) {
 	$('#Frames').append('<div style="height: 0; background: url(https://media0.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif)"><iframe id="ClassOpenFrame' + i + '" style="width: 41.6%;position: relative;top: -300px; height: 150px; overflow-y: hidden; z-index: 3;border: 1px solid black;box-sizing: border-box;display: none;"></iframe><a class="expand" id="Expand' + i + '" onclick="expand(' + i + ')" style="position: relative; display: none; vertical-align: top; width: 7.5%; top: -350px; z-index: 99999; text-align: center; text-decoration: underline;">Read More</a></div>');
 	//document.getElementById('ClassOpenFrame' + i).style.backgroundImage = "url('https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif')";
