@@ -862,12 +862,12 @@ label {
 #OffIntro #Row1 .TableCel:nth-child(1) {
   /*President*/
   background-image: url('/images/char.jpg');
+  background-size: 300%;
 }
 
 #OffIntro #Row1 .TableCel:nth-child(2) {
   /*Vice President*/
   background-image: url('https://image.freepik.com/free-icon/male-user-shadow_318-34042.jpg');
-  background-size: 300%;
 }
 
 #OffIntro #Row1 .TableCel:nth-child(3) {
