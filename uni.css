@@ -861,23 +861,23 @@ label {
 
 #OffIntro #Row1 .TableCel:nth-child(1) {
   /*President*/
-  background-image: url('https://pbs.twimg.com/profile_images/736763645510725632/ICe9Z_2V.jpg');
+  background-image: url('/images/char.jpg');
 }
 
 #OffIntro #Row1 .TableCel:nth-child(2) {
   /*Vice President*/
-  background-image: url('/images/char.jpg');
+  background-image: url('https://image.freepik.com/free-icon/male-user-shadow_318-34042.jpg');
   background-size: 300%;
 }
 
 #OffIntro #Row1 .TableCel:nth-child(3) {
   /*Secretary*/
-  background-image: url('https://i.imgur.com/p48VOEI.png');
+  background-image: url('https://i.imgur.com/U9V3Zrl.jpg');
 }
 
 #OffIntro #Row1 .TableCel:nth-child(4) {
   /*Treasurer*/
-  background-image: url('images/agnim.jpg');
+  background-image: url('https://image.freepik.com/free-icon/male-user-shadow_318-34042.jpg');
 }
 
 #OffIntro #Row1 .TableCel:nth-child(5) {
