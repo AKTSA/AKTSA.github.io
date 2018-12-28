@@ -859,36 +859,36 @@ label {
   width: 12.5% !important;
 }
 
-#OffIntro #Row1 .TableCel:nth-child(1) {
+#OffIntro #Row1 .TableCel:nth-child(0) {
   /*President*/
   background-image: url('/images/char.jpg');
 }
 
-#OffIntro #Row1 .TableCel:nth-child(2) {
+#OffIntro #Row1 .TableCel:nth-child(1) {
   /*Vice President*/
-  background-image: url('/images/char.jpg');
+  background-image: url('https://cdn3.iconfinder.com/data/icons/business-and-finance-icons/512/Business_Man-512.png');
   background-size: 300%;
 }
 
-#OffIntro #Row1 .TableCel:nth-child(3) {
+#OffIntro #Row1 .TableCel:nth-child(2) {
   /*Secretary*/
   background-image: url('https://i.imgur.com/p48VOEI.png');
 }
 
-#OffIntro #Row1 .TableCel:nth-child(4) {
+#OffIntro #Row1 .TableCel:nth-child(3) {
   /*Treasurer*/
   background-image: url('https://cdn3.iconfinder.com/data/icons/business-and-finance-icons/512/Business_Man-512.png');
 }
 
  #OffIntro #Row1 .TableCel:nth-child(5) {
   /*Webmaster*/
-  background-image: url('https://michaelxing.tk/old/aktsa/img/nats.jpg');
+  background-image: url('https://cdn3.iconfinder.com/data/icons/business-and-finance-icons/512/Business_Man-512.png');
 } 
 
 
-#OffIntro #Row1 .TableCel:nth-child(6) {
+#OffIntro #Row1 .TableCel:nth-child(4) {
   /*Reporter*/
-  background-image: url('http://i.imgur.com/X6OtAFW.jpg');
+  background-image: url('https://cdn3.iconfinder.com/data/icons/business-and-finance-icons/512/Business_Man-512.png');
 }
 
 #OffIntro #Row1 .TableCel:nth-child(7) {
