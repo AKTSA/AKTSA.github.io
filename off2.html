@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Officer Page - AK TSA</title>
+<title>Officer Page - AK TSA</title>
 		<link rel="stylesheet" type="text/css" href="uni.css" />
 
 		<!--Polyfills-->
@@ -14,11 +14,11 @@
 		</script>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="change.js"></script> 
+		<script src="change.js"></script>
 
 
 
-	<script id="pageJS" src="/pageJS/off.js"></script>
+		<script id="pageJS" src="/pageJS/off.js"></script>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
@@ -120,24 +120,6 @@
 }
 				}
 			}
-
-function newLoad(){
-	console.log("Officer Page Loaded");
-
-	var temp = location.search.split("?")[1];
-	if(!temp){
-		temp = 26;
-	}
-		document.getElementById("OffFrame").src = "https://aktsa.azurewebsites.net/off.php?id=" + temp;
-		if(document.getElementById("navLink" + temp)){
-			document.getElementById("navLink" + temp).className = "BigBtn CurrPage";
-		}
-	//}
-}
-
-function newUnload(){
-
-}
 
 		</script>
 	</body>
