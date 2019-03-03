@@ -73,7 +73,11 @@
   font-size: 36px;
   margin-left: 50px;
 }
-		
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 	</style>
 </head>
 
@@ -94,10 +98,17 @@
 		position:absolute;
 		transform:translateX(0px);
 		transition: transform 0.5s ease;
-		top:0;"></span>
+		top:0;" onclick="openNav()"></span>
 	</nav>	
 	
-	
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
 	
 	<div id="NavBG">
 		<h1 class="MainTitle">AK <span>TSA</span></h1></div>
@@ -169,6 +180,15 @@
 
 		</div>
 	</div>
+	<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 	<script>
 		function expandNav() {
 			if ($(window).width() <= 960) {
