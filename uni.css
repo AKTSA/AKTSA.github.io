@@ -1567,7 +1567,7 @@ label {
     right: -110px;
     transition: right 0.5s ease;
   }
-  nav::before {
+/*  nav::before {
     content: 'Navigation';
     background: black;
     text-align: center;
@@ -1580,7 +1580,7 @@ label {
     transform: translateX(0px);
     transition: transform 0.5s ease;
     top: 0;
-  }
+  } */
   .Nav {
     display: none;
     text-align: center;
