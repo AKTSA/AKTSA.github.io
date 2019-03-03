@@ -36,11 +36,43 @@
 			width: 100% !important;
 			height: 100% !important;
 		}
+		
+		.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+		
 	</style>
 </head>
 
 <body onload="setUpPage();" style="max-width:100vw;width:100vw;overflow-x:hidden;">
-		<nav onclick="expandNav()">
+	<!--	<nav onclick="expandNav()">
 		<a href="/" class="MainBtn CurrPage Nav"><span>Home</span>
 			</a> <a href="/about.html" class="SurroundBtn Nav">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
 			</a><a href="/member.html" class="SurroundBtn Nav">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
@@ -49,7 +81,20 @@
 			</a><a href="/cte.html" class="SurroundBtn Nav">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
 			</a><a href="http://aktsawebmasters.azurewebsites.net" class="SurroundBtn Nav">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
 			</a><a href="https://aktsa.azurewebsites.net" class="SurroundBtn Nav">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
-	</nav>
+	</nav> -->
+	
+	<div class="topnav">
+  <a href="#home" class="active">Logo</a>
+  <div id="myLinks">
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="openmobilenav()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+	
 	<div id="NavBG">
 		<h1 class="MainTitle">AK <span>TSA</span></h1></div>
 	<div class="MainWrap">
@@ -134,7 +179,16 @@
 			}
 		}
 	</script>
-
+<script>
+function openmobilenav() {
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+</script>
 
 </body>
 
