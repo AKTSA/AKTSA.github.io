@@ -197,3 +197,5 @@ function closeNav() {
   };
   xhttp.open("GET", "https://aktsawebmasters.azurewebsites.net/ping.php?request=ping", true);
   xhttp.send();
+
+ feather.replace()
