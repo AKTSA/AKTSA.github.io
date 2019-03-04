@@ -182,6 +182,13 @@ function setUpPage(){
 	});
 }
 
+function openNav() {
+  document.getElementById("mySidenav").style.width = "100%";
+}
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+
   var xhttp = new XMLHttpRequest(); 
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
