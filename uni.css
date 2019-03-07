@@ -1494,7 +1494,7 @@ label {
   body {
     font-size: 80%;
   }
-  /*nav{
+  nav{
 		top:11px;
 
 		right:-110px;
@@ -1561,7 +1561,9 @@ label {
 	nav .CurrPage{
 		color:black !important;
 		background:white !important;
-	}*/
+	}	
+	/*
+	
   nav {
     top: 11px;
     right: -110px;
@@ -1595,7 +1597,7 @@ label {
     left: -100px;
     top: 50px;
     /*transform: translateX(110px);*/
-    transition: background 0.5s ease, color 0.5s ease !important;
+   /* transition: background 0.5s ease, color 0.5s ease !important;
   }
   .Nav::before, .Nav::after, .LeftPseudo, .RightPseudo {
     display: none !important;
@@ -1605,7 +1607,9 @@ label {
   }
   .Nav:hover {
     /* display: none !important; */
-  }
+  /*} /*
+
+
   /*
 		ABOUT PAGE
 	*/
