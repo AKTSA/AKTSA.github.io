@@ -31,13 +31,12 @@ body{
 
 
 nav{
-  position: fixed;
-  width: 100%;
-  top: 10px;
-  color: white;
-  z-index: 100;
-  text-align: center;
-  white-space: nowrap;
+	position:fixed;
+	top:10px; right:10px;
+	color:white;
+	z-index:100;
+	text-align:right;
+	white-space:nowrap;
 }
 
 nav a{
