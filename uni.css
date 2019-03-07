@@ -387,7 +387,7 @@ code{background:#2c3e50;color:white;font-family:'Lucida Console',monospace;paddi
 
 #HomeHero{
 	background-color:#2c3e50;
-	background-position:left center;
+	background-position: center;
 	background-image:url('/images/new/heroBGTEST.JPG');
 	/*background-image:url('/images/IMG_20150322_160628.jpg');*/
 	color:white;
