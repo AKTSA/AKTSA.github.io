@@ -22,19 +22,18 @@ body {
   color: #FF0000;
 }
 
-nav {
-  position: fixed;
-  width: 100%;
-  top: 10px;
-  color: white;
-  z-index: 100;
-  text-align: center;
-  white-space: nowrap;
+nav{
+	position:fixed;
+	top:10px; right:10px;
+	color:white;
+	z-index:100;
+	text-align:right;
+	white-space:nowrap;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
+nav a{
+	color:white;
+	text-decoration:none;
 }
 
 #NavBG {
@@ -1494,9 +1493,9 @@ label {
   body {
     font-size: 80%;
   }
-  nav{
+ 	nav{
 		top:11px;
-
+		
 		right:-110px;
 		transition: right 0.5s ease;
 	}
@@ -1513,36 +1512,36 @@ label {
 		transition: transform 0.5s ease;
 		top:0;
 	}
-	nav:active{
+	nav:hover{
 		right:0px;
 	}
-	nav:active::before{
+	nav:hover::before{
 		transform:translateX(110px);
 	}
-
+	
 	nav a:nth-child(1){
 		margin-top:50px !important;;
 	}
-
+	
 	nav a{
 		display:block !important;
 		text-align:center;
-
+		
 		background:#2c3e50 !important;
 		border:none !important;
 		color:white !important;
-
+		
 		margin:0 !important;
 		padding-left:0 !important;
 		padding-right:0 !important;
 		width:110px;
-
+		
 		transition: background 0.5s ease, color 0.5s ease !important;
 	}
 	nav .MainBtn{
 		font-weight:bold;
 	}
-	nav a:active{
+	nav a:hover{
 		background:rgba(0,0,0,0.5) !important;
 	}
 	nav a:active{
@@ -1561,7 +1560,8 @@ label {
 	nav .CurrPage{
 		color:black !important;
 		background:white !important;
-	}	
+	}
+	
 	/*
 	
   nav {
