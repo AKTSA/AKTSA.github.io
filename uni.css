@@ -31,12 +31,13 @@ body{
 
 
 nav{
-	position:fixed;
-	top:10px; right:10px;
-	color:white;
-	z-index:100;
-	text-align:right;
-	white-space:nowrap;
+  position: fixed;
+  width: 100%;
+  top: 10px;
+  color: white;
+  z-index: 100;
+  text-align: center;
+  white-space: nowrap;
 }
 
 nav a{
@@ -1290,6 +1291,13 @@ label{
 	#MemberHeroWord{
 		display:none;
 	}
+	.InfoFrame {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    width: 100vw !important;
+    left: 0 !important;
+    margin-left: 0 !important;
+  }
 }
 @media (max-width : 500px){
 	section.HeroWrap, .HomeHero, #HeroMotto{
@@ -1304,9 +1312,9 @@ label{
 		margin-left:10px !important;
 		margin-right: 10px !important;
 	}
-	.InfoFrame{
-		margin-left: 30% !important;
-	}
+  .InfoFrame {
+    /* margin-left: 30% !important; */
+  }
 }
 @media (max-width : 700px) {
 	body{
@@ -1663,4 +1671,20 @@ label{
 		left:30vh !important;
 		top:-30vh !important;
 	}
+}
+
+.InfoFrame {
+  /*height:80vh;
+	display: flex;
+	align-items: center;*/
+  overflow: hidden;
+  z-index: 1;
+  text-align: center;
+  width: 40%;
+  background: #2c3e50;
+  opacity: 1;
+  color: white;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 20vh !important;
 }
