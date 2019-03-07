@@ -385,47 +385,52 @@ code{background:#2c3e50;color:white;font-family:'Lucida Console',monospace;paddi
 
 */
 
-#HomeHero{
-	background-color:#2c3e50;
-	background-position: center;
-	background-image:url('/images/new/heroBGTEST.JPG');
-	/*background-image:url('/images/IMG_20150322_160628.jpg');*/
-	color:white;
-	position:relative;
-	z-index:99;
-	overflow:hidden;
-	margin:0;
-}
-#HomeHero h1{
-	font-size:1000%;
-	margin:0;
-}
-#HomeHero h2{
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-	font-size:200%;
-	margin:0;
+#HomeHero {
+  background-color: #2c3e50;
+  background-position: center;
+  /*background-image: url('https://scontent-iad3-1.cdninstagram.com/t51.2885-15/e35/19436835_1932687060307712_3855680124024258560_n.jpg');*/
+  background-image: url('/images/new/heroBG.JPG');
+  /*background-image:url('/images/IMG_20150322_160628.jpg');*/
+  color: white;
+  position: relative;
+  z-index: 99;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
 }
 
-#HomeHero .HomeHeroWrap{
-	top:45vh;
-	position:relative;
-	transform:translateY(-50%);
-	transform-style:preserve-3d;
-	margin-left:5vw;
-	z-index:10;
+#HomeHero h1 {
+  font-size: 1000%;
+  margin: 0;
 }
 
-#HomeHero::before{
-	content:'';
-	background:linear-gradient(to right, black, rgba(0,0,0,0), rgba(0,0,0,0));/*linear-gradient(to top, #2c3e50, rgba(0,0,0,0) 20%), */
-	width:100%;
-	height:90vh;
-	position:absolute;
-	left:0; top:0;
-	z-index:0;
+#HomeHero h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 200%;
+  margin: 0;
 }
 
+#HomeHero .HomeHeroWrap {
+  top: 45vh;
+  position: relative;
+  transform: translateY(-50%);
+  transform-style: preserve-3d;
+  margin-left: 5vw;
+  z-index: 10;
+}
+
+#HomeHero::before {
+  content: '';
+  background: radial-gradient(black, rgba(0, 0, 0, 0) 900px);
+  /*linear-gradient(to top, #2c3e50, rgba(0,0,0,0) 20%), */
+  width: 100%;
+  height: 90vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
 
 #HomeCW{
 	padding:0;
