@@ -16,10 +16,6 @@ body{
 	background-attachment:fixed;
 }
 
-
-
-
-
 .MainTitle{
 	font-family:"Audiowide", sans-serif;
 	color:#7A52CC;
@@ -1691,4 +1687,13 @@ label{
   padding: 20px;
   margin: 0 auto;
   margin-top: 20vh !important;
+}
+
+
+.AwardsHeroWrap {
+  background: url('http://aktsa.org/img_2019/CUT_7689.jpg') !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  line-height: initial;
+  text-shadow: -2px -2px white, 2px 2px white, 2px -2px white, -2px 2px white;
 }
