@@ -53,7 +53,7 @@ function ChangeProjBack(a){
 			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/CTEProj5.jpg')";
 			break;
 		case 5:
-			document.getElementById("ProjFrame").style.backgroundImage = "url('/img_2019/webdev.JPG')";
+			document.getElementById("ProjFrame").style.backgroundImage = "url('/img_2019/webdev.jpg')";
 			break;
 	}
 }
