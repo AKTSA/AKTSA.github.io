@@ -38,7 +38,7 @@ function ChangeProjBack(a){
 	
 	switch(a){
 		case 0:
-			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/VRobots4.jpg')";
+			document.getElementById("ProjFrame").style.backgroundImage = "url('http://aktsa.org/img_2019/vex2.jpg')";
 			break;
 		case 1:
 			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/CTEProj1.jpg')";
