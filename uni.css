@@ -737,7 +737,7 @@ label{
 	background-image:url('/images/cs2.jpg');
 }
 #CommServ .TableCel:nth-child(2){
-	background-image:url('/images/cs1.jpg');
+	background-image:url('http://aktsa.org/img_2019/commservice1.jpeg');
 }
 #CommServ .TableCel:nth-child(3){
 	background-image:url('/images/new/CancerBands.jpg');
