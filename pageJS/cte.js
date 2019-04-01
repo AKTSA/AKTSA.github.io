@@ -47,7 +47,7 @@ function ChangeProjBack(a){
 			document.getElementById("ProjFrame").style.backgroundImage = "url('http://aktsa.org/img_2019/Cimhomepage.jpeg')";
 			break;
 		case 3:
-			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/CTEProj4.jpg')";
+			document.getElementById("ProjFrame").style.backgroundImage = "url('https://raw.githubusercontent.com/AKTSA/AKTSA.github.io/master/img_2019/house.jpg')";
 			break;
 		case 4:
 			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/CTEProj5.jpg')";
