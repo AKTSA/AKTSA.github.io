@@ -41,10 +41,10 @@ function ChangeProjBack(a){
 			document.getElementById("ProjFrame").style.backgroundImage = "url('http://aktsa.org/img_2019/TSAA.JPG')";
 			break;
 		case 1:
-			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/CTEProj1.jpg')";
+			document.getElementById("ProjFrame").style.backgroundImage = "url('http://aktsa.org/img_2019/Wright%20Flyer.jpg')";
 			break;
 		case 2:
-			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/CTEProj3.jpg')";
+			document.getElementById("ProjFrame").style.backgroundImage = "url('http://aktsa.org/img_2019/Cimhomepage.jpeg')";
 			break;
 		case 3:
 			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/CTEProj4.jpg')";
