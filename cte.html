@@ -1,341 +1,341 @@
 <!DOCTYPE html>
 <html style="overflow-x:hidden;max-width:100vw;width:100%;">
-	<head>
-		<title>AK CTE</title>
-		<link rel="stylesheet" type="text/css" href="uni.css" />
-		<script src="https://unpkg.com/feather-icons"></script>
-		<!--Polyfills-->
-		<script src="promise.js"></script>
-		<script src="fetch.js"></script>
-		<script>
-			if (!window.Promise) {
-				window.Promise = Promise;
-			}
-		</script>
+    <head>
+        <title>AK CTE</title>
+        <link rel="stylesheet" type="text/css" href="uni.css" />
+        <script src="https://unpkg.com/feather-icons"></script>
+        <!--Polyfills-->
+        <script src="promise.js"></script>
+        <script src="fetch.js"></script>
+        <script>
+            if (!window.Promise) {
+                window.Promise = Promise;
+            }
+        </script>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="change.js"></script>
-
-
-
-		<script id="pageJS" src="/pageJS/cte.js"></script>
-
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
-		<meta name="author" content="Michael Xing" />
-		<meta charset="UTF-8" />
-		<style>
-		#OffIntro .TableOut{
-width:100%;
-min-height:150px;
-height:150px;
-color:white;
-/* background:black; */
-text-align:center;
-}
-#OffIntro .TableCel{
-width:16.6%; height:100%;
-box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
-background-position:center;
-background-size:cover;
-position:relative; z-index:1;
-
-transition:transform 0.5s ease;
-transform:scale(1);
-
-overflow-y:hidden;
-overflow:hidden;
-}
-#OffIntro .TableCel:hover{
-transform:scale(1.05);
-z-index:2;
-}
-
-#OffIntro h3{
-margin:0;
-}
-#OffIntro .TextWrap{
-padding:10px 0;
-display:block;
-margin:0; position:absolute;
-/*background:rgba(0,0,0,0.3);*/
-background:rgb(52, 73, 94);
-transform:translateY(100%);
-transition: transform 0.5s ease;
-width:100%;
-bottom:0; left:0;
-color:white; text-decoration:none;
-}
-#OffIntro .TextWrap div{
-width:100%;
-}
-#OffIntro p{
-padding: 0 5px;
-margin:0;
-}
-#OffIntro .TableCel:hover .TextWrap{
-transform:translateY(0);
-}
-
-#OffIntro .TableCel:nth-child(1){
-background-image:url('https://i.imgur.com/iBj8SBk.jpg');
-}
-#OffIntro .TableCel:nth-child(2){
-background-image:url('/images/max.jpg');
-}
-#OffIntro .TableCel:nth-child(3){
-background-image:url('/images/Makenzie.jpg');
-}
-#OffIntro .TableCel:nth-child(4){
-background-image:url('https://pbs.twimg.com/profile_images/736763645510725632/ICe9Z_2V.jpg');
-}
-#OffIntro .TableCel:nth-child(5){
-background-image:url('https://michaelxing.tk/old/aktsa/img/nats.jpg');
-}
-#OffIntro .TableCel:nth-child(6){
-background-image:url('https://i.imgur.com/X6OtAFW.jpg');
-}
-		</style>
-	</head>
-	<body onload="setUpPage();" style="overflow-x:hidden;max-width:100vw;width:100%;">
-	<!--	<nav onclick="expandNav()">
-		<a href="/" class="MainBtn CurrPage Nav"><span>Home</span>
-			</a> <a href="/about.html" class="SurroundBtn Nav">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/member.html" class="SurroundBtn Nav">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/off2" class="SurroundBtn Nav">Officers<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/awards.html" class="SurroundBtn Nav">Awards<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/cte.html" class="SurroundBtn Nav">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="http://aktsawebmasters.azurewebsites.net" class="SurroundBtn Nav">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="https://aktsa.azurewebsites.net" class="SurroundBtn Nav">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
-	</nav> -->
-	
-		<nav onclick="expandNav()">
-			<a href="/" class="MainBtn"><span>Home</span>
-			</a> <a href="/about.html" class="SurroundBtn Nav">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/member.html" class="SurroundBtn Nav">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/off" class="SurroundBtn Nav">Officers<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/awards.html" class="SurroundBtn Nav">Awards<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/cte.html" class="SurroundBtn Nav">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="http://aktsawebmasters.azurewebsites.net" class="SurroundBtn Nav">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="https://aktsa.azurewebsites.net" class="SurroundBtn Nav">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
-	</nav>
-		<div id="NavBG"><h1 class="MainTitle">AK <span>TSA</span></h1></div>
-		<div class="MainWrap">
-			<div class="ContentWrap">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="change.js"></script>
 
 
-				<!--
 
-				=========================================================================================
+        <script id="pageJS" src="/pageJS/cte.js"></script>
 
-												PRIMARY CONTENT BEGINS HERE
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
+        <meta name="author" content="Michael Xing" />
+        <meta charset="UTF-8" />
+        <style>
+            #OffIntro .TableOut{
+                width:100%;
+                min-height:150px;
+                height:150px;
+                color:white;
+                /* background:black; */
+                text-align:center;
+            }
+            #OffIntro .TableCel{
+                width:16.6%; height:100%;
+                box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+                background-position:center;
+                background-size:cover;
+                position:relative; z-index:1;
 
-				=========================================================================================
+                transition:transform 0.5s ease;
+                transform:scale(1);
 
-				-->
+                overflow-y:hidden;
+                overflow:hidden;
+            }
+            #OffIntro .TableCel:hover{
+                transform:scale(1.05);
+                z-index:2;
+            }
 
-				<section class="HeroWrap" id="CTEHero">
+            #OffIntro h3{
+                margin:0;
+            }
+            #OffIntro .TextWrap{
+                padding:10px 0;
+                display:block;
+                margin:0; position:absolute;
+                /*background:rgba(0,0,0,0.3);*/
+                background:rgb(52, 73, 94);
+                transform:translateY(100%);
+                transition: transform 0.5s ease;
+                width:100%;
+                bottom:0; left:0;
+                color:white; text-decoration:none;
+            }
+            #OffIntro .TextWrap div{
+                width:100%;
+            }
+            #OffIntro p{
+                padding: 0 5px;
+                margin:0;
+            }
+            #OffIntro .TableCel:hover .TextWrap{
+                transform:translateY(0);
+            }
+
+            #OffIntro .TableCel:nth-child(1){
+                background-image:url('https://i.imgur.com/iBj8SBk.jpg');
+            }
+            #OffIntro .TableCel:nth-child(2){
+                background-image:url('/images/max.jpg');
+            }
+            #OffIntro .TableCel:nth-child(3){
+                background-image:url('/images/Makenzie.jpg');
+            }
+            #OffIntro .TableCel:nth-child(4){
+                background-image:url('https://pbs.twimg.com/profile_images/736763645510725632/ICe9Z_2V.jpg');
+            }
+            #OffIntro .TableCel:nth-child(5){
+                background-image:url('https://michaelxing.tk/old/aktsa/img/nats.jpg');
+            }
+            #OffIntro .TableCel:nth-child(6){
+                background-image:url('https://i.imgur.com/X6OtAFW.jpg');
+            }
+        </style>
+    </head>
+    <body onload="setUpPage();" style="overflow-x:hidden;max-width:100vw;width:100%;">
+        <!--	<nav onclick="expandNav()">
+<a href="/" class="MainBtn CurrPage Nav"><span>Home</span>
+</a> <a href="/about.html" class="SurroundBtn Nav">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+</a><a href="/member.html" class="SurroundBtn Nav">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+</a><a href="/off2" class="SurroundBtn Nav">Officers<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+</a><a href="/awards.html" class="SurroundBtn Nav">Awards<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+</a><a href="/cte.html" class="SurroundBtn Nav">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+</a><a href="http://aktsawebmasters.azurewebsites.net" class="SurroundBtn Nav">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+</a><a href="https://aktsa.azurewebsites.net" class="SurroundBtn Nav">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
+</nav> -->
+
+        <nav onclick="expandNav()">
+            <a href="/" class="MainBtn"><span>Home</span>
+            </a> <a href="/about.html" class="SurroundBtn Nav">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+            </a><a href="/member.html" class="SurroundBtn Nav">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+            </a><a href="/off" class="SurroundBtn Nav">Officers<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+            </a><a href="/awards.html" class="SurroundBtn Nav">Awards<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+            </a><a href="/cte.html" class="SurroundBtn Nav">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+            </a><a href="http://aktsawebmasters.azurewebsites.net" class="SurroundBtn Nav">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+            </a><a href="https://aktsa.azurewebsites.net" class="SurroundBtn Nav">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
+        </nav>
+        <div id="NavBG"><h1 class="MainTitle">AK <span>TSA</span></h1></div>
+        <div class="MainWrap">
+            <div class="ContentWrap">
+
+
+                <!--
+
+=========================================================================================
+
+PRIMARY CONTENT BEGINS HERE
+
+=========================================================================================
+
+-->
+
+                <section class="HeroWrap" id="CTEHero">
                     <h1>
-						<img style="position:absolute;max-width:55vh;margin-top:14vh;" src="/images/AK%20Logo.png" alt="Ardrey Kell" /> <span style="margin-left:50vh;text-shadow: -2px -2px white, 2px 2px white, 2px -2px white, -2px 2px white;">CTE</span>
-						<p style="margin:0;color:white;position:relative;top:-21vh;left:52vh;font-size:20%;line-height:100%;width:235px;text-shadow: 0px 0px 2px black;">Career and Technical Education</p>
-					</h1>
+                        <img style="position:absolute;max-width:55vh;margin-top:14vh;" src="/images/AK%20Logo.png" alt="Ardrey Kell" /> <span style="margin-left:50vh;text-shadow: -2px -2px white, 2px 2px white, 2px -2px white, -2px 2px white;">CTE</span>
+                        <p style="margin:0;color:white;position:relative;top:-21vh;left:50vh;font-size:20%;line-height:100%;width:235px;text-shadow: 0px 0px 2px black;">Career and Technical Education</p>
+                    </h1>
 
                 </section>
 
 
-				<section id="HeroMotto" style="padding-left:15vw; padding-right:15vw;">
-					Ardrey Kell High School is a student-centered community that implements a challenging curriculum leading to the development of creative and independent thinkers who have a strong sense of honor, respect, and service.
-				</section>
+                <section id="HeroMotto" style="padding-left:15vw; padding-right:15vw;">
+                    Ardrey Kell High School is a student-centered community that implements a challenging curriculum leading to the development of creative and independent thinkers who have a strong sense of honor, respect, and service.
+                </section>
 
-				<section>
-					<p>AK's Career and Technical Education department is one of the fastest growing branches in the school and easily the most important. With interesting courses ranging from design to programming and everything in between, all taught by experienced teachers, these classes prepare students for life in the 21st century and beyond.</p>
-				</section>
-
-
-
-				<section id="CTEClasses">
-					<h2>Course Offerings</h2>
-					<span id="ClassClose"><button onclick="openPanel(-1);" class="BigBtn">X</button></span>
-					<div>
-						<div>
-							<a onclick="openPanel(0);" class="BigBox" style="background-image:url('/images/compsci.jpg');"><!--https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg-->
-								<p class="CenterWrap">AP Computer Science</p>
-								<span id="ClassArrow0" class="ClassArrow">&#9660;</span>
-							</a><a onclick="openPanel(1);" class="BigBox" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/5/54/Rayleigh-Taylor_instability.jpg');">
-								<p class="CenterWrap">Scientific Visualization</p>
-								<span id="ClassArrow1" class="ClassArrow">&#9660;</span>
-							</a><a onclick="openPanel(2);" class="BigBox" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Isometric_Drawing_of_Lasource-Durand_Framing-Ste_in_Genevieve_MO.png');filter:invert(100%);">
-								<p style="filter:invert(100%);background:radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0) 50%);" class="CenterWrap">Drafting</p>
-								<span id="ClassArrow2" style="filter:invert(100%);" class="ClassArrow">&#9660;</span>
-							</a>
-						</div>
-						<div class="ClassOpen" id="ClassOpen0">
-							<h3>AP Computer Science</h3>
-							<p>This is a college-level introductory course in computer science. Because the design and implementation of computer programs to solve problems involve skills that are fundamental to the study of computer science, a large part of the course is built around the development of computer programs that correctly solve a given problem. At the same time, the design and implementation of computer programs is used as a context for introducing other important aspects of computer science, including the development and analysis of algorithms, the development and use of fundamental data structures, the study of standard algorithms and typical applications, and the use of logic and formal methods. In addition, the responsible use of these systems is an integral part of the course.</p>
-						</div>
-						<div class="ClassOpen" id="ClassOpen1">
-							<h3>Scientific Visualization</h3>
-							<p>This course introduces students to the use of complex graphic tools. Emphasis is placed on the principles, concepts, and use of complex graphic and visualization tools as applied to the study of science and technology. Students use complex 2D graphics, animation, editing, and image analysis tools to better understand, illustrate, explain, and present technical, mathematical, and/or scientific concepts and principles. Emphasis is placed on the use of computer-enhanced images to generate both conceptual and data-driven models, data-driven charts and animations. Science, math, and visual design concepts are reinforced throughout the course. Activities are structured to integrate physical and social sciences, mathematics, English language arts, and art.</p>
-						</div>
-						<div class="ClassOpen" id="ClassOpen2">
-							<h3>Drafting</h3>
-							<p>This course introduces students to the use of simple and complex graphic tools used to communicate and understand ideas and concepts found in the areas of architecture, manufacturing, engineering, science, and mathematics. Topics include problem-solving strategies, classical representation methods such as sketching, geometric construction techniques, as well as computer assisted design (CAD), orthographic projection, and 3D modeling.</p>
-						</div>
-						<div>
-							<a onclick="openPanel(3);" class="BigBox" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/26/Edge_(video_game)_level_layout.png');">
-								<p class="CenterWrap">Game Art Design</p>
-								<span id="ClassArrow3" class="ClassArrow">&#9660;</span>
-							</a><a onclick="openPanel(4);" class="BigBox" style="background-image:url('https://c1.staticflickr.com/6/5044/5335125988_a656efded1_b.jpg');">
-								<p class="CenterWrap">PLTW: Engineering</p>
-								<span id="ClassArrow4" class="ClassArrow">&#9660;</span>
-							</a><a onclick="openPanel(5);" class="BigBox" style="background-image:url('/images/biomed.jpg');">
-								<p class="CenterWrap">PLTW: Biomedical Sciences</p>
-								<span id="ClassArrow5" class="ClassArrow">&#9660;</span>
-							</a><!--https://static.pexels.com/photos/5795/medicine-thermometer-tablets-pills.jpg-->
-						</div>
-						<div class="ClassOpen" id="ClassOpen3">
-							<h3>Game Art Design</h3>
-							<p>This course introduces students to techniques used in the electronic game industry. Students will focus on the principles used in game design including mathematical and virtual modeling. Emphasis is placed on areas related to art, history, ethics, plot development, storyboarding, programming, 2D visual theory, and interactive play technologies. Students develop physical and virtual games using hands-on experiences and a variety of software.</p>
-						</div>
-						<div class="ClassOpen" id="ClassOpen4">
-							<h3>Project Lead The Way<br />Introduction to Engineering Design &amp; Principles of Engineering</h3>
-							<p>In these foundation Project Lead the Way (PLTW) courses, students are exposed to the design process, research and analysis, teamwork, communication methods, global and human impacts, engineering standards, and technical documentation. Students use 3D solid modeling design software to help them design solutions to solve proposed problems and learn how to document their work and communicate solutions to peers and members of the professional community.</p>
-						</div>
-						<div class="ClassOpen" id="ClassOpen5">
-							<h3>Project Lead The Way<br />Principles of Biomedical Sciences</h3>
-							<p>In this foundation Project Lead the Way (PLTW) class, students survey engineering and are exposed to major concepts they will encounter in a postsecondary engineering course of study. Students employ engineering and scientific concepts in the solution of engineering design problems. They develop problem-solving skills and apply their knowledge of research and design to create solutions to various challenges, documenting their work and communicating solutions to peers and members of the professional community.</p>
-						</div>
-
-					</div>
-
-
-				</section>
+                <section>
+                    <p>AK's Career and Technical Education department is one of the fastest growing branches in the school and easily the most important. With interesting courses ranging from design to programming and everything in between, all taught by experienced teachers, these classes prepare students for life in the 21st century and beyond.</p>
+                </section>
 
 
 
-				<section id="CTEProj">
-					<h2>Student Projects</h2>
+                <section id="CTEClasses">
+                    <h2>Course Offerings</h2>
+                    <span id="ClassClose"><button onclick="openPanel(-1);" class="BigBtn">X</button></span>
+                    <div>
+                        <div>
+                            <a onclick="openPanel(0);" class="BigBox" style="background-image:url('/images/compsci.jpg');"><!--https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg-->
+                                <p class="CenterWrap">AP Computer Science</p>
+                                <span id="ClassArrow0" class="ClassArrow">&#9660;</span>
+                            </a><a onclick="openPanel(1);" class="BigBox" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/5/54/Rayleigh-Taylor_instability.jpg');">
+                            <p class="CenterWrap">Scientific Visualization</p>
+                            <span id="ClassArrow1" class="ClassArrow">&#9660;</span>
+                            </a><a onclick="openPanel(2);" class="BigBox" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Isometric_Drawing_of_Lasource-Durand_Framing-Ste_in_Genevieve_MO.png');filter:invert(100%);">
+                            <p style="filter:invert(100%);background:radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0) 50%);" class="CenterWrap">Drafting</p>
+                            <span id="ClassArrow2" style="filter:invert(100%);" class="ClassArrow">&#9660;</span>
+                            </a>
+                        </div>
+                        <div class="ClassOpen" id="ClassOpen0">
+                            <h3>AP Computer Science</h3>
+                            <p>This is a college-level introductory course in computer science. Because the design and implementation of computer programs to solve problems involve skills that are fundamental to the study of computer science, a large part of the course is built around the development of computer programs that correctly solve a given problem. At the same time, the design and implementation of computer programs is used as a context for introducing other important aspects of computer science, including the development and analysis of algorithms, the development and use of fundamental data structures, the study of standard algorithms and typical applications, and the use of logic and formal methods. In addition, the responsible use of these systems is an integral part of the course.</p>
+                        </div>
+                        <div class="ClassOpen" id="ClassOpen1">
+                            <h3>Scientific Visualization</h3>
+                            <p>This course introduces students to the use of complex graphic tools. Emphasis is placed on the principles, concepts, and use of complex graphic and visualization tools as applied to the study of science and technology. Students use complex 2D graphics, animation, editing, and image analysis tools to better understand, illustrate, explain, and present technical, mathematical, and/or scientific concepts and principles. Emphasis is placed on the use of computer-enhanced images to generate both conceptual and data-driven models, data-driven charts and animations. Science, math, and visual design concepts are reinforced throughout the course. Activities are structured to integrate physical and social sciences, mathematics, English language arts, and art.</p>
+                        </div>
+                        <div class="ClassOpen" id="ClassOpen2">
+                            <h3>Drafting</h3>
+                            <p>This course introduces students to the use of simple and complex graphic tools used to communicate and understand ideas and concepts found in the areas of architecture, manufacturing, engineering, science, and mathematics. Topics include problem-solving strategies, classical representation methods such as sketching, geometric construction techniques, as well as computer assisted design (CAD), orthographic projection, and 3D modeling.</p>
+                        </div>
+                        <div>
+                            <a onclick="openPanel(3);" class="BigBox" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/26/Edge_(video_game)_level_layout.png');">
+                                <p class="CenterWrap">Game Art Design</p>
+                                <span id="ClassArrow3" class="ClassArrow">&#9660;</span>
+                            </a><a onclick="openPanel(4);" class="BigBox" style="background-image:url('https://c1.staticflickr.com/6/5044/5335125988_a656efded1_b.jpg');">
+                            <p class="CenterWrap">PLTW: Engineering</p>
+                            <span id="ClassArrow4" class="ClassArrow">&#9660;</span>
+                            </a><a onclick="openPanel(5);" class="BigBox" style="background-image:url('/images/biomed.jpg');">
+                            <p class="CenterWrap">PLTW: Biomedical Sciences</p>
+                            <span id="ClassArrow5" class="ClassArrow">&#9660;</span>
+                            </a><!--https://static.pexels.com/photos/5795/medicine-thermometer-tablets-pills.jpg-->
+                        </div>
+                        <div class="ClassOpen" id="ClassOpen3">
+                            <h3>Game Art Design</h3>
+                            <p>This course introduces students to techniques used in the electronic game industry. Students will focus on the principles used in game design including mathematical and virtual modeling. Emphasis is placed on areas related to art, history, ethics, plot development, storyboarding, programming, 2D visual theory, and interactive play technologies. Students develop physical and virtual games using hands-on experiences and a variety of software.</p>
+                        </div>
+                        <div class="ClassOpen" id="ClassOpen4">
+                            <h3>Project Lead The Way<br />Introduction to Engineering Design &amp; Principles of Engineering</h3>
+                            <p>In these foundation Project Lead the Way (PLTW) courses, students are exposed to the design process, research and analysis, teamwork, communication methods, global and human impacts, engineering standards, and technical documentation. Students use 3D solid modeling design software to help them design solutions to solve proposed problems and learn how to document their work and communicate solutions to peers and members of the professional community.</p>
+                        </div>
+                        <div class="ClassOpen" id="ClassOpen5">
+                            <h3>Project Lead The Way<br />Principles of Biomedical Sciences</h3>
+                            <p>In this foundation Project Lead the Way (PLTW) class, students survey engineering and are exposed to major concepts they will encounter in a postsecondary engineering course of study. Students employ engineering and scientific concepts in the solution of engineering design problems. They develop problem-solving skills and apply their knowledge of research and design to create solutions to various challenges, documenting their work and communicating solutions to peers and members of the professional community.</p>
+                        </div>
 
-					<div>
-						<p>Our students engage in a wide variety of real world and hands-on projects. Click to learn about a few of them.</p>
-					</div>
-					<div id="ProjInfo">
-						<p style="display:block;">Students from AK TSA built robots to perform specific tasks both under drive control and autonomously for competition.</p>
-						<p>This is a Model Plane which was designed and built using CAD programs</p>
-						<p>Developed by students in Introduction to Engineering, this engine was made using various 3D Modeling Programs.</p>
-						<p>Students develop a home which uses effective Solar Energy Techniques</p>
-						<p>Drafting 2 students create architectural plans using CAD programs as part of their class projects and eventually go on to build full, real life models of these plans.</p>
-						<p>Students from AK TSA create a website for a fictional music band.</p>
-					</div>
-					<div id="ProjFrame"><div id="ProjSelect">
-						<input onclick="ChangeProjBack(0);" type="radio" checked name="Projects" value="TwoPoint" id="VexRobot" />
-						<label for="VexRobot"><span>VEX Robotics</span></label>
+                    </div>
 
-						<input onclick="ChangeProjBack(1);" type="radio" name="Projects" value="TwoPoint" id="TwoPoint" />
-						<label for="TwoPoint"><span>Model Plane</span></label>
 
-						<input onclick="ChangeProjBack(2);" type="radio" name="Projects" value="TwoPoint" id="PuzzleCube" />
-						<label for="PuzzleCube"><span>Model Engine</span></label>
-
-						<input onclick="ChangeProjBack(3);" type="radio" name="Projects" value="TwoPoint" id="BridgeD" />
-						<label for="BridgeD"><span>Solar Energy Model</span></label>
-
-						<input onclick="ChangeProjBack(4);" type="radio" name="Projects" value="TwoPoint" id="HouseD" />
-						<label for="HouseD"><span>House Design</span></label>
-
-						<input onclick="ChangeProjBack(5);" type="radio" name="Projects" value="TwoPoint" id="WebSite" />
-						<label for="WebSite"><span>Web Development</span></label>
-					</div></div>
-				</section>
+                </section>
 
 
 
+                <section id="CTEProj">
+                    <h2>Student Projects</h2>
 
+                    <div>
+                        <p>Our students engage in a wide variety of real world and hands-on projects. Click to learn about a few of them.</p>
+                    </div>
+                    <div id="ProjInfo">
+                        <p style="display:block;">Students from AK TSA build robots to perform specific tasks both under human and autonomous control. </p>
+                        <p>This is a model of the original Wright Flyer was designed and built using Autodesk Inventor. </p>
+                        <p>Developed by students in Introduction to Engineering, this engine was 3D Printed and designed using Autodesk Inventor Professional.</p>
+                        <p>Students develop a home which uses effective Solar Energy Techniques</p>
+                        <p>Drafting 2 students create architectural plans using CAD programs as part of their class projects and eventually go on to build full, real life models of these plans.</p>
+                        <p>Students from AK TSA create a website for a fictional music band.</p>
+                    </div>
+                    <div id="ProjFrame"><div id="ProjSelect">
+                        <input onclick="ChangeProjBack(0);" type="radio" checked name="Projects" value="TwoPoint" id="VexRobot" />
+                        <label for="VexRobot"><span>VEX Robotics</span></label>
 
-				<section id="OffIntro" class="CTETeach" style="height: 75vh !important;">
-					<h2>Teachers</h2>
-					<div class="TableOut"><div class="TableRow">
-						<div class="TableCel" style="background-image:url('/images/teachers/sheff.jpg');">
-							<a href="javascript:showTeach(0);" class="TextWrap">
-								<h3>Jason Sheffield</h3>
-							</a>
-						</div>
-						<div class="TableCel" style="background-image:url('/images/teachers/friar.jpg');">
-							<a href="javascript:showTeach(1);" class="TextWrap">
-								<h3>Elaine Friar</h3>
-							</a>
-						</div>
-						<div class="TableCel" style="background-image:url('/images/teachers/glenn.jpg');">
-							<a href="javascript:showTeach(2);" class="TextWrap">
-								<h3>John Glenn</h3>
-							</a>
-						</div>
-					</div><div class="TableRow">
-						<div class="TableCel" style="background-image:url('/images/teachers/robinson.jpg');">
-							<a href="javascript:showTeach(3);" class="TextWrap">
-								<h3>Rachel Robinson</h3>
-							</a>
-						</div>
-						<div class="TableCel" style="background-image:url('/images/teachers/hicks.jpg');">
-							<a href="javascript:showTeach(4);" class="TextWrap">
-								<h3>Michael Hicks</h3>
-							</a>
-						</div>
-						<div class="TableCel" style="background-image:url('/images/teachers/shaffer.jpg');">
-							<a href="javascript:showTeach(5);" class="TextWrap">
-								<h3>Melissa Shaffer</h3>
-							</a>
-						</div>
-					</div>
+                        <input onclick="ChangeProjBack(1);" type="radio" name="Projects" value="TwoPoint" id="TwoPoint" />
+                        <label for="TwoPoint"><span>Model Plane</span></label>
 
-						<div class="InfoCell" id="TeachInfo0">
-							<h3>Jason Sheffield</h3>
-							<p>My name is Jason Sheffield and I have been a teacher here at Ardrey Kell High School since 2011, prior to that, I spent 18 years teaching at Harding University High School. I have a Master's Degree in Trade and Industrial Education form North Carolina A&amp;T and a Bachelor's Degree in Mechanical Engineering from the University of Tennessee (Go Vols). I grew up in England and spend way too much time watching the beautiful game. I have been blessed to have found a woman way too good for me who inexplicably married me in 1992 - Suzanne is an Exceptional Children's teacher at Independence High School. Suzanne and I are the proud parents of a wonderful young man - Gabriel Quinn.</p>
-						</div>
-						<div class="InfoCell" id="TeachInfo1">
-							<h3>Elaine Friar</h3>
-							<p>I am Elaine Friar and I have taught Business Education for 20 years. I am originally from South Carolina and received my B.S. in Business Education from Winthrop College (long before its name changed to Winthrop University). I have taught in several different states as I followed my husband in his navy career. We moved to Charlotte in 2000 along with our two children, Claudia and AJ. I earned my Master's of Education from the University of Maryland. In 2005, I became a National Board Certified teacher in Career and Technical Education. At this time, I am a sponsor of the National Technical Honor Society (NTHS) and Future Business Leaders of America (FBLA). All business students should join FBLA and participate at the school, district, state and national competitions. Please encourage your juniors and seniors to excel so that they may become a member of NTHS, the prestigious honor society for Career and Technical Education students.</p>
-						</div>
-						<div class="InfoCell" id="TeachInfo2">
-							<h3>John Glenn</h3>
-							<p>My name is John Glenn, and I am the Drafting and Civil Engineering teacher at Ardrey Kell High School. I am a native Charlottean and attended South Mecklenburg High School, graduating in 1983. I attended both the University of Tennessee in Knoxville, and North Carolina State University in Raleigh, graduating from NC State in 1989 with a Bachelor's Degree of Science in Industrial Arts Education. Upon graduation I taught Technology Education for eight years at South Mecklenburg High School, then taught Tech. Ed. at David W. Butler High School for one year in 1998. I spent the next ten years working in the home-building industry as a CAD operator and CAD Department Manager for Shea Homes in Charlotte. In 2008 I re-entered the teaching profession at Harding University High School teaching Drafting and Civil Engineering. In 2011, I was fortunate enough to be able to transfer to Ardrey Kell High School...without a doubt, the best place to teach in North Carolina! I have been married to my wife Shelby for 26 years, and have two children. My son Daniel is married to Samantha Glenn, and lives in Knoxville, Tennessee, and my daughter Kelli is a junior at Western Carolina University majoring in Psychology. I also have a Jack Russell terrier named 'Jack' of all things. He showed up at my house and adopted my family about 5 years ago! I also have a sweet bulldog named Tigger. She's an old girl now, but the best dog anybody ever had. I also have two cats, but what can you say about cats?! They do their thing, and I do mine. I enjoy sports: baseball and football in particular, but my favorite sport, or hobby if you will is fly fishing for trout in the mountains of North Carolina. Nothing beats wading in cold clear streams and being in some of the most beautiful country on Earth!  I fully believe God spent just a little more time on the Appalachians than he did anywhere else! If I am not here...I'm gone fishin'!</p>
-						</div>
-						<div class="InfoCell" id="TeachInfo3">
-							<h3>Rachel Robinson</h3>
-							<p>My name is Mrs. Robinson. I have been teaching for 15 years in a wide range of classes, ages, and parts of the country. I earned my Bachelor's of Education in Secondary Computer Science from Baylor University in 1999. In the beginning of August 2014, I completed my Master's in Education from the University of North Carolina at Charlotte. I have been married for 15 years and I have two sons. My first teaching position was at Lorena High School in Lorena, Texas. After my first year I moved to New Mexico. For two years I taught classes and managed the training department at CompUSA in Albuquerque, New Mexico. When that company closed, I found a job teaching at Rio Rancho High School. I taught at Rio Rancho for 9 years in a wide variety of classes: Computer Science/Programming (C, C++, VB), Game Design, Web Design, PLTW IED, PLTW POE, Technology Systems. A few years ago I moved to North Carolina where I taught at private schools initially: Lake Norman Christian and Carmel Christian schools. This is my first year teaching at Ardrey Kell. I look forward to our time together.</p>
-						</div>
-						<div class="InfoCell" id="TeachInfo4">
-							<h3>Michael Hicks</h3>
-							<p>My name is Mr. Michael Hicks. I teach Marketing classes at Ardrey Kell High School. I have over 9 years of teaching and athletics coaching experience. I graduated from High Point University with a BS in Business Administration. I have two wonderful boys, ages 8 and 15. Previously, I was in Corporate America where I held various positions in management, human resources and data management/analysis over a 20 year span.</p>
-						</div>
-						<div class="InfoCell" id="TeachInfo5">
-							<h3>Melissa Shaffer</h3>
-							<p>The 2016-2017 school year marks my 11th year as a teacher.  Originally from Michigan, I lived & taught computer/business classes in Yuma, Arizona for 7 years prior to moving to North Carolina in 2013.  This is my fourth year at Ardrey Kell as a Marketing teacher, DECA advisor, and assistant softball coach. </p>
-						</div>
-						<div class="InfoCell" id="TeachInfo-1" style="background:#bdc3c7;left:100%;z-index:-2;box-shadow: inset 0 0 20px rgba(0,0,0,0.5); ">
+                        <input onclick="ChangeProjBack(2);" type="radio" name="Projects" value="TwoPoint" id="PuzzleCube" />
+                        <label for="PuzzleCube"><span>Model Engine</span></label>
 
-						</div>
+                        <input onclick="ChangeProjBack(3);" type="radio" name="Projects" value="TwoPoint" id="BridgeD" />
+                        <label for="BridgeD"><span>Solar Energy Model</span></label>
+
+                        <input onclick="ChangeProjBack(4);" type="radio" name="Projects" value="TwoPoint" id="HouseD" />
+                        <label for="HouseD"><span>House Design</span></label>
+
+                        <input onclick="ChangeProjBack(5);" type="radio" name="Projects" value="TwoPoint" id="WebSite" />
+                        <label for="WebSite"><span>Web Development</span></label>
+                        </div></div>
+                </section>
 
 
 
 
-					</div>
-					
 
-				</section>
-				<!-- <section style="height: 65vh;"></section> -->
-				<section>
-					<!-- <small>Additional teachers declined to be displayed on this page.</small> -->
-				</section>
-				<!-- <section>
-					<h2>Additional Links</h2>
-					<p>
-						<a class="BigBtn" href="http://schools.cms.k12.nc.us/ardreykellHS/Pages/Default.aspx">Ardrey Kell High School</a>
-						<a class="BigBtn" href="http://schools.cms.k12.nc.us/ardreykellHS/Pages/FacultyAndStaff.aspx">Faculty and Staff</a>
-						<a class="BigBtn" href="http://www.cms.k12.nc.us/Pages/default.aspx">Charlotte Mecklenburg Schools</a>
-					</p>
-				</section> -->
-			</div>
-		</div>
-	</body>
+                <section id="OffIntro" class="CTETeach" style="height: 75vh !important;">
+                    <h2>Teachers</h2>
+                    <div class="TableOut"><div class="TableRow">
+                        <div class="TableCel" style="background-image:url('/images/teachers/sheff.jpg');">
+                            <a href="javascript:showTeach(0);" class="TextWrap">
+                                <h3>Jason Sheffield</h3>
+                            </a>
+                        </div>
+                        <div class="TableCel" style="background-image:url('/images/teachers/friar.jpg');">
+                            <a href="javascript:showTeach(1);" class="TextWrap">
+                                <h3>Elaine Friar</h3>
+                            </a>
+                        </div>
+                        <div class="TableCel" style="background-image:url('/images/teachers/glenn.jpg');">
+                            <a href="javascript:showTeach(2);" class="TextWrap">
+                                <h3>John Glenn</h3>
+                            </a>
+                        </div>
+                        </div><div class="TableRow">
+                        <div class="TableCel" style="background-image:url('/images/teachers/robinson.jpg');">
+                            <a href="javascript:showTeach(3);" class="TextWrap">
+                                <h3>Rachel Robinson</h3>
+                            </a>
+                        </div>
+                        <div class="TableCel" style="background-image:url('/images/teachers/hicks.jpg');">
+                            <a href="javascript:showTeach(4);" class="TextWrap">
+                                <h3>Michael Hicks</h3>
+                            </a>
+                        </div>
+                        <div class="TableCel" style="background-image:url('/images/teachers/shaffer.jpg');">
+                            <a href="javascript:showTeach(5);" class="TextWrap">
+                                <h3>Melissa Shaffer</h3>
+                            </a>
+                        </div>
+                        </div>
+
+                        <div class="InfoCell" id="TeachInfo0">
+                            <h3>Jason Sheffield</h3>
+                            <p>My name is Jason Sheffield and I have been a teacher here at Ardrey Kell High School since 2011, prior to that, I spent 18 years teaching at Harding University High School. I have a Master's Degree in Trade and Industrial Education form North Carolina A&amp;T and a Bachelor's Degree in Mechanical Engineering from the University of Tennessee (Go Vols). I grew up in England and spend way too much time watching the beautiful game. I have been blessed to have found a woman way too good for me who inexplicably married me in 1992 - Suzanne is an Exceptional Children's teacher at Independence High School. Suzanne and I are the proud parents of a wonderful young man - Gabriel Quinn.</p>
+                        </div>
+                        <div class="InfoCell" id="TeachInfo1">
+                            <h3>Elaine Friar</h3>
+                            <p>I am Elaine Friar and I have taught Business Education for 20 years. I am originally from South Carolina and received my B.S. in Business Education from Winthrop College (long before its name changed to Winthrop University). I have taught in several different states as I followed my husband in his navy career. We moved to Charlotte in 2000 along with our two children, Claudia and AJ. I earned my Master's of Education from the University of Maryland. In 2005, I became a National Board Certified teacher in Career and Technical Education. At this time, I am a sponsor of the National Technical Honor Society (NTHS) and Future Business Leaders of America (FBLA). All business students should join FBLA and participate at the school, district, state and national competitions. Please encourage your juniors and seniors to excel so that they may become a member of NTHS, the prestigious honor society for Career and Technical Education students.</p>
+                        </div>
+                        <div class="InfoCell" id="TeachInfo2">
+                            <h3>John Glenn</h3>
+                            <p>My name is John Glenn, and I am the Drafting and Civil Engineering teacher at Ardrey Kell High School. I am a native Charlottean and attended South Mecklenburg High School, graduating in 1983. I attended both the University of Tennessee in Knoxville, and North Carolina State University in Raleigh, graduating from NC State in 1989 with a Bachelor's Degree of Science in Industrial Arts Education. Upon graduation I taught Technology Education for eight years at South Mecklenburg High School, then taught Tech. Ed. at David W. Butler High School for one year in 1998. I spent the next ten years working in the home-building industry as a CAD operator and CAD Department Manager for Shea Homes in Charlotte. In 2008 I re-entered the teaching profession at Harding University High School teaching Drafting and Civil Engineering. In 2011, I was fortunate enough to be able to transfer to Ardrey Kell High School...without a doubt, the best place to teach in North Carolina! I have been married to my wife Shelby for 26 years, and have two children. My son Daniel is married to Samantha Glenn, and lives in Knoxville, Tennessee, and my daughter Kelli is a junior at Western Carolina University majoring in Psychology. I also have a Jack Russell terrier named 'Jack' of all things. He showed up at my house and adopted my family about 5 years ago! I also have a sweet bulldog named Tigger. She's an old girl now, but the best dog anybody ever had. I also have two cats, but what can you say about cats?! They do their thing, and I do mine. I enjoy sports: baseball and football in particular, but my favorite sport, or hobby if you will is fly fishing for trout in the mountains of North Carolina. Nothing beats wading in cold clear streams and being in some of the most beautiful country on Earth!  I fully believe God spent just a little more time on the Appalachians than he did anywhere else! If I am not here...I'm gone fishin'!</p>
+                        </div>
+                        <div class="InfoCell" id="TeachInfo3">
+                            <h3>Rachel Robinson</h3>
+                            <p>My name is Mrs. Robinson. I have been teaching for 15 years in a wide range of classes, ages, and parts of the country. I earned my Bachelor's of Education in Secondary Computer Science from Baylor University in 1999. In the beginning of August 2014, I completed my Master's in Education from the University of North Carolina at Charlotte. I have been married for 15 years and I have two sons. My first teaching position was at Lorena High School in Lorena, Texas. After my first year I moved to New Mexico. For two years I taught classes and managed the training department at CompUSA in Albuquerque, New Mexico. When that company closed, I found a job teaching at Rio Rancho High School. I taught at Rio Rancho for 9 years in a wide variety of classes: Computer Science/Programming (C, C++, VB), Game Design, Web Design, PLTW IED, PLTW POE, Technology Systems. A few years ago I moved to North Carolina where I taught at private schools initially: Lake Norman Christian and Carmel Christian schools. This is my first year teaching at Ardrey Kell. I look forward to our time together.</p>
+                        </div>
+                        <div class="InfoCell" id="TeachInfo4">
+                            <h3>Michael Hicks</h3>
+                            <p>My name is Mr. Michael Hicks. I teach Marketing classes at Ardrey Kell High School. I have over 9 years of teaching and athletics coaching experience. I graduated from High Point University with a BS in Business Administration. I have two wonderful boys, ages 8 and 15. Previously, I was in Corporate America where I held various positions in management, human resources and data management/analysis over a 20 year span.</p>
+                        </div>
+                        <div class="InfoCell" id="TeachInfo5">
+                            <h3>Melissa Shaffer</h3>
+                            <p>The 2016-2017 school year marks my 11th year as a teacher.  Originally from Michigan, I lived & taught computer/business classes in Yuma, Arizona for 7 years prior to moving to North Carolina in 2013.  This is my fourth year at Ardrey Kell as a Marketing teacher, DECA advisor, and assistant softball coach. </p>
+                        </div>
+                        <div class="InfoCell" id="TeachInfo-1" style="background:#bdc3c7;left:100%;z-index:-2;box-shadow: inset 0 0 20px rgba(0,0,0,0.5); ">
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                </section>
+                <!-- <section style="height: 65vh;"></section> -->
+                <section>
+                    <!-- <small>Additional teachers declined to be displayed on this page.</small> -->
+                </section>
+                <!-- <section>
+<h2>Additional Links</h2>
+<p>
+<a class="BigBtn" href="http://schools.cms.k12.nc.us/ardreykellHS/Pages/Default.aspx">Ardrey Kell High School</a>
+<a class="BigBtn" href="http://schools.cms.k12.nc.us/ardreykellHS/Pages/FacultyAndStaff.aspx">Faculty and Staff</a>
+<a class="BigBtn" href="http://www.cms.k12.nc.us/Pages/default.aspx">Charlotte Mecklenburg Schools</a>
+</p>
+</section> -->
+            </div>
+        </div>
+    </body>
 </html>
