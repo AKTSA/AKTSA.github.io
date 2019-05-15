@@ -16,6 +16,7 @@
 	</script>
 	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="https://www.mattboldt.com/demos/typed-js/js/typed.custom.js"></script>
 	<script src="change.js"></script>
 
 	<script src="skrollr.js"></script>
@@ -135,13 +136,126 @@
                 </section>
 			</div>
 
-			<div style="position:relative;height:100vh">
+			<!-- <div style="position:relative;height:100vh">
 				<div class="PicDiv" style="width:100vw;background-image:url('/images/fdesign2.jpg');background-position:center;position:relative;top: 0;height: 100vh;"></div>
 				<section id="IntroFrame" class="InfoFrame Right" style="position: relative; top: -100vh" data-aos="flip-left" data-aos-duration="1000">
 					<p>We are the Ardrey Kell High School Technology Student Association.<br />We are a club of students that participates in technology-based projects. We are a team that competes in TSA conferences in the regional, state, and national levels. Above all,
 						we are a band of enthusiasts that comes together to share our love of science, technology, engineering, and math, and to push the boundaries of what's possible. </p>
 				</section>
+			</div> -->
+			
+						<div style="position:relative;height:100vh;" style="">
+				<div class="PicDiv" style="width:100vw;background-image:url('https://images.pexels.com/photos/825258/pexels-photo-825258.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');background-position:center;position:relative;top: 0;height: 100vh; width: 100%;">
+
+               
+                <center><h1 style="color:white;">What We're About</h1></center>
+				<!-- <div class="PicDiv" style="width:100vw;background-image:url('https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');background-position:center;position:relative;top: 0;height: 100vh;"></div>
+				<section class="InfoFrame Left" style="position: relative; top: -100vh" data-aos="flip-right" data-aos-duration="1000">
+					<p>Innovate Today. Change Tomorrow.<br />Our motto is a reflection of what we believe to be not only true, but possible. In our modern, interconnected world, technology literacy is more important than ever. The wonder of technology is that it allows
+						anyone, no matter their age, gender, race, ethnicity, religion, or any other factor, to be the change they wish to see in the world. Technology empowers everyone to do great things. And that's exactly what we aim to do.</p>
+				</section> -->
+                
+                <style>
+            
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+                    
+.console{
+	margin:0 auto;
+/* 	position:absolute; */
+font-family: 'Source Code Pro', monospace;
+}
+.title-bar{
+	background:#f8f8f8;
+	background-image: -webkit-linear-gradient(top, #e8e8e8e, #bcbbbc);
+	background-image: linear-gradient(top, #e8e8e8e, #bcbbbc);
+	width:1020px;
+	padding:5px 0;
+	border-radius:7px 7px 0px 0px;
+	margin:0 auto;
+	font-size:0.75em;
+	text-align:center;
+	display:block;
+	color:black;
+	border-bottom:1px solid #f8f8f8;
+}
+.main-window{
+	background-color:rgb(0, 0, 0);
+	opacity:0.85;
+	padding:10px 20px;
+	width:980px;
+	box-shadow:black 2px 15px 105px;
+	height:450px;
+	text-align:left;
+	margin:0 auto;
+	border-radius:0px 0px 7px 7px;
+}
+.cool-text{
+	color:white;
+	font-size:1.75em;
+}
+.animate-text{
+font-family: 'Source Code Pro', monospace;
+}
+.typed-cursor{
+	opacity:1;
+/* 	font-size:1em; */
+	font-weight:100;
+	
+	animation:blink .7s infinite;
+	-webkit-animation:blink .7s infinite;
+	-moz-animation:blink .7s infinite;
+}
+@keyframes blink{
+	0%{
+		opacity:0;
+	}
+	50%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+	}
+}
+
+@-webkit-keyframes blink{
+	0%{
+		opacity:0;
+	}
+	50%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+	}
+}
+
+@-moz-keyframes blink{
+	0%{
+		opacity:0;
+	}
+	50%{
+		opacity:1;
+	}
+	100%{
+		opacity:0;
+	}
+}
+                    
+                </style>
+                
+                			<div class="console">
+				<div class="title-bar">AKTSA Console</div>
+				<div class="main-window">
+				<div class="cool-text">
+					$
+					<span class="animate-text"></span>
+				</div>
+					
+				</div>
 			</div>
+                
+			</div>
+            </div>
 
 			<div style="position:relative;height:100vh">
 				<div class="PicDiv" style="width:100vw;background-image:url('https://raw.githubusercontent.com/AKTSA/AKTSA.github.io/master/img_2019/Cimhomepage.jpeg');background-position:center;position:relative;top: 0;height: 100vh;"></div>
@@ -199,6 +313,22 @@
                 time: 2500
             });
         });
+		
+	        $(function(){
+	$('.animate-text').typed({
+		strings:[
+                	"AKTSA Science Technology Engineering Math",
+			"Innovate Today. Change Tomorrow.",
+            "Using Technology To Empower The Future",
+            "We are a team that competes in TSA conferences in the regional, state, and national levels",
+            "We push the boundaries of what's possible"
+			  ],
+		    typeSpeed:0,
+        	backSpeed:0,
+        	backDelay:3500,
+		    loop:true
+	});
+});	
 	</script>
 </body>
 
