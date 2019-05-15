@@ -1711,18 +1711,18 @@ label{
     justify-content: space-between;
 }
 
-#hours {
-   
-}
-
-#members {
-    
-}
-
-#money {
-   
-}
-
 .subtitle {
     color:gray;
+}
+
+.ev {
+    border-right: 3px solid white;
+}
+
+#hours-div {
+    width:33%;
+}
+
+#members-div {
+    width:33%;
 }
