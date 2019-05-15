@@ -1,3 +1,215 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>AK TSA</title>
+	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="uni.css" />
+
+	<!--Polyfills-->
+	<script src="promise.js"></script>
+	<script src="fetch.js"></script>
+	<script>
+		if (!window.Promise) {
+			window.Promise = Promise;
+		}
+	</script>
+	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="change.js"></script>
+
+	<script src="skrollr.js"></script>
+
+	<script id="pageJS" src="/pageJS/index.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
+	<meta name="author" content="Michael Xing" />
+	<meta charset="UTF-8" />
+</head>
+
+<body onload="setUpPage();">
+		<nav onclick="expandNav()">
+		<a href="/" class="MainBtn CurrPage Nav"><span>Home</span>
+			</a> <a href="/about.html" class="SurroundBtn Nav">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="/member.html" class="SurroundBtn Nav">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="/off" class="SurroundBtn Nav">Officers<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="/awards.html" class="SurroundBtn Nav">Awards<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="/cte.html" class="SurroundBtn Nav">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="http://aktsawebmasters.azurewebsites.net" class="SurroundBtn Nav">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
+			</a><a href="https://aktsa.azurewebsites.net" class="SurroundBtn Nav">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
+	</nav>
+	
+	<div id="NavBG">
+		<h1 class="MainTitle">AK <span>TSA</span></h1></div>
+	<div class="MainWrap" id="skrollr-body">
+
+
+		<section class="Hero HomeHero" id="HomeHero">
+			<div class="HomeHeroWrap">
+				<h1 class="MainTitle">AK <span>TSA</span></h1>
+				<h2>Ardrey Kell High School<br />Technology Student Association</h2>
+			</div>
+
+			
+				<!--<div style="
+							position:fixed;
+							color:white;
+							background:#c0392b;
+							top:72px;
+							z-index:101;
+							right:0;
+							padding:20px;
+							border-top-left-radius:20px;
+							border-bottom-left-radius:20px;
+							text-align:right;
+					">
+					The registration page is up here <span style="font-size:300%;line-height:0%;position:relative;top:10px;">&#8657;</span>
+				</div> -->
+
+			<!--
+				<div style="
+							position:absolute;
+							color:white;
+							background:#2c3e50;
+							bottom:0;
+							z-index:100;
+							left:0;
+							max-width:30vw;
+							padding:20px 20px 20px 40px;
+							border-top-right-radius:20px;
+							text-align:left;
+					">
+					We're trialing a new website design. It's not final yet. Please don't freak out if anything breaks.
+				</div-->
+		</section>
+
+
+
+
+		<div class="ContentWrap" id="HomeCW">
+
+
+			<!--
+
+				=========================================================================================
+
+												PRIMARY CONTENT BEGINS HERE
+
+				=========================================================================================
+
+				-->
+            
+            
+
+			<section id="HeroMotto">
+				<h2>Innovate Today. Change Tomorrow.</h2>
+			</section>
+
+            <div style="position:relative;height:100vh">
+				<div class="PicDiv" style="width:100vw;background-image:url('/images/new/PackingFood.JPG');background-position:center;position:relative;top: 0;height: 100vh;"></div>
+				<section id="IntroFrame" class="InfoFrame Right" style="position: relative; top: -100vh">
+                    
+                    <center> <h1 class="numberh1" style="font-size: 45px;"> Accomplishments </h1></center>
+                    <br>
+                    <div id="accomp-flexbox">
+                    
+                        <div style="">
+                    <span data-aos-delay="200" data-aos="zoom-in" id="hours" class="counter">700</span>
+                            <p class="subtitle">Hours of Community<br> Service</p>
+                    </div>
+                        
+                    <div>
+                        <span data-aos-delay="600" data-aos="zoom-in" id="members" class="counter">144</span>
+                         <p class="subtitle">Members Competing in TSA</p>
+                    </div>
+                        <div>
+                        <span data-aos-delay="1000" data-aos="zoom-in" class="secondary-counter">$<span id="money" class="counter">3000</span></span>
+                             <p class="subtitle">Dollars Raised for the <br> American Cancer Society</p>
+                        </div>
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>  
+                </section>
+			</div>
+
+			<div style="position:relative;height:100vh">
+				<div class="PicDiv" style="width:100vw;background-image:url('/images/fdesign2.jpg');background-position:center;position:relative;top: 0;height: 100vh;"></div>
+				<section id="IntroFrame" class="InfoFrame Right" style="position: relative; top: -100vh" data-aos="flip-left" data-aos-duration="1000">
+					<p>We are the Ardrey Kell High School Technology Student Association.<br />We are a club of students that participates in technology-based projects. We are a team that competes in TSA conferences in the regional, state, and national levels. Above all,
+						we are a band of enthusiasts that comes together to share our love of science, technology, engineering, and math, and to push the boundaries of what's possible. </p>
+				</section>
+			</div>
+
+			<div style="position:relative;height:100vh">
+				<div class="PicDiv" style="width:100vw;background-image:url('https://raw.githubusercontent.com/AKTSA/AKTSA.github.io/master/img_2019/Cimhomepage.jpeg');background-position:center;position:relative;top: 0;height: 100vh;"></div>
+				<section class="InfoFrame Left" style="position: relative; top: -100vh" data-aos="flip-right" data-aos-duration="1000">
+					<p>Innovate Today. Change Tomorrow.<br />Our motto is a reflection of what we believe to be not only true, but possible. In our modern, interconnected world, technology literacy is more important than ever. The wonder of technology is that it allows
+						anyone, no matter their age, gender, race, ethnicity, religion, or any other factor, to be the change they wish to see in the world. Technology empowers everyone to do great things. And that's exactly what we aim to do.</p>
+				</section>
+			</div>
+
+			<div style="position:relative;height:100vh">
+				<div class="PicDiv" style="width:100vw;background-image:url('/img_2019/homepic1.jpg');background-position:center;position:relative;top: 0;height: 100vh;"></div>
+				<section class="InfoFrame Right" style="position: relative; top: -100vh;display:flex;align-items:center;" data-aos="zoom-out" data-aos-duration="1000">
+					<img src="/images/crest.png" alt="The official crest of AK TSA" style="width:15vw;" />
+					<p style="float:right;text-align:left;">The official crest of the AK TSA represents the spirit of our competitors. Its abnormal shape and design symbolizes the innovative and modern perspective of the club, while the pieced together nature of the Rubik's Cube reminds us that we are all
+						part of a greater whole, working together to better our world.</p>
+				</section>
+			</div>
+
+
+
+			<div style="position: relative; height:100vh; width: 100%; background-image: url(http://mrmarwitz.weebly.com/uploads/2/3/1/4/23149774/background-images/1730036860.jpg); opacity: .8;" >
+				<section class="InfoFrame InvertFrame" style="padding:80px 0;display: block; position: relative; top: 25vh; left: 0;margin: 0 auto !important;  text-align: center; opacity: 1;" data-aos="fade-up" data-aos-duration="1000">
+					<h3 style="font-weight:bold;margin:0;font-size:500%;" class="MainTitle">AK <span>TSA</span></h3><br>
+					<h3 style="margin:0;position:relative;top:-20px;">Advisor: Mr. Sheffield &nbsp;&nbsp;&nbsp; Room A304<br />Competition information available <a style="color:white;" href="/competition.html">here</a>.</h3>
+				</section>
+				<!-- <iframe src="https://aktsawebmasters.azurewebsites.net/ping.php" style="display: none;"></iframe> -->
+			</div>
+
+		</div>
+	</div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script src="http://bfintal.github.io/Counter-Up/jquery.counterup.min.js"></script>
+    
+	<script>
+		AOS.init();
+	</script>
+	<script>
+		function expandNav() {
+			if ($(window).width() <= 960) {
+				if ($('nav').hasClass('open')) {
+					$('.Nav').css('display', 'none');
+					$('nav').removeClass('open');
+				} else {
+					$('.Nav').css('display', 'block');
+					$('nav').addClass('open');
+					//  $('.Nav::').css('transform', 'translateX(110px)');
+				}
+			}
+		}
+//        console.log("this happ//ened ");
+        jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 2500
+            });
+        });
+	</script>
+</body>
+
+</html>
+=======
 <!DOCTYPE html>
 <html>
 
@@ -168,3 +380,4 @@
 </body>
 
 </html>
+>>>>>>> 2301fff8f38769c9aa0633a275584c99553632cf
