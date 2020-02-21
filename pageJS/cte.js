@@ -38,22 +38,22 @@ function ChangeProjBack(a){
 	
 	switch(a){
 		case 0:
-			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/VRobots4.jpg')";
+			document.getElementById("ProjFrame").style.backgroundImage = "url('http://aktsa.org/img_2019/TSAA.JPG')";
 			break;
 		case 1:
-			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/CTEProj1.jpg')";
+			document.getElementById("ProjFrame").style.backgroundImage = "url('http://aktsa.org/img_2019/Wright%20Flyer.jpg')";
 			break;
 		case 2:
-			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/CTEProj3.jpg')";
+			document.getElementById("ProjFrame").style.backgroundImage = "url('http://aktsa.org/img_2019/Cimhomepage.jpeg')";
 			break;
 		case 3:
-			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/CTEProj4.jpg')";
+			document.getElementById("ProjFrame").style.backgroundImage = "url('https://raw.githubusercontent.com/AKTSA/AKTSA.github.io/master/img_2019/house.jpg')";
 			break;
 		case 4:
 			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/CTEProj5.jpg')";
 			break;
 		case 5:
-			document.getElementById("ProjFrame").style.backgroundImage = "url('/images/Drone.png')";
+			document.getElementById("ProjFrame").style.backgroundImage = "url('https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')";
 			break;
 	}
 }
