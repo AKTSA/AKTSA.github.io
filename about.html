@@ -1,452 +1,314 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<title>About - AK TSA</title>
-	<link rel="stylesheet" type="text/css" href="uni.css" />
-
-	<!--Polyfills-->
-	<script src="promise.js"></script>
-	<script src="fetch.js"></script>
-	<script>
-		if (!window.Promise) {
-			window.Promise = Promise;
-		}
-	</script>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="change.js"></script>
-
-
-	<script id="pageJS" src="/pageJS/about.js"></script>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
-	<meta name="author" content="Agnim Agarwal" />
-	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="/JSDep/ideal-image-slider.css">
-	<link rel="stylesheet" href="/JSDep/ideal-default.css">
-
-	<script src="/JSDep/ideal-image-slider.js"></script>
-	<script src="/JSDep/ideal-captions.js"></script>
+<meta charset="utf-8"/>
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favicon.ico">
+<link rel="icon" type="image/png" href="./assets/img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<title>About- AKTSA</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
+    
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,600,800" rel="stylesheet">
+    
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
+<!-- Main CSS -->
+<link href="./assets/css/main.css" rel="stylesheet"/>
+    
+<!-- Animation CSS -->
+<link href="./assets/css/vendor/aos.css" rel="stylesheet"/>
+    
 </head>
-
-<body onload="setUpPage();">
-	<nav onclick="expandNav()">
-		<a href="/" class="MainBtn Nav"><span>Home</span>
-			</a> <a href="/about.html" class="SurroundBtn CurrPage Nav">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/member.html" class="SurroundBtn Nav">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/awards.html" class="SurroundBtn Nav">Awards<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/cte.html" class="SurroundBtn Nav">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="http://aktsawebmasters.azurewebsites.net" class="SurroundBtn Nav">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="https://aktsa.azurewebsites.net" class="SurroundBtn Nav">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
-	</nav>
-	<div id="NavBG">
-		<h1 class="MainTitle">AK <span>TSA</span></h1></div>
-	<div class="MainWrap">
-		<div class="ContentWrap">
-
-
-			<!--
-
-				=========================================================================================
-
-												PRIMARY CONTENT BEGINS HERE
-
-				=========================================================================================
-
-				-->
-
-			<section class="HeroWrap">
-				<h1>About Us</h1>
-			</section>
-				<section id="HeroMotto" style="padding-left:15vw; padding-right:15vw;"></section>
-			<!--div style="
-							position:fixed;
-							color:white;
-							background:#2c3e50;
-							bottom:0;
-							z-index:100;
-							left:0;
-							padding:20px;
-							border-top-right-radius:20px;
-							text-align:right;
-					">
-					Certain text and images on this page are not finalized.
-				</div-->
-
-			<section>
-				<h2>Our Projects</h2>
-				<div id="slider">
-					<img src="/images/IMG_20150322_160628.jpg" alt="Students build and program robots to accomplish an objective and learn valuable life skills and develop teamwork.">
-					<img src="/images/fdesign1.jpg" alt="TSA members will demonstrate an understanding of and expertise in using research and design to convey a wearable technology concept.">
-					<img src="/images/cs3.jpg" alt="Participants built animatronic contraptions to fulfill certain goals. Pictured here, TSA members built animatronic toys for children.">
-					<img src="/images/Drone.png" alt="Participants are required to design, build, and launch a website that features the school’s career and technology/engineering program, the TSA chapter, and the chapter’s ability to research and present a given topic pertaining to technology.">
-				</div>
-				<!--<div class="PhotoGallery">
-						<ul>
-							<li>
-								<input type="radio" checked name="ProjRadio" id="Proj1" />
-								<label for="Proj1">VEX Robotics</label>
-								<div>
-									<img src="/images/IMG_20150322_160628.jpg" />
-									<p>Students build and program robots to accomplish an objective and learn valuable life skills and develop teamwork.</p>
-								</div>
-							</li>
-							<li>
-								<input type="radio" name="ProjRadio" id="Proj2" />
-								<label for="Proj2">Fashion Design</label>
-								<div>
-									<img src="/images/fdesign1.jpg" />
-									<p>TSA members will demonstrate an understanding of and expertise in using research and design to convey a wearable technology concept.</p>
-								</div>
-							</li>
-							<li>
-								<input type="radio" name="ProjRadio" id="Proj3" />
-								<label for="Proj3">Animatronics</label>
-								<div>
-									<img src="/images/cs3.jpg" />
-									<p>Participants built animatronic contraptions to fulfill certain goals. Pictured here, TSA members built animatronic toys for children.</p>
-								</div>
-							</li>
-							<li>
-								<input type="radio" name="ProjRadio" id="Proj4" />
-								<label for="Proj4">Webmaster</label>
-								<div>
-									<img src="/images/Drone.png" />
-									<p>Participants are required to design, build, and launch a website that features the school’s career and technology/engineering program, the TSA chapter, and the chapter’s ability to research and present a given topic pertaining to technology.</p>
-								</div>
-							</li>
-							<li>
-								<input type="radio" name="ProjRadio" id="Proj5" />
-								<label for="Proj5">Test</label>
-								<div></div>
-							</li>
-						</ul>
-					</div-->
-			</section>
-
-			<section id="CommServ">
-				<h2>Community Service Activities</h2>
-				<div class="TableOut">
-					<div class="TableRow">
-						<div class="TableCel">
-							<div class="TextWrap">
-								<div>
-									<h3>Campus Cleanup</h3>
-									<p>As part of a coordinated effort across all clubs in the school to beautify the campus and create an environment more condusive to education, the AK TSA maintains a sector of the school, cleaning the area and keeping it presentable for the students
-										to enjoy.</p>
-								</div>
-							</div>
-						</div>
-						<div class="TableCel">
-							<div class="TextWrap">
-								<div>
-									<h3>Food Bank</h3>
-									<p>Loaves and Fishes is a local charitable organization which distributes donated food to people in need via local food pantries. Students from AK TSA help obtain cans, collect donations, and sort food to help the entire process.</p>
-								</div>
-							</div>
-						</div>
-						<div class="TableCel">
-							<div class="TextWrap">
-								<div>
-									<h3>Cancer Cure Bracelets</h3>
-									<p>To help raise awareness of and fund research for a cure to cancer, students from AK TSA sold wristbands to students across the school. 100% of proceeds from the sales were donated to charity to help find "AKure".</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<section id="OffIntro">
-				<h2>Officer Team</h2>
-				<div class="TableOut">
-					<div class="TableRow" id="Row1">
-						<div class="TableCel" id="TableCel0">
-							<a onclick="ClassOpen(0);" class="TextWrap" id="TblText0">
-								<h3>President</h3>
-								<p>Anshool Pradhan</p>
-							</a>
-						</div>
-						<div class="TableCel" id="TableCel1">
-							<a onclick="ClassOpen(1);" class="TextWrap" id="TblText1">
-								<h3>Vice President</h3>
-								<p>Charlotte Cheng</p>
-							</a>
-						</div>
-						<div class="TableCel" id="TableCel2">
-							<a onclick="ClassOpen(2);" class="TextWrap" id="TblText2">
-								<h3>Secretary</h3>
-								<p>Hannah Dong</p>
-							</a>
-						</div>
-						<!-- <div class="TableCel" id="TableCel3" style="width: 12.5%">
-							<a onclick="ClassOpen(3);" class="TextWrap" id="TblText3">
-								<h3>Treasurer</h3>
-								<p>Sophia Shi</p>
-							</a>
-						</div> -->
-						<!-- <div class="TableCel" id="TableCel4">
-							<a onclick="ClassOpen(4);" class="TextWrap" id="TblText4">
-								<h3>Reporter</h3>
-								<p>Joseph D'Appolonio</p>
-							</a>
-						</div> -->
-						<div class="TableCel" id="TableCel3">
-							<a onclick="ClassOpen(3);" class="TextWrap" id="TblText3">
-								<h3>Srgt. at Arms &amp; Webmaster</h3>
-								<p>Agnim Agarwal</p>
-							</a>
-						</div>
-						<!-- <div class="TableCel" id="TableCel6">
-							<a onclick="ClassOpen(6);" class="TextWrap" id="TblText6">
-								<h3>Executive Robotics Director</h3>
-								<p>Sungwoo Lee</p>
-							</a>
-						</div> -->
-					</div>
-				</div>
-				<div id="Frames">
-					<!-- <div style="height: 0px;">
-							<iframe id="ClassOpenFrame0" style="
-						width: 50%;
-						position: relative;
-						top: -300px;
-						height: 150px;
-						left: 16.6%;
-						z-index: 3;
-						border: 1px solid black;
-						box-sizing: border-box;
-						display: none;
-						"
-							></iframe>
-						</div> -->
-
-					<!-- <div style="height: 0px;">
-							<iframe id="ClassOpenFrame1" style="
-						width: 50%;
-						position: relative;
-						top: -300px;
-						height: 150px;
-						left: 33.3%;
-						z-index: 3;
-						border: 1px solid black;
-						box-sizing: border-box;
-						display: none;
-						"
-							></iframe>
-						</div> -->
-				</div>
-				<div style="height: 300px;z-index: 2;position: relative;top: 0px;background: rgba(0,0,0,.5);display: none;cursor: pointer;" id="BlCover" onclick="ClassOpen(-1);"></div>
-
-				<!-- Modal Structure -->
-
-
-				<!--President- Anshool Pradhan
-	Vice President- Charlotte Cheng
-	Secretary- Hannah Dong
-	Treasurer- Sophia Shi
-	Reporter- Connor D'Appollonio
-	Webmaster- Agnim Agarwal
-	Vex Correspondent- Sungwoo Lee-->
-
-
-				<!-- <div id="modal1" class="modal" style="overflow: hidden;">
-						<div class="modal-content" style="height: 50vh;">
-							<iframe style="width: 100%; height: 100%;" id="OffSrc0" src="https://aktsa.azurewebsites.net/off.php?id=1"></iframe>
-						</div>
-						<div class="modal-footer">
-							<a href="#!" class="modal-action modal-close BigBtn" style="float: right; margin: 5px;">Close</a>
-						</div>
-					</div> -->
-			</section>
-
-			<section>
-				<h2>Past Awards</h2>
-				<p>These are the results from TSA Nationals, 2017. Congratulations to the following winners:</p>
-				<table id="WeWonStuff">
-					<tr>
-						<th>Event</th>
-						<th>Place</th>
-						<th>Members</th>
-					</tr>
-					<tr>
-						<td>3D Animation</td>
-						<td>6th</td>
-						<td>Anna Goddard &amp; Dave Kubala</td>
-					</tr>
-					<tr>
-						<td>Essays On Technology</td>
-						<td>6th</td>
-						<td>Charlotte Cheng</td>
-					</tr>
-					<tr>
-						<td>Extemporaneous Speech</td>
-						<td>7th</td>
-						<td>Michael Xing</td>
-					</tr>
-					<tr>
-						<td>Prepared Presentation</td>
-						<td>4th</td>
-						<td>Ishani Deliwala</td>
-					</tr>
-					<td>Webmaster</td>
-					<td>2nd</td>
-					<td>Timmothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
-				</table>
-
-				<p>These are the results from NCTSA States, 2017. Congratulations to the following winners:</p>
-				<table id="WeWonStuff">
-					<tr>
-						<th>Event</th>
-						<th>Place</th>
-						<th>Members</th>
-					</tr>
-					<tr>
-						<td>3D Animation</td>
-						<td>3rd</td>
-						<td>Anna Goddard &amp; Dave Kubala</td>
-					</tr>
-					<tr>
-						<td>Architectural Design</td>
-						<td>1st</td>
-						<td>Jackson Dye, Rachel Ehrman, Anusha Khansaheb, &amp; Katie Zhao</td>
-					</tr>
-					<tr>
-						<td>Biotechnology Design</td>
-						<td>2nd</td>
-						<td>Bhavana Ambil, Hannah Dong, Manivannan Senthil, Carissa Tai, &amp; Katie Zhao</td>
-					</tr>
-					<!--tr>
-							<td>3rd</td>
-							<td>Abdurakhmon Abdulatipov, Hannah Dong, Jin Gao, Aryan Gupta, Lucas Lu, & Carissa Tai</td>
-						</tr-->
-					<tr>
-						<td>Children's Stories</td>
-						<td>3rd</td>
-						<td>Yashika Ghandi, Sunny Gorrepati, Joshita Padala, &amp; Imad Rahu</td>
-					</tr>
-					<tr>
-						<td>Debating Technological Issues</td>
-						<td>2nd</td>
-						<td>Timmothy Rossow &amp; Michael Xing</td>
-					</tr>
-					<tr>
-						<td>Essays on Technology</td>
-						<td>3rd</td>
-						<td>Charlotte Cheng</td>
-					</tr>
-					<tr>
-						<td>Extemporaneous Speech</td>
-						<td>1st<br>2nd</td>
-						<td>Adarsh Sukumar<br>Michael Xing</td>
-					</tr>
-					<tr>
-						<td>Fashion Design</td>
-						<td>2nd</td>
-						<td>Tobi Akinyelu, Makenzie Kelly, Sophia Shi, &amp; Gabrielle Skelton</td>
-					</tr>
-					<tr>
-						<td>Future Technology Teacher</td>
-						<td>1st</td>
-						<td>Ishani Deliwala</td>
-					</tr>
-					<tr>
-						<td>Music Production</td>
-						<td>2nd</td>
-						<td>Joseph D'Apollonio, Gabriel Goldhagen, Max Kegley, Makenzie Kelly, &amp; Keon Kim</td>
-					</tr>
-					<!--tr>
-							<td>3rd</td>
-							<td>Maxwell Kegley & Makenzie Kelly</td>
-						</tr-->
-					<tr>
-						<td>Photographic Technology</td>
-						<td>2nd</td>
-						<td>Yashika Gandhi</td>
-					</tr>
-					<tr>
-						<td>Prepared Presentation</td>
-						<td>1st<br>3rd</td>
-						<td>Manivannan Senthil<br>Ishani Deliwala</td>
-					</tr>
-					<tr>
-						<td>SciViz</td>
-						<td>1st</td>
-						<td>Anna Goddard, Elijah Hubble, &amp; Dave Kubala</td>
-					</tr>
-					<tr>
-						<td>STEM Careers</td>
-						<td>3rd</td>
-						<td>Hannah Dong</td>
-					</tr>
-					<tr>
-						<td>Structural Engineering</td>
-						<td>2nd</td>
-						<td>Rohit Chaudhuri &amp; Prakash Ray</td>
-					</tr>
-					<tr>
-						<td>Transportation Modeling</td>
-						<td>2nd</td>
-						<td>Koushik Sridhar</td>
-					</tr>
-					<tr>
-						<td>Webmaster</td>
-						<td>1st</td>
-						<td>Aviral Agarwal, Joshita Padala, Timmothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
-					</tr>
-				</table>
-				<p>To see our additional awards, see our <a href="awards.html">awards</a> page.</p>
-			</section>
-
-
-
-
+    
+<body> 
+    
+<!------------------------------------------
+NAVBAR
+------------------------------------------->
+<nav class="topnav navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+<div class="container">
+	<a class="navbar-brand" href="./index.html"><i class="fas fa-anchor mr-2"></i><strong>Anchor UI</strong> Kit</a>
+	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="navbar-collapse collapse" id="navbarColor02" style="">
+		<ul class="navbar-nav mr-auto d-flex align-items-center">
+			<li class="nav-item">
+			<a class="nav-link" href="./index.html">Intro <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			Examples </a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				<a class="dropdown-item" href="./landing.html">Home Landing</a>
+				<a class="dropdown-item" href="./login.html">User Login</a>
+				<a class="dropdown-item" href="./blog.html">Blog Index</a>
+				<a class="dropdown-item" href="./page.html">Sample Page</a>
+			</div>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="./docs.html">Docs</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav ml-auto d-flex align-items-center">
+			<li class="nav-item">
+			<span class="nav-link" href="#">
+			<a class="btn btn-info btn-round shadow" href="#" data-toggle="modal" data-target="#modal_newsletter"><i class="fas fa-cloud-download-alt"></i> Download UI Kit <a href="https://github.com/wowthemesnet/Anchor-Bootstrap-UI-Kit/archive/master.zip" class="downloadzip" class="hidden"></a>
+			</a>
+			</span>
+			</li>
+		</ul>
+	</div>
+</div>
+</nav>
+<!-- End Navbar -->
+    
+<!------------------------------------------
+HEADER
+------------------------------------------->
+<div class="jumbotron jumbotron-lg jumbotron-fluid mb-3 bg-primary position-relative">
+	<div class="container text-white h-100 tofront">
+		<div class="row align-items-center justify-content-center text-center">
+			<div class="col-md-10">
+				<h1 class="display-3">About Us</h1>
+			</div>
 		</div>
 	</div>
-	<script id="pageJS" src="/pageJS/about.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			if ($(window).width() > 1079) {
+</div>
+<!-- End Header -->
 
-				if (document.getElementById('BlCover').style.display = "none") {
-					$.each(new Array(10), function(i) {
-						$("#TableCel" + i).hover(function() {
-							$("#TblText" + i).slideDown(250); //1000 = 1 second animation
+<!-- Main -->
+<div class="container pt-5 pb-5" data-aos="fade-up">
+	<div class="row justify-content-center">
+		<div class="col-md-8">
+			<article>
+			<h1><strong>Bold title</strong> for your paragraph</h1>
+			<p>
+				And then some paragraph text to follow. The purpose of this HTML is to help determine what default settings are with CSS and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.
+			</p>
+			<h3>Following a full width image</h3>
+			<p>
+				And then some paragraph text to follow. The purpose of this HTML is to help determine what default settings are with CSS and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.
+			</p>
+			<figure class="text-center mt-4 mb-4 full-width" data-aos="fade-up">
+			<img src="assets/img/demo/slide1.jpg" class="figure-img" alt="">
+			<figcaption class="figure-caption">Full widh image outside container</figcaption>
+			</figure>
+			<p>
+				Lorem ipsum dolor sit amet, <a title="test link" href="#">test link</a> adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+			</p>
+			<blockquote>
+				<p>
+					"Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus." <br/>
+					<cite>—Blockquote</cite>
+				</p>
+			</blockquote>
+			<p>
+				Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.
+			</p>
+			</article>
+		</div>
+	</div>
+</div>
+<!-- End Main -->
+    
+<!------------------------------------------
+NEWSLETTER
+------------------------------------------->
+<div class="container pt-4 pb-5 mb-5" data-aos="fade-down">
+	<div class="pb-4 text-center">
+		<h2><span class="text-secondary font-weight-bold">Subscribe</span> to our <strong>newsletter</strong></h2>
+		<p class="text-muted">
+			 A lot of features to develop your own lore ipsum. No credit card required.
+		</p>
+	</div>
+	<form class="row justify-content-center">
+		<div class="col-md-3">
+			<input type="text" class="form-control input-round w-100 form-control-lg" placeholder="First name*">
+		</div>
+		<div class="col-md-3">
+			<input type="text" class="form-control input-round w-100 form-control-lg" placeholder="E-mail address*">
+		</div>
+		<div class="col-md-3">
+			<button type="submit" class="btn btn-info btn-round btn-lg w-100">Subscribe</button>
+		</div>
+	</form>
+</div>
+<!-- End Newsletter -->
+  
+<!------------------------------------------
+DEMO MODAL & DONATE BUTTON ONLY - DON'T COPY
+------------------------------------------->
+<div class="modal fade" id="modal_newsletter" tabindex="-1" role="dialog" aria-labelledby="modal_newsletter" aria-hidden="true">
+	<div class="modal-dialog shadow-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="d-flex align-items-center justify-content-center">
+					<em class="text-muted mr-2">Share this freebie:</em>
+					<!-- Share Facebook -->
+					<span class="c-pointer iconbox iconsmall rounded-circle bg-secondary text-white mr-1" data-sharer="facebook" data-url="https://www.wowthemes.net/anchor-free-bootstrap-ui-kit/"><i class="fab fa-facebook-f"></i></span>
+					<!-- Share Twitter -->
+					<span class="c-pointer iconbox iconsmall rounded-circle bg-info text-white mr-1" data-sharer="twitter" data-title="Download Anchor - Free Bootstrap 4.1.x UI Kit with Sass!" data-hashtags="bootstrap,free" data-url="https://www.wowthemes.net/anchor-free-bootstrap-ui-kit/"><i class="fab fa-twitter"></i></span>
+					<!-- Share Google+ -->
+					<span class="c-pointer iconbox iconsmall rounded-circle bg-danger text-white mr-1" data-sharer="googleplus" data-url="https://www.wowthemes.net/anchor-free-bootstrap-ui-kit/"><i class="fab fa-google"></i></span>
+					<!-- Share E-mail -->
+					<span class="c-pointer iconbox iconsmall rounded-circle bg-purple text-white mr-1" data-sharer="email" data-title="Bootstrap KIT Url" data-url="https://www.wowthemes.net/anchor-free-bootstrap-ui-kit/" data-subject="Download Anchor - Free Bootstrap 4.1.x UI Kit with Sass!" data-to="some@email.com"><i class="fas fa-envelope"></i></span>
+					<!-- Sharingbutton Pinterest -->
+					<span class="c-pointer iconbox iconsmall rounded-circle bg-danger text-white mr-1" data-sharer="pinterest" data-url="https://www.wowthemes.net/anchor-free-bootstrap-ui-kit/"><i class="fab fa-pinterest"></i></span>
+				</div>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="text-center mb-3">
+					<img src="assets/img/favicon.ico">
+				</div>
+				<h6 class="text-center font-weight-light ">Thanks for downloading Anchor Bootstrap UI Kit!</h6>
+				<h5 class="text-center mb-4">We'll e-mail you when a new version arrives! *</h5>
+				<form id="newsletter-form" action="https://www.themepush.com/sendy/subscribe" method="POST" accept-charset="utf-8">
+					<div class="d-none">
+						<label for="hp">HP</label>
+						<br>
+						<input type="text" name="hp" id="hp">
+					</div>
+					<div class="row justify-content-center align-items-center">
+						<div class="col-md-6">
+							<div class="form-group has-icon-left form-control-name">
+								<label class="sr-only" for="inputName">Your name</label>
+								<input type="text" name="name" id="name" required="" pattern="[A-Za-z\s]+" class="form-control" placeholder="Name">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group has-icon-left form-control-email">
+								<label class="sr-only" for="inputEmail">Email address</label>
+								<input type="email" name="email" id="email" required="" class="form-control" placeholder="E-mail">
+							</div>
+						</div>
+						<input type="hidden" name="list" value="CVN62nDKE0qTf4XLs8J9iQ" checked="checked">
+						<div class="col-md-12 mb-3">
+							<input type="hidden" name="subform" value="yes">
+							<input onclick="requiredConsent()" class="btn btn-success btn-block shadow-sm" value="Send me updates & more freebies" type="submit" name="submit" id="submit">
+						</div>
+						<div class="col-md-12 mb-3 text-center">
+							<small class="d-block" style="color:#ccc;font-style:italic;line-height:1.4;">* This is a newsletter managed by WowThemes, the item author. It is the only way we can reach you out when a new version is released, so, please, subscribe!</small>
+						</div>
+					</div>
+					<div class="row justify-content-center d-none mt-3">
+						<label class="c-input c-checkbox small">
+						<input type="checkbox" name="gdpr" id="gdpr" checked="checked">
+						<span class="c-indicator"></span> I agree to the <a target="_blank" href="https://www.wowthemes.net/privacy-policy/#newsletter-subscription-forms">privacy policy</a>. </label>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div style="position:fixed; bottom:20px;left:20px;">
+	<a href="https://www.paypal.me/wowthemes/10" target="_blank"><img class="rounded-circle shadow-lg" src="assets/img/demo/coffee.png" width="70" data-toggle="tooltip" data-placement="top" title="" data-original-title="Buy me a coffee!"></a>
+</div>
+<!--------------------------------------
+END DEMO MODAL & DONATE BUTTON
+--------------------------------------->
 
-						}, function() {
-							$("#TblText" + i).slideUp(250);
-							// $("#TblText" + i).css("display: flex;");
-						}); //1000 = 1 second animation
-						//setting the height and width to '' will clear the inserted style, leaving you with your original style
-					});
-				}
-			}
-		});
-	</script>
-	<script>
-		function expandNav() {
-			if ($(window).width() <= 960) {
-				if ($('nav').hasClass('open')) {
-					$('.Nav').css('display', 'none');
-					$('nav').removeClass('open');
-				} else {
-					$('.Nav').css('display', 'block');
-					$('nav').addClass('open');
-					//  $('.Nav::').css('transform', 'translateX(110px)');
-				}
-			}
-		}
-	</script>
-	<script>
-		var slider = new IdealImageSlider.Slider({
-			selector: '#slider',
-			height: 400
-		});
-		slider.addCaptions();
-		slider.start();
-	</script>
+    
+<!--------------------------------------
+FOOTER
+--------------------------------------->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1440 126" style="enable-background:new 0 0 1440 126;" xml:space="preserve">
+<path class="bg-black" d="M685.6,38.8C418.7-11.1,170.2,9.9,0,30v96h1440V30C1252.7,52.2,1010,99.4,685.6,38.8z"/>
+</svg>
+<footer class="bg-black pb-5">
+<div class="container">
+	<div class="row">
+		<div class="col-12 col-md mr-4">
+			<i class="fas fa-copyright text-white"></i>
+			<small class="d-block mt-3 text-muted">©
+			<script>document.write(new Date().getFullYear())</script>
+			 Anchor Bootstrap UI Kit,  by <a target="_blank" href="https://www.wowthemes.net">WowThemes.net</a>. <a target="_blank" href="https://www.wowthemes.net/freebies-license/">License</a></small>
+		</div>
+		<div class="col-6 col-md">
+			<h5 class="mb-4 text-white">Features</h5>
+			<ul class="list-unstyled text-small">
+				<li><a class="text-muted" href="#">Cool stuff</a></li>
+				<li><a class="text-muted" href="#">Random feature</a></li>
+				<li><a class="text-muted" href="#">Team feature</a></li>
+				<li><a class="text-muted" href="#">Stuff for developers</a></li>
+			</ul>
+		</div>
+		<div class="col-6 col-md">
+			<h5 class="mb-4 text-white">Resources</h5>
+			<ul class="list-unstyled text-small">
+				<li><a class="text-muted" href="#">Resource</a></li>
+				<li><a class="text-muted" href="#">Resource name</a></li>
+				<li><a class="text-muted" href="#">Another resource</a></li>
+				<li><a class="text-muted" href="#">Final resource</a></li>
+			</ul>
+		</div>
+		<div class="col-6 col-md">
+			<h5 class="mb-4 text-white">Utilities</h5>
+			<ul class="list-unstyled text-small">
+				<li><a class="text-muted" href="#">Business</a></li>
+				<li><a class="text-muted" href="#">Education</a></li>
+				<li><a class="text-muted" href="#">Government</a></li>
+				<li><a class="text-muted" href="#">Gaming</a></li>
+			</ul>
+		</div>
+		<div class="col-6 col-md">
+			<h5 class="mb-4 text-white">About</h5>
+			<ul class="list-unstyled text-small">
+				<li><a class="text-muted" href="#">Team</a></li>
+				<li><a class="text-muted" href="#">Locations</a></li>
+				<li><a class="text-muted" href="#">Privacy</a></li>
+				<li><a class="text-muted" href="#">Terms</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+</footer>
+
+    
+    
+   
+<!--------------------------------------
+JAVASCRIPTS
+--------------------------------------->    
+<script src="./assets/js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="./assets/js/vendor/popper.min.js" type="text/javascript"></script>
+<script src="./assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>
+<script src="./assets/js/functions.js" type="text/javascript"></script>
+    
+<!-- Animation -->
+<script src="./assets/js/vendor/aos.js" type="text/javascript"></script>
+<noscript>
+    <style>
+        *[data-aos] {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
+</noscript>
+<script>
+    AOS.init({
+        duration: 700
+    });
+</script>
+ 
+<!-- Disable animation on less than 1200px, change value if you like -->
+<script>
+AOS.init({
+  disable: function () {
+    var maxWidth = 1200;
+    return window.innerWidth < maxWidth;
+  }
+});
+</script>
+
 </body>
-
 </html>

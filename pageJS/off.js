@@ -3,7 +3,7 @@ function newLoad(){
 
 	var temp = location.search.split("?")[1];
 	if(!temp){
-		temp = 31;
+		temp = 26;
 	}
 		document.getElementById("OffFrame").src = "https://aktsa.azurewebsites.net/off.php?id=" + temp;
 		if(document.getElementById("navLink" + temp)){

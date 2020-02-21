@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 50%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h2>Tester</h2>
+
+
+
+
+  <div class="row no-gutters">
+      <div class="col"><div class="image-container"><img src="http://aktsa.org/img_2019/homecomm.jpg" height="550" alt="First slide"><div id="overlay">
+          <div id="overlaytext"><h2><div id="hours-div" class="ev">
+              <span data-aos-delay="200" data-aos="zoom-in" id="hours" class="counter" style="font-size:36px;">700</span>
+                  <p class="subtitle">Hours of Community<br> Service</p>
+              </div></h2></div>
+          </div></img></div></div>
+          <div class="col"><div class="image-container"><img src="http://aktsa.org/img_2019/commservice1.jpeg" height="550" alt="First slide"><div id="overlay">
+            <div id="overlaytext">
+                <span style="font-size:36px;" data-aos-delay="1000" data-aos="zoom-in" class="secondary-counter">$<span id="money" class="counter" style="font-size:36px;">3000</span></span>
+                   <p class="subtitle">Dollars Raised for the <br> American Cancer Society</p>
+                </div>
+            </div></img></div></div>
+    </div>
+
+
+</body>
+</html>

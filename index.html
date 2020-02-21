@@ -1,166 +1,324 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<title>AK TSA</title>
-	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="uni.css" />
+<meta charset="utf-8"/>
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favicon.ico">
+<link rel="icon" type="image/png" href="./assets/img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
+<title>AK TSA</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
+    
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Nunito:300,300i,400,600,800" rel="stylesheet">
+    
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
+<!-- Main CSS -->
+<link href="./assets/css/main.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+    
+<!-- Animation CSS -->
+<link href="./assets/css/vendor/aos.css" rel="stylesheet"/>
 
-	<!--Polyfills-->
-	<script src="promise.js"></script>
-	<script src="fetch.js"></script>
-	<script>
-		if (!window.Promise) {
-			window.Promise = Promise;
-		}
-	</script>
-	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="change.js"></script>
+<!-- Gallery CSS -->
 
-	<script src="skrollr.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
 
-	<script id="pageJS" src="/pageJS/index.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
-	<meta name="author" content="Michael Xing" />
-	<meta charset="UTF-8" />
+
 </head>
-
-<body onload="setUpPage();">
-		<nav onclick="expandNav()">
-		<a href="/" class="MainBtn CurrPage Nav"><span>Home</span>
-			</a> <a href="/about.html" class="SurroundBtn Nav">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/member.html" class="SurroundBtn Nav">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/awards.html" class="SurroundBtn Nav">Awards<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/cte.html" class="SurroundBtn Nav">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="http://aktsawebmasters.azurewebsites.net" class="SurroundBtn Nav">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="https://aktsa.azurewebsites.net" class="SurroundBtn Nav">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
-	</nav>
-	
-	<div id="NavBG">
-		<h1 class="MainTitle">AK <span>TSA</span></h1></div>
-	<div class="MainWrap" id="skrollr-body">
-
-
-
-
-		<section class="Hero HomeHero" id="HomeHero">
-			<div class="HomeHeroWrap">
-				<h1 class="MainTitle">AK <span>TSA</span></h1>
-				<h2>Ardrey Kell High School<br />Technology Student Association</h2>
-			</div>
-
-			<!--
-				<div style="
-							position:fixed;
-							color:white;
-							background:#c0392b;
-							top:72px;
-							z-index:101;
-							right:0;
-							padding:20px;
-							border-top-left-radius:20px;
-							border-bottom-left-radius:20px;
-							text-align:right;
-					">
-					The registration page is up here <span style="font-size:300%;line-height:0%;position:relative;top:10px;">&#8657;</span>
-				</div> -->
-
-			<!--
-				<div style="
-							position:absolute;
-							color:white;
-							background:#2c3e50;
-							bottom:0;
-							z-index:100;
-							left:0;
-							max-width:30vw;
-							padding:20px 20px 20px 40px;
-							border-top-right-radius:20px;
-							text-align:left;
-					">
-					We're trialing a new website design. It's not final yet. Please don't freak out if anything breaks.
-				</div-->
-		</section>
+    
+<body> 
+    
+<!----------------------------------------------------------------------
+NAVBAR (remove topnav if you don't want changed nav background on scroll)
+------------------------------------------------------------------------>
+<nav class="topnav navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+    <a class="navbar-brand" href="./index.html"><strong>AK</strong> TSA</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbarColor02" style="">
+        <ul class="navbar-nav mr-auto d-flex align-items-center">
+            <li class="nav-item">
+            <a class="nav-link SurroundBtn" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link SurroundBtn" href="./aboutus.html">About</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link SurroundBtn" href="./memberinfo.html">Members</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link SurroundBtn" href="./awards.html">Awards <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link SurroundBtn" href="./officer.html">Officers</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link SurroundBtn" href="https://sychic.github.io/AKTSA.landingpage/">Design Brief</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link SurroundBtn" href="https://aktsa.azurewebsites.net/">Login</a>
+						</li>
+        </ul>
+    </div>
+</div>
+</nav>
+<!-- End Navbar -->
+    
 
 
+<section class="intro">
+		<div style="position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%); font-size: 100px;">
+							   
+								<h1 id="introtext" style="color: white;">Ardrey Kell Technology Student Association</h1>
+								</div>
+<canvas class="header__background"></canvas>
+</section>
 
 
-		<div class="ContentWrap" id="HomeCW">
+<section id="HeroMotto">
+		<h2>Innovate Today. Change Tomorrow.</h2>
+</section>
+<section>
+	<div class="row no-gutters">
+		<div class="col"><div class="image-container"><img src="http://aktsa.org/img_2019/homecomm.jpg" height="550" alt="First slide"><div id="overlay">
+				<div id="overlaytext"><h2><div id="hours-div" class="ev">
+						<span data-aos-delay="200" data-aos="zoom-in" id="hours" class="counter" style="font-size:36px;">700</span>
+								<p class="subtitle">Hours of Community<br> Service</p>
+						</div></h2></div>
+			  </div></img></div></div>
+			  <div class="col"><div class="image-container"><img src="http://aktsa.org/img_2019/commservice1.jpeg" height="550" alt="First slide"><div id="overlay">
+					<div id="overlaytext">
+							<span style="font-size:36px;" data-aos-delay="1000" data-aos="zoom-in" class="secondary-counter">$<span id="money" class="counter" style="font-size:36px;">3000</span></span>
+								 <p class="subtitle">Dollars Raised for the <br> American Cancer Society</p>
+							</div>
+				  </div></img></div></div>
+	</div>
+</section>
+<section id="HeroMotto">
+		<h2>We take our competition very seriously. We have been successful over the years.<h2>
+</section>    
+    
+    
+<section>
+		<div class="timeline">
+				<div class="history left">
+				  <div class="content" data-aos="fade-left">
+					<h2>2019</h2>
+					<p>We had a very successful year in 2019. We were finalists in over 5 events at the National Conference in Washington, D.C.</p>
+				  </div>
+				</div>
+				<div class="history right">
+				  <div class="content" data-aos="fade-right">
+					<h2>2018</h2>
+					<p>In the 2018 NCTSA Competition, we were able to get first in over 10 events! We then had a successful run in Atlanta, Georgia at the National Conference.</p>
+				  </div>
+				</div>
+				<div class="history left">
+				  <div class="content" data-aos="fade-left">
+					<h2>2017</h2>
+					<p>After a successful year at the NCTSA Level, with over five first place winners, Ardrey Kell TSA had a successful run in Orlando. The Webmaster Team placed 2nd overall!</p>
+				  </div>
+				</div>
+				<div class="history right">
+				  <div class="content" data-aos="fade-right">
+					<h2>2015</h2>
+					<p>The Ardrey Kell Technology Student Association gained over 100 members! We were successful in the State Competition and advanced to our first National Conference!</p>
+				  </div>
+				</div>
+			  </div>			  
+</section>
+    
+<section id="HeroMotto" style="background: darkblue;">
+		<div class="container">
+				<div class="row">
+				  <div class="col-sm" data-aos="fade">
+					Over 30 1st place winners at NCTSA over the past 3 years
+				  </div>
+				  <div class="col-sm" data-aos="fade" data-aos-delay="500">
+					Over 140 members 
+				  </div>
+				  <div class="col-sm" data-aos="fade" data-aos-delay="1000">
+					Over 5 years of success
+				  </div>
+				</div>
+			  </div>
+</section>
+
+<section id="gallery">
+	<br /><br />
+		<h2 style="color: white;"><center>Our chapter over the years</center><h2><br />
+			<div class="gallery">
 
 
-			<!--
+		<div class="row" data-aos="fade">
 
-				=========================================================================================
+						 <div class="col-sm-12 col-md-4">
+						 <a class="viewimg" href="assets/img/nats1.JPG" data-caption="System Control Finalist 2019">
+						 <img src="assets/img/nats1.JPG" alt="assets/img/nats1.JPG" height="300" width="450">
+						 </a>
+						 </div>
+			
+						 <div class="col-sm-12 col-md-4">
+								<a class="viewimg" href="assets/img/nats_2019.JPG" data-caption="TSA Nationals Squad">
+								<img src="assets/img/nats_2019.JPG" alt="assets/img/nats_2019.JPG" height="300" width="450">
+								</a>
+						 </div> 
+						 <div class="col-sm-12 col-md-4">
+								<a class="viewimg" href="http://aktsa.org/img_2019/Tsa.jpg" data-caption="AKTSA representing Ardrey Kell High School">
+								<img src="http://aktsa.org/img_2019/Tsa.jpg" alt="http://aktsa.org/img_2019/Tsa.jpg" height="300" width="450">
+								</a>
+						 </div> 
+				</div>
 
-												PRIMARY CONTENT BEGINS HERE
+				<div class="row" style="margin-top: 50px;">
 
-				=========================================================================================
+						<div class="col-sm-12 col-md-4">
+								<a class="viewimg" href="assets/img/nats2.JPG" data-caption="Board Game Design Finalist 2019">
+								<img src="assets/img/nats2.JPG" alt="assets/img/nats2.JPG" height="300" width="450">
+								</a>
+						</div>
 
-				-->
+						<div class="col-sm-12 col-md-4">
+								<a class="viewimg" href="http://aktsa.org/images/nats.jpg" data-caption="2016 TSA Nationals Squad">
+								<img src="http://aktsa.org/images/nats.jpg" alt="http://aktsa.org/images/nats.jpg" height="300" width="450">
+								</a>
+						</div>
 
+						<div class="col-sm-12 col-md-4">
+								<a class="viewimg" href="http://aktsa.org/images/new/heroBG.JPG" data-caption="2015 TSA Nationals Squad">
+								<img src="http://aktsa.org/images/new/heroBG.JPG" alt="http://aktsa.org/images/new/heroBG.JPG" height="300" width="450">
+								</a>
+						</div>
 
-			<section id="HeroMotto">
-				<h2>Innovate Today. Change Tomorrow.</h2>
-			</section>
-
-
-			<div style="position:relative;height:100vh">
-				<div class="PicDiv" style="width:100vw;background-image:url('/images/fdesign2.jpg');background-position:center;position:relative;top: 0;height: 100vh;"></div>
-				<section id="IntroFrame" class="InfoFrame Right" style="position: relative; top: -100vh" data-aos="flip-left" data-aos-duration="1000">
-					<p>We are the Ardrey Kell High School Technology Student Association.<br />We are a club of students that participates in technology-based projects. We are a team that competes in TSA conferences in the regional, state, and national levels. Above all,
-						we are a band of enthusiasts that comes together to share our love of science, technology, engineering, and math, and to push the boundaries of what's possible. </p>
-				</section>
-			</div>
-
-			<div style="position:relative;height:100vh">
-				<div class="PicDiv" style="width:100vw;background-image:url('/images/IMG_20150322_160628.jpg');background-position:center;position:relative;top: 0;height: 100vh;"></div>
-				<section class="InfoFrame Left" style="position: relative; top: -100vh" data-aos="flip-right" data-aos-duration="1000">
-					<p>Innovate Today. Change Tomorrow.<br />Our motto is a reflection of what we believe to be not only true, but possible. In our modern, interconnected world, technology literacy is more important than ever. The wonder of technology is that it allows
-						anyone, no matter their age, gender, race, ethnicity, religion, or any other factor, to be the change they wish to see in the world. Technology empowers everyone to do great things. And that's exactly what we aim to do.</p>
-				</section>
-			</div>
-
-			<div style="position:relative;height:100vh">
-				<div class="PicDiv" style="width:100vw;background-image:url('/images/cs3.jpg');background-position:center;position:relative;top: 0;height: 100vh;"></div>
-				<section class="InfoFrame Right" style="position: relative; top: -100vh;display:flex;align-items:center;" data-aos="zoom-out" data-aos-duration="1000">
-					<img src="/images/crest.png" alt="The official crest of AK TSA" style="width:15vw;" />
-					<p style="float:right;text-align:left;">The official crest of the AK TSA represents the spirit of our competitors. Its abnormal shape and design symbolizes the innovative and modern perspective of the club, while the pieced together nature of the Rubik's Cube reminds us that we are all
-						part of a greater whole, working together to better our world.</p>
-				</section>
-			</div>
-
-
-
-			<div style="height:100vh; width: 100vw;">
-				<section class="InfoFrame InvertFrame" style="padding:80px 0;display: block; position: relative; top: 25vh; left: 0;margin: 0 auto !important; text-align: center; opacity: 1;" data-aos="flip-left" data-aos-duration="1000">
-					<p style="font-weight:bold;margin:0;font-size:500%;" class="MainTitle">AK <span>TSA</span></p><br>
-					<p style="margin:0;position:relative;top:-20px;">Advisor: Mr. Sheffield &nbsp;&nbsp;&nbsp; Room A304<br />Competition information available <a style="color:white;" href="/competition.html">here</a>.</p>
-				</section>
-			</div>
+						
+				</div>	 
+						
 
 		</div>
-	</div>
-	<script>
-		AOS.init();
-	</script>
-	<script>
-		function expandNav() {
-			if ($(window).width() <= 960) {
-				if ($('nav').hasClass('open')) {
-					$('.Nav').css('display', 'none');
-					$('nav').removeClass('open');
-				} else {
-					$('.Nav').css('display', 'block');
-					$('nav').addClass('open');
-					//  $('.Nav::').css('transform', 'translateX(110px)');
-				}
-			}
-		}
-	</script>
 
+</section>
+    
+	
+<!--------------------------------------
+FOOTER
+--------------------------------------->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1440 126" style="enable-background:new 0 0 1440 126;" xml:space="preserve">
+<path class="bg-black" d="M685.6,38.8C418.7-11.1,170.2,9.9,0,30v96h1440V30C1252.7,52.2,1010,99.4,685.6,38.8z"/>
+</svg>
+<footer class="bg-black pb-5">
+<center><h3 style="color: white;">About this website: <a href="competition.html">here</a>.</h3></center>
+</footer>
+<!-- End Footer -->
 
+<!--------------------------------------
+JAVASCRIPTS
+--------------------------------------->    
+<script src="./assets/js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="./assets/js/vendor/popper.min.js" type="text/javascript"></script>
+<script src="./assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>
+<script src="./assets/js/vendor/share.js" type="text/javascript"></script>
+<script src="./assets/js/functions.js" type="text/javascript"></script>
+    
+<!-- Animation -->
+<script src="./assets/js/vendor/aos.js" type="text/javascript"></script>
+<script src="https://npmcdn.com/particlesjs@2.2.2/dist/particles.min.js"></script>
+<script src="https://bfintal.github.io/Counter-Up/jquery.counterup.min.js"></script>
+<script>
+	jQuery(document).ready(function($) {
+            $('.counter').counterUp({
+                delay: 10,
+                time: 2500
+            });
+        });
+</script>
+
+    <script>
+      window.onload = function() {
+        Particles.init({
+          selector: '.header__background',
+          color: '#75A5B7',
+          maxParticles: 130,
+          connectParticles: true,
+          responsive: [
+            {
+              breakpoint: 768,
+              options: {
+                maxParticles: 80
+              }
+            }, {
+              breakpoint: 375,
+              options: {
+                maxParticles: 50
+              }
+            }
+          ]
+        });
+      };
+    </script>
+<noscript>
+    <style>
+        *[data-aos] {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
+</noscript>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+    baguetteBox.run('.gallery');
+</script>
+<script>
+    AOS.init({
+        duration: 700
+    });
+</script>
+ 
+<!-- Disable animation on less than 1200px, change value if you like -->
+<script>
+AOS.init({
+  disable: function () {
+    var maxWidth = 1200;
+    return window.innerWidth < maxWidth;
+  }
+});
+</script>
+    
+<!-- Carousel Height Smooth -->
+<script>    
+    $('.carousel').on('slide.bs.carousel', function (event) {
+      var height = $(event.relatedTarget).height();
+      var $innerCarousel = $(event.target).find('.carousel-inner');
+      $innerCarousel.animate({
+        height: height
+      });
+    });
+    </script>
+    
+<!-- Popovers -->
+<script>
+    $(function () {
+      $('[data-toggle="popover"]').popover()
+    })
+    $('.popover-dismiss').popover({
+      trigger: 'focus'
+    })
+    </script>
+    
+<!-- Tooltips -->
+<script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
+    
 </body>
-
 </html>

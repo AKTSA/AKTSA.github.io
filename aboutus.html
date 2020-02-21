@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favicon.ico">
+<link rel="icon" type="image/png" href="./assets/img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<title>About us</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
+    
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,800" rel="stylesheet">
+    
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
+<!-- Main CSS -->
+<link href="./assets/css/main.css" rel="stylesheet"/>
+
+    
+<!-- Animation CSS -->
+<link href="./assets/css/vendor/aos.css" rel="stylesheet"/>
+
+  
+    
+</head>
+    
+<body> 
+        <style>
+         .hovereffect {
+            width: 100%;
+            height: 100%;
+            float: left;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            cursor: default;
+          }
+          
+          .hovereffect .overlay {
+            position: absolute;
+            overflow: hidden;
+            width: 80%;
+            height: 80%;
+            left: 10%;
+            top: 10%;
+            border-bottom: 1px solid #FFF;
+            border-top: 1px solid #FFF;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: scale(0,1);
+            -ms-transform: scale(0,1);
+            transform: scale(0,1);
+          }
+          
+          .hovereffect:hover .overlay {
+            opacity: 1;
+            filter: alpha(opacity=100);
+            -webkit-transform: scale(1);
+            -ms-transform: scale(1);
+            transform: scale(1);
+          }
+          
+          .hovereffect img {
+            display: block;
+            position: relative;
+            -webkit-transition: all 0.35s;
+            transition: all 0.35s;
+          }
+          
+          .hovereffect:hover img {
+            filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+            filter: brightness(0.6);
+            -webkit-filter: brightness(0.6);
+          }
+          
+          .hovereffect h2 {
+            text-transform: uppercase;
+            text-align: center;
+            position: relative;
+            font-size: 17px;
+            background-color: transparent;
+            color: #FFF;
+            padding: 1em 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: translate3d(0,-100%,0);
+            transform: translate3d(0,-100%,0);
+          }
+          
+          .hovereffect a, .hovereffect p {
+            color: #FFF;
+            padding: 1em 0;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+            transition: opacity 0.35s, transform 0.35s;
+            -webkit-transform: translate3d(0,100%,0);
+            transform: translate3d(0,100%,0);
+          }
+          
+          .hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
+            opacity: 1;
+            filter: alpha(opacity=100);
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+          }
+
+          #HeroMotto{margin:0;padding:10vh;text-align:center;background:#2c3e50;color:#fff;font-family:raleway,sans-serif;font-size:150%}#HeroMotto h2{margin:0}
+
+        #CTEClasses{position:relative}#CTEClasses .BigBox{display:inline-block;width:33.333%;height:200px;background-size:cover;background-position:center;vertical-align:top;cursor:pointer;position:relative}#CTEClasses p{margin:0;text-align:center;height:100%;background:radial-gradient(rgba(0,0,0,1),rgba(0,0,0,0));color:#fff;opacity:0;transition:opacity .5s ease}#CTEClasses .BigBox:hover p{opacity:1}#CTEClasses .BigBox:active p{opacity:.8;transition:opacity .1s ease}#CTEClasses button{background:0 0;padding:10px 13px}#CTEClasses .ClassOpen{max-height:0;transition:max-height .2s ease-out;overflow-y:hidden;background:#34495e;color:#fff;box-shadow:inset 0 0 10px rgba(0,0,0,.5)}#CTEClasses .ClassOpen p{color:#fff;opacity:1;background:0 0;text-align:left;margin:20px}#CTEClasses .ClassOpen h3{margin:20px}#CTEClasses .ClassArrow{font-size:400%;color:#fff;width:100%;display:inline-block;text-align:center;position:absolute;top:80%;transition:opacity .5s ease;opacity:0}#CTEClasses #ClassClose{position:absolute;right:-50px;top:50%;transform:translateY(-50%);opacity:0;transition:opacity .5s ease;pointer-events:none}
+
+          #ClassClose{display:none}
+
+          #ClassClose{position:absolute;right:-50px;top:50%;transform:translateY(-50%);opacity:0;transition:opacity .5s ease;pointer-events:none}
+
+        </style>
+    
+<!----------------------------------------------------------------------
+NAVBAR (remove topnav if you don't want changed nav background on scroll)
+------------------------------------------------------------------------>
+<nav class="topnav navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html"><strong>AK</strong> TSA</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarColor02" style="">
+                <ul class="navbar-nav mr-auto d-flex align-items-center">
+                    <li class="nav-item">
+                    <a class="nav-link SurroundBtn" href="./index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link SurroundBtn" href="./aboutus.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link SurroundBtn" href="./memberinfo.html">Members</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link SurroundBtn" href="./awards.html">Awards <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link SurroundBtn" href="./officer.html">Officers</a>
+                    </li>
+                    <li class="nav-item">
+							<a class="nav-link SurroundBtn" href="https://sychic.github.io/AKTSA.landingpage/">Design Brief</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link SurroundBtn" href="https://aktsa.azurewebsites.net/">Login</a>
+					</li>
+                </ul>
+            </div>
+        </div>
+        </nav>
+        <!-- End Navbar -->
+    
+    
+<!--------------------------------------
+HEADER
+--------------------------------------->
+<div class="jumbotron jumbotron-lg jumbotron-fluid mb-3 bg-primary position-relative" style="margin-bottom: -20px;">
+    <div class="container text-white h-100 tofront">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10">
+                <h1 class="display-3">About Us</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Header -->
+
+    
+<!--------------------------------------
+MAIN
+--------------------------------------->
+
+<p>Ardrey Kell's CTE department is one of the fastest growing parts of the school, and one of the most important. With intriguing and specialized courses such as AP Computer Science Principles, Intro to Engineering Design, and others, students are prepared for life in the 21st century and beyond.</p>
+
+<section id="CTEClasses">
+                    <h2><center>Course Offerings</center></h2>
+                    <span id="ClassClose"><button onclick="openPanel(-1);" class="BigBtn">X</button></span>
+                    <div>
+                        <div>
+                            <a onclick="openPanel(0);" class="BigBox" style="background-image:url('http://aktsa.org/images/compsci.jpg');"><!--https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg-->
+                                <p class="CenterWrap">AP Computer Science</p>
+                                <span id="ClassArrow0" class="ClassArrow">&#9660;</span>
+                            </a><a onclick="openPanel(1);" class="BigBox" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/5/54/Rayleigh-Taylor_instability.jpg');">
+                            <p class="CenterWrap">Scientific Visualization</p>
+                            <span id="ClassArrow1" class="ClassArrow">&#9660;</span>
+                            </a><a onclick="openPanel(2);" class="BigBox" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Isometric_Drawing_of_Lasource-Durand_Framing-Ste_in_Genevieve_MO.png');filter:invert(100%);">
+                            <p style="filter:invert(100%);background:radial-gradient(rgba(0,0,0,1), rgba(0,0,0,0) 50%);" class="CenterWrap">Drafting</p>
+                            <span id="ClassArrow2" style="filter:invert(100%);" class="ClassArrow">&#9660;</span>
+                            </a>
+                        </div>
+                        <div class="ClassOpen" id="ClassOpen0">
+                            <h3>AP Computer Science</h3>
+                            
+<!--                            <p>This is a college-level introductory course in computer science. Because the design and implementation of computer programs to solve problems involve skills that are fundamental to the study of computer science, a large part of the course is built around the development of computer programs that correctly solve a given problem. At the same time, the design and implementation of computer programs is used as a context for introducing other important aspects of computer science, including the development and analysis of algorithms, the development and use of fundamental data structures, the study of standard algorithms and typical applications, and the use of logic and formal methods. In addition, the responsible use of these systems is an integral part of the course.</p>-->
+                            
+                            <p>This is an AP® course designed to teach students the basics of encryption, programming, and the fundamentals of the internet. A large portion of the curriculum addresses programming, which is extremely useful for solving a wide range of problems. This is used to teach other important topics, such as algorithms, data structures, and basic logic. The responsible use of programming and the topics discussed in class is an integral part of the course.</p>
+                        </div>
+                        <div class="ClassOpen" id="ClassOpen1">
+                            <h3>Scientific Visualization</h3>
+                            
+                            <p>This course introduces students to the use of complex graphic tools. Emphasis is placed on the principles, concepts, and use of complex graphic and visualization tools as applied to the study of science and technology. Students learn how to create complex 2D graphics, animate, edit, and analyze images to better understand, illustrate, explain, and present technical, mathematical, and/or scientific concepts and principles. Emphasis is placed on the use of computer-enhanced images to generate both conceptual and data-driven models, data-driven charts and animations. Science, math, and visual design concepts are reinforced throughout the course. Activities are structured to integrate physical and social sciences, mathematics, English, and art.</p>
+                            
+                        </div>
+                        <div class="ClassOpen" id="ClassOpen2">
+                            <h3>Drafting</h3>
+                            <p>This course introduces students to the use of complex graphic tools used to communicate and understand ideas and concepts found in the areas of architecture, manufacturing, engineering, science, and mathematics. Topics include problem-solving strategies, classical representation methods such as sketching, geometric construction techniques, as well as CAD (computer aided design), orthographic projection, and 3D modeling.</p>
+                            
+                        </div>
+                        <div>
+                            <a onclick="openPanel(3);" class="BigBox" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/26/Edge_(video_game)_level_layout.png');">
+                                <p class="CenterWrap">Game Art Design</p>
+                                <span id="ClassArrow3" class="ClassArrow">&#9660;</span>
+                            </a><a onclick="openPanel(4);" class="BigBox" style="background-image:url('https://c1.staticflickr.com/6/5044/5335125988_a656efded1_b.jpg');">
+                            <p class="CenterWrap">PLTW: Engineering</p>
+                            <span id="ClassArrow4" class="ClassArrow">&#9660;</span>
+                            </a><a onclick="openPanel(5);" class="BigBox" style="background-image:url('http://aktsa.org/images/biomed.jpg');">
+                            <p class="CenterWrap">PLTW: Biomedical Sciences</p>
+                            <span id="ClassArrow5" class="ClassArrow">&#9660;</span>
+                            </a><!--https://static.pexels.com/photos/5795/medicine-thermometer-tablets-pills.jpg-->
+                        </div>
+                        <div class="ClassOpen" id="ClassOpen3">
+                            <h3>Game Art Design</h3>
+                            <p>This course introduces students to techniques used in the video game industry. Students will focus on the principles used in game design, some of which include mathematical and virtual modeling. Emphasis is placed on areas related to art, history, ethics, plot development, storyboarding, programming, 2D visual theory, and interactive play technologies. Students develop physical and virtual games using hands-on experiences and a variety of software including Unity.</p>
+                        </div>
+                        <div class="ClassOpen" id="ClassOpen4">
+                            <h3>Project Lead The Way<br />Introduction to Engineering Design &amp; Principles of Engineering</h3>
+                            <p>In these PLTW (Project Lead The Way) courses, students are exposed to the design process, research and analysis, teamwork, communication methods, global and human impacts, engineering standards, and technical documentation involved in the process of creating a product. Students use CAD software to help them design solutions to solve proposed problems and learn how to document their work and communicate solutions to peers and members in the professional community.</p>
+                        </div>
+                        <div class="ClassOpen" id="ClassOpen5">
+                            <h3>Project Lead The Way<br />Principles of Biomedical Sciences</h3>
+                            <p>In this PLTW (Project Lead the Way) class, students survey engineering and are exposed to major concepts they will encounter in a postsecondary engineering course of study. Students employ engineering and scientific concepts in the solution of engineering design problems. They develop problem-solving skills and apply their knowledge of research and design to create solutions to various challenges, documenting their work and communicating solutions to peers and members in the professional community.</p>
+                        </div>
+
+                    </div>
+
+
+                </section>
+
+
+<div class="container" style="height: 100%;">
+    <br /><br /><center><h2>Our Projects</h2></center>
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
+<ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+</ol>
+<div class="carousel-inner shadow-sm rounded">
+    <div class="carousel-item active">
+        <img class="d-block w-100" src="assets/img/vgd.jpg" alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Current Video Game Design Project</h5>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img class="d-block w-100" src="assets/img/design1.jpg" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Current Webmaster Project</h5>
+        </div>
+    </div>
+    <div class="carousel-item">
+        <img class="d-block w-100" src="assets/img/cim2.jpg" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+            <h5>Current CIM Project</h5>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<!-- End Main -->
+    
+    
+<!--------------------------------------
+FOOTER
+--------------------------------------->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1440 126" style="enable-background:new 0 0 1440 126;" xml:space="preserve">
+<path class="bg-black" d="M685.6,38.8C418.7-11.1,170.2,9.9,0,30v96h1440V30C1252.7,52.2,1010,99.4,685.6,38.8z"/>
+</svg>
+<footer class="bg-black pb-5">
+<center><h3 style="color: white;">About this website: <a href="competition.html">here</a>.</h3></center>
+</footer>
+<!-- End Footer -->
+    
+    
+   
+<!--------------------------------------
+JAVASCRIPTS
+--------------------------------------->    
+<script src="./assets/js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="./assets/js/vendor/popper.min.js" type="text/javascript"></script>
+<script src="./assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>
+<script src="./assets/js/functions.js" type="text/javascript"></script>
+    
+<!-- Animation -->
+<script src="./assets/js/vendor/aos.js" type="text/javascript"></script>
+<noscript>
+    <style>
+        *[data-aos] {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
+</noscript>
+<script>
+    AOS.init({
+        duration: 700
+    });
+    $(function () { $('[data-toggle="tooltip"]').tooltip() })
+</script>
+ 
+<!-- Disable animation on less than 1200px, change value if you like -->
+<script>
+AOS.init({
+  disable: function () {
+    var maxWidth = 1200;
+    return window.innerWidth < maxWidth;
+  }
+});
+
+
+function newLoad(){console.log("CTE Page Loaded");}
+function newUnload(){}
+function openPanel(a){for(i=0;i<6;i++){if(i!=a){document.getElementById("ClassOpen"+i).style.maxHeight="";document.getElementById("ClassOpen"+i).style.transition="";document.getElementById("ClassArrow"+i).style.opacity="";document.getElementById("ClassClose").style.pointerEvents="";}}
+if(a==-1){document.getElementById("ClassClose").style.opacity="";return;}
+document.getElementById("ClassClose").style.opacity="1";document.getElementById("ClassClose").style.pointerEvents="all";document.getElementById("ClassOpen"+a).style.maxHeight="100vh";document.getElementById("ClassOpen"+a).style.transition="max-height 0.5s ease-in";document.getElementById("ClassArrow"+a).style.opacity="1";}
+function ChangeProjBack(a){var temp=document.getElementById("ProjInfo").getElementsByTagName("P");for(i=0;i<6;i++){if(i!=a){temp[i].style.display="none";}}
+temp[a].style.display="block";switch(a){case 0:document.getElementById("ProjFrame").style.backgroundImage="url('http://aktsa.org/img_2019/TSAA.JPG')";break;case 1:document.getElementById("ProjFrame").style.backgroundImage="url('http://aktsa.org/img_2019/Wright%20Flyer.jpg')";break;case 2:document.getElementById("ProjFrame").style.backgroundImage="url('http://aktsa.org/img_2019/Cimhomepage.jpeg')";break;case 3:document.getElementById("ProjFrame").style.backgroundImage="url('https://raw.githubusercontent.com/AKTSA/AKTSA.github.io/master/img_2019/house.jpg')";break;case 4:document.getElementById("ProjFrame").style.backgroundImage="url('/images/CTEProj5.jpg')";break;case 5:document.getElementById("ProjFrame").style.backgroundImage="url('https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')";break;}}
+function showTeach(a){for(i=0;i<6;i++){if(i!=a){document.getElementById("TeachInfo"+i).style.left="";}}
+document.getElementById("TeachInfo"+a).style.left="100%";}
+
+</script>
+
+</body>
+</html>

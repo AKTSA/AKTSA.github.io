@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background:#2c3e50;
+}
+
+
+.SurroundBtn{padding:15px 30px;display:inline-block;border:none;position:relative;cursor:pointer;vertical-align:top;margin-left:3px;transition:background .2s ease}.SurroundBtn:active,.SurroundBtn.CurrPage{background:rgba(0,0,0,.6)}.SurroundBtn.CurrPage{cursor:default}.SurroundBtn::before,.SurroundBtn::after,.SurroundBtn .LeftPseudo,.SurroundBtn .RightPseudo{position:absolute;display:block;background:#000;transition:width .5s ease,height .5s ease,opacity .5s ease;opacity:0}.SurroundBtn:hover::before,.SurroundBtn:hover::after,.SurroundBtn:hover .LeftPseudo,.SurroundBtn:hover .RightPseudo,.CurrPage.SurroundBtn::before,.CurrPage.SurroundBtn::after,.CurrPage.SurroundBtn .LeftPseudo,.CurrPage.SurroundBtn .RightPseudo{opacity:1}.SurroundBtn::before,.SurroundBtn::after{height:3px;width:0;content:''}.SurroundBtn:hover::before,.SurroundBtn:hover::after,.CurrPage.SurroundBtn::before,.CurrPage.SurroundBtn::after{width:100%}.SurroundBtn::before{top:0;right:0}.SurroundBtn::after{bottom:0;left:0}.SurroundBtn .LeftPseudo,.SurroundBtn .RightPseudo{width:3px;height:0}.SurroundBtn:hover .LeftPseudo,.SurroundBtn:hover .RightPseudo,.SurroundBtn.CurrPage .LeftPseudo,.SurroundBtn.CurrPage .RightPseudo{height:100%}.SurroundBtn .LeftPseudo{bottom:0;left:0}.SurroundBtn .RightPseudo{top:0;right:0}
+
+
+.intro {
+   /* background: url("assets/img/background.JPG") no-repeat center center fixed; */
+    /* background: url("http://aktsa.org/images/intro-min.jpeg") no-repeat center center fixed; */
+    background: url("https://images.pexels.com/photos/1252869/pexels-photo-1252869.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center center fixed;
+    height: 100%;
+   
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  
+
+
+  .section2 {
+    background: url("http://aktsa.org/images/intro-min.jpeg"); 
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .title {
+      text-align: center;
+      color: white;
+  }
+
+section {
+    font-family:raleway,sans-serif;
+}
+
+#HeroMotto{margin:0;padding:10vh;text-align:center;background:#2c3e50;color:#fff;font-family:raleway,sans-serif;font-size:150%}#HeroMotto h2{margin:0}
+
+.image-container {
+    position: relative;
+
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+  }
+  
+#overlaytext{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+  }
+
+  .subtitle {
+      font-size: 24px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .history {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .history::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+    
+    /* Full-width containers */
+    .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+  }

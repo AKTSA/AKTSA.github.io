@@ -1,405 +1,1207 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-	<title>About - AK TSA</title>
-	<link rel="stylesheet" type="text/css" href="uni.css" />
-
-	<!--Polyfills-->
-	<script src="promise.js"></script>
-	<script src="fetch.js"></script>
-	<script>
-		if (!window.Promise) {
-			window.Promise = Promise;
-		}
-	</script>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script src="change.js"></script>
-
-
-	<script id="pageJS" src="/pageJS/awards.js"></script>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="The official website of the Ardrey Kell Technology Student Association" />
-	<meta name="author" content="Agnim Agarwal" />
-	<meta charset="UTF-8" />
-	<link rel="stylesheet" href="/JSDep/ideal-image-slider.css">
-	<link rel="stylesheet" href="/JSDep/ideal-default.css">
-
-	<script src="/JSDep/ideal-image-slider.js"></script>
-	<script src="/JSDep/ideal-captions.js"></script>
+<meta charset="utf-8"/>
+<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favicon.ico">
+<link rel="icon" type="image/png" href="./assets/img/favicon.ico">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<title>Awards</title>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
+    
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,800|Arvo|Do+Hyeon|Audiowide|Open+Sans|Raleway:300" rel="stylesheet">
+    
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
+<!-- Main CSS -->
+<link href="./assets/css/main.css" rel="stylesheet"/>
+    
+<!-- Animation CSS -->
+<link href="./assets/css/vendor/aos.css" rel="stylesheet"/>
+    
 </head>
+    
+<body> 
+    <style>
 
-<body onload="setUpPage();">
-	<nav onclick="expandNav()">
-		<a href="/" class="MainBtn Nav"><span>Home</span>
-			</a> <a href="/about.html" class="SurroundBtn Nav">About<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/member.html" class="SurroundBtn Nav">Members<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/awards.html" class="SurroundBtn Nav CurrPage">Awards<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="/cte.html" class="SurroundBtn Nav">AK CTE<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="https://aktsawebmasters.azurewebsites.net/" class="SurroundBtn Nav">Design Brief<div class="LeftPseudo"></div><div class="RightPseudo"></div>
-			</a><a href="https://aktsa.azurewebsites.net" class="SurroundBtn Nav">Login<div class="LeftPseudo"></div><div class="RightPseudo"></div></a>
-	</nav>
-	<div id="NavBG">
-		<h1 class="MainTitle">AK <span>TSA</span></h1></div>
-	<div class="MainWrap">
-		<div class="ContentWrap">
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .SurroundBtn{padding:15px 30px;display:inline-block;border:none;position:relative;cursor:pointer;vertical-align:top;margin-left:3px;transition:background .2s ease}.SurroundBtn:active,.SurroundBtn.CurrPage{background:rgba(0,0,0,.6)}.SurroundBtn.CurrPage{cursor:default}.SurroundBtn::before,.SurroundBtn::after,.SurroundBtn .LeftPseudo,.SurroundBtn .RightPseudo{position:absolute;display:block;background:#000;transition:width .5s ease,height .5s ease,opacity .5s ease;opacity:0}.SurroundBtn:hover::before,.SurroundBtn:hover::after,.SurroundBtn:hover .LeftPseudo,.SurroundBtn:hover .RightPseudo,.CurrPage.SurroundBtn::before,.CurrPage.SurroundBtn::after,.CurrPage.SurroundBtn .LeftPseudo,.CurrPage.SurroundBtn .RightPseudo{opacity:1}.SurroundBtn::before,.SurroundBtn::after{height:3px;width:0;content:''}.SurroundBtn:hover::before,.SurroundBtn:hover::after,.CurrPage.SurroundBtn::before,.CurrPage.SurroundBtn::after{width:100%}.SurroundBtn::before{top:0;right:0}.SurroundBtn::after{bottom:0;left:0}.SurroundBtn .LeftPseudo,.SurroundBtn .RightPseudo{width:3px;height:0}.SurroundBtn:hover .LeftPseudo,.SurroundBtn:hover .RightPseudo,.SurroundBtn.CurrPage .LeftPseudo,.SurroundBtn.CurrPage .RightPseudo{height:100%}.SurroundBtn .LeftPseudo{bottom:0;left:0}.SurroundBtn .RightPseudo{top:0;right:0}
+    
+    </style>
+<!--------------------------------------
+NAVBAR
+--------------------------------------->
+<nav class="topnav navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+<div class="container">
+    <a class="navbar-brand" href="./index.html"><strong>AK</strong> TSA</a>
+    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse" id="navbarColor02" style="">
+        <ul class="navbar-nav mr-auto d-flex align-items-center">
+            <li class="nav-item">
+            <a class="nav-link SurroundBtn" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link SurroundBtn" href="./aboutus.html">About</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link SurroundBtn" href="./memberinfo.html">Members</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link SurroundBtn" href="./awards.html">Awards <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link SurroundBtn" href="./officer.html">Officers</a>
+            </li>
+            <li class="nav-item">
+			    <a class="nav-link SurroundBtn" href="https://sychic.github.io/AKTSA.landingpage/">Design Brief</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link SurroundBtn" href="https://aktsa.azurewebsites.net/">Login</a>
+			</li>
+        </ul>
+    </div>
+</div>
+</nav>
+<!-- End Navbar -->
+    
+    
+<!--------------------------------------
+HEADER
+--------------------------------------->
+<div class="jumbotron jumbotron-lg jumbotron-fluid mb-3 bg-primary position-relative">
+    <div class="container text-white h-100 tofront">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10">
+                <h1 class="display-3">Awards</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Header -->
+
+    
+<!--------------------------------------
+MAIN
+--------------------------------------->
+
+<div class="container pt-5 pb-5">
 
 
-			<!--
+<section class="pt-4 pb-5">
+    <div class="row">
 
-				=========================================================================================
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://cdn.pixabay.com/photo/2016/07/04/12/51/rendering-1496578_960_720.jpg" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">3D Animation</h5>
 
-												PRIMARY CONTENT BEGINS HERE
 
-				=========================================================================================
-
-				-->
-
-			<section class="HeroWrap AwardsHeroWrap">
-				<h1>Awards</h1>
-			</section>
-
-			<section id="HeroMotto" style="padding-left:15vw; padding-right:15vw;"></section>
-			<section>
-				Our chapter takes competition very seriously. Since TSA was introduced to our school, we've won several awards at the regional, state, and national conferences. Below is a list of our awards from the past 3 years.
-			</section>
-			<section>
-				<p>TSA Nationals, 2017</p>
-				<table id="WeWonStuff">
-					<tr>
-						<th>Event</th>
-						<th>Place</th>
-						<th>Members</th>
-					</tr>
-					<tr>
-						<td>3D Animation</td>
-						<td>6th</td>
-						<td>Anna Goddard &amp; Dave Kubala</td>
-					</tr>
-					<tr>
-						<td>Essays On Technology</td>
-						<td>6th</td>
-						<td>Charlotte Cheng</td>
-					</tr>
-					<tr>
-						<td>Extemporaneous Speech</td>
-						<td>7th</td>
-						<td>Michael Xing</td>
-					</tr>
-					<tr>
-						<td>Prepared Presentation</td>
-						<td>4th</td>
-						<td>Ishani Deliwala</td>
-					</tr>
-					<td>Webmaster</td>
-					<td>2nd</td>
-					<td>Timmothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
-				</table>
-
-				<p>NCTSA States, 2017</p>
-				<table id="WeWonStuff">
-					<tr>
-						<th>Event</th>
-						<th>Place</th>
-						<th>Members</th>
-					</tr>
-					<tr>
-						<td>3D Animation</td>
-						<td>3rd</td>
-						<td>Anna Goddard &amp; Dave Kubala</td>
-					</tr>
-					<tr>
-						<td>Architectural Design</td>
-						<td>1st</td>
-						<td>Jackson Dye, Rachel Ehrman, Anusha Khansaheb, &amp; Katie Zhao</td>
-					</tr>
-					<tr>
-						<td>Biotechnology Design</td>
-						<td>2nd</td>
-						<td>Bhavana Ambil, Hannah Dong, Manivannan Senthil, Carissa Tai, &amp; Katie Zhao</td>
-					</tr>
-					<!--tr>
-							<td>3rd</td>
-							<td>Abdurakhmon Abdulatipov, Hannah Dong, Jin Gao, Aryan Gupta, Lucas Lu, & Carissa Tai</td>
-						</tr-->
-					<tr>
-						<td>Children's Stories</td>
-						<td>3rd</td>
-						<td>Yashika Ghandi, Sunny Gorrepati, Joshita Padala, &amp; Imad Rahu</td>
-					</tr>
-					<tr>
-						<td>Debating Technological Issues</td>
-						<td>2nd</td>
-						<td>Timmothy Rossow &amp; Michael Xing</td>
-					</tr>
-					<tr>
-						<td>Essays on Technology</td>
-						<td>3rd</td>
-						<td>Charlotte Cheng</td>
-					</tr>
-					<tr>
-						<td>Extemporaneous Speech</td>
-						<td>1st<br>2nd</td>
-						<td>Adarsh Sukumar<br>Michael Xing</td>
-					</tr>
-					<tr>
-						<td>Fashion Design</td>
-						<td>2nd</td>
-						<td>Tobi Akinyelu, Makenzie Kelly, Sophia Shi, &amp; Gabrielle Skelton</td>
-					</tr>
-					<tr>
-						<td>Future Technology Teacher</td>
-						<td>1st</td>
-						<td>Ishani Deliwala</td>
-					</tr>
-					<tr>
-						<td>Music Production</td>
-						<td>2nd</td>
-						<td>Joseph D'Apollonio, Gabriel Goldhagen, Max Kegley, Makenzie Kelly, &amp; Keon Kim</td>
-					</tr>
-					<!--tr>
-							<td>3rd</td>
-							<td>Maxwell Kegley & Makenzie Kelly</td>
-						</tr-->
-					<tr>
-						<td>Photographic Technology</td>
-						<td>2nd</td>
-						<td>Yashika Gandhi</td>
-					</tr>
-					<tr>
-						<td>Prepared Presentation</td>
-						<td>1st<br>3rd</td>
-						<td>Manivannan Senthil<br>Ishani Deliwala</td>
-					</tr>
-					<tr>
-						<td>SciViz</td>
-						<td>1st</td>
-						<td>Anna Goddard, Elijah Hubble, &amp; Dave Kubala</td>
-					</tr>
-					<tr>
-						<td>STEM Careers</td>
-						<td>3rd</td>
-						<td>Hannah Dong</td>
-					</tr>
-					<tr>
-						<td>Structural Engineering</td>
-						<td>2nd</td>
-						<td>Rohit Chaudhuri &amp; Prakash Ray</td>
-					</tr>
-					<tr>
-						<td>Transportation Modeling</td>
-						<td>2nd</td>
-						<td>Koushik Sridhar</td>
-					</tr>
-					<tr>
-						<td>Webmaster</td>
-						<td>1st</td>
-						<td>Aviral Agarwal, Joshita Padala, Timmothy Rossow, Manivannan Senthil, &amp; Michael Xing</td>
-					</tr>
-				</table>
-				<p>TSA Nationals, 2016</p>
-				<table id="WeWonStuff">
-					<tr>
-						<th>Event</th>
-						<th>Place</th>
-						<th>Members</th>
-					</tr>
-					<tr>
-						<td>Biotechnology Design</td>
-						<td>5th</td>
-						<td>Vibhu Ambil, Mani Senthil, &amp; Katie Zhao</td>
-					</tr>
-					<tr>
-						<td>CAD 3D, Engineering</td>
-						<td>7th</td>
-						<td>Samuel Unferth</td>
-					</tr>
-					<tr>
-						<td>Music Production</td>
-						<td>4th</td>
-						<td>Max Kegley &amp; Mackenzie Kelly</td>
-					</tr>
-					<tr>
-						<td>Prepared Presentation</td>
-						<td>7th</td>
-						<td>Mani Senthil</td>
-					</tr>
-					<tr>
-						<td>Webmaster</td>
-						<td>5th</td>
-						<td>Aviral Agarwal, Aryan Gupta, Timmothy Rossow, Sarosh Santosh, &amp; Michael Xing</td>
-					</tr>
-				</table>
-				<p>NCTSA States, 2016</p>
-				<table id="WeWonStuff">
-					<tr>
-						<th>Event</th>
-						<th>Place</th>
-						<th>Members</th>
-					</tr>
-					<tr>
-						<td>Architectural Renovation</td>
-						<td>1st</td>
-						<td>Jackson Dye, Rachel Ehrmann, Anusha Khansaheb, Chase Ralston, &amp; Katie Zhao</td>
-					</tr>
-					<tr>
-						<td>Biotechnology Design</td>
-						<td>1st<br>3rd</td>
-						<td>Vibhu Ambil, Mani Senthil, &amp; Katie Zhao<br>Abdurakhmon Abdulatipov, Hannah Dong, Jin Gao, Aryan Gupta, Lucas Lu, &amp; Carissa Tai</td>
-					</tr>
-					<tr>
-						<td>Career Preparation</td>
-						<td>1st</td>
-						<td>Anisha Ponnapati</td>
-					</tr>
-					<tr>
-						<td>CAD 3D, Engineering</td>
-						<td>3rd</td>
-						<td>Aryan Gupta</td>
-					</tr>
-					<tr>
-						<td>Debating Technological Issues</td>
-						<td>2nd</td>
-						<td>Douglas Dubrowski &amp; Matthew Lyons</td>
-					</tr>
-					<tr>
-						<td>Desktop Publishing</td>
-						<td>1st</td>
-						<td>Sunnie Kwak</td>
-					</tr>
-					<tr>
-						<td>Essays On Technology</td>
-						<td>3rd</td>
-						<td>Carolyn Sanderlin</td>
-					</tr>
-					<tr>
-						<td>Extemporaneous Speech</td>
-						<td>2nd</td>
-						<td>Michael Xing</td>
-					</tr>
-					<tr>
-						<td>Flight Endurance</td>
-						<td>2nd</td>
-						<td>Katie Zhao</td>
-					</tr>
-					<tr>
-						<td>Music Production</td>
-						<td>2nd<br>3rd</td>
-						<td>John Casabonne, Ishan Jolly, Keon Kim, &amp; Grant Kinsey<br>Max Kegley &amp; Mackenzie Kelly</td>
-					</tr>
-					<tr>
-						<td>Photographic Technology</td>
-						<td>2nd</td>
-						<td>Sabrina Ho</td>
-					</tr>
-					<tr>
-						<td>Prepared Presentation</td>
-						<td>2nd</td>
-						<td>Manivannan Senthil</td>
-					</tr>
-					<tr>
-						<td>SciVis</td>
-						<td>3rd</td>
-						<td>Alec Probst &amp; Stephen Wardlaw</td>
-					</tr>
-					<tr>
-						<td>Structural Engineering</td>
-						<td>2nd</td>
-						<td>Kevin Carney &amp; Ishan Jolly</td>
-					</tr>
-					<tr>
-						<td>Systems Control</td>
-						<td>1st</td>
-						<td>Hazim Mukhtar, Karan Malhotra, &amp; Samuel Unferth</td>
-					</tr>
-					<tr>
-						<td>Webmaster</td>
-						<td>1st</td>
-						<td>Aviral Agarwal, Aryan Gupta, Timmothy Rossow, Sarosh Santosh, &amp; Michael Xing</td>
-					</tr>
-				</table>
-				<p>TSA Nationals, 2015</p>
-				<table id="WeWonStuff">
-					<tr>
-						<th>Event</th>
-						<th>Place</th>
-						<th>Members</th>
-					</tr>
-					<tr>
-						<td>Engineering Design</td>
-						<td>4th</td>
-						<td>Carson Orr, Kevin Carney, Nick Spina, Jake Cheek, &amp; Jackson Wright</td>
-					</tr>
-					<tr>
-						<td>Technology Bowl, Written Test</td>
-						<td>10th</td>
-						<td>Aviral Agarwal</td>
-					</tr>
-				</table>
-				<p>NCTSA States, 2015</p>
-				<table id="WeWonStuff">
-					<tr>
-						<th>Event</th>
-						<th>Place</th>
-						<th>Members</th>
-					</tr>
-					<tr>
-						<td>Engineering Design</td>
-						<td>1st</td>
-						<td>Carson Orr, Kevin Carney, Nick Spina, Jake Cheek, &amp; Jackson Wright</td>
-					</tr>
-					<tr>
-						<td>Fashion Design</td>
-						<td>1st</td>
-						<td>Yara Bauer, Katherine Norwine, Isabel Hoerr, &amp; Irene Zhou</td>
-					</tr>
-					<tr>
-						<td>Music Production</td>
-						<td>1st</td>
-						<td>Keon Kim, John Casabonne, Ishan Jolly, David Knoble, Yash Makwana, &amp; Haley Pratt</td>
-					</tr>
-					<tr>
-						<td>Debating Technological Issues</td>
-						<td>2nd</td>
-						<td>Anisha Ponnapati &amp; Abhijith Tammanagari</td>
-					</tr>
-					<tr>
-						<td>Career Prep</td>
-						<td>2nd</td>
-						<td>Anisha Ponnapati</td>
-					</tr>
-				</table>
-			</section>
+<table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1st</td>
+        <td>Luke Japaridze & Dave Kubala</td>
+        <td>NCTSA States, 2018</td>
+    </tr>
+    <tr>
+        <td>1st</td>
+        <td>Luke Japardize & Dave Kubala</td>
+        <td>NCTSA Regionals, 2018</td>
+    </tr>
+    <tr>
+        <td>6th</td>
+        <td>Anna Goddard & Dave Kubala</td>
+        <td>TSA Nationals, 2017</td>
+    </tr>
+    <tr>
+        <td>3rd</td>
+        <td>Anna Goddard & Dave Kubala</td>
+        <td>NCTSA States, 2017</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
 
 
 
 
-		</div>
-	</div>
-	<script>
-		function expandNav() {
-			if ($(window).width() <= 960) {
-				if ($('nav').hasClass('open')) {
-					$('.Nav').css('display', 'none');
-					$('nav').removeClass('open');
-				} else {
-					$('.Nav').css('display', 'block');
-					$('nav').addClass('open');
-					//  $('.Nav::').css('transform', 'translateX(110px)');
-				}
-			}
-		}
-	</script>
-	<script>
-		var slider = new IdealImageSlider.Slider({
-			selector: '#slider',
-			height: 400
-		});
-		slider.addCaptions();
-		slider.start();
-	</script>
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://cdn.pixabay.com/photo/2016/11/24/20/30/architecture-1857175_960_720.jpg" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Architectural Design</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1st</td>
+        <td>Nathan Alexander, Grant Cascone, Dylan Estrada, Dave Kubala, Zaina Shawar, & Sophia Shi</td>
+        <td>NCTSA States, 2018</td>
+    </tr>
+    <tr>
+        <td>1st</td>
+        <td>Nathan Alexander, Grant Cascone, Dylan Estrada, Dave Kubala, Zaina Shawar, & Sophia Shi</td>
+        <td>NCTSA States, 2018</td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>  
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://cdn.pixabay.com/photo/2016/11/24/20/30/architecture-1857175_960_720.jpg" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Animatronics</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>  
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/2280549/pexels-photo-2280549.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Biotechnology Design</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <td>2nd</td>
+        <td>Charlotte Cheng, Hannah Dong, Ayush Padhi, Koushik Sridhar, & Tara Ghorpadkar</td>
+        <td>NCTSA States, 2018</td>
+        </tr>
+        <tr>
+        <td>2nd</td>
+        <td>Bhavana Ambil, Hannah Dong, Manivannan Senthil, Carissa Tai, & Katie Zhao</td>
+        <td>NCTSA States, 2017</td>
+        </tr>
+        <tr>
+        <td>5th</td>
+        <td>Vibhu Ambil, Mani Senthil, & Katie Zhao</td>
+        <td>TSA Nationals, 2016</td>
+        </tr>
+        <tr>
+        <td>1st</td>
+        <td>Vibhu Ambil, Mani Senthil, & Katie Zhao</td>
+        <td>NCTSA States, 2016</td>
+        </tr>
+        <tr>
+        <td>1st</td>
+        <td>Vibhu Ambil, Mani Senthil, & Katie Zhao</td>
+        <td>NCTSA States, 2016</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>  
+
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/776654/pexels-photo-776654.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Board Game Design</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div> 
+
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/265076/pexels-photo-265076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Children’s Stories</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>3rd</td>
+            <td>Yashika Ghandi, Sunny Gorrepati, Joshita Padala, & Imad Rahu</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div> 
+
+
+    <div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Coding</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2nd</td>
+            <td>Shreyash Malhotra, Arjun Vashistha, & Shirsti Grover</td>
+            <td>NCTSA Regionals, 2018</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div> 
+
+ <div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="assets/img/CIM2.jpg" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Computer Integrated Manufacturing (CIM)</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1st</td>
+            <td>Anshul Shah & Anuraag Warudkar</td>
+            <td>NCTSA States, 2018</td>
+        </tr>
+        <tr>
+            <td>5th</td>
+            <td>Anshul Shah, Anuraag Warudkar, Rushil Vashee, Samir Appikatla, and Akshay Gududuru</td>
+            <td>TSA Nationals, 2019</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div> 
+
+ <div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://cdn.pixabay.com/photo/2016/11/25/21/00/plan-1859392_960_720.jpg" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Computer-Aided Design (CAD), Architecture</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1st</td>
+            <td>Zahra Masroor & Zaina Shawar</td>
+            <td>TSA Regionals, 2018</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+ <div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://cdn.pixabay.com/photo/2018/06/19/10/51/cad-3484213_1280.jpg" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Computer-Aided Design (CAD), Engineering</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1st</td>
+            <td>Agnim Agarwal & Major Kirby</td>
+            <td>NCTSA Regionals, 2018</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+ <div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://cdn.pixabay.com/photo/2017/07/10/23/49/club-2492011_960_720.jpg" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Debating Technological Issues</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2nd</td>
+            <td>Anisha Ponnapati & Abhijith Tammanagari</td>
+            <td>NCTSA States, 2015</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>Douglas Dubrowski & Matthew Lyons</td>
+            <td>NCTSA States, 2016</td>
+        </tr>
+       <tr>
+            <td>2nd</td>
+            <td>Timmothy Rossow & Michael Xing</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+ <div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/66134/pexels-photo-66134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Digital Video Production</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1st</td>
+            <td>Anshool Pradhan, Arpeet Dabhade, Aaditya Aluri, Ali Alvarez, & Aksh Chhabra</td>
+            <td>NCTSA States, 2018</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+ <div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="assets/img/dragster.png" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Dragster Design</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1st</td>
+            <td>Rushil Vashee</td>
+            <td>NCTSA Regionals, 2018</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+ <div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/414579/pexels-photo-414579.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Engineering Design</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2nd</td>
+            <td>Ryan Yun, Aakanksh Goskonda, Shrinidhi Muthukumar, Joseph Majual, Elise Zhang, & Arnav Waghmare</td>
+            <td>NCTSA Regionals, 2018</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>Carson Orr, Kevin Carney, Nick Spina, Jake Cheek, & Jackson Wright</td>
+            <td>NCTSA States, 2015</td>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>Carson Orr, Kevin Carney, Nick Spina, Jake Cheek, & Jackson Wright</td>
+            <td>NCTSA States, 2015</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+ <div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/210661/pexels-photo-210661.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Essays on Technology</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2nd</td>
+            <td>Michael Xing</td>
+            <td>NCTSA States, 2016</td>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>Adarsh Sukumar</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>Michael Xing</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>Michael Xing</td>
+            <td>TSA Nationals, 2017</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>Rama Yasin</td>
+            <td>NCTSA States, 2018</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+ <div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Extemporaneous Speech</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2nd</td>
+            <td>Michael Xing</td>
+            <td>NCTSA States, 2016</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>Michael Xing</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>Adarsh Sukumar</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>Rama Yasin</td>
+            <td>NCTSA States, 2018</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+ <div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/1036856/pexels-photo-1036856.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Fashion Design and Technology</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+       <tr>
+            <td>2nd</td>
+            <td>Abisha Fenn, Shrinidhi Gunda, Shristi Grover, & Gabriella Spina</td>
+            <td>NCTSA States, 2018</td>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>Tobi Akinyelu, Makenzie Kelly, Sophia Shi, & Gabrielle Skelton</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>Yara Bauer, Katherine Norwine, Isabel Hoerr, & Irene Zhou</td>
+            <td>NCTSA States, 2015</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="http://aktsa.org/img_2019/Wright%20Flyer.jpg" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Flight Endurance</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2nd</td>
+            <td>Katie Zhao</td>
+            <td>NCTSA States, 2016</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/923681/pexels-photo-923681.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Forensic Science</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/265076/pexels-photo-265076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Future Technology Teacher</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2nd</td>
+            <td>Anna Goddard</td>
+            <td>NCTSA States, 2018</td>
+        </tr>
+       <tr>
+            <td>1st</td>
+            <td>Ishani Deliwala</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/257904/pexels-photo-257904.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Music Production</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2nd</td>
+            <td>Joseph D'Apollonio, Gabriel Goldhagen, Max Kegley, Makenzie Kelly, & Keon Kim</td>
+            <td>NCTSA States 2017</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>Max Kegley & Mackenzie Kelly</td>
+            <td>TSA Nationals 2016</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>John Casabonne, Ishan Jolly, Keon Kim, & Grant Kinsey</td>
+            <td>NCTSA States 2016</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>Max Kegley & Mackenzie Kelly</td>
+            <td>NCTSA States 2016</td>
+        </tr>
+       <tr>
+            <td>1st</td>
+            <td>Keon Kim, John Casabonne, Ishan Jolly, David Knoble, Yash Makwana, & Haley Pratt</td>
+            <td>NCTSA States 2015</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/403495/pexels-photo-403495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">On Demand Video</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Photographic Technology</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2nd</td>
+            <td>Yashika Gandhi</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>Sabrina Ho</td>
+            <td>NCTSA States, 2016</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/355948/pexels-photo-355948.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Prepared Presentation</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2nd</td>
+            <td>Rama Yasin</td>
+            <td>NCTSA States, 2018</td>
+        </tr>
+        <tr>
+            <td>4th</td>
+            <td>Ishani Deliwala</td>
+            <td>TSA Nationals, 2017</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>Ishani Deliwala</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>Manivannan Senthil</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+        <tr>
+            <td>7th</td>
+            <td>Manivannan Senthil</td>
+            <td>TSA Nationals, 2016</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>Manivannan Senthil</td>
+            <td>NCTSA States, 2016</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/1209843/pexels-photo-1209843.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Promotional Design</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://cdn.pixabay.com/photo/2018/12/13/23/44/concept-3873992_960_720.jpg" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Scientific Visualization (SciVis)</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2nd</td>
+            <td>Luke Japaridze & Dave Kubala</td>
+            <td>NCTSA States, 2018</td>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>Anna Goddard, Elijah Hubble, & Dave Kubala</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+        <tr>
+            <td>3rd</td>
+            <td>Alec Probst & Stephen Wardlaw</td>
+            <td>NCTSA States, 2016</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Software Development</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>3rd</td>
+            <td>Sahith Appikatla, Anshul Shah, Siddhant Dubey, and Justin Zhang</td>
+            <td>NCTSA States, 2019</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="http://aktsa.org/images/CTEProj4.jpg" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Structural Design and Engineering</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1st</td>
+            <td>Prakash Ray & Rohit Chauduri</td>
+            <td>NCTSA States, 2018</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>Prakash Ray & Rohit Chauduri</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>Kevin Carney & Ishan Jolly</td>
+            <td>NCTSA States, 2016</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/1476321/pexels-photo-1476321.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">System Control Technology</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1sr</td>
+            <td>Hazim Mukhtar, Karan Malhotra, & Samuel Unferth</td>
+            <td>NCTSA States, 2016</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.unsplash.com/photo-1484069560501-87d72b0c3669?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Technology Bowl</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>3rd</td>
+            <td>Vijayvenkat Madapakula, Sahil Azad, & Sreyas Adiraju</td>
+            <td>NCTSA States, 2018</td>
+        </tr>
+              <tr>
+            <td>3rd</td>
+            <td>Aviral Agarwal</td>
+            <td>TSA Nationals, 2015</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/34591/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Technology Problem Solving</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>3rd</td>
+            <td>Yashika Ghandi, Sunny Gorrepati, Joshita Padala, & Imad Rahu</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="assets/img/transportation.jpg" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Transportation Modeling</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1st</td>
+            <td>Sachit Nayak</td>
+            <td>NCTSA States, 2019</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>Koushik Sridhar</td>
+            <td>NCTSA States, 2017</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="assets/img/vgd.jpg" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Video Game Design</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1st</td>
+            <td>Vikram Iyengar, Jason Sahayaraj, and Rakil Patel</td>
+            <td>NCTSA States, 2019</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-6">
+<div class="card shadow-sm border-0" data-aos="fade">
+    <img class="card-img-top" src="https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image cap" height="200">
+    <div class="card-body">
+        <h5 class="card-title">Webmaster</h5>
+             <table class="table">
+    <thead class="thead">
+    <tr>
+        <th scope="col">Place</th>
+        <th scope="col">Members</th>
+        <th scope="col">Year</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>8th</td>
+            <td>Sahith Appikatla, Samir Appikatla, Anuraag Warudkar, and Jason Sahayaraj</td>
+            <td>TSA Nationals, 2019</td>
+        </tr>
+        <tr>
+            <td>1st</td>
+            <td>Sahith Appikatla, Samir Appikatla, Anuraag Warudkar, and Jason Sahayaraj</td>
+            <td>NCTSA States, 2019</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>Sahith Appikatla, Vatsal Varma, Agnim Agarwal, Jason Sahayaraj & Jai Deshmukh</td>
+            <td>NCTSA States, 2018</td>
+        </tr>
+        <tr>
+            <td>2nd</td>
+            <td>Timmothy Rossow, Manivannan Senthil, & Michael Xing</td>
+            <td>TSA Nationals, 2017</td>
+        </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+</div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+</div>
+<!-- End Main -->
+    
+    
+<!--------------------------------------
+FOOTER
+--------------------------------------->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1440 126" style="enable-background:new 0 0 1440 126;" xml:space="preserve">
+<path class="bg-black" d="M685.6,38.8C418.7-11.1,170.2,9.9,0,30v96h1440V30C1252.7,52.2,1010,99.4,685.6,38.8z"/>
+</svg>
+<footer class="bg-black pb-5">
+<center><h3 style="color: white;">About this website: <a href="competition.html">here</a>.</h3></center>
+</footer>
+<!-- End Footer -->
+    
+    
+   
+<!--------------------------------------
+JAVASCRIPTS
+--------------------------------------->    
+<script src="./assets/js/vendor/jquery.min.js" type="text/javascript"></script>
+<script src="./assets/js/vendor/popper.min.js" type="text/javascript"></script>
+<script src="./assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>
+<script src="./assets/js/functions.js" type="text/javascript"></script>
+    
+<!-- Animation -->
+<script src="./assets/js/vendor/aos.js" type="text/javascript"></script>
+<noscript>
+    <style>
+        *[data-aos] {
+            display: block !important;
+            opacity: 1 !important;
+            visibility: visible !important;
+        }
+    </style>
+</noscript>
+<script>
+    AOS.init({
+        duration: 700
+    });
+    $(function () { $('[data-toggle="tooltip"]').tooltip() })
+</script>
+ 
+<!-- Disable animation on less than 1200px, change value if you like -->
+<script>
+AOS.init({
+  disable: function () {
+    var maxWidth = 1200;
+    return window.innerWidth < maxWidth;
+  }
+});
+</script>
+
 </body>
-
 </html>
+

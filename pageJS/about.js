@@ -24,6 +24,10 @@ for (i = 2; i < 4; i++) {
 	// document.getElementById('Expand' + i).style.left = 25 * (i - 1.62) + "%";
 }
 
+for (i = 4; i < 6; i++) {
+	document.getElementById('ClassOpenFrame' + i).style.bottom = 25 * (i - 1.65) + "%";
+	// document.getElementById('Expand' + i).style.left = 25 * (i - 1.62) + "%";
+}
 
 function ClassOpen(a) {
 	if(document.documentElement.clientWidth > 960) {
