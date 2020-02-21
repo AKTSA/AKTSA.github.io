@@ -184,7 +184,7 @@ MAIN
                     <span id="ClassClose"><button onclick="openPanel(-1);" class="BigBtn">X</button></span>
                     <div>
                         <div>
-                            <a onclick="openPanel(0);" class="BigBox" style="background-image:url('http://aktsa.org/images/compsci.jpg');"><!--https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg-->
+                            <a onclick="openPanel(0);" class="BigBox" style="background-image:url('http://aktsa.github.io/images/compsci.jpg');"><!--https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg-->
                                 <p class="CenterWrap">AP Computer Science</p>
                                 <span id="ClassArrow0" class="ClassArrow">&#9660;</span>
                             </a><a onclick="openPanel(1);" class="BigBox" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/5/54/Rayleigh-Taylor_instability.jpg');">
@@ -220,7 +220,7 @@ MAIN
                             </a><a onclick="openPanel(4);" class="BigBox" style="background-image:url('https://c1.staticflickr.com/6/5044/5335125988_a656efded1_b.jpg');">
                             <p class="CenterWrap">PLTW: Engineering</p>
                             <span id="ClassArrow4" class="ClassArrow">&#9660;</span>
-                            </a><a onclick="openPanel(5);" class="BigBox" style="background-image:url('http://aktsa.org/images/biomed.jpg');">
+                            </a><a onclick="openPanel(5);" class="BigBox" style="background-image:url('http://aktsa.github.io/images/biomed.jpg');">
                             <p class="CenterWrap">PLTW: Biomedical Sciences</p>
                             <span id="ClassArrow5" class="ClassArrow">&#9660;</span>
                             </a><!--https://static.pexels.com/photos/5795/medicine-thermometer-tablets-pills.jpg-->
@@ -334,7 +334,7 @@ function openPanel(a){for(i=0;i<6;i++){if(i!=a){document.getElementById("ClassOp
 if(a==-1){document.getElementById("ClassClose").style.opacity="";return;}
 document.getElementById("ClassClose").style.opacity="1";document.getElementById("ClassClose").style.pointerEvents="all";document.getElementById("ClassOpen"+a).style.maxHeight="100vh";document.getElementById("ClassOpen"+a).style.transition="max-height 0.5s ease-in";document.getElementById("ClassArrow"+a).style.opacity="1";}
 function ChangeProjBack(a){var temp=document.getElementById("ProjInfo").getElementsByTagName("P");for(i=0;i<6;i++){if(i!=a){temp[i].style.display="none";}}
-temp[a].style.display="block";switch(a){case 0:document.getElementById("ProjFrame").style.backgroundImage="url('http://aktsa.org/img_2019/TSAA.JPG')";break;case 1:document.getElementById("ProjFrame").style.backgroundImage="url('http://aktsa.org/img_2019/Wright%20Flyer.jpg')";break;case 2:document.getElementById("ProjFrame").style.backgroundImage="url('http://aktsa.org/img_2019/Cimhomepage.jpeg')";break;case 3:document.getElementById("ProjFrame").style.backgroundImage="url('https://raw.githubusercontent.com/AKTSA/AKTSA.github.io/master/img_2019/house.jpg')";break;case 4:document.getElementById("ProjFrame").style.backgroundImage="url('/images/CTEProj5.jpg')";break;case 5:document.getElementById("ProjFrame").style.backgroundImage="url('https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')";break;}}
+temp[a].style.display="block";switch(a){case 0:document.getElementById("ProjFrame").style.backgroundImage="url('http://aktsa.github.io/img_2019/TSAA.JPG')";break;case 1:document.getElementById("ProjFrame").style.backgroundImage="url('http://aktsa.github.io/img_2019/Wright%20Flyer.jpg')";break;case 2:document.getElementById("ProjFrame").style.backgroundImage="url('http://aktsa.github.io/img_2019/Cimhomepage.jpeg')";break;case 3:document.getElementById("ProjFrame").style.backgroundImage="url('https://raw.githubusercontent.com/AKTSA/AKTSA.github.io/master/img_2019/house.jpg')";break;case 4:document.getElementById("ProjFrame").style.backgroundImage="url('/images/CTEProj5.jpg')";break;case 5:document.getElementById("ProjFrame").style.backgroundImage="url('https://images.pexels.com/photos/276452/pexels-photo-276452.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')";break;}}
 function showTeach(a){for(i=0;i<6;i++){if(i!=a){document.getElementById("TeachInfo"+i).style.left="";}}
 document.getElementById("TeachInfo"+a).style.left="100%";}
 
