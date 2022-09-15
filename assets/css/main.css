@@ -8805,6 +8805,10 @@ a {
   text-decoration: none;
   color: #502c6c; }
 
+.card a.btn-outline-primary:hover {
+  color: white;
+}
+
 .card-pricing .card ul li {
   margin-bottom: 1.5rem; }
 
