@@ -1,258 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="utf-8"/>
-<link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favicon.ico">
-<link rel="icon" type="image/png" href="./assets/img/favicon.ico">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-<title>Member Information</title>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favicon.ico">
+    <link rel="icon" type="image/png" href="./assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>Member Information</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport'/>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,800" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,800" rel="stylesheet">
 
-<!-- Font Awesome Icons -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-<!-- Main CSS -->
-<link href="./assets/css/main.css" rel="stylesheet"/>
+    <!-- Main CSS -->
+    <link href="./assets/css/main.css" rel="stylesheet"/>
 
-<!-- Animation CSS -->
-<link href="./assets/css/vendor/aos.css" rel="stylesheet"/>
+    <!-- Animation CSS -->
+    <link href="./assets/css/vendor/aos.css" rel="stylesheet"/>
+  </head>
 
-</head>
-
-<body>
-
-<!--------------------------------------
-NAVBAR
---------------------------------------->
-<nav class="topnav navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-<div class="container">
-    <a class="navbar-brand" href="./index.html"><strong>AK</strong> TSA</a>
-    <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="navbar-collapse collapse" id="navbarColor02" style="">
-        <ul class="navbar-nav mr-auto d-flex align-items-center">
+  <body>
+    <!--------------------------------------
+    NAVBAR
+    --------------------------------------->
+    <nav class="topnav navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html"><strong>AK</strong> TSA</a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarColor02" style="">
+          <ul class="navbar-nav mr-auto d-flex align-items-center">
             <li class="nav-item">
-            <a class="nav-link SurroundBtn" href="./index.html">Home</a>
+              <a class="nav-link SurroundBtn" href="./index.html">Home</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link SurroundBtn" href="./aboutus.html">About</a>
+              <a class="nav-link SurroundBtn" href="./aboutus.html">About</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link SurroundBtn" href="./memberinfo.html">Members <span class="sr-only">(current)</span></a>
+              <a class="nav-link SurroundBtn" href="./memberinfo.html">Members <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-            <a class="nav-link SurroundBtn" href="./awards.html">Awards</a>
+              <a class="nav-link SurroundBtn" href="./awards.html">Awards</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link SurroundBtn" href="./officer.html">Officers</a>
+              <a class="nav-link SurroundBtn" href="./officer.html">Officers</a>
             </li>
             <li class="nav-item">
-				<a class="nav-link SurroundBtn" href="https://sychic.github.io/Webmaster-2020/">Design Brief</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link SurroundBtn" href="https://aktsa.azurewebsites.net/">Login</a>
-			</li>
-        </ul>
-    </div>
-</div>
-</nav>
-<!-- End Navbar -->
-
-
-<!--------------------------------------
-HEADER
---------------------------------------->
-<div class="jumbotron jumbotron-lg jumbotron-fluid mb-3 bg-primary position-relative">
-    <div class="container text-white h-100 tofront">
-        <div class="row align-items-center justify-content-center text-center">
-            <div class="col-md-10">
-                <h1 class="display-3">Member Information</h1>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Header -->
-
-
-<!--------------------------------------
-MAIN
---------------------------------------->
-
-<div class="container pt-5 pb-5">
-
-
-<section class="pt-4 pb-5" data-aos="fade-up">
-<h3 class="h5 mb-4 font-weight-bold"></h3>
-<div class="row">
-    <div class="col-lg-6">
-        <div class="card bg-dark overlay overlay-black text-white shadow-sm border-0">
-            <img class="card-img" src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image">
-            <div class="card-img-overlay d-flex align-items-center text-center">
-                <div class="card-body">
-                    <h3 class="card-title">Upcoming Meetings</h3>
-    <table class="table">
-  <thead class="thead">
-    <tr>
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">September 15, 2022</th>
-    </tr>
-    <tr>
-      <th scope="row">October 6, 2022</th>
-
-    </tr>
-    <tr>
-      <th scope="row">TBD</th>
-    </tr>
-  </tbody>
-  </table>
-
-                </div>
-            </div>
-        </div>
-	</div>
-    <div class="col-lg-6">
-        <div class="card bg-dark overlay overlay-black text-white shadow-sm border-0">
-            <img class="card-img" src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image">
-            <div class="card-img-overlay d-flex align-items-center text-center">
-                <div class="card-body">
-                    <h3 class="card-title">TSA Competition Dates</h3>
-    <table class="table">
-  <thead class="thead">
-    <tr>
-
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">TBD (likely in February) Virtual</th>
-    </tr>
-    <tr>
-      <th scope="row">March 26-28, 2023, Greensboro, North Carolina</th>
-
-    </tr>
-    <tr>
-      <th scope="row">June 28 - July 2, 2023 St. Louisville, Kentucky</th>
-    </tr>
-  </tbody>
-  </table>
-
-                </div>
-            </div>
-        </div>
-	</div>
-
-
-
-      <div class="col-lg-6" style="margin-top: 50px;">
-        <div class="card border-0">
-          <div class="card-head">
-              <center><h1 style="color: black;">Stay Updated!</h1></center>
-          </div>
-          <div class="card-body row">
-            <div style = "margin-bottom: 0em; margin-right: 1.5em;">
-              <span style = "font-weight: bold;">Remind:</span>
-              <ul style = "margin-top: 0em;">
-                <li>9th-10th grade: @aktsa910</li>
-                <li>11th-12th grade: @aktsa1112</li>
-              </ul>
-            </div>
-            <div><span style = "font-weight: bold;">Discord:</span> <a href = "https://discord.gg/97pCVA5gN4">Join here!</a></div>
-            <div><span style = "font-weight: bold;">Instagram:</span> <a href = "https://www.instagram.com/akhs_tsa/">@akhs_tsa</a></div>
-    <!--<a href="https://www.facebook.com/groups/TSA.AK/"><img class="rounded-circle shadow" src="https://en.facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png" width="70" data-toggle="tooltip" data-placement="top" title="Join our Facebook Group!" data-original-title="Facebook"></a>
-    <a href="https://twitter.com/AKHSTSA"><img class="rounded-circle shadow" src="https://seeklogo.net/wp-content/uploads/2015/11/twitter-logo.png" width="70" data-toggle="tooltip" data-placement="top" title="Follow us on Twitter!" data-original-title="Twitter"></a>
-
-    <a href="https://www.instagram.com/ak.tsa/"><img class="rounded-circle shadow" src="https://thesustainableangle.org/wp-content/uploads/2015/01/Stunning-Instagram-Logo-Vector-Free-Download-43-For-New-Logo-with-Instagram-Logo-Vector-Free-Download-1024x1024.png" width="70" data-toggle="tooltip" data-placement="top" title="Follow us on Instagram!" data-original-title="Instagram"></a>
-    <img class="rounded-circle shadow" src="https://d25hn4jiqx5f7l.cloudfront.net/companies/logos/original/remind_1556131842.png?1556131842" width="70" data-toggle="tooltip" data-placement="top" title="Use code @akt to join Remind!" data-original-title="Remind">-->
-          </div>
+              <a class="nav-link SurroundBtn" href="https://sychic.github.io/Webmaster-2020/">Design Brief</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link SurroundBtn" href="https://aktsa.azurewebsites.net/">Login</a>
+            </li>
+          </ul>
         </div>
       </div>
+    </nav>
+    <!-- End Navbar -->
 
-    <div class="col-lg-6" style="margin-top: 50px;">
-        <div class="card text-white border-0">
-            <div class="card-head">
-                <center><h1 style="color: black;">Helpful Links</h1></center>
+    <!--------------------------------------
+    HEADER
+    --------------------------------------->
+    <div class="jumbotron jumbotron-lg jumbotron-fluid mb-3 bg-primary position-relative">
+        <div class="container text-white h-100 tofront">
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-md-10">
+                    <h1 class="display-3">Member Information</h1>
+                </div>
             </div>
-                <center><div class="card-body">
-
-    <a href="https://tsaweb.org/competitions-programs/tsa/high-school-competitions" class="btn btn-outline-primary btn-round" style="margin: 5px;">Event List</a>
-    <a href="https://drive.google.com/file/d/1D8qwfb3TmOiGwiSHe7JVp-deR6Cah7VX/view" class="btn btn-outline-primary btn-round" style="margin: 5px;">HS Handbook</a>
-    <a href="https://tsaweb.org/competitions-programs/tsa/themes-problems" class="btn btn-outline-primary btn-round" style="margin: 5px;">Themes</a>
-    <a href="https://tsaweb.org/competitions-programs/tsa/competition-updates" class="btn btn-outline-primary btn-round" style="margin: 5px;">Competition Updates</a>
-    <a href="https://tsaweb.org/" class="btn btn-outline-primary btn-round" style="margin: 5px;">TSA Home</a>
-
-                    </div><center>
         </div>
     </div>
+    <!-- End Header -->
+
+    <!--------------------------------------
+    MAIN
+    --------------------------------------->
+    <div class="container pt-5 pb-5">
+      <section class="pt-4 pb-5" data-aos="fade-up">
+        <h3 class="h5 mb-4 font-weight-bold"></h3>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card bg-dark overlay overlay-black text-white shadow-sm border-0">
+              <img class="card-img" src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image">
+              <div class="card-img-overlay d-flex align-items-center text-center">
+                <div class="card-body">
+                  <h3 class="card-title">Upcoming Meetings</h3>
+                  <table class="table">
+                    <thead class="thead"><tr></tr></thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">September 15, 2022</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">October 6, 2022</th>
+
+                      </tr>
+                      <tr>
+                        <th scope="row">TBD</th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card bg-dark overlay overlay-black text-white shadow-sm border-0">
+              <img class="card-img" src="https://images.pexels.com/photos/9754/mountains-clouds-forest-fog.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Card image">
+              <div class="card-img-overlay d-flex align-items-center text-center">
+                <div class="card-body">
+                  <h3 class="card-title">TSA Competition Dates</h3>
+                  <table class="table">
+                    <thead class="thead"><tr></tr></thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">TBD (likely in February) Virtual</th>
+                      </tr>
+                      <tr>
+                        <th scope="row">March 26 - 28 2023, Greensboro, North Carolina</th>
+
+                      </tr>
+                      <tr>
+                        <th scope="row">June 28 - July 2, 2023 St. Louisville, Kentucky</th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" style="margin-top: 50px;">
+            <div class="card border-0">
+              <div class="card-head">
+                <center><h1 style="color: black;">Stay Updated!</h1></center>
+              </div>
+              <div class="card-body row">
+                <div style = "margin-bottom: 0em; margin-right: 1.5em;">
+                  <span style = "font-weight: bold;">Remind:</span>
+                  <ul style = "margin-top: 0em;">
+                    <li>9th-10th grade: @aktsa910</li>
+                    <li>11th-12th grade: @aktsa1112</li>
+                  </ul>
+                </div>
+                <div><span style = "font-weight: bold;">Discord:</span> <a href = "https://discord.gg/97pCVA5gN4">Join here!</a></div>
+                <div><span style = "font-weight: bold;">Instagram:</span> <a href = "https://www.instagram.com/akhs_tsa/">@akhs_tsa</a></div>
+          <!--<a href="https://www.facebook.com/groups/TSA.AK/"><img class="rounded-circle shadow" src="https://en.facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png" width="70" data-toggle="tooltip" data-placement="top" title="Join our Facebook Group!" data-original-title="Facebook"></a>
+          <a href="https://twitter.com/AKHSTSA"><img class="rounded-circle shadow" src="https://seeklogo.net/wp-content/uploads/2015/11/twitter-logo.png" width="70" data-toggle="tooltip" data-placement="top" title="Follow us on Twitter!" data-original-title="Twitter"></a>
+
+          <a href="https://www.instagram.com/ak.tsa/"><img class="rounded-circle shadow" src="https://thesustainableangle.org/wp-content/uploads/2015/01/Stunning-Instagram-Logo-Vector-Free-Download-43-For-New-Logo-with-Instagram-Logo-Vector-Free-Download-1024x1024.png" width="70" data-toggle="tooltip" data-placement="top" title="Follow us on Instagram!" data-original-title="Instagram"></a>
+          <img class="rounded-circle shadow" src="https://d25hn4jiqx5f7l.cloudfront.net/companies/logos/original/remind_1556131842.png?1556131842" width="70" data-toggle="tooltip" data-placement="top" title="Use code @akt to join Remind!" data-original-title="Remind">-->
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" style="margin-top: 50px;">
+            <div class="card text-white border-0">
+              <div class="card-head">
+                <center><h1 style="color: black;">Helpful Links</h1></center>
+              </div>
+              <center><div class="card-body">
+                <a href="https://tsaweb.org/competitions-programs/tsa/high-school-competitions" class="btn btn-outline-primary btn-round" style="margin: 5px;">Event List</a>
+                <a href="https://drive.google.com/file/d/1D8qwfb3TmOiGwiSHe7JVp-deR6Cah7VX/view" class="btn btn-outline-primary btn-round" style="margin: 5px;">HS Handbook</a>
+                <a href="https://tsaweb.org/competitions-programs/tsa/themes-problems" class="btn btn-outline-primary btn-round" style="margin: 5px;">Themes</a>
+                <a href="https://tsaweb.org/competitions-programs/tsa/competition-updates" class="btn btn-outline-primary btn-round" style="margin: 5px;">Competition Updates</a>
+                <a href="https://tsaweb.org/" class="btn btn-outline-primary btn-round" style="margin: 5px;">TSA Home</a>
+              </div><center>
+            </div>
+        </div>
+      </section>
+    </div>
+    <!-- End Main -->
 
 
-</section>
+    <!--------------------------------------
+    FOOTER
+    --------------------------------------->
+    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1440 126" style="enable-background:new 0 0 1440 126;" xml:space="preserve">
+      <path class="bg-black" d="M685.6,38.8C418.7-11.1,170.2,9.9,0,30v96h1440V30C1252.7,52.2,1010,99.4,685.6,38.8z"/>
+    </svg>
+    <footer class="bg-black pb-5">
+      <center><h3 style="color: white;">About this website: <a href="competition.html">here</a>.</h3></center>
+    </footer>
+    <!-- End Footer -->
 
 
 
+    <!--------------------------------------
+    JAVASCRIPTS
+    --------------------------------------->
+    <script src="./assets/js/vendor/jquery.min.js" type="text/javascript"></script>
+    <script src="./assets/js/vendor/popper.min.js" type="text/javascript"></script>
+    <script src="./assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>
+    <script src="./assets/js/functions.js" type="text/javascript"></script>
 
+    <!-- Animation -->
+    <script src="./assets/js/vendor/aos.js" type="text/javascript"></script>
+    <noscript>
+        <style>
+            *[data-aos] {
+                display: block !important;
+                opacity: 1 !important;
+                visibility: visible !important;
+            }
+        </style>
+    </noscript>
+    <script>
+      AOS.init({
+          duration: 700
+      });
+      $(function () { $('[data-toggle="tooltip"]').tooltip() })
+    </script>
 
-
-
-</div>
-<!-- End Main -->
-
-
-<!--------------------------------------
-FOOTER
---------------------------------------->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1440 126" style="enable-background:new 0 0 1440 126;" xml:space="preserve">
-<path class="bg-black" d="M685.6,38.8C418.7-11.1,170.2,9.9,0,30v96h1440V30C1252.7,52.2,1010,99.4,685.6,38.8z"/>
-</svg>
-<footer class="bg-black pb-5">
-<center><h3 style="color: white;">About this website: <a href="competition.html">here</a>.</h3></center>
-</footer>
-<!-- End Footer -->
-
-
-
-<!--------------------------------------
-JAVASCRIPTS
---------------------------------------->
-<script src="./assets/js/vendor/jquery.min.js" type="text/javascript"></script>
-<script src="./assets/js/vendor/popper.min.js" type="text/javascript"></script>
-<script src="./assets/js/vendor/bootstrap.min.js" type="text/javascript"></script>
-<script src="./assets/js/functions.js" type="text/javascript"></script>
-
-<!-- Animation -->
-<script src="./assets/js/vendor/aos.js" type="text/javascript"></script>
-<noscript>
-    <style>
-        *[data-aos] {
-            display: block !important;
-            opacity: 1 !important;
-            visibility: visible !important;
-        }
-    </style>
-</noscript>
-<script>
+    <!-- Disable animation on less than 1200px, change value if you like -->
+    <script>
     AOS.init({
-        duration: 700
+      disable: function () {
+        var maxWidth = 1200;
+        return window.innerWidth < maxWidth;
+      }
     });
-    $(function () { $('[data-toggle="tooltip"]').tooltip() })
-</script>
-
-<!-- Disable animation on less than 1200px, change value if you like -->
-<script>
-AOS.init({
-  disable: function () {
-    var maxWidth = 1200;
-    return window.innerWidth < maxWidth;
-  }
-});
-</script>
-
-</body>
+    </script>
+  </body>
 </html>
