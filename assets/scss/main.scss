@@ -328,6 +328,9 @@ a {
             }
         }
     a:hover {text-decoration:none; color: $primary;}
+    .card a.btn-outline-primary:hover {
+      color: white;
+    }
 }
     
 .card-pricing .card ul li {
